@@ -214,3 +214,18 @@ There are two types of tags:
 ### Delete a remote tag
 
 `$ git push origin --delete <tagname>`
+
+## Branching
+
+### Create a new branch
+
+`$ git branch <new-branch-name>`
+
+### Switch to a different branch
+
+`$ git checkout <branch-name>`
+
+### Create a new branch and switch to it with one command
+
+`$ git checkout -b <new-branch-name>`
+
