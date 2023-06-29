@@ -37,11 +37,11 @@ Time series data is time-ordered data.
 
 ### Compute correlation
 
-`dataframe['column1'].corr(data['column2'])
+`dataframe['column1'].corr(data['column2'])`
 
 ### Compute autocorrelation
 
-`dataframe['column'].autocorr()
+`dataframe['column'].autocorr()`
 
 ### Example of loading + visualizing Google Trends data
 
