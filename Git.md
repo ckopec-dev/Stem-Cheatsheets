@@ -229,3 +229,28 @@ There are two types of tags:
 
 `$ git checkout -b <new-branch-name>`
 
+### Merge a branch into your current branch
+
+`$ git merge <branch-to-be-merged>`
+
+### Delete a branch
+
+`$ git branch -d <branch-to-be-deleted>`
+
+## Common workflows 
+
+### Work on a new user story/feature
+
+* Create a new branch for the story
+* Do work on the branch (coding/etc)
+* Submit pull request
+* Approved PR gets merged
+
+ ### Work on a hotfix while working on a new story/feature
+
+ * Switch to production branch
+ * Create a new branch for the hotfix
+ * Merge the hotfix branch
+ * Push to production
+ * Switch back to story branch
+
