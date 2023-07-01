@@ -3,7 +3,7 @@
 
 ## Disk Administration
 
-### Wipe and format new or used drive
+### Clean and format new or used drive
 
 ~~~
 
