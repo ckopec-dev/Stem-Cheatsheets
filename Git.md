@@ -217,6 +217,18 @@ There are two types of tags:
 
 ## Branching
 
+### Show all branches
+
+`$ git branch`
+
+The branch prefixed with an '*' is the branch you have currently checked out.  
+
+The --merged and --no-merged flags will filter the list to branches that you have or have not merged into your current branch.
+
+### Show all branches with the last commit on each branch
+
+`$ git branch -v`
+
 ### Create a new branch
 
 `$ git branch <new-branch-name>`
