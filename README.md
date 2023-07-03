@@ -1,3 +1,3 @@
-# IT-Cheatsheets
+# Stem-Cheatsheets
 
-Cheat sheets for various IT topics.
+Cheat sheets for various STEM topics.
