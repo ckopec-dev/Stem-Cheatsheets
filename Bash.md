@@ -1,7 +1,7 @@
 
 # Bash Cheat Sheet
 
-## Basic commands
+## File management
 
 ### Show the current directory
 
