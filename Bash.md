@@ -1,6 +1,53 @@
 
 # Bash Cheat Sheet
 
+## Basic commands
+
+### Show the current directory
+
+`$ pwd`
+
+### List contents of directory
+
+`$ ls {path}`
+
+If the first character of the path starts with a '/', then it's an absolute path. Otherwise, it's relative.  
+. means the current directory.  
+.. means the parent direcotry of the current directory.  
+A path of '/' means the root directory.
+~ means your home directory.
+
+### Change current directory
+
+`$ cd {path}`
+
+### Copy a file
+
+`$ cp {original-path} {destination-path}`
+
+### Copy multiple files into a different directory
+
+`$ cp {file1} {file2} {destination-path}`
+
+### Move files
+
+`$ mv {file1} {file2} {destination-path}`
+
+Similar to a copy and delete.
+Can be used to rename files.
+
+### Delete files
+
+`$ rm {file1} {file2}`
+
+### Create directory
+
+`$ mkdir {path}`
+
+### Delete directory and all contents
+
+`$ rm -r {path}`
+
 ## Control statements
 
 ### Basic IF statement syntax
