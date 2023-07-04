@@ -1,6 +1,18 @@
 
 # Bash Cheatsheet
 
+## Help
+
+### Show the manual for a command
+
+`$ man {command}`
+
+### Show history of commands previously entered
+
+`$ history`
+
+The output contains a number followed by the command. To rerun a command, type !{number}
+
 ## File management
 
 ### Show the current directory
@@ -10,6 +22,8 @@
 ### List contents of directory
 
 `$ ls {path}`
+
+Use '-R' to list contents recursively.
 
 If the first character of the path starts with a '/', then it's an absolute path. Otherwise, it's relative.  
 . means the current directory.  
@@ -47,6 +61,57 @@ Can be used to rename files.
 ### Delete directory and all contents
 
 `$ rm -r {path}`
+
+## Text data manipulation
+
+### View a file's contents
+
+`$ cat {path}`
+
+### View a file's contents with paging
+
+`$ less {path}`
+
+When specifying multiple paths, use ':n' to go to the next file, and ':q' to quit.
+
+### View the start of a file
+
+`$ head {path}`
+
+Shows 10 lines by default. 
+Use '-n {lines}' to specify the number of lines.
+
+### View the end of a file
+
+`$ tail {path}`
+
+Similar options as head.
+
+### Select columns from a file
+
+`$ cut -f {field-specifiers}, -d {delimiter} {path}`
+
+Field specifiers are column indexes separated by commas. Can consist of ranges. E.g. 3-5,6,8
+Cut is sometimes not the best tool for csv, since it can't handle quoted strings.
+
+## Grep searches
+
+### Basic grep usage
+
+`$ grep {search-text} {file1} {file2}`
+
+Returns all lines from files which contain search-text.
+
+### Common flags
+
+| Flag | Description |
+| ---- | ----------- |
+| -c | prints count of matching lines |
+| -h | don't print the names of files when searching multiple files |
+| -i | ignore case |
+| -l | print the names of the files that contain the matches (instead of the matches) |
+| -n | print line numbers for matching lines |
+| -v | only show lines that don't match |
 
 ## Control statements
 
