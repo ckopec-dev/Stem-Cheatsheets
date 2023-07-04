@@ -1,5 +1,5 @@
 
-# Bash Cheat Sheet
+# Bash Cheatsheet
 
 ## File management
 
