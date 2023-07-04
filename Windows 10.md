@@ -1,7 +1,7 @@
 
 # Windows 10 Cheatsheet
 
-## System Administration
+## System administration
 
 ### Clean free disk space
 
