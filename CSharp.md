@@ -1,5 +1,5 @@
 
-# C# Cheat Sheet
+# C# Cheatsheet
 
 ## Classes
 
