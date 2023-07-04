@@ -1,7 +1,7 @@
 
-# Windows PE Cheat Sheet
+# Windows PE Cheatsheet
 
-## Disk Administration
+## Disk administration
 
 ### Clean and format new or used drive
 
