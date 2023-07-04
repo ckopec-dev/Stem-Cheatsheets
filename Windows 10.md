@@ -1,5 +1,5 @@
 
-# Windows 10 Cheat Sheet
+# Windows 10 Cheatsheet
 
 ## System Administration
 
