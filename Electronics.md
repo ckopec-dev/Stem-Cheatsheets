@@ -22,3 +22,32 @@
 - Voltage (E): measure of pressure pushing the electrons. Voltage refers to a difference in electrical potential between two parts of a circuit.
 - Watt (W): measure of power, P = EI
 
+### Decoding resistors
+
+Convert 1st and 2nd stripe by color value, then add color zeroes.
+
+| Color | Value |
+| - | - |
+| Black | 0 |
+| Brown | 1 |
+| Red | 2 |
+| Orange | 3 |
+| Yellow | 4 |
+| Green | 5 |
+| Blue | 6 |
+| Violet | 7 |
+| Gray | 8 |
+| White | 9 |
+
+| Color | Zeroes |
+| - | - |
+| Black | 0 |
+| Brown | 1 |
+| Red | 2 |
+| Orange | 3 |
+| Yellow | 4 |
+| Green | 5 |
+| Blue | 6 |
+| Violet | 7 |
+| Gray | 8 |
+| White | 9 |
