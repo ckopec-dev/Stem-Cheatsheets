@@ -62,6 +62,13 @@ Can be used to rename files.
 
 `$ rm -r {path}`
 
+### Use wildcards
+
+- *: zero or more characters
+- ?: a single character
+- [...]: any character inside brackets
+- {...}: any comma-separated patterns inside the curly brackets, e.g. {*.txt, *.csv}
+
 ## Text data manipulation
 
 ### View a file's contents
@@ -94,6 +101,26 @@ Similar options as head.
 Field specifiers are column indexes separated by commas. Can consist of ranges. E.g. 3-5,6,8
 Cut is sometimes not the best tool for csv, since it can't handle quoted strings.
 
+### Print counts of characters, words, and lines in a file
+
+`$ wc {path}`
+
+'-c' for characters, '-w' for words, '-l' for lines
+
+### Sort text
+
+`$ sort {path}`
+
+Can pass path from standard input.  
+
+- -r: sort reverse the order
+- -b: ignore leading blanks
+- -f: case-insensitive
+
+### Remove duplicate adjacent rows
+
+`$ uniq {path}`
+
 ## Grep searches
 
 ### Basic grep usage
@@ -112,6 +139,20 @@ Returns all lines from files which contain search-text.
 | -l | print the names of the files that contain the matches (instead of the matches) |
 | -n | print line numbers for matching lines |
 | -v | only show lines that don't match |
+
+## Redirection
+
+### Redirect output to a file
+
+`$ ls > {path}`
+
+Outputs the directory listing and redirects it to specified file.
+
+### Redirect output to the input of another command
+
+`$ cat {path} | sort
+
+Sends output of cat to sort.
 
 ## Control statements
 
