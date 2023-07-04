@@ -154,6 +154,25 @@ Outputs the directory listing and redirects it to specified file.
 
 Sends output of cat to sort.
 
+## Shell variables
+
+### Common environment variables
+
+- HOME: user's home directory
+- PWD: present working directory
+- SHELL: which shell is being used
+- USER: user's Id
+
+Available everywhere
+
+### Create and assign a shell (local) variable
+
+`$ {variable-name}={variable-value}`
+
+### Print a variable value
+
+`$ echo ${variable-name}`
+
 ## Control statements
 
 ### Basic IF statement syntax
