@@ -1,5 +1,5 @@
 
-# Docker Cheat Sheet
+# Docker Cheatsheet
 
 ## Overview
 
