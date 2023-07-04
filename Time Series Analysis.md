@@ -1,5 +1,5 @@
 
-# Time Series Analysis Cheat Sheet
+# Time Series Analysis Cheatsheet
 
 ## Overview
 
