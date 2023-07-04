@@ -1,6 +1,8 @@
-# Sql Cheat Sheet
+# Sql Cheatsheet
 
-## Check installed version and edition
+## Server administration
+
+### Check installed version and edition
 
 `SELECT @@VERSION`  
 `SELECT SERVERPROPERTY('Edition')`
