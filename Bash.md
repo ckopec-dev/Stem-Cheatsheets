@@ -256,3 +256,9 @@ case STRING OR VARIABLE in
 esac
 
 ~~~
+
+## Process management
+
+### Stop a running command
+
+`CTRL-C`
