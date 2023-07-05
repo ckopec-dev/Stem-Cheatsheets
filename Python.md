@@ -60,6 +60,11 @@
 - Can contain different types
 - Can contain lists
 - Zero-based indexing
+- index(): gets the index of the first element that matches input value
+- count(): the number of time input value appears in list
+- append(): adds an element to the list
+- remove(): removes the first element of a list that matches input value
+- reverse(): reverses the order of elements
 
 ### Indexing
 
@@ -139,6 +144,7 @@ y = x
 - statsmodels: stats
 - seaborn: visualization
 - numpy: maths
+- math: maths
 
 ### Import modules
 
@@ -146,6 +152,9 @@ y = x
 
 # Import pandas with an alias
 import pandas as pd
+
+# Selective import syntax
+from math import pi
 
 from matplotlib import pyplot as plt
 
@@ -158,7 +167,22 @@ plt.show()
 
 ~~~
 
+### Install a package
+
+`$ pip3 install numpy`
+
 ## Functions
 
 - Positional arguments are ordinary arguments, assigned by their positional location.
 - Keyword arguments come after positional arguments, and are assigned with their label (e.g. arg='value')
+
+### Some useful built-in functions
+
+- help(): display help for another built-in function, e.g. help(max)
+- print(): prints value to stdout
+- type(): returns type of value
+- len(): length of value
+- max(): maximum value
+- pow(base, exp): power
+- upper(): convert to uppercase
+
