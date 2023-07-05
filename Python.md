@@ -122,3 +122,34 @@ y = list(x)
 y = x
 
 ~~~
+
+## Modules
+
+### Examples of commonly used modules
+
+- matplotlib: plotting
+- pandas: loads data
+- scikit-learn: ML
+- scipy: stats
+- nltk: manipulates text data
+- statsmodels: stats
+- seaborn: visualization
+- numpy: maths
+
+### Import modules
+
+~~~
+
+# Import pandas with an alias
+import pandas as pd
+
+from matplotlib import pyplot as plt
+
+# Pandas loads data
+df = pd.read_csv('data.csv')
+
+# Matplotlib plots it
+plt.plot(df.columnA, df.columnB)
+plt.show()
+
+~~~
