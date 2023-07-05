@@ -19,12 +19,33 @@
 - Short circuit: an umwanted conductive bridge.
 - Resistance (R): how tightly materials hold onto electrons. Measured in ohms
 - Volt (V): measure of voltage. 1V will push 1A through 1 ohm of resistance
-- Voltage (E): measure of pressure pushing the electrons. Voltage refers to a difference in electrical potential between two parts of a circuit.
+- Voltage (E): measure of pressure pushing the electrons. Voltage refers to a difference in electrical potential between two parts of a circuit. Voltage = ohms * amps.
 - Watt (W): measure of power, P = EI
 
-### Decoding resistors
+## Tools
 
-Convert 1st and 2nd stripe by color value, then add color zeroes.
+### Using a multimeter
+
+- Voltage is measured relatively, between two points in a circuit. Use the multimeter like a stethoscope. Set to volts.
+- Current measures the flow in a circuit - i.e. it must past through the meter. Set to milliamps.
+
+## Components
+
+### LEDs
+
+- Longer wire is for the positive voltage
+- Voltage difference between wires must not exceed manufacturer limit
+- The current between wires must not exceed manufacturer limit
+
+### Potentiometers
+
+- Typically look like knobs
+- Used to vary resistance
+
+### Resistors
+
+- Create a resistance in electron flow, like stepping on a water hose
+- Convert 1st and 2nd stripe by color value, then add color zeroes
 
 | Color | Value |
 | - | - |
