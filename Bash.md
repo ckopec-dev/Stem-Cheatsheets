@@ -197,8 +197,19 @@ echo "Age: $2";
 echo "Full Name: $3";chg
 
 # $@ is a special expression that means "all of the arguments"
+# $* also means "all of the arguments"
+# $# gives the number of arguments
+
 
 ~~~
+
+### Execute a script
+
+`$ bash my_script.sh`
+
+or
+
+`$ ./my_script.sh`
 
 ## Control statements
 
