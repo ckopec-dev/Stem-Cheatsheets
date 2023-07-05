@@ -26,6 +26,10 @@
 
 ## Variables
 
+- Must start with a letter (lowercase is better)
+- Remaining letters can be letters, numbers, or underscores
+- Case-sensitive
+
 ### Create an assign a variable
 
 `{label} = {value}`
@@ -153,3 +157,8 @@ plt.plot(df.columnA, df.columnB)
 plt.show()
 
 ~~~
+
+## Functions
+
+- Positional arguments are ordinary arguments, assigned by their positional location.
+- Keyword arguments come after positional arguments, and are assigned with their label (e.g. arg='value')
