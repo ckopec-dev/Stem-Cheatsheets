@@ -9,7 +9,7 @@
 - Right-click on downloaded file. Click Properties, then Permissions tab. Check "Allow executing file as program". Close Properties windows.
 - Double-click downloaded file to launch.
 
-### Basic HelloWorld test to verify everything is working correctly
+### Basic test to verify everything is working correctly
 
 - Connect Arduino device to PC with USB cable.
 - Launch IDE.
