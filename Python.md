@@ -171,6 +171,14 @@ plt.show()
 
 `$ pip3 install numpy`
 
+### List installed packages
+
+`$ pip3 list`
+
+### Uninstall a package
+
+`$ pip3 uninstall numpy`
+
 ## Functions
 
 - Positional arguments are ordinary arguments, assigned by their positional location.
