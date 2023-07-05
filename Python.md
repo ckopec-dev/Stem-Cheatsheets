@@ -47,3 +47,78 @@
 - int({variable})
 - str({variable})
 - bool({variable})
+
+## Lists
+
+- A list is a named collection of values
+- A list is a reference type
+- Can contain any type
+- Can contain different types
+- Can contain lists
+- Zero-based indexing
+
+### Indexing
+
+~~~
+
+# Basic example
+ages = [2, 19, 34]
+
+# Example with sub-list
+names_and_ages = [["mary", 2], ["bob", 19], ["mark", 34]]
+
+# Get item by index. This is the 3rd item in the list.
+ages[2]
+
+# Get item by negative index. This is the 3rd item in the list, starting at the last item and moving backwards (the last item is considered zero for this purpose.)
+ages[-2]
+
+# Get item from list that contains another list (a.k.a. subsetting.)
+names_and_ages[2][0]
+
+~~~
+
+### Slicing
+
+~~~
+
+# Slice from index 0.
+ages[{start-index-inclusive}:{end-index-exclusive]
+
+Returns first four items.
+ages[:4]
+
+# Slice to end. Returns everything from 4th item to last item.
+ages[4:]
+
+~~~
+
+### Updating lists
+
+~~~
+
+# Basic example.
+ages[0] = 3
+
+# Updating with a slice.
+ages[0:2] = [3, 20]
+
+# Appending to a list.
+names_and_ages + ["Sally", 14]
+
+# Deleting from a list. Deletes item with index 2.
+del(names_and_ages[2])
+
+~~~
+
+### Create a new list from an existing list
+
+~~~
+
+# This value-copies items from x into y. I.e. they don't share the same reference. Slicing also achieves this.
+y = list(x)
+
+# This retains the reference to the same memory location, so updates to y will be reflected in x.
+y = x
+
+~~~
