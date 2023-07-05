@@ -40,4 +40,7 @@ plt.text(xcoord, ycoord, "Some text")
 # Add before any other plotting code
 plt.style.use('seaborn')
 
+# Show all available styles
+print(plt.style.available)
+
 ~~~
