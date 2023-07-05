@@ -150,7 +150,7 @@ Outputs the directory listing and redirects it to specified file.
 
 ### Redirect output to the input of another command
 
-`$ cat {path} | sort
+`$ cat {path} | sort`
 
 Sends output of cat to sort.
 
@@ -172,6 +172,33 @@ Available everywhere
 ### Print a variable value
 
 `$ echo ${variable-name}`
+
+## Creating and using scripts
+
+### Create a Hello World script
+
+~~~
+
+#!/bin/bash
+
+echo "Hello World!"
+
+~~~
+
+### Pass arguments to a script
+
+~~~
+
+#!/bin/bash
+
+# Based on position of arguments that are passed in.
+echo "Username: $1";
+echo "Age: $2";
+echo "Full Name: $3";chg
+
+# $@ is a special expression that means "all of the arguments"
+
+~~~
 
 ## Control statements
 
