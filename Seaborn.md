@@ -82,3 +82,47 @@ sns.scatterplot(x="total_bill", y="tip", data=tips, hue="smoker", hue_order=["Ye
 plt.show()
 
 ~~~
+
+### Relational scatter plots
+
+Similar to scatter plot, except with the ability to create subplots
+
+~~~
+
+# Imports
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Load built-in dataset
+tips = sns.load_dataset("tips")
+
+# Plot data. Creates two plots next to each other (in columns). To arrange in rows, use row param.
+sns.relplot(x="total_bill", y="tip", data=tips, kind="scatter", col="smoker", col_wrap=2, col_order=["Thur","Fri","Sat","Sun"])
+plt.show()
+
+# Use size and hue.
+sns.relplot(x="total_bill", y="tip", data=tips, kind="scatter", size="size", hue="size")
+plt.show()
+
+# Use point style.
+sns.relplot(x="total_bill", y="tip", data=tips, kind="scatter", hue="smoker", style="smoker")
+plt.show()
+
+# Set transparency. 0 = 100% transparent, 1 = opaque.
+sns.relplot(x="total_bill", y="tip", data=tips, kind="scatter", alpha=0.4)
+plt.show()
+
+~~~
+
+### Relational line plots
+
+~~~
+
+# Similar to scatter plots. Use kind="line".
+
+sns.relplot(x="hour", y="brightness", data=sunlight, kind="line", hue="location", markers=True, dashes=False)
+
+# If there are multiple records per x value, the y values are aggregated into a mean and a confidence interval is displayed. To show the standard deviation, set ci="sd". To turn it off, set ci=None.
+
+~~~
+
