@@ -3,9 +3,22 @@
 
 ## Basics
 
+### Create an interactive session
+
+~~~
+
+# Type "exit()" to exit.
+$ python3
+
+~~~
+
 ### Create a python script
 
 `$ touch my-script.py`
+
+### Execute the script
+
+`$ python3 my-script.py`
 
 ### Print a calculation to screen
 
