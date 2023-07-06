@@ -53,11 +53,11 @@ Detecting outliers. Data points that strongly differ from the others. Useful in 
 
 Finding relationships between observations. E.g. which objects are bought together.
 
-## Evaluating models
+## Evaluating classification models
 
 - Overfitting: this is when the model performs great on training data but poorly on test data.
 - Accuracy: correctly classified observations / all observations. Not very useful when there are few labels of a certain type.
-- Confusion matrix: a better way of showing accuracy. Results are displayed in a grid such as:
+- Confusion matrix: a better way of showing accuracy. Results are displayed in a grid such as:  
 
 | | | Actual | Actual |
 | - | - | - | - |
@@ -65,4 +65,9 @@ Finding relationships between observations. E.g. which objects are bought togeth
 | Predicted | Y | true positives | false positives |
 | Predicted | N | false negatives | true negatives |
 
+- Sensitivity: true positives / (true positives + false negatives)
+- Specificity: true negatives / (true negatives + false positives)
 
+## Evaluating regression models
+
+- Error: distance between actual value and predicted value
