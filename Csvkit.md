@@ -89,5 +89,25 @@ $ csvstack -g "MyCsv1","MyCsv2" -n "source" MyCsv1.csv MyCsv2.csv > MyCsvCombine
 
 ~~~
 
+### Create a csv file from sql data
+
+~~~
+
+# Basic structure of command
+$ sql2csv --db "{connection-string}" \
+        --query "SELECT * FROM Some_Table" \
+        > MyCsv.csv
+
+# To connect to a MS Sql Server database, need to install pymssql
+$ pip3 install pymssql
+
+# Since the database isn't in the connection string, it needs to be specified in the query
+# If the password contains a '@', it needs to be escaped with '%40'
+$ sql2csv --db "mssql+pymssql://{username}:{password}@{server-address}/?charset=utf8" \
+        --query "SELECT * FROM MyDatabase.dbo.Some_Table" \
+        > MyCsv.csv
+
+~~~
+
 
 
