@@ -19,3 +19,40 @@
 - From Sketch menu, select Upload.
 - If everything has gone well, the green onboard LED should now be blinking.
 
+## Coding
+
+### Barebones example
+
+~~~
+
+void setup()
+{
+    // Runs once when device is powered on, or has been programmed.  
+}
+
+void loop()
+{
+    // Runs after setup finishes, and then repeatedly.
+}
+
+~~~
+
+### Multiline comment
+
+`/* This comment can extend across multiple lines */`
+
+### Initialize a pin as either an input or output
+
+`pinMode(13, OUTPUT);`
+
+### Turn pin power on (+5V)
+
+`digitalWrite(13, HIGH);`
+
+### Turn pin power off
+
+`digitalWrite(13, LOW);`
+
+### Sleep for a second
+
+`delay(1000);`
