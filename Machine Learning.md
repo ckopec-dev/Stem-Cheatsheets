@@ -71,3 +71,19 @@ Finding relationships between observations. E.g. which objects are bought togeth
 ## Evaluating regression models
 
 - Error: distance between actual value and predicted value
+
+## Tuning models
+
+### Dimensionality reduction
+
+Removing features that may be irrelevant.  
+Some features might be highly correlated, and therefore redundant.
+
+### Hyperparameter tuning
+
+Tweaking the algorithm's parameters. Differs by algorithm.
+
+### Ensemble methods
+
+Combines several models to produce a single optimal model.
+With regression, the predictions from multiple models are typically averaged.
