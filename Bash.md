@@ -140,7 +140,7 @@ Returns all lines from files which contain search-text.
 | -n | print line numbers for matching lines |
 | -v | only show lines that don't match |
 
-## Redirection
+## Redirection and related controls
 
 ### Redirect output to a file
 
@@ -153,6 +153,14 @@ Outputs the directory listing and redirects it to specified file.
 `$ cat {path} | sort`
 
 Sends output of cat to sort.
+
+### Chain commands together. Each command is executed sequentially.
+
+`$ cat file1.txt; cat file2.txt`
+
+### Chain commands together. Each command is executed sequentially, ONLY if the preceeding command succeeded.
+
+`$ cat file1.txt && cat file2.txt`
 
 ## Shell variables
 
