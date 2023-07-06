@@ -1,6 +1,16 @@
 
 # Machine Learning Cheatsheet
 
+## Workflow
+
+- Starts with historical/existing data
+- Extract features
+- Split data into training set and test set
+- Select and train a model with the training set
+- Evaluate the model's performance with the test set
+- If the performance is not acceptable, tune it and retrain
+- Repeat until performance is acceptable. If it never is, it might be due to inadequate data.
+  
 ## Supervised learning
 
 Starts with training data. Data contains:
@@ -16,19 +26,33 @@ Example:
 | -------- | -------- | ------- |
 | Data1    | Data2    | Label   |
 
+### Classification
+
+Assigning a category as an answer to a question. E.g. What kind of iris is that?
+
+- Linear classifier: separates data into categories with a straight line
+- Polynomial classifier: separates data into categories with a curve
+
+### Regression
+
+Assigns a continuous variable. E.g. What will this stock be worth?
+
 ## Unsupervised learning
 
 Similar to supervised, except the data has no targets. Useful for:
 
-- Anomaly detection
-- Diving data into groups (a.k.a. clustering)
+### Clustering
 
-## Workflow
+Divides data into groups with similar characteristics
 
-- Starts with historical/existing data
-- Extract features
-- Split data into training set and test set
-- Select and train a model with the training set
-- Evaluate the model's performance with the test set
-- If the performance is not acceptable, tune it and retrain
-- Repeat until performance is acceptable. If it never is, it might be due to inadequate data.
+### Anomaly detection
+
+Detecting outliers. Data points that strongly differ from the others. Useful in fraud detection.
+
+### Association
+
+Finding relationships between observations. E.g. which objects are bought together.
+
+
+
+
