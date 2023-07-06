@@ -44,4 +44,21 @@ plt.show()
 
 ~~~
 
+### Working with Pandas example
+
+~~~
+
+# Import libraries
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Load dataframe
+df = pd.read_csv("MyCsv.csv")
+
+# Plot data
+sns.countplot(x="columnA", data=df)
+plt.show()
+
+~~~
 
