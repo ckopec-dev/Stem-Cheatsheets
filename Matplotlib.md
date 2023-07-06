@@ -44,3 +44,61 @@ plt.style.use('seaborn')
 print(plt.style.available)
 
 ~~~
+
+## Types of plots
+
+### Scatter plots
+
+Good for an unordered collection of 2d data.
+
+~~~
+
+# Give markers transparency by setting alpha. 
+plt.scatter(x_values, y_values, alpha=0.1)
+
+~~~
+
+### Bar charts
+
+Good for a comparison of categorical data.
+
+~~~
+
+# For vertical bar chart
+plt.bar(x_values, y_values)
+
+# For horizontal bar chart
+plt.barh(x_values, y_values)
+
+# Show error bars (for example, from standard deviation of data)
+plt.bar(x_values, y_values, yerr=df.error)
+
+~~~
+
+### Stacked bar charts
+
+~~~
+
+plt.bar(x_values, y_values)
+plt.bar(x_values, z_values, bottom=y_values)
+
+~~~
+
+### Histograms
+
+Visualizes a distribution of values in a dataset.
+
+~~~
+
+# By default, 10 bins are created.
+plt.hist(y_values, bins=40)
+
+# Limit values used for creating the histogram.
+plt.hist(y_values, range=(5, 15))
+
+# Normalization reduces the height of each bar by a constant factor.
+# Useful for comparing two histograms with different ranges.
+plt.hist(y.values, density=True)
+plt.hist(z.values, density=True)
+
+~~~
