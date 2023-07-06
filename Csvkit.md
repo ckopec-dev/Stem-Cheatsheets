@@ -109,5 +109,26 @@ $ sql2csv --db "mssql+pymssql://{username}:{password}@{server-address}/?charset=
 
 ~~~
 
+### Execute sql against a csv file
 
+~~~
+
+# Since this creates an in-memory instance of a sql database from the entire csv file, it isn't practical for large files.
+$ csvsql --query "SELECT * FROM MyTable LIMIT 10" MyCsv.csv
+
+# Can be used to query multiple files using joins. See documentation for details.
+
+~~~
+
+### Insert data into sql from csv
+
+~~~
+
+$ csvsql --db "{connection-string}" --insert MyCsv.csv
+
+# Useful flags: 
+# --no-inference: disables type inference when parsing input
+# --no-constraints: generates a schema without length limits or null checks
+
+~~~
 
