@@ -1,7 +1,7 @@
 
-# Scikit-image Cheatsheets
+# Image Processing Cheatsheets
 
-## Installation
+## Installation of skimage-image
 
 `$ pip3 install scimage-image`
 
