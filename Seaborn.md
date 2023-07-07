@@ -249,7 +249,7 @@ g.set_title("My Title", y=1.05)
 g.set_titles("Title {variable_name}")
 
 # Add axis labels
-g.set(xlbel="X Label", ylabel="Y Label")
+g.set(xlabel="X Label", ylabel="Y Label")
 
 # Rotate x-axis labels
 plt.xticks(rotation=90)
