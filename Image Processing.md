@@ -28,4 +28,29 @@ plt.show()
 
 ~~~
 
+## Using numpy with images
+
+### Load an image into an ndarray
+
+`image = plt.imread('{path}')`
+
+### Obtain a single channel of an ndarray image
+
+`red = image[:, :, 0]`
+
+### Show the shape 
+
+`image.shape`
+
+### Show the number of pixels
+
+`image.size`
+
+### Flip vertically
+
+`flipped = np.flipup(image)`
+
+### Flip horizontally
+
+`flipped = np.fliplr(image)`
 
