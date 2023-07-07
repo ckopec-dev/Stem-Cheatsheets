@@ -87,3 +87,10 @@ Tweaking the algorithm's parameters. Differs by algorithm.
 
 Combines several models to produce a single optimal model.
 With regression, the predictions from multiple models are typically averaged.
+
+## Deep learning
+
+- Subset of Machine Learning
+- Uses neural networks to emulate animal brains
+- Requires large amounts of data
+- Useful when input is images or text
