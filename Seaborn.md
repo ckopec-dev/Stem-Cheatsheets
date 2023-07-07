@@ -151,3 +151,49 @@ plt.show()
 
 ~~~
 
+### Box plots
+
+~~~
+
+# Shows the distribution of quantitative data
+# Colored box represents the 25-75th percentile
+# The line inside the box represents the median
+# The whiskers represent the spread. They extend to 1.5 times the interquartile range (change by setting whis={multiplier}, or whis=[{lower-percentile},{upper-percentile}])
+# Floating points represent outliers (omit with sym="")
+
+# Imports
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Load built-in dataset
+tips = sns.load_dataset("tips")
+
+# Create box plot
+sns.catplot(x="time", y="total_bill", data=tips, kind="box")
+plt.show()
+
+~~~
+
+### Point plots
+
+~~~
+
+# The mean of quantitative variable
+# Vertical bars represent 95% confidence intervals
+
+# Imports
+import seaborn as sns
+import matplotlib.pyplot as plt
+import numpy import median
+
+# Data load not shown
+
+# Create point plot
+sns.catplot(x="{x-valyes}, y={y-values}, data=df; kind="point")
+plt.show()
+
+# Set join=False to remove lines between categories
+# To use median instead of mean, set estimator=median
+# To add caps to the end of the confidence intervals, set capsize={cap-size}
+
+~~~
