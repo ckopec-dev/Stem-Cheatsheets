@@ -197,3 +197,61 @@ plt.show()
 # To add caps to the end of the confidence intervals, set capsize={cap-size}
 
 ~~~
+
+### Figure styles
+
+- Changes background and axes, among other things
+- Presets: white (the default), dark, whitegrid, darkgrid, ticks
+- Set via sns.set_style()
+
+### Palette styles
+
+- Changes the main elements of the plot
+- Set via sns.set_palette()
+- Diverging palettes provide a transition from one color to another contrasting color
+- Sequential palettes are one or two blended colors, moving from light to dark values
+
+### Create a custom palette
+
+~~~
+
+color_names = ["red", etc]
+sns.set_palette(color_names)
+
+hex_codes = ['#FBB4AE', etc]
+sns.set_palette(hex_codes)
+
+~~~
+
+### Change plot scale
+
+- Changes scale of plot elements and labels
+- Set via sns.set_context()
+- Presets: paper (the default), notebook, talk, poster
+
+### Seaborn objects
+
+~~~
+
+# Seaborn crates 2 types of objects: FacetGrid (rel and cat plots) and AxesSubplot (box and line plots)
+# To view the type:
+
+g = sns.relplot(x="height", y="weight", data=df)
+type(g)
+
+# Set the title on a FacetGrid with a custom height (y)
+g.fig.suptitle("My Title", y=1.05)
+
+# Set the title on an AxesSubplot
+g.set_title("My Title", y=1.05)
+
+# Set the titles on a subplot
+g.set_titles("Title {variable_name}")
+
+# Add axis labels
+g.set(xlbel="X Label", ylabel="Y Label")
+
+# Rotate x-axis labels
+plt.xticks(rotation=90)
+
+~~~
