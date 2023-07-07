@@ -126,3 +126,28 @@ sns.relplot(x="hour", y="brightness", data=sunlight, kind="line", hue="location"
 
 ~~~
 
+### Categorical plots 
+
+~~~
+
+# Involve a categorical variable
+# Used to compare groups
+
+# Imports
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Data load not shown
+
+# Create list to specify category order
+category_order = [4, 6, 8, 12]
+
+# Create count plot
+sns.catplot(x="cylinders", data=cars, kind="count", order=category_order)
+plt.show()
+
+# To create a category bar plot, set kind="bar" and set y={y-values}.
+# Bar plots display mean of quantitative variable per category (95% confidence interval).
+
+~~~
+
