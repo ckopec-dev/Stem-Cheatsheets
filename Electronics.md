@@ -44,8 +44,10 @@
 
 ### Resistors
 
-- Create a resistance in electron flow, like stepping on a water hose
-- Convert 1st and 2nd stripe by color value, then add color zeroes
+- Create a resistance in electron flow, like stepping on a water hose.
+- Convert 1st and 2nd stripe by color value, then add color zeroes.
+- When resistors are in series, electricy has to pass through each of them to reach the other, so resistance rises.
+- When resistors are in parallel, electricty can flow through both, so resistance drops.
 
 | Color | Value |
 | - | - |
@@ -72,3 +74,5 @@
 | Violet | 7 |
 | Gray | 8 |
 | White | 9 |
+
+
