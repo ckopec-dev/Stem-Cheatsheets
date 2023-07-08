@@ -18,6 +18,9 @@ plt.plot(a_values, b_values, label="Dataset N", color="seagreen", linewidth=1)
 plt.legend(color="green")
 plt.show()
 
+# Clear plot
+# plt.clf()
+
 ~~~ 
 
 ## Labels and legends
