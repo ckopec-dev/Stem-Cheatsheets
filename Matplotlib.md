@@ -34,6 +34,9 @@ plt.title("This is the title", fontsize=20)
 # Add arbitrary text
 plt.text(xcoord, ycoord, "Some text")
 
+# Customize ticks. First param is the tick values, 2nd param is the tick labels.
+plt.yticks([0, 2, 4, 6, 8, 10], ['0', '2B', '4B', '6B', '8B', '10B'])
+
 ~~~
 
 ## Styles
