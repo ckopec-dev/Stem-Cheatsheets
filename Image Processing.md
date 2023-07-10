@@ -1,5 +1,5 @@
 
-# Image Processing Cheatsheets
+# Image Processing Cheatsheet
 
 ## Installation of skimage-image
 
