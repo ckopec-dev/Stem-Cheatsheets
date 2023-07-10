@@ -94,6 +94,9 @@ for key, value in dic.items() :
 # To loop 2d numpy arrays
 for val in np.nditer(my2d_array) :
 
+# To loop pandas dataframes
+for label, row in df.iterrows() :
+
 ~~~
 
 ## Variables
