@@ -25,6 +25,9 @@ model.add(Dense(100, activation='relu'))
 # Output layer
 model.add(Dense(1))
 
+# Print out model architecture
+print(model.summary())
+
 ~~~
 
 ### Compiling model
