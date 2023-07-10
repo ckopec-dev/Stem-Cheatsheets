@@ -45,3 +45,9 @@
 ### Select rows and columns by indexes
 `df.iloc[[1,2,3], [0,1]]`
 
+### Filter with a comparison operator
+`df[df["square_feet"] > 5]`
+
+### Filter with a boolean operator
+`df[np.logical_and(df["square_feet"] > 5, df["square_feet] < 15)]`
+
