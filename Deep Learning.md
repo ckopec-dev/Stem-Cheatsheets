@@ -17,6 +17,25 @@
 - An activation function determines if the neuron fires.
 - A popular modern one is called Rectified Linear Activation (ReLU): returns 0 if x < 0, otherwise returns x.
 
+## Loss functions
+
+- Aggregates errors in predictions into a single number
+- It's a measure of a model's predictive performance
+- Lower = better
+
+### Gradient descent
+
+- Look around for nearby downhill slopes (go opposite the slope, if the slope is positive)
+- Repeat until uphill in every direction
+
+### Learning rate
+
+- Update every weight by subtracting learning rate * slope
+
+## Backpropagation
+
+- Sends error from output layer back through previous layers and updates the weights accordlingly
+
 ## Sample code
 
 ~~~
