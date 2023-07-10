@@ -76,3 +76,16 @@ model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accur
 model.fit(predictors, target)
 
 ~~~
+
+## Reusing models
+
+~~~
+
+from tensorflow.keras.models import load_model
+
+model.save('my_model.h5')
+my_model = load_model('my_model.h5')
+predictions = my_model.predict(test_data)
+probability_true = predictions[:,1]
+
+~~~
