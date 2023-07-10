@@ -1,6 +1,6 @@
 
 
-# Curl cheatsheet
+# Curl Cheatsheet
 
 ## Basics
 
