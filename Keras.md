@@ -59,6 +59,8 @@ model.fit(data, target)
 
 ### Example classification code
 
+~~~
+
 from tensorflow.keras.utils import to_categorical
 
 data = pd.read_csv('basketball_shot_log.csv')
@@ -72,3 +74,5 @@ model.add(Dense(100, activation='relu'))
 model.add(Dense(2, activation='softmax'))
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 model.fit(predictors, target)
+
+~~~
