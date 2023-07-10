@@ -154,7 +154,7 @@ y = x
 - Dictionaries are like lists of key-value pairs
 - Keys should be unique and immuatable
   
-### Examlples
+### Examples
 
 ~~~
 
