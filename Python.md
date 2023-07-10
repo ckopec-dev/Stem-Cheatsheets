@@ -67,6 +67,29 @@ else :
 
 ~~~
 
+### While loops
+
+~~~
+
+while condition :
+    expression
+
+~~~
+
+### For loops
+
+~~~
+
+# General syntax
+for var in seq :
+    expression
+
+# To enumerate indexes in an array
+for x, y in enumerate(data) :
+    print("x: " + str(x) + ", y: " + str(y))
+
+~~~
+
 ## Variables
 
 - Must start with a letter (lowercase is better)
