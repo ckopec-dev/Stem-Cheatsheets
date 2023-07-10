@@ -4,11 +4,10 @@
 ## Basics
 
 ### Import pandas
-
 `import pandas as pd`
 
-### Create a dataframe from a csv file
-`df = pd.read_csv('my_file.csv')`
+### Create a dataframe from a csv file. index_col refers to a column used as a row index.
+`df = pd.read_csv('my_file.csv', index_col=0)`
 
 ### Print the dataframe
 `print(df)`
@@ -29,5 +28,4 @@
 `expensive = df[df.price > 20]`
 
 ### Create a DataFrame from a dictionary
-
 `df = pd.DataFrame({dictionary})`
