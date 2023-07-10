@@ -27,5 +27,21 @@
 ### Select a column with a logical comparison
 `expensive = df[df.price > 20]`
 
-### Create a DataFrame from a dictionary
+### Create a dataframe from a dictionary
 `df = pd.DataFrame({dictionary})`
+
+### Return a dataframe by selecting keys from an existing dataframe
+`df = my_dataframe[["my_key1", "my_key2"]]`
+
+### Slice a dataframe to return only certain rows
+`df[1:4]`
+
+### Select rows by named indexes
+`df.loc[["my_index1", "my_index2"]]`
+
+### Select rows by named indexes and specify columns
+`df.loc[["my_index1", "my_index2"], ["col1", "col2"]]`
+
+### Select rows and columns by indexes
+`df.iloc[[1,2,3], [0,1]]`
+
