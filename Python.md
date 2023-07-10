@@ -33,6 +33,21 @@ $ python3
 - **: exponentiation
 - %: modulo
 
+### Comparison operators
+
+- <: less than
+- <=: less than or equal to
+- >: greater than
+- >=: greater than or equal to
+- ==: equal
+- !=: not equal
+
+### Boolean operators
+
+- {value1} and {value2}: returns true if both values are true. To use on numpy arrays: np.logical_and({comparison})
+- {value1} and {value2}: returns true if either value is true. To use on numpy arrays: np.logical_or({comparison})
+- not {value}: returns opposite of value. To use on numpy arrays: np. logical_not({comparison})
+
 ### Create a comment
 
 `# This is a comment`
