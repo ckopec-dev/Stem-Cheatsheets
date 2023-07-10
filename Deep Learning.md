@@ -1,5 +1,5 @@
 
-# Deep Learning Cheatsheets
+# Deep Learning Cheatsheet
 
 ## Neural networks
 
