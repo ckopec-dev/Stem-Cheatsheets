@@ -88,6 +88,12 @@ for var in seq :
 for x, y in enumerate(data) :
     print("x: " + str(x) + ", y: " + str(y))
 
+# To loop dictionaries
+for key, value in dic.items() :
+
+# To loop 2d numpy arrays
+for val in np.nditer(my2d_array) :
+
 ~~~
 
 ## Variables
