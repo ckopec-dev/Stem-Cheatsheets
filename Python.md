@@ -98,6 +98,10 @@ ages[-2]
 # Get item from list that contains another list (a.k.a. subsetting.)
 names_and_ages[2][0]
 
+# Find index by string value
+people = ["bob", "sally"]
+index_people = people.index("sally")
+
 ~~~
 
 ### Slicing
@@ -142,6 +146,38 @@ y = list(x)
 
 # This retains the reference to the same memory location, so updates to y will be reflected in x.
 y = x
+
+~~~
+
+## Dictionaries
+
+- Dictionaries are like lists of key-value pairs
+- Keys should be unique and immuatable
+  
+### Examlples
+
+~~~
+
+# Example of names + ages
+people = { "bob":34, "alice":14, "mark": 24 }
+
+# Get bob's age
+people["bob"]
+
+# Get all the keys
+people.keys()
+
+# Update a value
+people["mark"] = 25
+
+# Check if a key exists. Returns true/false.
+"bob" in people
+
+# Add a key while assigning a value.
+people["jeff"] = 64
+
+# Remove a key.
+del(people["jeff"])
 
 ~~~
 
