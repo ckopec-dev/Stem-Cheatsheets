@@ -52,6 +52,21 @@ $ python3
 
 `# This is a comment`
 
+## Control statements
+
+### If-then-else
+
+~~~
+
+if condition :
+    expression
+elif :
+    expression
+else :
+    expression
+
+~~~
+
 ## Variables
 
 - Must start with a letter (lowercase is better)
