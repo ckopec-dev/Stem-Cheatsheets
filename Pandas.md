@@ -93,4 +93,21 @@
 ### Adding a new column
 `dogs["height_m"] = dogs["height_cm"] / 100`
 
+## Aggregation
 
+### Show various stats of a column
+
+- mean()
+- median()
+- mode()
+- min()
+- max()
+- var()
+- std()
+- sum()
+- quantile()
+- agg({custom-function-name}): this allows custom aggregate functions to be used like native functions
+- cumsum(): cummulative sum - returns a number for each row of the dataframe, cumulatively summed
+- cummax()
+- cummin()
+- cumprod()
