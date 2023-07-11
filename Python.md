@@ -196,6 +196,7 @@ ages[0:2] = [3, 20]
 
 # Appending to a list.
 names_and_ages + ["Sally", 14]
+names_and_ages.append(some_other_list)
 
 # Deleting from a list. Deletes item with index 2.
 del(names_and_ages[2])
