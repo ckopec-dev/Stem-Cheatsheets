@@ -42,7 +42,7 @@ model.compile(optimizer='adam', loss='mean_squared_error')
 
 ~~~
 
-model.fit(data, target)
+model.fit(data, target, validation_split=0.3)
 
 ~~~
 
@@ -90,5 +90,34 @@ model.save('my_model.h5')
 my_model = load_model('my_model.h5')
 predictions = my_model.predict(test_data)
 probability_true = predictions[:,1]
+
+~~~
+
+## Optimizers
+
+### Stochastic gradient descent
+
+~~~
+
+learing_rates_to_test = [0.000001, 0.01, 1]
+
+# Loop learning rates to test
+for lr in learning_rates_to_test :
+    model = get_model()
+    my_optimizer = SGD(lr=lr)
+    model.compile(optimizer = my_optimizer, loss = 'categorical_crossentropy')
+    model.fit(predictors, target)
+
+~~~
+
+### Early stopping monitor
+
+~~~
+
+from tensorflow.keras.callbacks import EarlyStopping
+
+monitor = EarlyStopping(patience=2)
+
+mod.fit(predictors, taget, validation_split=0.3, epochs=20, callbacks = [monitor])
 
 ~~~
