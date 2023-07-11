@@ -88,3 +88,9 @@
 ### Filter with a boolean operator
 `df[np.logical_and(df["square_feet"] > 5, df["square_feet] < 15)]`
 
+## Feature engineering
+
+### Adding a new column
+`dogs["height_m"] = dogs["height_cm"] / 100`
+
+
