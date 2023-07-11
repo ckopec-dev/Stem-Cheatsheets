@@ -18,14 +18,51 @@
 ### Show dataframe info
 `print(df.info())`
 
+### Print the number of rows and columns
+`print(df.shape)`
+
+### Show summary stats
+`print(df.describe())`
+
+### Get 2d numpy array of values
+`df.values`
+
+### Get index of column names
+`df.columns`
+
+### Get index of rows
+`df.index`
+
+### Sort with single column
+
+`df.sort_values("columnA", ascending=False)`
+
+### Sort with multiple columns
+
+`df.sort_values(["columnA", "columnB"], ascending=[True, False])`
+
+## Subsetting
+
 ### Select a column
-`first_name = df['first_name']`
+`first_name = df["first_name"]`
+
+### Select multiple columns
+`df[["first_name", "last_name"]]`
 
 ### Use dot notation to select a column name. Only works if colum name doesn't contain spaces or special characters.
 `last_name = df.last_name`
 
 ### Select a column with a logical comparison
-`expensive = df[df.price > 20]`
+`expensive = df["price"] > 20`
+
+### Subset with a logical comparison to return all affected rows
+`df[df["price"] > 20]`
+
+### Subset based on a date column
+`df[df["dob"] < "2000-01-01"]`
+
+### Subset using isin()
+`df[df["color"].isin(["Red", "Blue"])]`
 
 ### Create a dataframe from a dictionary
 `df = pd.DataFrame({dictionary})`
