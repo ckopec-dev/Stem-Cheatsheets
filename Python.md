@@ -37,8 +37,8 @@ $ python3
 
 - <: less than
 - <=: less than or equal to
-- >: greater than
-- >=: greater than or equal to
+- &gt;: greater than
+- &gt;=: greater than or equal to
 - ==: equal
 - !=: not equal
 
