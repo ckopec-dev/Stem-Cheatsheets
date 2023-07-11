@@ -84,6 +84,9 @@ while condition :
 for var in seq :
     expression
 
+# Loop through a range of integers
+for x in range(10) :
+
 # To enumerate indexes in an array
 for x, y in enumerate(data) :
     print("x: " + str(x) + ", y: " + str(y))
