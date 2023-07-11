@@ -111,3 +111,29 @@
 - cummax()
 - cummin()
 - cumprod()
+
+### Drop duplicates
+
+`df.drop_duplicates(subset=["columnA", "columnB"]x)`
+
+### Count 
+
+`df.["columnA"].value_counts(sort=True)`
+
+### Count proportions of total
+
+`df.["columnA"].value_counts(normalize=True)`
+
+### Group summaries
+
+~~~
+
+# General syntax
+df.groupby("columnA")["columnB"].mean()`
+
+# Examples
+dogs.groupby("color")["weight"].agg([min, max, sum])
+dogs.groupby(["color", "breed"])["weight"].mean()
+
+~~~
+
