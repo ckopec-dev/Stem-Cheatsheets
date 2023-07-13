@@ -1,10 +1,74 @@
 
 # Pandas Cheatsheet
 
+Pandas is a python library for working with data (analyzing, cleaning, importing/exporting, and manipulating.)
+
 ## Basics
+
+### Installation
+`$ pip3 install pandas`
 
 ### Import pandas
 `import pandas as pd`
+
+### Check version
+`print(pd.__version__)`
+
+## Series
+
+A Panda Series is analogous to a column in a database table.
+It is a one-dimensional array consisting of a single type.
+
+~~~
+
+import pandas as pd
+
+s = [1, 3, 5]
+my_series = pd.Series(s)
+print(my_series)
+
+~~~
+
+### The values are labeled with their zero-based index number, unless specified.  
+`print(my_series[0])`
+
+### To customize the labels
+
+~~~
+
+import pandas as pd
+
+s = [1, 3, 5]
+my_series = pd.Series(s, index = ["a", "b", "c"])
+print(my_series)
+
+~~~
+
+### Create a series from a dictionary (the keys become the labels)
+
+~~~
+
+import pandas as pd
+
+s = {"a": 1, "b": 3, "c": 5}
+my_series = pd.Series(s)
+print(my_series)
+
+~~~
+
+### Create a series from a dictionary using only select keys
+
+~~~
+
+import pandas as pd
+
+s = {"a": 1, "b": 3, "c": 5}
+my_series = pd.Series(s, index = ["a", "b"])
+print(my_series)
+
+~~~
+
+
 
 ### Create a dataframe from a csv file. index_col refers to a column used as a row index.
 `df = pd.read_csv('my_file.csv', index_col=0)`
