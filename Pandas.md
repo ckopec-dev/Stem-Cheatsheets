@@ -171,7 +171,91 @@ print(df)
 ### Get index of rows
 `df.index`
 
+## Data cleaning
 
+### Remove rows with one or more empty cells 
+
+~~~
+
+import pandas as pd
+
+df = pd.read_csv("data.csv")
+
+# The dropna method returns a new dataframe
+new_df = df.dropna()
+
+# To update the dataframe in place and return null
+df.dropna(inplace = True)
+
+~~~
+
+### Replace empty values with new value
+
+~~~
+
+import pandas as pd
+
+df = pd.read_csv("data.csv")
+
+# Replace null values with 123
+df.fillna(123, inplace = True)
+
+# To only replace the null values in a specific column
+df["ColumnA"].fillna(123, inplace = True)
+
+# To replace the null values with the mean of all the values in given column
+m = df["ColumnA"].mean()
+df["ColumnA"]fillna(x, inplace = True)
+
+~~~
+
+### Replacing data in the wrong format
+
+~~~
+
+import pandas as pd
+
+df = pd.read_csv("data.csv")
+df["Date"] = pd.to_datetime(df["Date"])
+
+# Now remove rows with a null date
+df.dropna(subset=["Date"], inplace = True)
+
+~~~
+
+### Replace data in a specific row and column
+`df.loc[15, "ColumnA"] = 123`
+
+### To loop through all rows and replace or delete them with a rule
+
+~~~
+
+for i in df.index:
+    if df.loc[i, "ColumnA"] > 100:
+
+        # Replace
+        df.loc[i, "ColumnA"] = 100
+
+        # Delete
+        df.drop(i, inplace = True)
+
+~~~
+
+### Deduplicate rows
+
+~~~
+
+import pandas as pd
+
+df = pd.read_csv("data.csv")
+
+# Show duplicates (True or False for every row)
+print(df.duplicated())
+
+# Remove them
+df.drop_duplicates(inplace = True)
+
+~~~
 
 
 
@@ -268,9 +352,6 @@ print(df)
 - cummin()
 - cumprod()
 
-### Drop duplicates
-
-`df.drop_duplicates(subset=["columnA", "columnB"]x)`
 
 ### Count 
 
