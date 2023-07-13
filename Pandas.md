@@ -356,7 +356,7 @@ dogs.pivot_table(values="columnA", index="columnB", columns="columnC", fill_valu
 ## Subsetting
 
 ### Create a new DataFrame with selected columns of an existing DataFrame
-`new_df = df[["ColumnA", "ColumnB"]]
+`new_df = df[["ColumnA", "ColumnB"]]`
 
 ### Create a new DataFrame with filtered rows of an existing DataFrame
 `new_df = df[df["ColumnA"] > 100]`
