@@ -298,6 +298,27 @@ df.sort_values(by=["ColumnA", "ColumnB"], inplace=True, ascending=[False, True])
 
 ~~~
 
+### Sort by index
+
+~~~
+
+import pandas as pd
+
+data = {
+    "height": [45, 56, 43],
+    "weight": [12, 45, 23]
+}
+
+df = pd.DataFrame(data, index  = ["bob", "mary", "juan"])
+
+# Ascending (the default)
+df.sort_index()
+
+# Descending
+df.sort_index(ascending=False)
+
+~~~
+
 ## Aggregation
 
 ### Show various stats of a column
