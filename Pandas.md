@@ -328,3 +328,22 @@ df.sort_values(by=["ColumnA", "ColumnB"], inplace=True, ascending=[False, True])
 ### Group summaries
 `df.groupby("columnA")["columnB"].mean()`
 
+### Pivot tables
+
+~~~
+
+# By default, aggregation is by mean
+df.pivot_table(values="columnA", index="columnB")
+
+# Specify an aggregation
+df.pivot_table(values="columnA", index="columnB", aggfunc=np.median)
+
+# Specify multiple aggregations
+dogs.pivot_table(values="columnA", index="columnB", aggfunc=[np.median, np.mean])
+
+# Pivot by two variables.
+# fill_value prevents NaN results
+# margins creates a final column containing the mean of values for given row (not including 0 values)
+dogs.pivot_table(values="columnA", index="columnB", columns="columnC", fill_value=0, margins=True)
+
+~~~
