@@ -90,7 +90,7 @@
 `df.loc[["my_index1", "my_index2"], ["col1", "col2"]]`
 
 ### Select rows with tuples
-`df.lock[[("value1", "value2"), ("value3", "value4")]]`
+`df.loc[[("value1", "value2"), ("value3", "value4")]]`
 
 ### Select rows and columns by indexes
 `df.iloc[[1,2,3], [0,1]]`
