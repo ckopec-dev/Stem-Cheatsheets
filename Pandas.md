@@ -351,7 +351,7 @@ dogs.pivot_table(values="columnA", index="columnB", columns="columnC", fill_valu
 ## Feature engineering
 
 ### Adding a new derived column
-`df["ColumnA"] = df["ColumnA"] / 100`
+`df["ColumnA"] = df["ColumnB"] / 100`
 
 ## Subsetting
 
