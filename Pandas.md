@@ -347,3 +347,8 @@ dogs.pivot_table(values="columnA", index="columnB", aggfunc=[np.median, np.mean]
 dogs.pivot_table(values="columnA", index="columnB", columns="columnC", fill_value=0, margins=True)
 
 ~~~
+
+## Feature engineering
+
+### Adding a new column
+`df["ColumnA"] = df["ColumnA"] / 100`
