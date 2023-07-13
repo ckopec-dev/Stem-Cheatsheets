@@ -115,19 +115,43 @@ print(df)
 ### Return a row by index name
 `print(df.loc["bob"])`
 
+## Reading file data
 
+### From CSV
 
+~~~
 
+import pandas as pd
 
+df = pd.read_csv('data.csv')
 
-### Create a dataframe from a csv file. index_col refers to a column used as a row index.
-`df = pd.read_csv('my_file.csv', index_col=0)`
+# This will print the first 5 and last 5 rows by default
+# To override, set pd.options.display.max_rows = n
+print(df)
 
-### Print the dataframe
-`print(df)`
+# This will print everything
+print(df.to_string())
 
-### Inspect dataframe (displays first 5 rows)
-`print(df.head())`
+~~~
+
+### From JSON
+
+~~~
+
+import pandas as pd
+
+df = pd.read_json('data.json')
+print(df)
+
+~~~
+
+## Analyzing data
+
+### Show first n rows. If n is not specified, it will return 5 by default.
+`print(df.head(n))`
+
+### Show last n rows. If n is not specified, it will return 5 by default.
+`print(df.tail(n))`
 
 ### Show dataframe info
 `print(df.info())`
@@ -146,6 +170,11 @@ print(df)
 
 ### Get index of rows
 `df.index`
+
+
+
+
+
 
 ### Sort with single column
 `df.sort_values("columnA", ascending=False)`
