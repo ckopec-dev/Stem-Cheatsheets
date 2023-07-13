@@ -16,7 +16,7 @@ Pandas is a python library for working with data (analyzing, cleaning, importing
 
 ## Series
 
-A Panda Series is analogous to a column in a database table.
+A Pandas Series is analogous to a column in a database table.
 It is a one-dimensional array consisting of a single type.
 
 ~~~
@@ -67,6 +67,56 @@ my_series = pd.Series(s, index = ["a", "b"])
 print(my_series)
 
 ~~~
+
+## DataFrames
+
+A Pandas DataFrame is analogous to a database table, i.e. a 2d structure with rows and columns.
+
+~~~
+
+import pandas as pd
+
+data = {
+    "height": [45, 56, 43],
+    "weight": [12, 45, 23]
+}
+
+df = pd.DataFrame(data)
+print(df)
+
+~~~
+
+### Locate a row by row index
+`print(df.loc[0])`
+
+When using single brackets, the result is a Series.
+
+### Locate multiple rows by row indexes
+`print(df.loc[[0, 1, 2]])`
+
+When using double brackets, the result is a DataFrame.
+
+### Add a custom index to give each row an indentifier/name.
+
+~~~
+
+import pandas as pd
+
+data = {
+    "height": [45, 56, 43],
+    "weight": [12, 45, 23]
+}
+
+df = pd.DataFrame(data, index  = ["bob", "mary", "juan"])
+print(df)
+
+~~~
+
+### Return a row by index name
+`print(df.loc["bob"])`
+
+
+
 
 
 
