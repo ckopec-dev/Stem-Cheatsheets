@@ -350,5 +350,19 @@ dogs.pivot_table(values="columnA", index="columnB", columns="columnC", fill_valu
 
 ## Feature engineering
 
-### Adding a new column
+### Adding a new derived column
 `df["ColumnA"] = df["ColumnA"] / 100`
+
+## Subsetting
+
+### Create a new DataFrame with selected columns of an existing DataFrame
+`new_df = df[["ColumnA", "ColumnB"]]
+
+### Create a new DataFrame with filtered rows of an existing DataFrame
+`new_df = df[df["ColumnA"] > 100]`
+
+### Create a new DataFrame with specific columns and filtered rows of an existing DataFrame
+`new_df = df.loc[df["ColumnA"] > 100, "ColumnB"]`
+
+### Create a new DataFrame with specific row and column indexes
+`new_df = df.iloc[9:25, 2:5]`
