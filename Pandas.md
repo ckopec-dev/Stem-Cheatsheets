@@ -34,12 +34,13 @@
 `df.index`
 
 ### Sort with single column
-
 `df.sort_values("columnA", ascending=False)`
 
 ### Sort with multiple columns
-
 `df.sort_values(["columnA", "columnB"], ascending=[True, False])`
+
+### Sort by index values
+`df.sort_index(level=["columnA", "columnB"], ascending=[True, False])`
 
 ## Subsetting
 
@@ -64,6 +65,15 @@
 ### Subset using isin()
 `df[df["color"].isin(["Red", "Blue"])]`
 
+### Setting a column as the index
+`index = df.set_index("columnA")`
+
+### Setting multiple columns as the index
+`index = df.set_index(["columnA", "columnB"])`
+
+### Removing an index. drop=True discards it.
+`index.reset_index(drop=True)`
+
 ### Create a dataframe from a dictionary
 `df = pd.DataFrame({dictionary})`
 
@@ -78,6 +88,9 @@
 
 ### Select rows by named indexes and specify columns
 `df.loc[["my_index1", "my_index2"], ["col1", "col2"]]`
+
+### Select rows with tuples
+`df.lock[[("value1", "value2"), ("value3", "value4")]]`
 
 ### Select rows and columns by indexes
 `df.iloc[[1,2,3], [0,1]]`
