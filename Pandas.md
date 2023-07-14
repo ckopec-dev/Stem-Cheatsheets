@@ -81,8 +81,16 @@ data = {
     "weight": [12, 45, 23]
 }
 
+# Create DataFrame from a dictionary
 df = pd.DataFrame(data)
 print(df)
+
+# Create DataFrame from a dictionary of lists
+dict_of_lists = {
+    "name": ["Sam", "Bob"],
+    "age": [45, 32]
+}
+df = pd.DataFrame((dict_of_Lists)
 
 ~~~
 
