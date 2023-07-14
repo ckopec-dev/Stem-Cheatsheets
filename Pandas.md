@@ -125,7 +125,7 @@ print(df)
 
 ## Reading file data
 
-### From CSV
+### From/To CSV
 
 ~~~
 
@@ -139,6 +139,9 @@ print(df)
 
 # This will print everything
 print(df.to_string())
+
+# Export
+df.to_csv("MyCsv.csv")
 
 ~~~
 
