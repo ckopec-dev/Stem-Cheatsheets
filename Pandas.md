@@ -173,6 +173,25 @@ print(df)
 
 ## Data cleaning
 
+### Show missing values
+
+~~~
+
+import pandas as pd
+
+df = pd.read_csv("data.csv")
+
+# Show a boolean for every cell (not very helpful)
+print(df.isna())
+
+# Show a boolean for each column. True if there are any missing values in that column.
+print(df.isna().any())
+
+# Show a count of missing values for each column.
+print(df.isna().sum())
+
+~~~
+
 ### Remove rows with one or more empty cells 
 
 ~~~
