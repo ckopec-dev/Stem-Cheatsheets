@@ -471,3 +471,25 @@ df.plot(x="columnA", y="columnB", kind="scatter")
 plt.show()
 
 ~~~
+
+### Stacking plots
+
+~~~
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv("data.csv")
+
+# 1st plot. Make semi-transparent with alpha
+df["ColumnA"].hist(alpha=0.7)
+
+# 2nd plot
+df["ColumnB"].hist(alpha=0.7)
+
+# Legend to distinguish the two
+plt.legend(["Plot1", "Plot2"])
+
+plt.show()
+
+~~~
