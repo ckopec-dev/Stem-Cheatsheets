@@ -387,3 +387,87 @@ dogs.pivot_table(values="columnA", index="columnB", columns="columnC", fill_valu
 
 ### Create a new DataFrame with specific row and column indexes
 `new_df = df.iloc[9:25, 2:5]`
+
+## Data visualization
+
+### Histograms
+
+Creates buckets of variable counts.
+
+~~~
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv("data.csv")
+
+# Use defaults
+df["ColumnA"].hist()
+
+# Change number of bins
+df["ColumnA"].hist(bins=5)
+
+plt.show()
+
+~~~
+
+### Bar plots
+
+Show relationship between a categorical variable and a numeric variable.
+
+~~~
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv("data.csv")
+
+# Use defaults
+df.plot(kind="bar")
+
+# Add a title
+df.plot(kind="bar", title="title")
+
+plt.show()
+
+~~~
+
+### Line plots
+
+For visualizing changes in numeric variables over time.
+
+~~~
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv("data.csv")
+
+# Use defaults
+df.plot(x="columnA", y="columnB", kind="line")
+
+# Rotate x-axis labels to make them easier to read
+df.plot(x="columnA", y="columnB", kind="line", rot=45)
+
+plt.show()
+
+~~~
+
+### Scatter plots
+
+For visualizing relationships between two numeric variables.
+
+~~~
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv("data.csv")
+
+# Use defaults
+df.plot(x="columnA", y="columnB", kind="scatter")
+
+
+plt.show()
+
+~~~
