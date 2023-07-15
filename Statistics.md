@@ -112,3 +112,11 @@ df.sample(2)
 df.sample(2, replace = True)
 
 ~~~
+
+### Probability distribution
+
+- Describes the probability of each possible outcome.
+- The expected value is the mean.
+- Discrete distributions represent probabilities with discrete outcomes (e.g. flipping a coin).
+- Discrete uniform distribution: when all outcomes have the same probability (e.g. rolling a die).
+- Law of large numbers: as the sample size increases, the sample mean approaches the expected value.
