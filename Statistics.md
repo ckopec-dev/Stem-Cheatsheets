@@ -88,3 +88,27 @@ upper_threshold = np.quantile(df["ColumnA"], 0.75) + 1.5 * iqr
 df[(df["ColumnA"] < lower_threshold) | (df["ColumnA"] > upper_threshold)]
 
 ~~~
+
+## Probability
+
+The probability of an event is the number of ways it can happen divided by the total number of possible outcomes.
+
+### Random sampling
+
+~~~
+
+import numpy as np
+
+# To insure reproducibility, set random seed
+np.random.seed(10)
+
+# Get random record
+df.sample()
+
+# Get 2 random records (without replacement. i.e. don't pick the same record)
+df.sample(2)
+
+# Get 2 random records with replacement
+df.sample(2, replace = True)
+
+~~~
