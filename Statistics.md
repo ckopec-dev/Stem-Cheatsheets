@@ -37,7 +37,7 @@ statistics.mode()
 ~~~
 
 import numpy as np
-import statistics
+from scipy.stats import iqr
 
 # Variance: average distance from each data point to the data's mean.
 # The higher the variance, the more spread out the data is.
@@ -58,5 +58,33 @@ np.std(df["ColumnA"], ddof=1))
 # Mean absolute deviation
 dists = df["ColumnA"] - mean(df$ColumnA)
 np.mean(np.abs(dists))
+
+# Quantiles: split up the data into a number of equal parts.
+q = np.quantile(df["ColumnA"], 0, 0.25, 0.5, 0.75, 1)
+
+# Another way of creating quantiles:
+# np.linspace({start}, {stop}, {num})
+np.quantile(df["ColumnA"], np.linspace(0, 1, 5))
+
+# Interquartile range: the 0.25 - 0.75 quartile range. Height of the box in a boxplot.
+iqr(df["ColumnA"])
+
+~~~
+
+### Outliers
+
+An outlier is a data point "substantially" different from the others. A general rule of thumb is: data < Q1 - 1.5 x IQR OR data > Q3 + 1.5 * IQR.
+
+~~~
+
+import numpy as np
+from scipy.stats import iqr
+
+iqr = iqr(df["ColumnA"])
+lower_threshold = np.quantile(df["ColumnA"], 0.25) - 1.5 * iqr
+upper_threshold = np.quantile(df["ColumnA"], 0.75) + 1.5 * iqr
+
+# Subset the outliers
+df[(df["ColumnA"] < lower_threshold) | (df["ColumnA"] > upper_threshold)]
 
 ~~~
