@@ -31,3 +31,32 @@ np.median()
 statistics.mode()
 
 ~~~
+
+### Measures of spread
+
+~~~
+
+import numpy as np
+import statistics
+
+# Variance: average distance from each data point to the data's mean.
+# The higher the variance, the more spread out the data is.
+
+# This is the manual/long way to calculate it.
+dists = df["ColumnA"] - np.mean(df["ColumnA"])
+sq_dists = dists ** 2
+sum_sq_dists = np.sum(sq_dists
+variance = sum_sq_dists / ({number_of_data_points} - 1)
+
+# The short way.
+# ddof=1 means sample variance. If it isn't specified, population variance is calculated instead.
+variance = np.var(df["ColumnA"], ddof=1)
+
+# Standard deviation: the square root of the variance.
+np.std(df["ColumnA"], ddof=1))
+
+# Mean absolute deviation
+dists = df["ColumnA"] - mean(df$ColumnA)
+np.mean(np.abs(dists))
+
+~~~
