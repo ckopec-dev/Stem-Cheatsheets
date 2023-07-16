@@ -138,3 +138,22 @@ def show_detected_face(result, detected, title="Face image"):
     plt.show()
 
 ~~~
+
+## Metadata
+
+### Extract all image metadata from a directory containing images into a csv file
+
+~~~
+
+# If needed:
+$ sudo apt install exiftool
+
+# Extract:
+$ exiftool -csv >{MyCsv.csv} {directory_containing_images}
+
+# E.g.
+$ exiftool -csv >out.txt ~/Code/images/*
+
+# For quick analysis, import into Access database and query table.
+
+~~~
