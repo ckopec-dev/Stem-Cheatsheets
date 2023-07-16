@@ -327,3 +327,35 @@ esac
 ### Stop a running command
 
 `CTRL-C`
+
+## Windows shares
+
+### Accessing a Windows share from Linux
+
+~~~
+
+*** IMPORTANT! cifs is not secure, so this example isn't either. Use only in test/isolated environments.
+
+# Pre-req installs
+$ sudo apt-get install nfs-common
+$ sudo apt install cifs-utils
+
+# To test connectivity/mounting
+$ sudo mkdir {local mount location, e.g. /mnt/windowsshare}
+$ sudo mount -t cifs -o username={username},password={password} {remote share, e.g. //192.168.0.10/WindowsShare} {local mount location, e.g. /mnt/windowsshare}
+$ ls {local mount location, e.g. /mnt/windowsshare}
+
+# To mount at boot:
+$ sudo nano /etc/sambapasswords
+        username={windows username}
+        password={windows password}
+
+$ sudo chown 0.0 /etc/sambapasswords # So root owns
+$ sudo chmod 600 /etc/sambapasswords # So only root can access
+
+$ sudo nano /etc/fstab
+        add a line: {remote share, e.g. //192.168.0.10/WindowsShare} {local mount location, e.g. /mnt/windowsshare} cifs auto,gid=users,credentials=/etc/sambapasswords,file_mode=0777,dir_mode=0777 0 0
+$ sudo shutdown -r now
+
+~~~
+
