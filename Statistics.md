@@ -120,3 +120,38 @@ df.sample(2, replace = True)
 - Discrete distributions represent probabilities with discrete outcomes (e.g. flipping a coin).
 - Discrete uniform distribution: when all outcomes have the same probability (e.g. rolling a die).
 - Law of large numbers: as the sample size increases, the sample mean approaches the expected value.
+
+### The normal distribution
+
+- Shape is a bell curve
+- Symetrical
+- Area beneath curve = 1
+- Curve never hits 0
+- Described by its mean and standard deviation
+- 68% of area falls within 1 standard deviation
+- 95% falls within 2 standard deviations
+- 99.7% falls within 3 standard deviations
+
+### Find percent of values less/more than given normal distribution
+
+~~~
+
+from scipy.stats import norm
+norm.cdf({value}, {mean}, {std})
+norm.ppf({percent}, {mean}, {std})
+
+# Examples
+
+# How many people are shorter than 150 cm?
+norm.cdf(150, 162, 4)
+
+# How many people are taller than 150 cm?
+1 - norm.cdf(150, 162, 4)
+
+# How many people are 150-153 cm?
+norm.cdf(153, 162, 4) - norm.cdf(150, 162, 4)
+
+# What height are 80% of people shorter than?
+norm.ppf(0.8, 162, 4)
+
+~~~
