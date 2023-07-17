@@ -183,3 +183,7 @@ poisson.cdf(6, 14)
 1 - poisson.cdf(6, 14)
 
 ~~~
+
+### Correlation coefficient
+
+- Quantifies the linear relationship between two variables. Range is -1 to 1.
