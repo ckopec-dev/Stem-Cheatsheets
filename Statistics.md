@@ -155,3 +155,8 @@ norm.cdf(153, 162, 4) - norm.cdf(150, 162, 4)
 norm.ppf(0.8, 162, 4)
 
 ~~~
+
+### The central limit theorum
+
+- The sampling distribution approaches the normal distribution as the number of trials increases
+- Only applies when samples are random and independent
