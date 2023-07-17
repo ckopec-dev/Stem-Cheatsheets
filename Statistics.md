@@ -160,3 +160,26 @@ norm.ppf(0.8, 162, 4)
 
 - The sampling distribution approaches the normal distribution as the number of trials increases
 - Only applies when samples are random and independent
+
+### The Poisson distribution
+
+- Events appear the happen at a certain rate, but at random
+- Probability of some # of events happening over a fixed period of time
+- Lambda: average number of events per time interval
+
+~~~
+
+from scipy.stats import poisson
+
+# Examples
+
+# If average number of events per week is 14, what is the probability of 6 events in a week?
+poisson.pmf(6, 14)
+
+# If average number of events per week is 14, what is the probability of 6 or fewer events in a week?
+poisson.cdf(6, 14)
+
+# If average number of events per week is 14, what is the probability of more than 6 events in a week?
+1 - poisson.cdf(6, 14)
+
+~~~
