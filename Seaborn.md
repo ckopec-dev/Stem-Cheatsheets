@@ -112,6 +112,9 @@ plt.show()
 sns.relplot(x="total_bill", y="tip", data=tips, kind="scatter", alpha=0.4)
 plt.show()
 
+# Add a trendline
+sns.regplot(x="total_bills", y="tip", data=tips, ci=None)
+
 ~~~
 
 ### Relational line plots
