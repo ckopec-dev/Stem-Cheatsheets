@@ -94,3 +94,29 @@ With regression, the predictions from multiple models are typically averaged.
 - Uses neural networks to emulate animal brains
 - Requires large amounts of data
 - Useful when input is images or text
+
+## Business applications
+
+- Draw causal insights. E.g. why are customers leaving?
+- Predict future events. E.g. which customers are likely to leave?
+- Understand patterns in data. E.g. are there groups of similar customers?
+
+### Examples by industry
+
+- Marketing
+  - Predict which customers will purchase next month
+  - Predict each customer's lifetime value
+  - Group customers into segments based on past purchases
+- Finance
+  - Predict fraud
+  - Predict loan payments
+  - Group transactions based on risk
+- Manufacturing
+  - Robotics
+  - Predict which production items are faulty
+  - Predict which machines need maintenance
+  - Group sensor readings and identify anomalies
+- Transportation
+  - Predict delivery times
+  - Predict product demand
+  - Identify optimal routing
