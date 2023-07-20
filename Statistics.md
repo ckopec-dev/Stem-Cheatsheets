@@ -187,3 +187,42 @@ poisson.cdf(6, 14)
 ### Correlation coefficient
 
 - Quantifies the linear relationship between two variables. Range is -1 to 1.
+
+## Making predictioms
+
+~~~
+
+# The dataset
+bream = fish[fish["species"] == "Bream"]
+print(bream.head())
+
+# Plot it to visually explain the relationship of mass v length
+sns.regplot(x="length", y="mass", data=bream, ci=None)
+plt.show()
+
+# Create a fitted model and examine it
+model = ols("mass ~ length", data=bream).fit()
+print(model.params)
+
+# Create explanatory data (in this example, all integer lengths in range of 20 - 41)
+explain = pd.DataFrame({"length"; np.arange(20, 41)})
+
+# Predict
+print(model.predict(explain))
+
+# Create predictiona (as above), but retain original columns and add new one (mass)
+predict = pd.assign(mass=model.predict(explain)
+
+# Plot the predictions along  with original scatterplot
+fig = plt.figure()
+sns.regplot(x="length", y="mass", data=bream, ci=None)
+sns.scatterplot(x="length", y="mass", data=predict, color="red", marker="s")
+plt.show()
+
+# Extrapolating outside range of observed data (frequently does not work well)
+small_bream = pd.DataFrame({"length": [10]})
+predict = small_bream.assign(mass=model.predict(small_bream))
+print(predict)
+
+~~~
+
