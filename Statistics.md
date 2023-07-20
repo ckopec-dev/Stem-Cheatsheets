@@ -224,5 +224,14 @@ small_bream = pd.DataFrame({"length": [10]})
 predict = small_bream.assign(mass=model.predict(small_bream))
 print(predict)
 
+# Show predictions on the original dataset
+print(model.fittedvalues)
+
+# Show prediction errors (actual response values minus predicted response values)
+print(model.resid)
+
+# Show extended details of the model
+print(model.summary())
+
 ~~~
 
