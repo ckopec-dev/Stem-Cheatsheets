@@ -235,3 +235,9 @@ print(model.summary())
 
 ~~~
 
+### Quantifying model fit
+
+- R-squared: the proportion of the variance in the response variable that is predictable from the explanatory variable (1 = perfect fit, 0 = no fit). This value is part of the summary function output.
+- Coefficient determination: correlation squared
+- Residual standard error (RSE): typical difference between a prediction and observed response
+- Mean squared error (MSE): RSE squared
