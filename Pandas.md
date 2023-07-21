@@ -235,7 +235,7 @@ df["ColumnA"].fillna(123, inplace = True)
 
 # To replace the null values with the mean of all the values in given column
 m = df["ColumnA"].mean()
-df["ColumnA"]fillna(x, inplace = True)
+df["ColumnA"]fillna(m, inplace = True)
 
 ~~~
 
