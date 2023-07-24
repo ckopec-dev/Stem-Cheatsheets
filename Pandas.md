@@ -523,3 +523,16 @@ plt.legend(["Plot1", "Plot2"])
 plt.show()
 
 ~~~
+
+## Merging data
+
+### Combining data from dataframes with different columns
+
+# This combines the wards DF with the census DF, joining on the ward column.
+# This is an inner join, which only returns rows that have matching values in both DFs.
+# If the same column appears in both DFs, each will be given a suffix to distinguish them.
+wards_census = wards.merge(census, on="ward")
+
+# Specify the suffixes
+wards_census = wards.merge(census, on="ward", suffixes=("_ward", "_cen"))
+
