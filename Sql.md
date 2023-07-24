@@ -78,8 +78,8 @@ SELECT * FROM films WHERE release_year IS NOT NULL;
 
 ### Comparison operators
 
-- >: greater than
-- >=: greater than or equal to
+- &gt;: greater than
+- &gt;=: greater than or equal to
 - <: less than
 - <=: less than or equal to
 - =: equal to
