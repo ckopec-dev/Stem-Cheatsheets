@@ -528,7 +528,9 @@ plt.show()
 
 ### Combining data from dataframes with different columns
 
-# This combines the wards DF with the census DF, joining on the ward column.
+~~~
+
+# This combines the wards DF with the census DF, joining on the ward column in a 1-1 relationship.
 # This is an inner join, which only returns rows that have matching values in both DFs.
 # If the same column appears in both DFs, each will be given a suffix to distinguish them.
 wards_census = wards.merge(census, on="ward")
@@ -536,3 +538,18 @@ wards_census = wards.merge(census, on="ward")
 # Specify the suffixes
 wards_census = wards.merge(census, on="ward", suffixes=("_ward", "_cen"))
 
+# For a 1-n relationship, same general syntax applies, but now rows with duplicate data will appear.
+
+~~~
+
+### Combining multiple dataframes
+
+~~~
+
+# Merge on two columns
+grants.merge(licenses, on=["address", "zip"])
+
+# Merge multiple dfs
+grants_licenses_ward = grants.merge(licenses, on["address", "zip").merge(wards, on="ward", suffixes("_bus", "_ward"))
+
+~~~
