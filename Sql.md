@@ -29,6 +29,12 @@ SELECT DISTINCT columnA FROM mytable;
 -- Count distinct values in a column
 SELECT COUNT(DISTINCT columnA) AS cnt_distinct FROM mytable;
 
+-- Select top 10 rows on MS Sql Server
+SELECT TOP 10 * FROM mytable
+
+-- Select top 10 rows on MySQL, PostgreSQL, or SQLite
+SELECT * FROM mytable LIMIT 10
+
 ~~~
 
 ## Filtering
