@@ -531,7 +531,6 @@ plt.show()
 ~~~
 
 # This combines the wards DF with the census DF, joining on the ward column in a 1-1 relationship.
-# This is an inner join, which only returns rows that have matching values in both DFs.
 # If the same column appears in both DFs, each will be given a suffix to distinguish them.
 wards_census = wards.merge(census, on="ward")
 
@@ -539,6 +538,9 @@ wards_census = wards.merge(census, on="ward")
 wards_census = wards.merge(census, on="ward", suffixes=("_ward", "_cen"))
 
 # For a 1-n relationship, same general syntax applies, but now rows with duplicate data will appear.
+
+# Example wtih a left join
+movies_taglines = movies.merge(taglines, on="id", how="left")
 
 ~~~
 
@@ -553,3 +555,8 @@ grants.merge(licenses, on=["address", "zip"])
 grants_licenses_ward = grants.merge(licenses, on["address", "zip").merge(wards, on="ward", suffixes("_bus", "_ward"))
 
 ~~~
+
+### Join types
+
+- Inner: returns all rows that have matching key vales in both tables (dataframes)
+- Left: returns all rows in left table, and rows in the right table that have matching key records
