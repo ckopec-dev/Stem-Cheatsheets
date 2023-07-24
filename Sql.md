@@ -59,6 +59,21 @@ SELECT title FROM films WHERE release_year BETWEEN 1960 and 1970
 -- Between is inclusive, so the above is identical to
 SELECT title FROM films WHERE release_year >= 1960 AND release_year <= 1970
 
+-- Select films that with "red" in the title
+SELECT * FROM films WHERE title LIKE '%red%';
+
+-- Select films that do not have "green" in the title
+SELECT * FROM films WHERE title NOT LIKE '%green%';
+
+-- Specify multiple values in a where clause
+SELECT * FROM films WHERE release_year IN (1990, 2000, 2010);
+
+-- Select films with unknown release year
+SELECT * FROM films WHERE release_year IS NULL;
+
+-- Select films with known release year
+SELECT * FROM films WHERE release_year IS NOT NULL;
+
 ~~~
 
 ### Comparison operators
@@ -69,6 +84,11 @@ SELECT title FROM films WHERE release_year >= 1960 AND release_year <= 1970
 - <=: less than or equal to
 - =: equal to
 - <>: not equal to
+
+### Wildcards
+
+- %: match zero or more characters
+- _: match one character
 
 ## Aggregating
 
