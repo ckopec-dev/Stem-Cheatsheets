@@ -539,8 +539,11 @@ wards_census = wards.merge(census, on="ward", suffixes=("_ward", "_cen"))
 
 # For a 1-n relationship, same general syntax applies, but now rows with duplicate data will appear.
 
-# Example wtih a left join
+# Example with a left join
 movies_taglines = movies.merge(taglines, on="id", how="left")
+
+# Example with a right join, and key columns that are not named identially
+tv_movies = movies.merge(tv_genre, how="right", left_on="id", right_on="movie_id")
 
 ~~~
 
@@ -560,3 +563,5 @@ grants_licenses_ward = grants.merge(licenses, on["address", "zip").merge(wards, 
 
 - Inner: returns all rows that have matching key vales in both tables (dataframes)
 - Left: returns all rows in left table, and rows in the right table that have matching key records
+- Right: returns all rows in right table, and rows in the left table that have matching key records
+- Outer: returns all rows from both left and right tables
