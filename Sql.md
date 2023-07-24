@@ -30,14 +30,33 @@ SELECT DISTINCT columnA FROM mytable;
 SELECT COUNT(DISTINCT columnA) AS cnt_distinct FROM mytable;
 
 -- Select top 10 rows on MS Sql Server
-SELECT TOP 10 * FROM mytable
+SELECT TOP 10 * FROM mytable;
 
 -- Select top 10 rows on MySQL, PostgreSQL, or SQLite
-SELECT * FROM mytable LIMIT 10
+SELECT * FROM mytable LIMIT 10;
 
 ~~~
 
 ## Filtering
+
+~~~
+
+-- Select films released after 1960
+SELECT title FROM films WHERE release_year > 1960;
+
+-- Select films from Japan
+SELECT title FROM films WHERE country = 'Japan';
+
+~~~
+
+### Comparison operators
+
+- >: greater than
+- >=: greater than or equal to
+- <: less than
+- <=: less than or equal to
+- =: equal to
+- <>: not equal to
 
 ## Aggregating
 
