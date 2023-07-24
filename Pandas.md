@@ -545,6 +545,9 @@ movies_taglines = movies.merge(taglines, on="id", how="left")
 # Example with a right join, and key columns that are not named identially
 tv_movies = movies.merge(tv_genre, how="right", left_on="id", right_on="movie_id")
 
+# Example of a self join
+original_sequels = sequels.merge(sequels, left_on="sequel", right_on="id", suffixes=("_org", "_seq"))
+
 ~~~
 
 ### Combining multiple dataframes
@@ -565,3 +568,4 @@ grants_licenses_ward = grants.merge(licenses, on["address", "zip").merge(wards, 
 - Left: returns all rows in left table, and rows in the right table that have matching key records
 - Right: returns all rows in right table, and rows in the left table that have matching key records
 - Outer: returns all rows from both left and right tables
+- Self: merges a table into itself
