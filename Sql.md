@@ -102,6 +102,25 @@ SELECT * FROM films WHERE release_year IS NOT NULL;
 
 ## Sorting and grouping
 
+~~~
+
+-- Order films by title
+SELECT * FROM films ORDER BY title;
+
+-- Order films by most largest gross
+SELECT * FROM films ORDER BY gross DESC;
+
+-- Order films by most recent release year then title
+SELECT * FROM films ORDER BY release_year DESC, title ASC;
+
+-- Show count of films by certification (G, PG, etc)
+SELECT certification, COUNT(title) AS title_count FROM films GROUP BY certification;
+
+-- Show count of films by certification and language, sorted by number of titles from most to least
+SELECT certification, language, COUNT(title) AS title_count FROM films GROUP BY certification, language ORDER BY title_count DESC;
+
+~~~
+
 ## Other useful functions
 
 - ROUND(number_to_round, decimal_places): if decimal_places is negative, the number will round to the left of the decimal point
