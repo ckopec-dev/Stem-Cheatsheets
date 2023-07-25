@@ -569,3 +569,5 @@ grants_licenses_ward = grants.merge(licenses, on["address", "zip").merge(wards, 
 - Right: returns all rows in right table, and rows in the left table that have matching key records
 - Outer: returns all rows from both left and right tables
 - Self: merges a table into itself
+- Semi: similar to an inner join, but returns only columns from the left table, and no duplicates
+- Anti:  returns all rows in left table that do not have matching rows in the right table
