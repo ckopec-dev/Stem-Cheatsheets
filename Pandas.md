@@ -571,3 +571,21 @@ grants_licenses_ward = grants.merge(licenses, on["address", "zip").merge(wards, 
 - Self: merges a table into itself
 - Semi: similar to an inner join, but returns only columns from the left table, and no duplicates
 - Anti:  returns all rows in left table that do not have matching rows in the right table
+
+### Vertical concatenation
+
+~~~
+
+# Basic exmaple of combining multiple dataframes vertically
+df = pd.concat([inv_jan, inv_feb, inv_mar])
+
+# Ignore the index if it contains no valuable information
+df = pd.concat([inv_jan, inv_feb, inv_mar], ignore_index=True)
+
+# Set label to original dataframes
+df = pd.concat([inv_jan, inv_feb, inv_mar], ignore_index=False, keys=["jan", "feb", "mar"])
+
+# Ignore columns that don't exist in all dataframes
+df = pd.concat([inv_jan, inv_feb], join="inner")
+
+~~~
