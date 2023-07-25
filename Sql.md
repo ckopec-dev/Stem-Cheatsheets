@@ -117,7 +117,10 @@ SELECT * FROM films ORDER BY release_year DESC, title ASC;
 SELECT certification, COUNT(title) AS title_count FROM films GROUP BY certification;
 
 -- Show count of films by certification and language, sorted by number of titles from most to least
-SELECT certification, language, COUNT(title) AS title_count FROM films GROUP BY certification, language ORDER BY title_count DESC;
+SELECT certification, language, COUNT(title) AS title_count
+FROM films
+GROUP BY certification, language
+ORDER BY title_count DESC;
 
 ~~~
 
