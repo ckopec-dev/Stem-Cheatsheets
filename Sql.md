@@ -92,4 +92,16 @@ SELECT * FROM films WHERE release_year IS NOT NULL;
 
 ## Aggregating
 
+### Common aggregate functions
+
+- AVG()
+- SUM()
+- MIN()
+- MAX()
+- COUNT()
+
 ## Sorting and grouping
+
+## Other useful functions
+
+- ROUND(number_to_round, decimal_places): if decimal_places is negative, the number will round to the left of the decimal point
