@@ -594,6 +594,8 @@ df = pd.concat([inv_jan, inv_feb], join="inner")
 
 - merge_ordered() method is very similar to merge(), however default join type is outer
 - merge_ordered() is called by passing both dataframes as params
+- merge_asof() method is similar to merge_ordered(), however matches on nearest key and not exact matches
+- merge_asof() requires "on" columns to be pre-sorted
 
 ~~~
 
