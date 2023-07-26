@@ -616,5 +616,18 @@ pd.merge_ordered(appl_stock, msft_stock, on="date", suffixes=("_appl", "_msft"),
 # Select rows where Apple close price is greater than or equal to 60
 stocks.query('stock=="appl"appl and close_price >= 60)
 
+~~~
+
+## Melting data
+
+- melt(): converts wide format data to long format data
+    - wide format: each column specifies an attribute of the record (this is the usual way data is stored in sql)
+    - long format: data about each record spans multiple rows (for example, with attribute/value columns)
 
 ~~~
+
+# This keeps columns A + B, and turns data from columns C + D into variable/value columns named year and dollars.
+df_melted = df.melt(id_vars=["ColumnA", "ColumnB"], value_vars=["ColumnC", "ColumnD"], var_name=["year"], value_name="dollars")
+
+~~~
+    
