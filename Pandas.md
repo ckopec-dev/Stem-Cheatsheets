@@ -589,3 +589,19 @@ df = pd.concat([inv_jan, inv_feb, inv_mar], ignore_index=False, keys=["jan", "fe
 df = pd.concat([inv_jan, inv_feb], join="inner")
 
 ~~~
+
+### Merging time series data
+
+- merge_ordered() method is very similar to merge(), however default join type is outer
+- merge_ordered() is called by passing both dataframes as params
+
+~~~
+
+# Merge apple + microsoft stock history
+pd.merge_ordered(appl_stock, msft_stock, on="date", suffixes=("_appl", "_msft"))
+
+# Fill missing data by populating with the previous value (forward fill)
+pd.merge_ordered(appl_stock, msft_stock, on="date", suffixes=("_appl", "_msft"), fill_method="ffill")
+
+~~~
+
