@@ -122,8 +122,26 @@ FROM films
 GROUP BY certification, language
 ORDER BY title_count DESC;
 
+-- Show count of films with a minimum of over ten films by release year
+SELECT release_year, COUNT(title) AS title_count FROM films GROUP BY release_year HAVING COUNT(title) > 10; 
+
 ~~~
 
 ## Other useful functions
 
 - ROUND(number_to_round, decimal_places): if decimal_places is negative, the number will round to the left of the decimal point
+
+## Order of execution
+
+- FROM
+- WHERE
+- GROUP BY
+- HAVING
+- SELECT
+- ORDER BY
+- LIMIT
+
+## Having vs where
+
+- WHERE can't filter aggregate functions.
+- WHERE filters individual records, HAVING filters grouped records.
