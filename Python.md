@@ -247,6 +247,19 @@ del(people["jeff"])
 
 ~~~
 
+## Tuples
+
+- Similar to lists
+- Immutable: values can't be modified
+
+~~~
+
+even_nums = (2, 4, 6)
+a, b, c = even_nums
+print(even_nums[1])
+
+~~~
+
 ## Modules
 
 ### Examples of commonly used modules
@@ -309,3 +322,26 @@ plt.show()
 - pow(base, exp): power
 - upper(): convert to uppercase
 
+### Custom functions
+
+~~~
+
+# Define the function
+def raise_to_power(num, power):
+    # Docstrings describe what the function does. 
+    """Returns the power of a number."""
+
+    new_value = num ** power
+    return new_value
+
+# Call the function
+num = raise_to_power(4, 2)
+
+# Return multiple values
+def my_func():
+    # Body code
+
+    # Create a tuple to return multiple values
+    return my_tuple
+
+~~~
