@@ -614,7 +614,7 @@ pd.merge_ordered(appl_stock, msft_stock, on="date", suffixes=("_appl", "_msft"),
 ~~~
 
 # Select rows where Apple close price is greater than or equal to 60
-stocks.query('stock=="appl"appl and close_price >= 60)
+stocks.query('stock=="appl" and close_price >= 60)
 
 ~~~
 
