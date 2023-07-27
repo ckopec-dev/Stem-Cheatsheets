@@ -345,3 +345,9 @@ def my_func():
     return my_tuple
 
 ~~~
+
+## Scope
+
+- Global: defined in main body
+- Local: defined inside a function
+- Built-in: in pre-defined built-ins module
