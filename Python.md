@@ -387,3 +387,24 @@ except:
 
 ~~~
 
+## Iterators
+
+- An object is iterable, it has an iter() method
+- Examples: lists, strings, dictionaries, file connections
+
+~~~
+
+# Iterate over a list
+employees = ["Bob", "Mark", "Sam"]
+for employee in employees:
+    print(employee)
+
+# Iterate with a loop
+for letter in "HelloWorld":
+    print(letter)
+
+# Iterate over a range of numbers
+for number in range(5):
+    print(number)
+
+~~~
