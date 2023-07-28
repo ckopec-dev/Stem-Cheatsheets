@@ -346,8 +346,23 @@ def my_func():
 
 ~~~
 
-## Scope
+### Lambda functions
+
+~~~
+
+# Lambdas are "quick and dirty" functions
+
+# Example
+raise_to_power = lambda x, y: x ** y
+
+# Call it
+raise_to_power(2, 3)
+
+~~~
+
+### Scope
 
 - Global: defined in main body
 - Local: defined inside a function
 - Built-in: in pre-defined built-ins module
+
