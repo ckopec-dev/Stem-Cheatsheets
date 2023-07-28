@@ -366,3 +366,24 @@ raise_to_power(2, 3)
 - Local: defined inside a function
 - Built-in: in pre-defined built-ins module
 
+## Error handling
+
+~~~
+
+# Explicitly raise an exception
+raise ValueError("explanation here")
+
+# Try to execute some code
+try:
+    {do something}
+
+# To catch specific types of exceptions
+except TypeError:
+    {code that executes for a TypeError exception}
+
+# To catch general exceptions
+except:
+    {code that executes if something went wrong}
+
+~~~
+
