@@ -143,6 +143,9 @@ print(df.to_string())
 # Export
 df.to_csv("MyCsv.csv")
 
+# To load in chunks (if the file is too big to load into memory, for example)
+for chunk in pd.read_csv('data.csv', chunksize=1000):
+
 ~~~
 
 ### From JSON
