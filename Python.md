@@ -258,6 +258,10 @@ even_nums = (2, 4, 6)
 a, b, c = even_nums
 print(even_nums[1])
 
+# Combine tubles using zip(), resulting in a iterator of tuples
+odd_nums = {1, 3, 5}
+z = zip(even_nums, odd_nums)
+
 ~~~
 
 ## Modules
