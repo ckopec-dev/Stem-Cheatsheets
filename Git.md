@@ -229,6 +229,10 @@ The --merged and --no-merged flags will filter the list to branches that you hav
 
 `$ git branch -v`
 
+### Show all differences between two branches
+
+`$ git diff branch1 branch2`
+
 ### Create a new branch
 
 `$ git branch <new-branch-name>`
@@ -244,6 +248,10 @@ The --merged and --no-merged flags will filter the list to branches that you hav
 ### Merge a branch into your current branch
 
 `$ git merge <branch-to-be-merged>`
+
+### Merge a branch into another branch
+
+`$ git merge <source-branch> <destination-branch>`
 
 ### Delete a branch
 
