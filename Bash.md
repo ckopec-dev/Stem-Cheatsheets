@@ -3,6 +3,10 @@
 
 ## Help
 
+### Show bash version
+
+`$ echo $BASH_VERSION`
+
 ### Show the manual for a command
 
 `$ man {command}`
