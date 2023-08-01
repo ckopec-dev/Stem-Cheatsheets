@@ -10,3 +10,14 @@
 - A base is a substance that will accept protons.
 - Bases in solution liberate hydroxyl ions (OH-).
 - Titration is used to determine the unknown strength of an acid or base.
+
+## Equations
+
+- Create a trial equation, for example: reacting aluminum with hydrochloric acid – Al + HCl -> AlCl + H.
+- Check valences of compounds and correct ratios: Al + HCl -> AlCl<sub>3</sub> + H2. 
+- Balance: 2AL + 6HCl -> 2AlCl<sub>3</sub> + 3H<sub>2</sub>.
+- Up arrow refers to a gas.
+- Down arrow refers to a precipitate.
+- Take into account water of hydration, if applicable.
+- Take into account solubility.
+- Calculate weight of all components to determine inputs and outputs.
