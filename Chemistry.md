@@ -14,8 +14,8 @@
 ## Equations
 
 - Create a trial equation, for example: reacting aluminum with hydrochloric acid – Al + HCl -> AlCl + H.
-- Check valences of compounds and correct ratios: Al + HCl -> AlCl<sub>3</sub> + H2. 
-- Balance: 2AL + 6HCl -> 2AlCl<sub>3</sub> + 3H<sub>2</sub>.
+- Check valences of compounds and correct ratios: Al + HCl -> AlCl<sub>3</sub> + H<sub>2</sub>. 
+- Balance: 2AL + 6HCl -> 2AlCl<sub>3</sub> + 3H<sub>2</sub> &uarr;.
 - Up arrow refers to a gas.
 - Down arrow refers to a precipitate.
 - Take into account water of hydration, if applicable.
