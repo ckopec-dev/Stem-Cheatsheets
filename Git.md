@@ -76,12 +76,33 @@ Negate a pattern by starting it with an explanation point.
 
 `$ git diff --staged`
 
-A commit is a snapshot of the code at a specific instance in time.
+### Show changes made to a specific file
+
+`$ git diff myfile.txt`
+
+### Show changes made to a specific directory
+
+`$ git diff mydir`
+
+### Compare changes to an existing commit
+
+`$ git diff -r HEAD`
+
+-r means compare to a particular version. HEAD is a shortcut for the for most recent commit.
+
+### Compare changes with a specific file or directory to an existing commit
+
+`$ git diff -r HEAD myfile.txt`
+
+### Compare changes between two commits
+
+`$ git diff {hash1}..{hash2}`
 
 ### Commit staged changes
 
 `$ git commit -m "Your commit message."`
 
+A commit is a snapshot of the code at a specific instance in time.  
 If -m is not specified, git will open an editor which allows a longer commit message.
 
 ## Viewing the commit history
