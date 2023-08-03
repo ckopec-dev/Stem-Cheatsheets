@@ -35,3 +35,12 @@
 ## Backpropagation
 
 - Sends error from output layer back through previous layers and updates the weights accordlingly
+
+## Centering and scaling
+
+- Features with different scales can disproportionatly influnce the model
+- Normalizing: scaling data. Various ways of doing this:
+  - Subtract the mean and divide by variance. This gives all features a variance of one centered around 0.
+  - Subtract the minimum and divide by the range. This gives all data a range of 0 to +1.
+  - Convert ranges from -1 to +1.
+- Standardization: centering data
