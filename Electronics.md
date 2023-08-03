@@ -20,7 +20,7 @@
 - Resistance (R): how tightly materials hold onto electrons. Measured in ohms
 - Volt (V): measure of voltage. 1V will push 1A through 1 ohm of resistance
 - Voltage (E): measure of pressure pushing the electrons. Voltage refers to a difference in electrical potential between two parts of a circuit. Voltage = ohms * amps.
-- Watt (W): measure of power, P = EI
+- Watt (W): measure of power, watts = volts * amps
 
 ## Tools
 
