@@ -46,6 +46,7 @@
 
 - Create a resistance in electron flow, like stepping on a water hose.
 - Convert 1st and 2nd stripe by color value, then add color zeroes.
+- Last band represents accuracy: silver is 10%, gold is 5%.
 - When resistors are in series, electricy has to pass through each of them to reach the other, so resistance rises.
 - When resistors are in parallel, electricty can flow through both, so resistance drops.
 
@@ -75,4 +76,40 @@
 | Gray | 8 |
 | White | 9 |
 
+### Capacitors
 
+- Like a mini rechargable battery
+- Amount of charge they can hold is measured in Farads (F)
+- 2 common types:
+  - Ceramic: brown with a disc shape. Non-polarized
+  - Electrolytic: Cylinder shape. Polarized
+ 
+### Diodes
+
+- One way street for electrons
+- Cylinder shaped. Electrons flow from cathode to anode end. Cathode end is marked with a band
+        - 3 common types are diodes, zener diodes, and light emitting diodes
+        - Zener diodes: Set voltage rating, which allows flow when voltage is exceeded
+        - Light emitting diodes (LED) lights up with flow. No band to indicate flow, but the longer pin is the anode
+
+### Transistors
+
+- Used for switching and amplifying
+- 2 common types are PNP and NPN. both have 3 pins: emitter, base, and collector
+
+### Integrated circuits
+
+- Usually referred to as chips
+- Many different types
+  - Logic circuits: usually contain logic gates
+  - Comparators: compare input and give an output
+  - Operational amplifiers: amplifiers
+  - Timers
+
+### Switches
+
+- Connects and disconnects a circuit
+- 3 common configurations:
+  - SPST: Single pole, single throw. Two terminal switch
+  - SPDT: 3 terminal switch. Connects one terminal to either of the other
+  - DPDT: Double pole, double throw. 6 terminal switch, connects a pair of terminals to either of the other two pairs
