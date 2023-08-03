@@ -13,7 +13,7 @@
 - Ground: zero voltage. A.k.a. 0V, minus terminal, earth, GND. Usually color-coded black.
 - Insulators: materials with a high resistance, eg. clay, plastics
 - Ohm (greek omega symbol): measure of resistance
-- Ohm's law: E=IR
+- Ohm's law: V = I * R (volts = amps * resistance)
 - Open circuit vs closed circuit: circuit is open if electricity cannot flow through a device.
 - Power (P): amount of work a circuit is doing.
 - Short circuit: an umwanted conductive bridge.
