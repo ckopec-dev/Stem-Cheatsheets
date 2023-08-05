@@ -36,6 +36,9 @@ This implicity adds an origin remote.
 
 ## Recording changes to the repo
 
+- Staging is like a box full of changes in the repo
+- Git status shows which files are in the box, and which changed files are not in the box
+
 `$ git status`
 
 This shows which files are in which state and also what branch you're on.
@@ -102,7 +105,7 @@ Negate a pattern by starting it with an explanation point.
 
 `$ git commit -m "Your commit message."`
 
-A commit is a snapshot of the code at a specific instance in time.  
+A commit is a snapshot of the code at a specific instance in time. It's like putting the box of changes in the mail. 
 If -m is not specified, git will open an editor which allows a longer commit message.
 
 ## Viewing the commit history
