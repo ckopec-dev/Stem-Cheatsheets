@@ -17,6 +17,18 @@
 
 The output contains a number followed by the command. To rerun a command, type !{number}
 
+## Process management
+
+### Redo last command as root
+
+`$ sudo !!`
+
+## Disk maangement
+
+### Create a fast temporary ram disk
+
+`$ mkdir -p /mnt/ram ; mount -t tmpfs tmpfs /mnt/ram -o size=8129M`
+
 ## File management
 
 ### Show the current directory
