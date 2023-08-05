@@ -23,6 +23,37 @@ The output contains a number followed by the command. To rerun a command, type !
 
 `$ sudo !!`
 
+### See the processes in your shell
+
+`$ ps`
+
+### Kill a process
+
+`$ kill -{level} {pid}`
+
+Levels (in order of gracefullness):
+
+- 15: sends sigterm (this is the default level)
+- 2: sends sigint
+- 1: send sighup
+- 9: send sigkill
+
+### Suspend foreground process
+
+`ctri-z`
+
+### List jobs
+
+`$ jobs`
+
+### Send stopped process to background
+
+`$ bg {jobnum}`
+
+### Bring process to foreground
+
+`$ fg {jobnum}`
+
 ## Disk maangement
 
 ### Create a fast temporary ram disk
