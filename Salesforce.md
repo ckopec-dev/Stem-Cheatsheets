@@ -48,3 +48,10 @@
 ### Open the org
 
 - There is a small "Open Org" icon that looks like a window in the bottom left of VS Code (to the left of "Quick Badges"). Click to open and it will open the org in a new browser window.
+
+### Retrieve metadata from the org
+
+- In the VS Code Activity Bar (big icons on the left), click the cloud "Org Browser" icon.
+- For a custom object's metadata, expand "Custom Objects" and find the object of interest. Select it, and click the icon to the right of the name "Retrieve Source from Org".
+- Object metadata is now available in your project in "force-app/main/default/objects".
+
