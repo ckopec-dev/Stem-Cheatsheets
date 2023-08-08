@@ -9,6 +9,10 @@
 - On Ubuntu, easiest way to install is via the Software Center.
 - After installation, install extension pack: Salesforce Extension Pack (Expanded)
 
+### Install Java Runtime Environment
+
+`$ sudo apt install default-jre`
+
 ### Install Salesforce CLI
 
 - Download: [https://developer.salesforce.com/tools/salesforcecli](https://developer.salesforce.com/tools/salesforcecli)
@@ -24,3 +28,23 @@
 `$ sudo snap refresh`  
 `$ sudo apt update`  
 `$ sudo apt upgrade`  
+
+## Coding with VS Code
+
+### Create a new Salesforce project
+
+- In the command palette, select "SFDX: Create Project".
+- Accept the Standard option.
+- Enter a project name.
+- Select a folder. A folder with the project's name will be created inside this folder.
+- Click Create Project.
+
+### Authorize an org
+
+- In the command palette, select "SFDX: Authorize an Org".
+- Choose Production and then provide an alias.
+- Your browser will open with a credential screen. Enter your username and password.
+
+### Open the org
+
+- There is a small "Open Org" icon that looks like a window in the bottom left of VS Code (to the left of "Quick Badges"). Click to open and it will open the org in a new browser window.
