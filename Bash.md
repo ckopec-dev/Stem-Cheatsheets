@@ -1,7 +1,7 @@
 
 # Bash Cheatsheet
 
-## Help
+## Help and misc
 
 ### Show bash version
 
@@ -14,6 +14,14 @@
 ### Show history of commands previously entered
 
 `$ history`
+
+### Open a full screen terminal in Ubuntu
+
+`{ctr-alt-f2}`
+
+### Get a gui back from a full screen console
+
+`{ctr-alt-f7}`
 
 The output contains a number followed by the command. To rerun a command, type !{number}
 
