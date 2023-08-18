@@ -34,6 +34,23 @@ This creates a new folder named .git inside ~/Code/MyProject.
 
 This implicity adds an origin remote.
 
+### Add an existing project to Github
+
+~~~
+
+# Create the repo on Github using the web UI.
+
+$ git init
+$ git add .
+$ git commit -m "Add existing project files to Git"
+$ git remote add origin https://github.com/{username}/example-website.git
+$ git push -u -f origin master
+
+# For username, enter {username}
+# For password, enter the personal token
+
+~~~
+
 ## Recording changes to the repo
 
 - Staging is like a box full of changes in the repo
