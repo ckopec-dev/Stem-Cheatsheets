@@ -3,6 +3,10 @@
 
 ## Basics
 
+### Show installed version
+
+`$ python3 --version`
+
 ### Create an interactive session
 
 ~~~
