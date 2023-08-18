@@ -62,6 +62,32 @@ Levels (in order of gracefullness):
 
 ## File management
 
+The working directory is the current directory. Unless you tell the OS otherwise, all commands apply to your working directory.   
+Absolute path: the full path of the file or directory starting with the root directory. E.g. /users/john.  
+Relative path: the path relative to the working directory. It never starts with a slash.  
+Navigation: to move up the directory tree, use “..”.   
+Names that begin with a dot are hidden. All characters are legal in a filename except “/”, and they cannot begin with a “-“.  
+
+### File permissions (as shown with ls -l command): 10 characters {0111222333}
+
+- 0: File type: d for directory, - for file.
+- 111: File owner permissions
+- 222: File group permissions
+- 333: Everybody else
+
+### Permission types
+
+- r(read): For directories, allows listing via ls. For files, allows reading the content.
+- w(write): For directories, this gives permission to delete, rename, or add files within the directory. For files, allows changing the file’s contents.
+- x(execute): For directories, this gives permission to access it. For files, this gives permission to execute it (i.e. if it isn’t a program, it shouldn’t have execute permission).
+- -(none)
+
+### File and directory wildcards
+
+- *: any number of characters
+- ?: a single character
+- []: surround a group of single characters to match
+        
 ### Show the current directory
 
 `$ pwd`
