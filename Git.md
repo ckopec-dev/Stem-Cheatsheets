@@ -32,7 +32,8 @@ This creates a new folder named .git inside ~/Code/MyProject.
 
 `$ git clone https://github.com/libgit2/libgit2`
 
-This implicity adds an origin remote.
+This implicity sets the origin remotes.  
+Origins are usually where the "main" code is hosted (e.g. github)
 
 ### Add an existing project to Github
 
