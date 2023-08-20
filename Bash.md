@@ -139,6 +139,10 @@ Can be used to rename files.
 
 `$ mkdir {path}`
 
+### Delete empty directory
+
+`$ rmdir {path}`
+
 ### Delete directory and all contents
 
 `$ rm -r {path}`
