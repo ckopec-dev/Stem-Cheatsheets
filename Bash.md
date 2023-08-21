@@ -62,7 +62,7 @@ Levels (in order of gracefullness):
 
 `$ fg {jobnum}`
 
-## Disk maangement
+## Disk management
 
 ### Create a fast temporary ram disk
 
@@ -119,6 +119,10 @@ A path of '/' means the root directory.
 ### Copy a file
 
 `$ cp {original-path} {destination-path}`
+
+### Extract a gz file
+
+`$ tar -xzvf {filename}`
 
 ### Copy multiple files into a different directory
 
