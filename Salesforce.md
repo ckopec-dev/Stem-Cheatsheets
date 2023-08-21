@@ -55,3 +55,18 @@
 - For a custom object's metadata, expand "Custom Objects" and find the object of interest. Select it, and click the icon to the right of the name "Retrieve Source from Org".
 - Object metadata is now available in your project in "force-app/main/default/objects".
 
+### Create an Apex class
+
+- Under force-app/main/default, right-click classes and select SFDX: Create Apex Class.
+
+### Deploy class to org
+
+- Right-click the class and select SFDC: Deploy Source to Org.
+
+### Create a Lightning Web Component
+
+- Under force-app/main/default, right-click lwc folder and select SFDX: Create Lightning Web Component.
+
+### Deploy LWC to org
+
+- Right-click the lwc's folder and select SFDC: Deploy Source to Org.
