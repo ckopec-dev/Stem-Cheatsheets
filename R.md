@@ -114,3 +114,26 @@ print(my_vector[c("Monday", "Tuesday")]
 my_vector(4, 5, 6) > 5
 # Result: FALSE FALSE TRUE
 ~~~
+
+## Matrices
+
+Matrices are two-dimensional arrays that can store numeric, character, or boolean data.
+
+### Create a matrix
+
+~~~
+matrix(1:9, byrow=TRUE, nrow=3)
+
+# 1st arg: collection of elements that fill the matrix
+# byrow: fill by rows. To fill by columns, set byrow = FALSE
+# nrow: number of rows in the matrix
+~~~
+
+### Sum rows
+`> rowSums(my_matrix)`
+
+### Merge matrices and/or vectors by column
+`> my_matrix <- cbind(matrix1, matrix2, vector1)`
+
+### Merge matrices and/or vectors by row
+`> my_matrix <- rbind(matrix1, matrix2, vector1)`
