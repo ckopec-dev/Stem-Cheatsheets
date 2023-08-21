@@ -15,6 +15,8 @@
 
 `$ history`
 
+The output contains a number followed by the command. To rerun a command, type !{number}
+
 ### Open a full screen terminal in Ubuntu
 
 `{ctr-alt-f2}`
@@ -23,7 +25,9 @@
 
 `{ctr-alt-f7}`
 
-The output contains a number followed by the command. To rerun a command, type !{number}
+### Get computer name
+
+`$ hostname`
 
 ## Process management
 
