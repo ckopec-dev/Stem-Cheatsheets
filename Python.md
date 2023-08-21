@@ -56,6 +56,13 @@ $ python3
 
 `# This is a comment`
 
+### Use random numbers
+
+~~~
+import random
+print (random.randrange(1,10))
+~~~
+
 ## Control statements
 
 ### If-then-else
