@@ -135,6 +135,10 @@ A path of '/' means the root directory.
 Similar to a copy and delete.
 Can be used to rename files.
 
+### Locate a file
+
+`$ locate {filename}`
+
 ### Delete files
 
 `$ rm {file1} {file2}`
