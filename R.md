@@ -49,6 +49,15 @@ $ sudo apt install --no-install-recommends r-base
 - ^: exponentiation
 - %%: modulo
 
+### Comparison operators
+
+- <: less than
+- &gt;: greater than
+- <=: less than or equal to
+- &gt;=: greater than or equal to
+- ==: equal to
+- !=: not equal to
+
 ### Variable assignment
 
 `> my_var <- 4`
@@ -77,3 +86,31 @@ names(my_vector) <- c("Name", "Profession")
 
 ### Summing a vector
 `> vector_sum <- sum(my_vector)`
+
+### Averaging a vector
+`> vector_avg <- mean(my_vector)`
+
+### Selecting vector elements
+
+~~~
+# Select first element (vectors are 1-based, not 0)
+print(my_vector[1])
+
+# Select first and third element
+print(my_vector[c(1,3)]
+
+# Select range of 2-4 elements (inclusive on both ends)
+print(my_vector[2:4]
+
+# Select by names
+print(my_vector[c("Monday", "Tuesday")]
+~~~
+
+### Vector comparisons
+
+~~~
+
+# Comparison operators can be used on vectors
+my_vector(4, 5, 6) > 5
+# Result: FALSE FALSE TRUE
+~~~
