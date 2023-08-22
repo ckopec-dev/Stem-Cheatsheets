@@ -115,6 +115,9 @@ my_vector(4, 5, 6) > 5
 # Result: FALSE FALSE TRUE
 ~~~
 
+### Summarize a vector
+`> summary(my_vector)`
+
 ## Matrices
 
 Matrices are two-dimensional arrays that can store numeric, character, or boolean data.
@@ -137,3 +140,15 @@ matrix(1:9, byrow=TRUE, nrow=3)
 
 ### Merge matrices and/or vectors by row
 `> my_matrix <- rbind(matrix1, matrix2, vector1)`
+
+## Factors
+
+A factor is a data type used to store categorical data.
+
+### Create a factor from a vector
+`> my_factor <- factor(my_vector)`
+
+### Change factor names
+`> levels(my_geneder_vector) <- c("Female", "Male")`
+
+
