@@ -19,6 +19,9 @@
 
  `$ npm install @salesforce/cli --global`
 
+### Update Salesforce CLI
+`$ sudo npm install --global @salesforce/cli`
+
 ### Check CLI version
 
 `$ sfdx --version`
