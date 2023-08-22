@@ -66,6 +66,21 @@ Levels (in order of gracefullness):
 
 `$ fg {jobnum}`
 
+### Various terminal "screensavers"
+
+~~~
+# Displays various stats related to processes, ram usage, etc.
+$ top
+
+# Similar to top but more colorful.
+$ sudo apt install htop
+$ htop
+
+# Displays vertically scrolling characters.
+$ sudo apt install cmatrix
+$ cmatrix
+~~~
+
 ## Disk management
 
 ### Create a fast temporary ram disk
