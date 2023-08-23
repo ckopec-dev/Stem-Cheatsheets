@@ -151,4 +151,29 @@ A factor is a data type used to store categorical data.
 ### Change factor names
 `> levels(my_geneder_vector) <- c("Female", "Male")`
 
+## Data frames
+
+A data frame has the variables of a dataset as columns and the observations as rows.
+
+### Print the first few rows of a data frame
+`> head(my_dataframe)`
+
+### Print the last few rows of a data frame
+`> tail(my_dataframe)`
+
+### Show the structure of a data frame
+`> str(my_dataframe)`
+
+### Create a data frame
+`> my_dataframe <- data.frame(vector_1, vector_2, vector_n)`
+
+### Select rows and columns
+`> my_dataframe[1:3,2:4] # Selects rows 1,2,3 and cols 2,3,4`
+
+### Select rows and columns by name
+`> my_dataframe[1:4,"my_col"]`
+
+### Subset a data frame
+`> subset(my_dataframe, subset = radius < 1)`
+
 
