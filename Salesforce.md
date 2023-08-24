@@ -146,3 +146,21 @@ public class EmailMananger {
 // Call a static method
 EmailManager.ShowLog();
 ~~~
+
+### sObjects
+
+Every record in SFDC is represented as an sObject in Apex.
+
+~~~
+// Create a sObject variable
+Account acct = new Account(Name='Acme');
+
+// Field names are referenced via their API names.
+// Custom fields have a '__c' suffix.
+// Custom relationships have a '__r' suffix.
+acct.Phone = '(555)555-5555';
+
+// Cast a generic sObject to a specific type
+Account acct = (Account)mySObject;
+~~~
+
