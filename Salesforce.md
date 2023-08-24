@@ -121,3 +121,28 @@ for(Integer i = 0; i < colors.size(); i++) {
  System.debug(colors[i]);
 }
 ~~~
+
+### Classes
+
+~~~
+public class EmailMananger {
+
+  // Public method
+  public void SendEmail(String address, String subject, String body) {
+    // Do something
+  }
+
+  public static void ShowLog() {
+    // Do something
+  }
+
+  // Private static method
+  private static Boolean CheckResult() {
+    // Do something
+  }
+
+}
+
+// Call a static method
+EmailManager.ShowLog();
+~~~
