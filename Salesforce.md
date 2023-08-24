@@ -73,3 +73,51 @@
 ### Deploy LWC to org
 
 - Right-click the lwc's folder and select SFDC: Deploy Source to Org.
+
+## Apex
+
+### Comments
+
+~~~
+// This is a single-line comment.
+/* This is a
+   multiple-line comment. */
+~~~
+
+### Data types
+
+- Primitives
+  - Integer
+  - Double
+  - Long
+  - Date
+  - Datetime
+  - String
+  - ID
+  - Boolean
+- sObject (either generic or specific, such as Account, Contact, etc)
+- Collections
+  - List
+  - Set
+  - Map
+- Enum: typed list of values
+- User-defined Apex classes
+- System-suppled Apex classes
+
+### Lists
+
+Hold ordered collections of objects. Synonymous and interchangable with arrays.
+
+~~~
+List<String> colors = new List<String>();
+// Equivalent to:
+String[] colors = new List<String();
+
+// Add item to list
+colors.add('red');
+
+// Iterate over a list
+for(Integer i = 0; i < colors.size(); i++) {
+ System.debug(colors[i]);
+}
+~~~
