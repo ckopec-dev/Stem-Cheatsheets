@@ -176,4 +176,22 @@ A data frame has the variables of a dataset as columns and the observations as r
 ### Subset a data frame
 `> subset(my_dataframe, subset = radius < 1)`
 
+## Lists
+
+A list stores a variety of objects in a single container.  
+
+### Create a list
+`> my_list <- list(my_vector, my_matrix)`
+
+### Create a list with named elements
+`> my_list <- list("name1" = my_vector, "name2" = my_matrix)`
+
+### Name elements on existing list
+`> names(my_list) <- c("name1", "name2")`
+
+### Select the nth element of a list
+`> my_list[[n]]`
+
+### Select a named element of a list
+`> my_list$my_element`
 
