@@ -10,10 +10,8 @@
 ### Create an interactive session
 
 ~~~
-
 # Type "exit()" to exit.
 $ python3
-
 ~~~
 
 ### Create a python script
@@ -26,7 +24,11 @@ $ python3
 
 ### Make a python script executable
 
-`$ chmod +x helloworld.py`
+~~~
+# Add "#!/usr/bin/python3" to first line of script (it MUST be the first line)
+# Make it executable with "chmod + x myscript.py"
+# Execute with "./myscript.py"
+~~~
 
 ### Print a calculation to screen
 
