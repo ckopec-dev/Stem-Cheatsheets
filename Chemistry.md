@@ -49,3 +49,45 @@
 - OH: -1
 - SO<sub>3</sub>: -2
 - SO<sub>4</sub>: -2
+
+## Crystal forms
+
+- Cubic (isometric): 3 axes of equal length and are at right angles to each other (e.g. a cube). Examples: galena, garnet, pyrite, halite.
+- Tetragonal: 2 axes of equal length and 1 unequal. All 3 are at right angles to each other. Examples: zircon, rutile, cassiterite.
+- Hexagonal: 3 equal axes  at 120 degrees arranged in 1 plane and one more axis of a different length at right angles to these. Examples: quartz, beryl, calcite, tourmaline, cinnabar.
+-	Orthorhombic: 3 unequal axes all at right angles. Examples: sulfur, barite, celestite, staurolite, olivine.
+-	Monoclinic: 3 unequal axes, two of which are not at right angles. The 3rd makes a right angle to the plane of the other two. Examples: orthoclase, gypsum, micas, augite, epidote, hornblende.
+-	Triclinic: 3 unequal axes, none of which forms a right angle with any other. Examples: plagioclase feldspars, rhodonite, chalcanthite.
+
+## Mineral hardness
+
+- If object A scratches object B, it is harder and therefore higher on the Mohs’ scale (an arbitrary scale from 1-10).
+
+Examples:
+
+1. Talc
+2. Gypsum
+2.5 Fingernail
+3. Calcite
+4. Fluorite
+5. Apatite
+5.5 Window glass, Knife blade
+6. Orthoclase
+6.5 Steel file
+7. Quartz
+8. Topaz
+9. Corundum
+10. Diamond
+
+## Specific gravity
+
+Specific gravity is the relative weight of a mineral compared to the weight of an equal volume of water.
+
+To determine specific gravity:
+- Weigh sample (rock), e.g. 36.2g
+- Wrap string around sample
+- Fill beaker with water (enough to cover sample without it touching bottom)
+- Place beaker on scale and tare it
+- Lower sample into water (without it touching bottom)
+- Take weight measurement, e.g. 14.2g
+- Specific gravity is weight of sample / weight in water, e.g. 36.2 / 14.2 = 2.55
