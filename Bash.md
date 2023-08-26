@@ -29,6 +29,28 @@ The output contains a number followed by the command. To rerun a command, type !
 
 `$ hostname`
 
+## Printing
+
+### Print from the console
+
+~~~
+# For printers in Gnome/Settings/Printers
+
+# Check if a default print is installed
+$ lpstat -d
+
+# Install a default printer
+# To find the printer name, look in Gnome/Settings/Printers/Printer Details/Name
+# When Ubuntu is hosted as a virtual machine, there might be two identical printers listed. Use the one that ends in .local
+$ lpadmin -d {printer name}
+
+# Print
+$ lpr {filename}
+
+# View print queue
+$ lpq
+~~~
+
 ## Process management
 
 ### Redo last command as root
