@@ -24,6 +24,10 @@ $ python3
 
 `$ python3 my-script.py`
 
+### Make a python script executable
+
+`$ chmod +x helloworld.py`
+
 ### Print a calculation to screen
 
 `print(5 / 8)`
