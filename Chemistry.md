@@ -1,6 +1,15 @@
 
 # Chemistry Cheatsheets
 
+## The periodic table
+
+- Top left: symbol
+- Top right: atomic number - the number of protons in an atom (and the number of electrons).
+- Top center: full name
+- Bottom center: atomic weight
+- Period: a row running left to right.
+- Group: a column running top to bottom.
+
 ## Acids and bases
 
 - Acids react with metals.
