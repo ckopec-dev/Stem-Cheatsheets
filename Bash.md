@@ -51,6 +51,9 @@ $ lpr {filename}
 $ lpq
 ~~~
 
+### Show installed pip packages 
+`$ pip list`
+
 ## Process management
 
 ### Redo last command as root
