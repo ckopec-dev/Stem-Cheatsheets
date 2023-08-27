@@ -303,6 +303,27 @@ Returns all lines from files which contain search-text.
 | -n | print line numbers for matching lines |
 | -v | only show lines that don't match |
 
+### Examples
+
+~~~
+# Find string 'Hello World' in file1.doc and file2.doc:
+$ grep -i 'Hello World' file1.doc file2.doc 
+
+# -i: case-insensitive search
+
+# Find all multiple words (i.e. result has all the words):
+$ grep -i 'duck' file1.doc | grep -i 'goose'
+
+# Find any words (i.e. result has at least one of the words):
+$ grep -i 'duck\|goose' file1.doc
+
+# Find rows without given string (i.e. result does not contain string):
+$ grep -v 'duck' file1.doc
+
+# Find all rows that contain a "c*h" string (where asterisk is wildcard).
+$ grep -i '\<c.*h\>' file1.doc
+~~~
+
 ## Redirection and related controls
 
 ### Redirect output to a file
