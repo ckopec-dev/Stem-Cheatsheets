@@ -54,6 +54,23 @@ $ lpq
 ### Show installed pip packages 
 `$ pip list`
 
+### Start Ubuntu in console mode
+
+~~~
+If you are using Grub2, then in /etc/default/grub replace:
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+
+with
+
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash text"
+
+Then run
+$ sudo update-grub
+
+Remove splash to disable the splash screen and/or quiet to make the boot process verbose.  
+To go graphical after booting up, use startx or start gdm.
+~~~
+
 ## Process management
 
 ### Redo last command as root
