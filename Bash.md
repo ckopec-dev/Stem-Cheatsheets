@@ -186,6 +186,17 @@ A path of '/' means the root directory.
 
 `$ cd {path}`
 
+### Create an alias for a directory
+
+~~~
+$ nano ~/.bashrc
+# Add to end:
+# shopt -s cdable_vars
+# export mydir=$HOME/Files
+# Save and exit. Will need to exit shell and start a new one to take effect.
+# cd mydir
+~~~
+
 ### Copy a file
 
 `$ cp {original-path} {destination-path}`
