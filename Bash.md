@@ -80,6 +80,10 @@ Levels (in order of gracefullness):
 
 `$ jobs`
 
+### Run a job in the background (append an amperstand)
+
+`$ sort bigfile > bigfile.sorted &`
+
 ### Send stopped process to background
 
 `$ bg {jobnum}`
