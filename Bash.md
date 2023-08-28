@@ -29,6 +29,9 @@ The output contains a number followed by the command. To rerun a command, type !
 
 `$ hostname`
 
+### Enable a ssh client to remotely access shell
+`$ sudo apt install openssh-server`
+
 ## Printing
 
 ### Print from the console
