@@ -294,3 +294,49 @@ for (Database.SaveResult sr : srList) {
  }
 }
 ~~~
+
+## SOQL
+
+To include SOQL queries within your Apex code, wrap the SOQL statement within square brackets and assign the return value to an array of sObjects.  
+You must specify every field you want to get explicitly.  
+
+`Account[] accts = [SELECT Name,Phone FROM Account];`
+
+### Filter results
+
+`SELECT Name,Phone FROM Account WHERE (Name='SFDC Computing' OR (NumberOfEmployees>25 AND BillingCity='Los Angeles'))`
+
+### Order results
+
+`SELECT Name,Phone FROM Account ORDER BY Name DESC`
+
+### Limit results
+
+`Account oneAccountOnly = [SELECT Name,Phone FROM Account LIMIT 1];`
+
+### Access Apex variables
+
+~~~
+String targetDepartment = 'Wingo';
+Contact[] techContacts = [SELECT FirstName,LastName 
+                          FROM Contact WHERE Department=:targetDepartment];
+~~~
+
+### Query related records
+
+~~~
+Account[] acctsWithContacts = [SELECT Name, (SELECT FirstName,LastName FROM Contacts)
+                               FROM Account 
+                               WHERE Name = 'SFDC Computing'];
+// Get child records
+Contact[] cts = acctsWithContacts[0].Contacts;
+System.debug('Name of first associated contact: ' 
+             + cts[0].FirstName + ', ' + cts[0].LastName);
+
+// Get parent fields
+Contact[] cts = [SELECT Account.Name FROM Contact 
+                 WHERE FirstName = 'Carol' AND LastName='Ruiz'];
+Contact carol = cts[0];
+String acctName = carol.Account.Name;
+System.debug('Carol\'s account name is ' + acctName);
+~~~
