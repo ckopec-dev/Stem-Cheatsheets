@@ -32,6 +32,23 @@ The output contains a number followed by the command. To rerun a command, type !
 ### Enable a ssh client to remotely access shell
 `$ sudo apt install openssh-server`
 
+### Linux freezes after login
+
+This can be due to a bad kernel. To revert to a prior kernel, follow this procedure:
+
+~~~
+Need to switch to older kernel when booting (from grub menu). Or access via SSH.
+$ sudo nano /etc/default/grub
+set GRUB_DEFAULT=saved
+set GRUB_SAVEDEFAULT=true
+set GRUB_TIMEOUT_STYLE=menu
+set GRUB_TIMEOUT=10
+$ sudo update-grub
+reboot
+manually select current kernel. grub will remember your selection and use it by default on next reboot.
+reboot again to verify
+~~~
+
 ## Printing
 
 ### Print from the console
