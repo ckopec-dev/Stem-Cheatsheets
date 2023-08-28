@@ -291,7 +291,7 @@ for (Database.SaveResult sr : srList) {
             System.debug(err.getStatusCode() + ': ' + err.getMessage());
             System.debug('Contact fields that affected this error: ' + err.getFields());
 	 }
- }
+    }
 }
 ~~~
 
