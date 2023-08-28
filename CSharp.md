@@ -86,6 +86,11 @@ public static void Read()
     myFile.Close();
 }
 
+public static void ReadAll()
+{
+    string text = System.IO.File.ReadAllText("text.txt");
+}
+
 public static void Write()
 {
     StreamWriter myFile = File.CreateText("text.txt");
@@ -96,6 +101,11 @@ public static void Write()
     }
 
     myFile.Close();
+}
+
+public static void WriteAll()
+{
+    System.IO.File.WriteAllText("filename.txt", “some text”);
 }
 ~~~
 
