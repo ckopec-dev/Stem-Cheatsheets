@@ -1,3 +1,3 @@
 # Stem Cheatsheets
 
-Cheat sheets for various STEM topics.
+Cheatsheets for various STEM topics.
