@@ -378,3 +378,26 @@ for (Contact c : searchContacts) {
     System.debug(c.LastName + ', ' + c.FirstName);
 }
 ~~~
+
+## Lightning Web Components
+
+### Hello world example
+
+~~~
+<!-- Html -->
+<template>
+  <input value={message}></input>
+</template>
+
+<!-- Javascript -->
+import { LightningElement } from 'lwc';
+export default class App extends LightningElement {
+  message = 'Hello World';
+}
+
+/* Css */
+input {
+  color: blue;
+}
+~~~
+
