@@ -381,6 +381,10 @@ for (Contact c : searchContacts) {
 
 ## Lightning Web Components
 
+[Component Library](https://developer.salesforce.com/docs/component-library/overview/components)  
+[Lightning Web Components Recipes](https://github.com/trailheadapps/lwc-recipes)  
+[E-Bikes Demo](https://github.com/trailheadapps/ebikes-lwc)  
+
 ### Hello world example
 
 ~~~
