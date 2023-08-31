@@ -45,6 +45,15 @@ np_weight = np.array(weight)
 ### Return an element
 `np_2d[0][1]`
 
+### Subset a 2d array
+
+~~~
+np_2d[0][2]     // Returns 1st row, 3rd column
+np_2d[0, 2]     // Returns same object as above
+np_2d[:, 1:3]   // Returns all rows, columns at index 1 through (but not including) 3
+np_2d[1, :]     // Returns 2nd row and all columns
+~~~
+
 ## Random numbers
 
 ### Set the random number seed
