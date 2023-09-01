@@ -71,5 +71,48 @@
 
 ## Column family databases
 
+- Derived from Google BigTable
+- Data is stored in column families
+- Also called "wide column databases"
+- Consist of rows and columns
+  - Each row can have different numbers of columns
+  - Columns can be added when needed
+  - Columns consist of: name, value, and timestamp (when data was inserted)
+
+### Popular examples
+
+- Cassandra
+- Apache Hbase
+- Accumulo
+
+### Advantages
+
+- Avoids default values
+- Flexibility (add new columns as needed)
+- Speed (related columns are stored together on disk)
+- Scales horizontally with sharding
+- Handles large quantity of data
+
+### Disadvantages
+
+- No multirow transactions
+- No joins
+- No subqueries
+
+### Some use cases
+
+- Large volumes of data
+- Extreme write speeds
+- Event logging
+- Content management systems
+- Time-series data
+
 ## Graph databases
 
+### Popular examples
+
+### Advantages
+
+### Disadvantages
+
+### Some use cases
