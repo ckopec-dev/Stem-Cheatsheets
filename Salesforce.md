@@ -405,3 +405,9 @@ input {
 }
 ~~~
 
+### Events
+
+- Information can be passed up using events and event listeners.
+	- The child component dispatches the event and the parent component listens for it. Dispatching the event includes creating an event object the child can pass to the parent component. The parent has a handler to respond to the event.
+- Information can be passed down using public properties and public methods.
+	- You can make a component property public by prefacing it with the @api decorator. Then, set the public property by an external component.
