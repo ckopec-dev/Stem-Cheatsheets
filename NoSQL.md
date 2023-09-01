@@ -38,6 +38,37 @@
 
 ## Document databases
 
+- Data is stored as documents (key-value pairs)
+- Documents are grouped in collections
+- Schemaless
+- Formats: JSON, BSON, YAML, XML
+
+### Popular examples
+
+- mongoDB
+- DyanamoDB
+- Couchbase
+- Firebase
+
+### Advantages
+
+- Schemaless
+- No need to use joins
+- Intuitive
+- Horizontal scalability with sharding
+
+### Disadvantages
+
+- Code has to handle data validation
+- Doesn't prevent redundant data
+
+### Some use cases
+
+- Catalogs
+- Event logging
+- Content management systems
+- Real-time analytics
+
 ## Column family databases
 
 ## Graph databases
