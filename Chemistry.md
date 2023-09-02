@@ -20,6 +20,13 @@
 - Bases in solution liberate hydroxyl ions (OH-).
 - Titration is used to determine the unknown strength of an acid or base.
 
+## Reaction types
+
+- Direct combination: two or more substances combine to form a single substance.
+- Decomposition: the opposite of direct combination – a single substance decomposes into multiple substances
+- Single displacement: one element takes the place of another in a compound.
+- Double displacement: two compounds change partners with each other.
+
 ## Equations
 
 - Create a trial equation, for example: reacting aluminum with hydrochloric acid – Al + HCl -> AlCl + H.
