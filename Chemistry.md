@@ -66,6 +66,27 @@
 - SO<sub>3</sub>: -2
 - SO<sub>4</sub>: -2
 
+## Replacement series
+
+Any metal in the series will drive out another metal below it and take its place in the salt.
+
+- Potassium
+- Sodium
+- Calcium
+- Magnesium
+- Aluminum
+- Zinc
+- Chromium
+- Iron
+- Nickel
+- Tin
+- Lead
+- Copper
+- Mercury
+- Silver
+- Platinum
+- Gold
+
 ## Crystal forms
 
 - Cubic (isometric): 3 axes of equal length and are at right angles to each other (e.g. a cube). Examples: galena, garnet, pyrite, halite.
