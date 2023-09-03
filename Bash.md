@@ -225,6 +225,14 @@ $ nano ~/.bashrc
 
 `$ tar -xzvf {filename}`
 
+### Encrypt a file
+
+`$ openssl aes-256-cbc -salt -in ./plainfile.txt -out ./encryptedfile.txt.enc`
+
+### Decrypt a file
+
+`$ openssl aes-256-cbc -d -in ./encryptedfile.txt.enc -out ./plainfile.txt`
+
 ### Copy multiple files into a different directory
 
 `$ cp {file1} {file2} {destination-path}`
