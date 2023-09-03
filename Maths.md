@@ -1,7 +1,27 @@
 
 # Maths Cheatsheet
 
-Power rules
+## Common terms
+
+- Analysis: the study of limits
+- Sequence: strings of a number pattern
+- Series: a sequence where the end result involves all the terms (eg. added up)
+- Sequence of partial sums: each term is the result of the previous terms added up
+- Arithmetic: the study of whole numbers and fractions
+- Geometry: the study of figures in space - points, lines, curves, and n-dimensional objects
+- Algebra: the use of abstract symbols to represent mathematical objects (numbers, lines, matrices, transformations), and the rules for combining these symbols
+- Domain: the numbers that a function can have as arguments. e.g. the d(N) function only applies to positive integers.
+- Exponential function, loosely defined: arguments go up by addition, values go up my multiplication.
+- Irrational number: a number that is not a ratio of two whole numbers.
+- Closed form: the exact representation of a number.
+- Open form: a decimal approximation of a number.
+- Pi(n): the number of primes up to and including n. pi refers to the greek letter, not the value 3.14...
+- Greek epsilon: typically used to represent a very tiny positive number.
+- Greek capital sigma: typically used to indicate a summation should be performed. The expressions at the top and bottom indicate range. The expression to the right indicates what is to be summed.
+- Li(x): the log integral function.
+- Algebraic number: a number that is a zero of some polynomial with integer coefficients.
+
+## Power rules
 
 - x^m * x^n = x^(m+n)
 - x^m / x^n = x^(m-n)
