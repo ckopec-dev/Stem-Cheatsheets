@@ -158,6 +158,11 @@ $ cmatrix
 ### Show disk usage in current directory, inclusive
 `$ du -s`
 
+### Reference a USB drive
+
+Use $cat /etc/mtab to see name of device (usually near bottom).  
+Then reference like any other directory. E.g. $ ls /media/user1/usbkey1  
+
 ## File management
 
 The working directory is the current directory. Unless you tell the OS otherwise, all commands apply to your working directory.   
