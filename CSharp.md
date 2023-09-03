@@ -1,6 +1,33 @@
 
 # C# Cheatsheet
 
+## Variables
+
+### Assign a variable with scientific notation
+
+~~~
+float f = 5e20F;  
+double d = 6e21D;  
+~~~
+
+### Casting types
+
+- Implicit: happens automatically going from a smaller type to a larger type. E.g. char -> int -> long -> float -> double
+- Explicit: put the type in parens in front of the variable, or by using Convert method.
+
+### Create and assign members to an array
+
+~~~
+string[] cars = new string[4];
+string[] cars = new string[4] {"Volvo", "BMW", "Ford", "Mazda"};
+string[] cars = new string[] {"Volvo", "BMW", "Ford", "Mazda"};
+string[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+~~~
+
+### Declare and assign multiple variables of the same type in the same statement
+
+`int x = 5, y = 6, z = 7;`
+        
 ## Classes
 
 ### Access modifiers
