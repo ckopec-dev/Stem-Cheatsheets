@@ -143,3 +143,73 @@ To determine specific gravity:
 - Lower sample into water (without it touching bottom)
 - Take weight measurement, e.g. 14.2g
 - Specific gravity is weight of sample / weight in water, e.g. 36.2 / 14.2 = 2.55
+
+## Various techniques
+
+### Make a 2% solution
+
+- Add 1g solute to 40 ml distilled water. If desired, heat to reduce dissolving time. 
+- Pour solution in to 100 ml graduated cylinder. 
+- Add distilled water to bring it to 50 ml.
+
+### Make a 10% solution
+
+- Add 5g solute to 40 ml distilled water. If desired, heat to reduce dissolving time. 
+- Pour solution in to 100 ml graduated cylinder. 
+- Add distilled water to bring it to 50 ml.
+
+### Make phenolphthalein indicator solution
+	
+- Dissolve 0.05g phenolphthalein powder in 50 ml denatured alcohol.
+
+### Make iodine indicator
+	
+- Dissolve 0.10g corn starch in 5 ml distilled water.
+- Heat 100 ml water to boiling.
+- Add mixture to boiling water and stir to combine.
+- Remove from heat and let cool.
+- Solution turns bright blue when iodine is present.
+- Can test with medicinal iodine tincture.
+
+### Detect acids
+
+- Acids turn blue litmus paper red.
+
+### Detect bases
+
+- Bases turn red litmus paper blue.
+-	Bases turn phenolphthalein solution pink.
+
+### Decantation
+	
+- Let liquid stand until insoluble matter has settled.
+- Pour off the liquid.
+
+### Filtration
+	 
+- Pass liquid through a funnel lined with filter paper.
+- Cleared liquid is called "filtrate".
+
+### Evaporation
+
+- Boiling away the liquid to reveal the solid.
+
+ ### Crystallization
+
+- The result of evaporation.
+
+### Saturization
+	
+- Add solute into a solution until no more will dissolve at a given temperature.
+
+### Solutions
+	
+- An x% solution has x% of solute dissolved in solution.
+- The solution is by volume and the solute is by weight.
+
+### Titration
+	
+- Neutralize an acid or base to determine its strength. 
+
+
+
