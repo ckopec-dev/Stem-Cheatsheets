@@ -87,6 +87,15 @@ Any metal in the series will drive out another metal below it and take its place
 - Platinum
 - Gold
 
+## Solubility of salts and hydroxides in water
+
+- Nitrates: soluble without exception
+- Acetates: soluble without exception
+- Chlorides: soluble except Ag, Hg (Mercurous), and Pb
+- Sulfates: soluble except Pb, Ba, Sr. Ca, Ag, and Hg slightly soluble
+- Normal carbonates, phosphates, silicates, sulfides: insoluble except Na, K, NH4
+- Hydroxides: insoluble except Na, K, NH4, Ba. Ca and Sr slightly soluble
+
 ## Crystal forms
 
 - Cubic (isometric): 3 axes of equal length and are at right angles to each other (e.g. a cube). Examples: galena, garnet, pyrite, halite.
