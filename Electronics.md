@@ -47,6 +47,10 @@ Gates are logic circuits. They take binary input and produce binary output. 0 = 
 - NAND: one or more 0 inputs = 1 output
 - NOR: all 0 inputs = 1 output
 
+## Schematic diagrams
+
+Shows how each component is connected to each other. Each component type has a unique symbol and name (usually 1-2 letters).
+
 ## Components
 
 ### LEDs
