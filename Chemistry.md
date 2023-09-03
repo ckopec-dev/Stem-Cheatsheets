@@ -96,6 +96,12 @@ Any metal in the series will drive out another metal below it and take its place
 - Normal carbonates, phosphates, silicates, sulfides: insoluble except Na, K, NH4
 - Hydroxides: insoluble except Na, K, NH4, Ba. Ca and Sr slightly soluble
 
+## Tapered glassware
+
+Standard taper glassware with ground glass joints is 19/22 or 14/20.   
+The numbers refer to diameter and length, in millimeters, of the joints.  
+14/20 is used for microscale experiments.  
+
 ## Crystal forms
 
 - Cubic (isometric): 3 axes of equal length and are at right angles to each other (e.g. a cube). Examples: galena, garnet, pyrite, halite.
