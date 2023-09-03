@@ -29,6 +29,15 @@
 - Voltage is measured relatively, between two points in a circuit. Use the multimeter like a stethoscope. Set to volts.
 - Current measures the flow in a circuit - i.e. it must past through the meter. Set to milliamps.
 
+## Circuits
+
+- Series: components connected one after another
+  - Total resistance is the sum of each resistance
+  - Total capacitance = (C1 * C2) / (C1 + C2)
+- Parallel: components connected side by side
+  - Total resistance = (R1 * R2) / (R1 + R2)
+  - Total capacitance is the sum of each capacitance
+
 ## Components
 
 ### LEDs
