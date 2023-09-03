@@ -38,6 +38,15 @@
   - Total resistance = (R1 * R2) / (R1 + R2)
   - Total capacitance is the sum of each capacitance
 
+## Gates
+
+Gates are logic circuits. They take binary input and produce binary output. 0 = no electricity, 1 = positive electricity.
+- AND: both 1 inputs = 1 output
+- OR: one or more 1 inputs = 1 output
+- NOT: one 0 input = 1 output (known as inverter circuit)
+- NAND: one or more 0 inputs = 1 output
+- NOR: all 0 inputs = 1 output
+
 ## Components
 
 ### LEDs
