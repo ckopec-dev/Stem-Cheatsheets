@@ -1,6 +1,10 @@
 
 # Salesforce Cheatsheet
 
+## Scratch orgs
+
+A dedicated, configurable, and short-term Salesforce environment that you can quickly spin up when starting a new project, a new feature branch, or a feature test.
+
 ## Development tools
 
 ### Install Visual Studio Code
