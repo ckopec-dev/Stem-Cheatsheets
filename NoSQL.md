@@ -136,3 +136,11 @@
 - Doesn't work well with huge values (BLOBs and CLOBs)
 
 ### Some use cases
+
+- Highly connected data
+- Social networks
+- Infectious diseases (to help understand transmission chains)
+- Location services (route optimization)
+- Real-time fraud detection
+- Real-time recommendations
+- Infrastructure mapping
