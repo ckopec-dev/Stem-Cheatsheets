@@ -109,6 +109,12 @@
 
 ## Graph databases
 
+- Treat data and relationships with same importance
+- Based on mathematical graph theory
+- Consist of vertices (nodes) and edges (links)
+- Vertices represent entities (e.g. users, accounts, contacts)
+- Edges represent relationships, and can have properties
+
 ### Popular examples
 
 ### Advantages
