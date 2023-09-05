@@ -582,5 +582,4 @@ df_melted = df.melt(id_vars=["ColumnA", "ColumnB"], value_vars=["ColumnC", "Colu
 import pandas as pd
 from datetime import datetime
 time_stamp = pd.Timestamp(datetime(2023, 9, 1))
-
 ~~~
