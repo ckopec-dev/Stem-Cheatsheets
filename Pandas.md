@@ -20,13 +20,11 @@ A Pandas Series is analogous to a column in a database table.
 It is a one-dimensional array consisting of a single type.
 
 ~~~
-
 import pandas as pd
 
 s = [1, 3, 5]
 my_series = pd.Series(s)
 print(my_series)
-
 ~~~
 
 ### The values are labeled with their zero-based index number, unless specified.  
@@ -35,37 +33,31 @@ print(my_series)
 ### To customize the labels
 
 ~~~
-
 import pandas as pd
 
 s = [1, 3, 5]
 my_series = pd.Series(s, index = ["a", "b", "c"])
 print(my_series)
-
 ~~~
 
 ### Create a series from a dictionary (the keys become the labels)
 
 ~~~
-
 import pandas as pd
 
 s = {"a": 1, "b": 3, "c": 5}
 my_series = pd.Series(s)
 print(my_series)
-
 ~~~
 
 ### Create a series from a dictionary using only select keys
 
 ~~~
-
 import pandas as pd
 
 s = {"a": 1, "b": 3, "c": 5}
 my_series = pd.Series(s, index = ["a", "b"])
 print(my_series)
-
 ~~~
 
 ## DataFrames
@@ -73,7 +65,6 @@ print(my_series)
 A Pandas DataFrame is analogous to a database table, i.e. a 2d structure with rows and columns.
 
 ~~~
-
 import pandas as pd
 
 data = {
@@ -91,7 +82,6 @@ dict_of_lists = {
     "age": [45, 32]
 }
 df = pd.DataFrame((dict_of_Lists)
-
 ~~~
 
 ### Locate a row by row index
@@ -107,7 +97,6 @@ When using double brackets, the result is a DataFrame.
 ### Add a custom index to give each row an indentifier/name.
 
 ~~~
-
 import pandas as pd
 
 data = {
@@ -117,7 +106,6 @@ data = {
 
 df = pd.DataFrame(data, index  = ["bob", "mary", "juan"])
 print(df)
-
 ~~~
 
 ### Return a row by index name
@@ -128,7 +116,6 @@ print(df)
 ### From/To CSV
 
 ~~~
-
 import pandas as pd
 
 df = pd.read_csv('data.csv')
@@ -145,18 +132,15 @@ df.to_csv("MyCsv.csv")
 
 # To load in chunks (if the file is too big to load into memory, for example)
 for chunk in pd.read_csv('data.csv', chunksize=1000):
-
 ~~~
 
 ### From JSON
 
 ~~~
-
 import pandas as pd
 
 df = pd.read_json('data.json')
 print(df)
-
 ~~~
 
 ## Analyzing data
@@ -190,7 +174,6 @@ print(df)
 ### Show missing values
 
 ~~~
-
 import pandas as pd
 
 df = pd.read_csv("data.csv")
@@ -203,13 +186,11 @@ print(df.isna().any())
 
 # Show a count of missing values for each column.
 print(df.isna().sum())
-
 ~~~
 
 ### Remove rows with one or more empty cells 
 
 ~~~
-
 import pandas as pd
 
 df = pd.read_csv("data.csv")
@@ -219,13 +200,11 @@ new_df = df.dropna()
 
 # To update the dataframe in place and return null
 df.dropna(inplace = True)
-
 ~~~
 
 ### Replace empty values with new value
 
 ~~~
-
 import pandas as pd
 
 df = pd.read_csv("data.csv")
@@ -239,13 +218,11 @@ df["ColumnA"].fillna(123, inplace = True)
 # To replace the null values with the mean of all the values in given column
 m = df["ColumnA"].mean()
 df["ColumnA"]fillna(m, inplace = True)
-
 ~~~
 
 ### Replacing data in the wrong format
 
 ~~~
-
 import pandas as pd
 
 df = pd.read_csv("data.csv")
@@ -253,7 +230,6 @@ df["Date"] = pd.to_datetime(df["Date"])
 
 # Now remove rows with a null date
 df.dropna(subset=["Date"], inplace = True)
-
 ~~~
 
 ### Replace data in a specific row and column
@@ -262,7 +238,6 @@ df.dropna(subset=["Date"], inplace = True)
 ### To loop through all rows and replace or delete them with a rule
 
 ~~~
-
 for i in df.index:
     if df.loc[i, "ColumnA"] > 100:
 
@@ -271,13 +246,11 @@ for i in df.index:
 
         # Delete
         df.drop(i, inplace = True)
-
 ~~~
 
 ### Deduplicate rows
 
 ~~~
-
 import pandas as pd
 
 df = pd.read_csv("data.csv")
@@ -287,7 +260,6 @@ print(df.duplicated())
 
 # Remove them
 df.drop_duplicates(inplace = True)
-
 ~~~
 
 ## Show correlations between columns
@@ -302,7 +274,6 @@ A "good" correlation is >= 0.6 or <= -0.6.
 ### Sort a single column
 
 ~~~
-
 import pandas as pd
 
 df = pd.read_csv("data.csv")
@@ -312,13 +283,11 @@ df.sort_values(by=["ColumnA"], inplace=True)
 
 # Descending
 df.sort_values(by=["ColumnA"], inplace=True, ascending=False)
-
 ~~~
 
 ### Sort by multiple columns
 
 ~~~
-
 import pandas as pd
 
 df = pd.read_csv("data.csv")
@@ -328,13 +297,11 @@ df.sort_values(by=["ColumnA", "ColumnB"], inplace=True)
 
 # Mixed
 df.sort_values(by=["ColumnA", "ColumnB"], inplace=True, ascending=[False, True])
-
 ~~~
 
 ### Sort by index
 
 ~~~
-
 import pandas as pd
 
 data = {
@@ -349,7 +316,6 @@ df.sort_index()
 
 # Descending
 df.sort_index(ascending=False)
-
 ~~~
 
 ## Aggregation
@@ -385,7 +351,6 @@ df.sort_index(ascending=False)
 ### Pivot tables
 
 ~~~
-
 # By default, aggregation is by mean
 df.pivot_table(values="columnA", index="columnB")
 
@@ -399,7 +364,6 @@ dogs.pivot_table(values="columnA", index="columnB", aggfunc=[np.median, np.mean]
 # fill_value prevents NaN results
 # margins creates a final column containing the mean of values for given row (not including 0 values)
 dogs.pivot_table(values="columnA", index="columnB", columns="columnC", fill_value=0, margins=True)
-
 ~~~
 
 ## Feature engineering
@@ -428,7 +392,6 @@ dogs.pivot_table(values="columnA", index="columnB", columns="columnC", fill_valu
 Creates buckets of variable counts.
 
 ~~~
-
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -439,9 +402,7 @@ df["ColumnA"].hist()
 
 # Change number of bins
 df["ColumnA"].hist(bins=5)
-
 plt.show()
-
 ~~~
 
 ### Bar plots
@@ -449,7 +410,6 @@ plt.show()
 Show relationship between a categorical variable and a numeric variable.
 
 ~~~
-
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -460,9 +420,7 @@ df.plot(kind="bar")
 
 # Add a title
 df.plot(kind="bar", title="title")
-
 plt.show()
-
 ~~~
 
 ### Line plots
@@ -470,7 +428,6 @@ plt.show()
 For visualizing changes in numeric variables over time.
 
 ~~~
-
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -481,9 +438,7 @@ df.plot(x="columnA", y="columnB", kind="line")
 
 # Rotate x-axis labels to make them easier to read
 df.plot(x="columnA", y="columnB", kind="line", rot=45)
-
 plt.show()
-
 ~~~
 
 ### Scatter plots
@@ -491,7 +446,6 @@ plt.show()
 For visualizing relationships between two numeric variables.
 
 ~~~
-
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -499,16 +453,12 @@ df = pd.read_csv("data.csv")
 
 # Use defaults
 df.plot(x="columnA", y="columnB", kind="scatter")
-
-
 plt.show()
-
 ~~~
 
 ### Stacking plots
 
 ~~~
-
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -524,7 +474,6 @@ df["ColumnB"].hist(alpha=0.7)
 plt.legend(["Plot1", "Plot2"])
 
 plt.show()
-
 ~~~
 
 ## Merging data
@@ -532,7 +481,6 @@ plt.show()
 ### Combining data from dataframes with different columns
 
 ~~~
-
 # This combines the wards DF with the census DF, joining on the ward column in a 1-1 relationship.
 # If the same column appears in both DFs, each will be given a suffix to distinguish them.
 wards_census = wards.merge(census, on="ward")
@@ -550,19 +498,16 @@ tv_movies = movies.merge(tv_genre, how="right", left_on="id", right_on="movie_id
 
 # Example of a self join
 original_sequels = sequels.merge(sequels, left_on="sequel", right_on="id", suffixes=("_org", "_seq"))
-
 ~~~
 
 ### Combining multiple dataframes
 
 ~~~
-
 # Merge on two columns
 grants.merge(licenses, on=["address", "zip"])
 
 # Merge multiple dfs
 grants_licenses_ward = grants.merge(licenses, on["address", "zip").merge(wards, on="ward", suffixes("_bus", "_ward"))
-
 ~~~
 
 ### Join types
@@ -578,7 +523,6 @@ grants_licenses_ward = grants.merge(licenses, on["address", "zip").merge(wards, 
 ### Vertical concatenation
 
 ~~~
-
 # Basic exmaple of combining multiple dataframes vertically
 df = pd.concat([inv_jan, inv_feb, inv_mar])
 
@@ -590,7 +534,6 @@ df = pd.concat([inv_jan, inv_feb, inv_mar], ignore_index=False, keys=["jan", "fe
 
 # Ignore columns that don't exist in all dataframes
 df = pd.concat([inv_jan, inv_feb], join="inner")
-
 ~~~
 
 ### Merging time series data
@@ -601,13 +544,11 @@ df = pd.concat([inv_jan, inv_feb], join="inner")
 - merge_asof() requires "on" columns to be pre-sorted
 
 ~~~
-
 # Merge apple + microsoft stock history
 pd.merge_ordered(appl_stock, msft_stock, on="date", suffixes=("_appl", "_msft"))
 
 # Fill missing data by populating with the previous value (forward fill)
 pd.merge_ordered(appl_stock, msft_stock, on="date", suffixes=("_appl", "_msft"), fill_method="ffill")
-
 ~~~
 
 ## Querying data
@@ -615,10 +556,8 @@ pd.merge_ordered(appl_stock, msft_stock, on="date", suffixes=("_appl", "_msft"),
 - query('{selection statement}'): similar to SQL WHERE clause
 
 ~~~
-
 # Select rows where Apple close price is greater than or equal to 60
 stocks.query('stock=="appl" and close_price >= 60)
-
 ~~~
 
 ## Melting data
@@ -628,9 +567,20 @@ stocks.query('stock=="appl" and close_price >= 60)
     - long format: data about each record spans multiple rows (for example, with attribute/value columns)
 
 ~~~
-
 # This keeps columns A + B, and turns data from columns C + D into variable/value columns named year and dollars.
 df_melted = df.melt(id_vars=["ColumnA", "ColumnB"], value_vars=["ColumnC", "ColumnD"], var_name=["year"], value_name="dollars")
-
 ~~~
     
+## Date and time series functionality
+
+- Data types are for date + time info, and represent points in time or periods in time
+- Attributes + methods reflect time-related details
+
+### Manually create a date
+
+~~~
+import pandas as pd
+from datetime import datetime
+time_stamp = pd.Timestamp(datetime(2023, 9, 1))
+
+~~~
