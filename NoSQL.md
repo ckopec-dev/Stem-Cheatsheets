@@ -114,8 +114,14 @@
 - Consist of vertices (nodes) and edges (links)
 - Vertices represent entities (e.g. users, accounts, contacts)
 - Edges represent relationships, and can have properties
+- Querying is called traversing the graph
 
 ### Popular examples
+
+- Azure Cosmos DB
+- OrientDB
+- Neo4j
+- ArangoDB
 
 ### Advantages
 
