@@ -125,6 +125,14 @@
 
 ### Advantages
 
+- No need to define final structure up front
+- Can easily add/delete vertices, properties, and edges
+- No joins, so high performance
+- Intuitive structure and easily visualized
+- Horitizontal scalability is possible, but not as easily as other NoSQL databases
+  
 ### Disadvantages
+
+- Doesn't work well with huge values (BLOBs and CLOBs)
 
 ### Some use cases
