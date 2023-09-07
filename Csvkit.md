@@ -44,7 +44,6 @@ For most csvkit commands, use "{command} -h" for help.
 ### Return data by column position
 
 ~~~
-
 # By index
 $ csvcut -c {position-index} MyCsv.csv
 
@@ -54,7 +53,6 @@ $ csvcut -c "{column-name}" MyCsv.csv
 # Multiple columns
 $ csvcut -c 2,3 MyCsv.csv
 $ csvcut -c "ColA","ColB" MyCsv.csv
-
 ~~~
 
 ### Return filtered rows
@@ -68,16 +66,13 @@ csvgrep: must be paired with one of 3 flags:
 ### Csvgrep example
 
 ~~~
-
 # Returns entire row with given Id
 $ csvgrep -c "Id" -m 123 MyCsv.csv
-
 ~~~
 
 ### Stack multiple csv files with the same schema
 
 ~~~
-
 # Basic example
 $ csvstack MyCsv1.csv MyCsv2.csv > MyCsvCombined.csv
 
@@ -86,13 +81,11 @@ $ csvstack -g "MyCsv1","MyCsv2" MyCsv1.csv MyCsv2.csv > MyCsvCombined.csv
 
 # Override default group name
 $ csvstack -g "MyCsv1","MyCsv2" -n "source" MyCsv1.csv MyCsv2.csv > MyCsvCombined.csv
-
 ~~~
 
 ### Create a csv file from sql data
 
 ~~~
-
 # Basic structure of command
 $ sql2csv --db "{connection-string}" \
         --query "SELECT * FROM Some_Table" \
@@ -106,29 +99,24 @@ $ pip3 install pymssql
 $ sql2csv --db "mssql+pymssql://{username}:{password}@{server-address}/?charset=utf8" \
         --query "SELECT * FROM MyDatabase.dbo.Some_Table" \
         > MyCsv.csv
-
 ~~~
 
 ### Execute sql against a csv file
 
 ~~~
-
 # Since this creates an in-memory instance of a sql database from the entire csv file, it isn't practical for large files.
 $ csvsql --query "SELECT * FROM MyTable LIMIT 10" MyCsv.csv
 
 # Can be used to query multiple files using joins. See documentation for details.
-
 ~~~
 
 ### Insert data into sql from csv
 
 ~~~
-
 $ csvsql --db "{connection-string}" --insert MyCsv.csv
 
 # Useful flags: 
 # --no-inference: disables type inference when parsing input
 # --no-constraints: generates a schema without length limits or null checks
-
 ~~~
 
