@@ -14,7 +14,6 @@
 ### Crontab entries
 
 ~~~
-
 * * * * * command to execute
 
 1st star: minute (0-59)
@@ -25,5 +24,4 @@
 
 Default is *, which means run every interval.
 To run multiple times per interval, separate values with a commad. E.g. 15,30,45 * 1 * *
-
 ~~~
