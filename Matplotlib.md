@@ -4,7 +4,6 @@
 ## Basics
 
 ~~~
-
 # Import library
 from matplotlib import pyplot as plt
 
@@ -20,13 +19,11 @@ plt.show()
 
 # Clear plot
 # plt.clf()
-
 ~~~ 
 
 ## Labels and legends
 
 ~~~
-
 plt.xlabel("This is the x axis label")
 plt.ylabel("This is the y axis label")
 plt.title("This is the title", fontsize=20)
@@ -36,19 +33,16 @@ plt.text(xcoord, ycoord, "Some text")
 
 # Customize ticks. First param is the tick values, 2nd param is the tick labels.
 plt.yticks([0, 2, 4, 6, 8, 10], ['0', '2B', '4B', '6B', '8B', '10B'])
-
 ~~~
 
 ## Styles
 
 ~~~
-
 # Add before any other plotting code
 plt.style.use('seaborn')
 
 # Show all available styles
 print(plt.style.available)
-
 ~~~
 
 ## Types of plots
@@ -58,10 +52,8 @@ print(plt.style.available)
 Good for an unordered collection of 2d data.
 
 ~~~
-
 # Give markers transparency by setting alpha. 
 plt.scatter(x_values, y_values, alpha=0.1)
-
 ~~~
 
 ### Bar charts
@@ -69,7 +61,6 @@ plt.scatter(x_values, y_values, alpha=0.1)
 Good for a comparison of categorical data.
 
 ~~~
-
 # For vertical bar chart
 plt.bar(x_values, y_values)
 
@@ -78,16 +69,13 @@ plt.barh(x_values, y_values)
 
 # Show error bars (for example, from standard deviation of data)
 plt.bar(x_values, y_values, yerr=df.error)
-
 ~~~
 
 ### Stacked bar charts
 
 ~~~
-
 plt.bar(x_values, y_values)
 plt.bar(x_values, z_values, bottom=y_values)
-
 ~~~
 
 ### Histograms
@@ -95,7 +83,6 @@ plt.bar(x_values, z_values, bottom=y_values)
 Visualizes a distribution of values in a dataset.
 
 ~~~
-
 # By default, 10 bins are created.
 plt.hist(y_values, bins=40)
 
@@ -106,5 +93,4 @@ plt.hist(y_values, range=(5, 15))
 # Useful for comparing two histograms with different ranges.
 plt.hist(y.values, density=True)
 plt.hist(z.values, density=True)
-
 ~~~
