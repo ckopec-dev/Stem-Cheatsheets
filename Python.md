@@ -133,7 +133,7 @@ for label, row in df.iterrows() :
 
 `type({variable})`
 
-### Some common types
+### Primitive types
 
 - float
 - int
@@ -146,6 +146,13 @@ for label, row in df.iterrows() :
 - int({variable})
 - str({variable})
 - bool({variable})
+
+### Non-primitive types
+
+- Lists
+- Tuples
+- Dictionaries
+- Sets
 
 ## Lists
 
