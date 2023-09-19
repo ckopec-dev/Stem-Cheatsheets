@@ -414,11 +414,9 @@ Available everywhere
 ### Create a Hello World script
 
 ~~~
-
 #!/bin/bash
 
 echo "Hello World!"
-
 ~~~
 
 ### Pass arguments to a script
