@@ -422,7 +422,6 @@ echo "Hello World!"
 ### Pass arguments to a script
 
 ~~~
-
 #!/bin/bash
 
 # Based on position of arguments that are passed in.
@@ -433,8 +432,6 @@ echo "Full Name: $3";chg
 # $@ is a special expression that means "all of the arguments"
 # $* also means "all of the arguments"
 # $# gives the number of arguments
-
-
 ~~~
 
 ### Execute a script
