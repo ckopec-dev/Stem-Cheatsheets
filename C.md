@@ -57,6 +57,33 @@ int main()
 
 Overflow occurs when you write more data to memory than you have allocated. This can result in a corrupt stack or heap.
 
+## Structs
+~~~
+#include <stdio.h>
+#include <string.h>
+
+// Define a struct
+struct company {
+	char *name;
+	int employee_count;
+};
+
+int main(void) {
+
+	// Create a company struct
+	struct company comp;
+
+	// Assign some values
+	comp.name = malloc(5 * sizeof(char));
+	strcpy(comp.name, "Acme");
+
+	// Create pointer to struct
+	struct company *comp_ptr = &em;
+
+	// Do something with the struct...
+}
+~~~
+
 ## Multithreading
 
 ### Basic demo
