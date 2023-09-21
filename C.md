@@ -53,6 +53,10 @@ int main()
 }
 ~~~
 
+## Buffer overflows
+
+Overflow occurs when you write more data to memory than you have allocated. This can result in a corrupt stack or heap.
+
 ## Multithreading
 
 ### Basic demo
