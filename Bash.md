@@ -447,7 +447,6 @@ or
 ### Basic IF statement syntax
 
 ~~~
-
 if [ CONDITION ]; then
       # CODE TO EXECUTE IF TRUE
 else 
@@ -463,18 +462,15 @@ if grep -q SomeText MyFile.txt; then
 
 # Execute via shell-within-a-shell technique. Produces same result as above:
 if $(grep -q SomeText MyFile.txt); then
-
 ~~~
 
 ### Multiple condition examples
 
 ~~~
-
 if [ CONDITION A ] && [ CONDITION B ]; then # A AND B
 if [ CONDITION A && CONDITION B ]; then # A AND B (same as above)
 if [ CONDITION A ] || [ CONDITION B ]; then # A OR B
 if [ CONDITION A || CONDITION B ]; then # A OR B (same as above)
-
 ~~~
 
 ### Special conditional flags
@@ -499,7 +495,6 @@ if [ CONDITION A || CONDITION B ]; then # A OR B (same as above)
 ### Basic FOR statement syntax
 
 ~~~
-
 for ITEM in ITEMS
 do
       # Do something
@@ -516,24 +511,20 @@ for logfile in logfiles/*
 
 # Shell-in-a-shell example:
 for loggile in $(ls logfiles/ | grep -i 'ftp')
-
 ~~~
 
 ### Basic WHILE statement syntax
 
 ~~~
-
 while [ CONDITION ]; # Syntax is similar to IF condtition syntax.
 do
       # Do something
 done
-
 ~~~
 
 ### Basic CASE statement syntax
 
 ~~~
-
 case STRING OR VARIABLE in
       PATTERN1)
       COMMAND1;;
@@ -542,7 +533,6 @@ case STRING OR VARIABLE in
       *)
       DEFAULT COMMAND;;
 esac
-
 ~~~
 
 ## Process management
@@ -556,7 +546,6 @@ esac
 ### Accessing a Windows share from Linux
 
 ~~~
-
 *** IMPORTANT! cifs is not secure, so this example isn't either. Use only in test/isolated environments.
 
 # Pre-req installs
@@ -579,6 +568,5 @@ $ sudo chmod 600 /etc/sambapasswords # So only root can access
 $ sudo nano /etc/fstab
         add a line: {remote share, e.g. //192.168.0.10/WindowsShare} {local mount location, e.g. /mnt/windowsshare} cifs auto,gid=users,credentials=/etc/sambapasswords,file_mode=0777,dir_mode=0777 0 0
 $ sudo shutdown -r now
-
 ~~~
 
