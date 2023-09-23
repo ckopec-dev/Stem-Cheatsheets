@@ -214,3 +214,15 @@ A list stores a variety of objects in a single container.
 - AND: &amp;
 - OR: |
 - NOT: !
+
+## Conditional statements
+
+~~~
+if (condition) {
+  expr1
+} elseif {
+  expr2
+} else {
+  expr3
+}
+~~~
