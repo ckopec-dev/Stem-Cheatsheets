@@ -195,3 +195,16 @@ A list stores a variety of objects in a single container.
 ### Select a named element of a list
 `> my_list$my_element`
 
+## Relational operators
+
+### Equality
+`> TRUE == TRUE`
+
+### Inequality 
+`> TRUE != TRUE`
+
+### Less than or greater than
+`> 3 < 5`
+
+### Less than or equal to
+`> 5 >= 3`
