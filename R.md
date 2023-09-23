@@ -208,3 +208,9 @@ A list stores a variety of objects in a single container.
 
 ### Less than or equal to
 `> 5 >= 3`
+
+## Logical Operators
+
+- AND: &amp;
+- OR: |
+- NOT: !
