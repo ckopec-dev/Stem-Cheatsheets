@@ -215,7 +215,7 @@ A list stores a variety of objects in a single container.
 - OR: |
 - NOT: !
 
-## Conditional statements
+## Conditional and control flow statements
 
 ~~~
 if (condition) {
