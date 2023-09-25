@@ -225,4 +225,11 @@ if (condition) {
 } else {
   expr3
 }
+
+while(condition) {
+  expr
+
+  # Break out of the loop
+  break
+}
 ~~~
