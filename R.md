@@ -232,4 +232,14 @@ while(condition) {
   # Break out of the loop
   break
 }
+
+for(var in seq) {
+  if (x == y) {
+
+  ## Next is like continue in other languages
+  next
+
+  }
+  expr
+}
 ~~~
