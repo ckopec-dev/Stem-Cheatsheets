@@ -74,29 +74,24 @@ print (random.randrange(1,10))
 ### If-then-else
 
 ~~~
-
 if condition :
     expression
 elif :
     expression
 else :
     expression
-
 ~~~
 
 ### While loops
 
 ~~~
-
 while condition :
     expression
-
 ~~~
 
 ### For loops
 
 ~~~
-
 # General syntax
 for var in seq :
     expression
@@ -116,7 +111,6 @@ for val in np.nditer(my2d_array) :
 
 # To loop pandas dataframes
 for label, row in df.iterrows() :
-
 ~~~
 
 ## Variables
