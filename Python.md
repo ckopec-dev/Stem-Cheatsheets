@@ -346,6 +346,25 @@ plt.show()
 - pow(base, exp): power
 - upper(): convert to uppercase
 
+### Docstrings
+
+Describe a function
+
+~~~
+# Example
+def do_something(argA, argB):
+    """Explains what the function does.
+
+    Args:
+        argA (DataFrame): Explains argA.
+        argB (iterable of str): Explains argB.
+
+    Returns:
+        Explains what is returned, if anything.
+    """
+    The function code
+~~~
+
 ### Custom functions
 
 ~~~
