@@ -361,6 +361,13 @@ def do_something(argA, argB):
 
     Returns:
         Explains what is returned, if anything.
+
+    Raises:
+        Describes any intentionally returned error types.
+
+    Notes:
+        Additional notes.
+
     """
     The function code
 ~~~
