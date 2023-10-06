@@ -6,7 +6,6 @@
 ### Clean and format new or used drive
 
 ~~~
-
 > diskpart
 > list disk
 > select disk <disk-number>
@@ -20,5 +19,4 @@ reboot
 
 > format c: /fs:ntfs /p:3
 > chkdsk c: /f /b /v /r
-
 ~~~
