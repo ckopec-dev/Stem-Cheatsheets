@@ -9,10 +9,8 @@
 ### Create lists
 
 ~~~
-
 height = [1.55, 1.67, 1.34]
 weight = [154, 134, 164]
-
 ~~~
 
 ### Create numpy arrays from lists. Numpy arrays can only contain a single type, unlike lists.
