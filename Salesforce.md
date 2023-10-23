@@ -78,6 +78,13 @@ A dedicated, configurable, and short-term Salesforce environment that you can qu
 
 - Right-click the lwc's folder and select SFDC: Deploy Source to Org.
 
+### View logs
+
+- In the command palette, select "SFDX: Turn On Apex Debug Log for Replay Debugger".
+- Reproduce the issue for which you want to review log info.
+- In the command palette, select "SFDX: Get Apex Debug Logs".
+- Select the log you wish to view.
+  
 ## Apex
 
 ### Comments
