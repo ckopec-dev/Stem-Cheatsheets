@@ -84,6 +84,10 @@ A dedicated, configurable, and short-term Salesforce environment that you can qu
 - Reproduce the issue for which you want to review log info.
 - In the command palette, select "SFDX: Get Apex Debug Logs".
 - Select the log you wish to view.
+
+### Run unit tests
+
+[https://developer.salesforce.com/tools/vscode/en/apex/testing](https://developer.salesforce.com/tools/vscode/en/apex/testing)
   
 ## Apex
 
