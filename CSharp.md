@@ -30,6 +30,51 @@ string[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
         
 ## Classes
 
+### Declaration
+
+Header consists of:
+- The attributes and modifiers of the class
+- The name of the class
+- The base class (when inheriting from a base class)
+- The interfaces implemented by the class
+    
+Body consists of:
+- A list of member declarations written between the delimiters { and }.
+
+~~~
+// Simple delcaration example
+public class Point
+{
+    public int X { get; }
+    public int Y { get; }
+    
+    public Point(int x, int y) => (X, Y) = (x, y);
+}
+
+// Create a new instance of the Point class.
+var p1 = new Point(0, 0);
+
+// Create a factory class for generating many instances of the Point class.
+public class PointFactory(int numberOfPoints)
+{
+    public IEnumerable<Point> CreatePoints()
+    {
+        var generator = new Random();
+        for (int i = 0; i < numberOfPoints; i++)
+        {
+            yield return new Point(generator.Next(), generator.Next());
+        }
+    }
+}
+
+// Use the factory class.
+var factory = new PointFactory(10);
+foreach (var point in factory.CreatePoints())
+{
+    Console.WriteLine($"({point.X}, {point.Y})");
+}
+~~~
+
 ### Access modifiers
 
 - Public: The code is accessible for all classes.
