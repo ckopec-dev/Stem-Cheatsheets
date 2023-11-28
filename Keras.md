@@ -6,7 +6,6 @@
 ### Architecture specification
 
 ~~~
-
 import numpy as np
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.models import Sequential
@@ -27,23 +26,18 @@ model.add(Dense(1))
 
 # Print out model architecture
 print(model.summary())
-
 ~~~
 
 ### Compiling model
 
 ~~~
-
 model.compile(optimizer='adam', loss='mean_squared_error')
-
 ~~~
 
 ### Fitting model
 
 ~~~
-
 model.fit(data, target, validation_split=0.3)
-
 ~~~
 
 ## Problem types
@@ -63,7 +57,6 @@ model.fit(data, target, validation_split=0.3)
 ### Example classification code
 
 ~~~
-
 from tensorflow.keras.utils import to_categorical
 
 data = pd.read_csv('basketball_shot_log.csv')
@@ -77,20 +70,17 @@ model.add(Dense(100, activation='relu'))
 model.add(Dense(2, activation='softmax'))
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 model.fit(predictors, target)
-
 ~~~
 
 ## Reusing models
 
 ~~~
-
 from tensorflow.keras.models import load_model
 
 model.save('my_model.h5')
 my_model = load_model('my_model.h5')
 predictions = my_model.predict(test_data)
 probability_true = predictions[:,1]
-
 ~~~
 
 ## Optimizers
@@ -98,7 +88,6 @@ probability_true = predictions[:,1]
 ### Stochastic gradient descent
 
 ~~~
-
 learing_rates_to_test = [0.000001, 0.01, 1]
 
 # Loop learning rates to test
@@ -107,17 +96,14 @@ for lr in learning_rates_to_test :
     my_optimizer = SGD(lr=lr)
     model.compile(optimizer = my_optimizer, loss = 'categorical_crossentropy')
     model.fit(predictors, target)
-
 ~~~
 
 ### Early stopping monitor
 
 ~~~
-
 from tensorflow.keras.callbacks import EarlyStopping
 
 monitor = EarlyStopping(patience=2)
 
 mod.fit(predictors, taget, validation_split=0.3, epochs=20, callbacks = [monitor])
-
 ~~~
