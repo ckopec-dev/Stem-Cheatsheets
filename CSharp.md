@@ -94,6 +94,10 @@ string name = $"My full name is: {firstName} {lastName}";
 
 ## Compilation
 
+### How to access command line args anywhere in a console app
+
+`Environment.GetCommandLineArgs`
+
 ### How to use directives
 
 ~~~
