@@ -216,3 +216,29 @@ public static void Write()
     myFile.Close();
 }
 ~~~
+
+## Functional techniques
+
+### How to use relational patterns in switch statements
+
+~~~
+string WaterState(int tempInFahrenheit) =>
+    tempInFahrenheit switch
+    {
+        (> 32) and (< 212) => "liquid",
+        < 32 => "solid",
+        > 212 => "gas",
+        32 => "solid/liquid transition",
+        212 => "liquid / gas transition",
+    };
+
+decimal CalculateDiscount(Order order) =>
+    order switch
+    {
+        { Items: > 10, Cost: > 1000.00m } => 0.10m,
+        { Items: > 5, Cost: > 500.00m } => 0.05m,
+        { Cost: > 250.00m } => 0.02m,
+        null => throw new ArgumentNullException(nameof(order), "Can't calculate discount on null order"),
+        var someObject => 0m,
+    };
+~~~
