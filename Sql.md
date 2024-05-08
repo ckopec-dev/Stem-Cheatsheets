@@ -3,17 +3,14 @@
 ## Server administration
 
 ~~~
-
 -- Check installed version and edition
 SELECT @@VERSION
 SELECT SERVERPROPERTY('Edition')
-
 ~~~
 
 ## Selecting
 
 ~~~
-
 -- Select two columns from a single table
 SELECT columnA, columnnB FROM mytable;
 
@@ -34,13 +31,11 @@ SELECT TOP 10 * FROM mytable;
 
 -- Select top 10 rows on MySQL, PostgreSQL, or SQLite
 SELECT * FROM mytable LIMIT 10;
-
 ~~~
 
 ## Filtering
 
 ~~~
-
 -- Select films released after 1960
 SELECT title FROM films WHERE release_year > 1960;
 
@@ -73,7 +68,6 @@ SELECT * FROM films WHERE release_year IS NULL;
 
 -- Select films with known release year
 SELECT * FROM films WHERE release_year IS NOT NULL;
-
 ~~~
 
 ### Comparison operators
@@ -103,7 +97,6 @@ SELECT * FROM films WHERE release_year IS NOT NULL;
 ## Sorting and grouping
 
 ~~~
-
 -- Order films by title
 SELECT * FROM films ORDER BY title;
 
@@ -124,7 +117,6 @@ ORDER BY title_count DESC;
 
 -- Show count of films with a minimum of over ten films by release year
 SELECT release_year, COUNT(title) AS title_count FROM films GROUP BY release_year HAVING COUNT(title) > 10; 
-
 ~~~
 
 ## Other useful functions
@@ -145,3 +137,30 @@ SELECT release_year, COUNT(title) AS title_count FROM films GROUP BY release_yea
 
 - WHERE can't filter aggregate functions.
 - WHERE filters individual records, HAVING filters grouped records.
+
+## Joins
+
+### Inner join
+
+- Looks for records in both tables that match on given field(s).
+- It is generally easier to construct the query by building the joins first.
+
+~~~
+-- Inner join of presidents and prime_ministers, joining on country
+SELECT prime_ministers.country, prime_ministers.continent, prime_minister, president
+FROM prime_ministers
+INNER JOIN presidents
+ON prime_ministers.country = presidents.country;
+
+-- Same query with aliases
+SELECT p1.country, p1.continent, prime_minister, president
+FROM prime_ministers AS p1
+INNER JOIN presidents AS p2
+ON p1.country = p2.country;
+
+-- Same query with USING
+SELECT p1.country, p1.continent, prime_minister, president
+FROM prime_ministers AS p1
+INNER JOIN presidents AS p2
+USING(country);
+~~~
