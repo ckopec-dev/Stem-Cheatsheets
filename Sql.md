@@ -163,4 +163,12 @@ SELECT p1.country, p1.continent, prime_minister, president
 FROM prime_ministers AS p1
 INNER JOIN presidents AS p2
 USING(country);
+
+-- Chaining joins
+SELECT p1.country, p1.continent, prime_minister, president, pm_start
+FROM prime_ministers AS p1
+INNER JOIN presidents AS p2
+USING(country)
+INNER JOIN prime_minister_terms AS p3
+USING(prime_minister);
 ~~~
