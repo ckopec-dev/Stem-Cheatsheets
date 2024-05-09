@@ -172,3 +172,30 @@ USING(country)
 INNER JOIN prime_minister_terms AS p3
 USING(prime_minister);
 ~~~
+
+### Left join
+
+- Returns all records in the left table, and records in the right table that match on given field(s).
+- This is a type of outer join.
+
+~~~
+-- Left join of presidents and prime_ministers, joining on country
+SELECT p1.country, prime_minister, president
+FROM prime_ministers AS p1
+LEFT JOIN presidents AS p2
+USING(country);
+~~~
+
+### Right join
+
+- Similar to left join, except in the other direction.
+- This is another type of outer join.
+- Uncommon, since it can be rewritten as an equivalent left join.
+
+~~~
+-- Right join of presidents and prime_ministers, joining on country
+SELECT p1.country, prime_minister, president
+FROM prime_ministers AS p1
+RIGHT JOIN presidents AS p2
+USING(country);
+~~~
