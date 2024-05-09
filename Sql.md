@@ -199,3 +199,16 @@ FROM prime_ministers AS p1
 RIGHT JOIN presidents AS p2
 USING(country);
 ~~~
+
+### Full join
+
+- Combines a left join and a right join.
+- This is another type of outer join.
+
+~~~
+-- Full join of presidents and prime_ministers, joining on country
+SELECT p1.country, prime_minister, president
+FROM prime_ministers AS p1
+FULL JOIN presidents AS p2
+USING(country);
+~~~
