@@ -212,3 +212,20 @@ FROM prime_ministers AS p1
 FULL JOIN presidents AS p2
 USING(country);
 ~~~
+
+### Cross join
+
+- Creates all possible combinations of two tables.
+
+### Self join
+
+- Used to join a table with itself.
+- Aliasing is required.
+
+~~~
+-- Self join of every country with every other country on the same continent
+SELECT p1.country AS country1, p2.country AS country2, p1.continent
+FROM prime_ministers AS p1
+INNER JOIN prime_ministers AS p2
+ON p1.continent = p2.continent AND p1.country <> p2.country
+~~~
