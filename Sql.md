@@ -251,3 +251,13 @@ SELECT * FROM left_table
 UNION ALL
 SELECT * FROM right_table;
 ~~~
+
+### Intersect
+
+- Takes two tables and returns rows that are identical in both tables.
+
+~~~
+SELECT id, val FROM left_table
+INTERSECT
+SELECT id, val FROM right_table;
+~~~
