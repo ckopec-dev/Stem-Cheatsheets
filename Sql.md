@@ -261,3 +261,9 @@ SELECT id, val FROM left_table
 INTERSECT
 SELECT id, val FROM right_table;
 ~~~
+
+### Except
+
+- Takes two tables and returns rows in the left table that are not in the right table.
+
+  
