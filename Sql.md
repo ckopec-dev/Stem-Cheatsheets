@@ -266,4 +266,9 @@ SELECT id, val FROM right_table;
 
 - Takes two tables and returns rows in the left table that are not in the right table.
 
+~~~
+SELECT id, val FROM left_table
+EXCEPT
+SELECT id, val FROM right_table;
+~~~
   
