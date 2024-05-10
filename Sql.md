@@ -229,3 +229,25 @@ FROM prime_ministers AS p1
 INNER JOIN prime_ministers AS p2
 ON p1.continent = p2.continent AND p1.country <> p2.country
 ~~~
+
+## Set operations
+
+### Union
+
+- Takes two tables and returns all rows from both tables (unless the rows are identical, in which case only one of them is returned).
+
+~~~
+SELECT * FROM left_table
+UNION
+SELECT * FROM right_table;
+~~~
+
+### Union All
+
+- Same as union except duplicates are included.
+
+~~~
+SELECT * FROM left_table
+UNION ALL
+SELECT * FROM right_table;
+~~~
