@@ -271,4 +271,27 @@ SELECT id, val FROM left_table
 EXCEPT
 SELECT id, val FROM right_table;
 ~~~
-  
+
+## Subqueries
+
+### Semi join
+
+- Selects records in the first table table where a condition is met in the second table.
+- Unlike other joins, a semi join is implemented via a subquery.
+
+~~~
+SELECT president, country, continent
+FROM presidents
+WHERE country IN (SELECT country FROM states WHERE indep_year < 1800);
+~~~
+
+### Anti join
+
+- Similar to semi join, except records are excluded when a condition is met.
+- Also implemented via a subquery.
+
+~~~
+SELECT president, country, continent
+FROM presidents
+WHERE country NOT IN (SELECT country FROM states WHERE indep_year < 1800);
+~~~
