@@ -138,6 +138,20 @@ SELECT release_year, COUNT(title) AS title_count FROM films GROUP BY release_yea
 - WHERE can't filter aggregate functions.
 - WHERE filters individual records, HAVING filters grouped records.
 
+## Case
+
+- Similar to case statements in other languages.
+~~~
+SELECT
+  home_goal,
+  away_goal,
+  CASE
+    WHEN home_goal > away_goal THEN 'Home Team Win'
+    WHEN home_goal < away_goal THEN 'Away Team Win'
+    ELSE 'Tie' END AS outcome
+FROM match;
+~~~
+
 ## Joins
 
 ### Inner join
