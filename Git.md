@@ -91,7 +91,7 @@ Negate a pattern by starting it with an explanation point.
 
 ### Show what is changed but not staged
 
-`$ git giff`
+`$ git diff`
 
 ### Show what is staged for the next commit
 
