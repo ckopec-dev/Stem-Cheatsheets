@@ -18,3 +18,8 @@ export PATH="$PATH:/home/<!username!>/.dotnet
 
 # Relog
 ~~~
+
+## Using with VS Code on Ubuntu 22.04
+
+- Make sure dotnet is installed via: $ dotnet --version
+- Install c# dev kit extension
