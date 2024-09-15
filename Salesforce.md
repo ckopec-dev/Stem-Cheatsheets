@@ -426,3 +426,21 @@ input {
 	- The child component dispatches the event and the parent component listens for it. Dispatching the event includes creating an event object the child can pass to the parent component. The parent has a handler to respond to the event.
 - Information can be passed down using public properties and public methods.
 	- You can make a component property public by prefacing it with the @api decorator. Then, set the public property by an external component.
+
+## Rest API
+
+- User must have API Enabled permission in their profile. For Developer edition, this is enabled by default.
+- Some things you can do with the API:
+	- CRUD records (incl querying + searching)
+ 	- Retrieve metadata
+  	- Retrieve instance configuration info
+- Elements used in a request:
+	- URI, basic structure: https://MyDomainName.my.salesforce.com/services/data/vXX.X/resource/
+ 	- Headers: used to pass params and options, e.g.:
+  		- Http Accept: format the cllient accepts in the response body, e.g. application/json
+    		- Http Content-type: format of the request body, e.g. application/json
+        	- Http Authorization: provides OAuth 2.0 token to authorize the client
+           	- Compression header: compresses the request or response
+           	- Conditional header request: validates records against a precondition
+  	- Http method: HEAD, GET, POST, PATCH, PUT, and DELETE
+  	- Request body: when attaching json with cURL, use -data-binary option
