@@ -444,3 +444,4 @@ input {
            	- Conditional header request: validates records against a precondition
   	- Http method: HEAD, GET, POST, PATCH, PUT, and DELETE
   	- Request body: when attaching json with cURL, use -data-binary option
+  - Requests can use 15 or 18 character IDs, but responses always have 18 character IDs
