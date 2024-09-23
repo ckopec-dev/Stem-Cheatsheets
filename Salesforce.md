@@ -445,3 +445,16 @@ input {
   	- Http method: HEAD, GET, POST, PATCH, PUT, and DELETE
   	- Request body: when attaching json with cURL, use -data-binary option
   - Requests can use 15 or 18 character IDs, but responses always have 18 character IDs
+ 
+  ## Create a Connected App for API usage
+
+  - Go to Setup / Apps / App Manager
+  - Click the "New Connected App" button
+  - Enter a Connected App Name, e.g. API Demo
+  - API Name should auto-populate
+  - Enter your email for Contact Email
+  - Make sure Enable OAuth Settings is checked
+  - For Callback URL, enter https://localhost
+  - For Selected OAuth Scopes, select "Manage user data via APIs (api)"
+  - Click the Save button
+    
