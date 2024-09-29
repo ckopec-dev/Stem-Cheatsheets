@@ -458,4 +458,22 @@ input {
   - For Selected OAuth Scopes, select "Manage user data via APIs (api)"
   - For Permitted Users, select "All users may self-authorize"
   - Click the Save button
+ 
+    ## Retrieve and use and access token
+
+~~~
+# Request:
+$ curl https://MyDomainName.my.salesforce.com/services/oauth2/token -d 'grant_type=password'
+-d 'client_id=consumer-key' -d 'client_secret=consumer-secret' -d
+'username=my-login@domain.com' -d 'password=my-password'
+
+# Response:
+{"access_token":"00D5e000001N20Q!ASAAQEDBeG8bOwPu8NWGsvFwWNfqHOp5ZcjMpFsU6yEMxTKdBuRXNzSZ8xGVyAiY8xoy1KYkaadzRlA2F5Zd3JXqLVitOdNS",
+"instance_url":"https://MyDomainName.my.salesforce.com",
+"id":"https://login.salesforce.com/id/00D5e000001N20QEAS/0055e000003E8ooAAC",
+"token_type":"Bearer",
+"issued_at":"1627237872637",
+"signature":"jmaZOgQyqUxFKAesVPsqVfAWxI62O+aH/mJhDrc8KvQ="}
+~~~
+    
     
