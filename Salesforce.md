@@ -456,5 +456,6 @@ input {
   - Make sure Enable OAuth Settings is checked
   - For Callback URL, enter https://localhost
   - For Selected OAuth Scopes, select "Manage user data via APIs (api)"
+  - For Permitted Users, select "All users may self-authorize"
   - Click the Save button
     
