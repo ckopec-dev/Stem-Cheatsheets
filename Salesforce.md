@@ -463,9 +463,9 @@ input {
 
 ~~~
 # Request:
-$ curl https://MyDomainName.my.salesforce.com/services/oauth2/token -d 'grant_type=password'
+$ curl -d 'grant_type=password'
 -d 'client_id=consumer-key' -d 'client_secret=consumer-secret' -d
-'username=my-login@domain.com' -d 'password=my-password'
+'username=my-login@domain.com' -d 'password=my-password' https://MyDomainName.my.salesforce.com/services/oauth2/token
 
 # Response:
 {"access_token":"00D5e000001N20Q!ASAAQEDBeG8bOwPu8NWGsvFwWNfqHOp5ZcjMpFsU6yEMxTKdBuRXNzSZ8xGVyAiY8xoy1KYkaadzRlA2F5Zd3JXqLVitOdNS",
