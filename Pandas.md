@@ -143,6 +143,11 @@ df = pd.read_json('data.json')
 print(df)
 ~~~
 
+### Display the full content of each column, regardless of its width.
+~~~
+pd.set_option("display.max_colwidth", None)
+~~~
+
 ## Analyzing data
 
 ### Show first n rows. If n is not specified, it will return 5 by default.
