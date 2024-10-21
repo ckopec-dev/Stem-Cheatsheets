@@ -31,3 +31,14 @@ $ git init
 - Fill out the other options as desired
 - Make sure "Create Git repository" is checked
 - Click the "Create" button
+
+## Create a new repo from existing folder/files
+## Clone an existing repo from Github
+## Commit
+## Push/pull
+## Create a branch
+## Create a PR
+## Reject a PR
+## Make changes and resubmitt a rejected PR 
+## Approve a PR
+## Merge branch 
