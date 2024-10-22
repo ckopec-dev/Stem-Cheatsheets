@@ -1,7 +1,7 @@
 
 # Git Common Scenarios
 
-## Create a new local repo from scratch
+## Create a new local repo from scratch (or existing folder)
 
 ### Console
 
@@ -13,7 +13,7 @@ $ git init
 
 ### VSCode
 
-- Create a folder that will contain your repo
+- Create or open a folder that will contain your repo
 - Open it in VSCode (File / Open Folder)
 - In Activity Bar: Choose Source Control, then click "Initialize Repository"
 
@@ -32,7 +32,6 @@ $ git init
 - Make sure "Create Git repository" is checked
 - Click the "Create" button
 
-## Create a new repo from existing folder/files
 ## Clone an existing repo from Github
 ## Commit
 ## Push/pull
