@@ -33,6 +33,7 @@ $ git init
 - Click the "Create" button
 
 ## Clone an existing repo from Github
+## Stage changes
 ## Commit
 ## Push/pull
 ## Create a branch
