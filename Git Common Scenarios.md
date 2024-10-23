@@ -33,6 +33,24 @@ $ git init
 - Click the "Create" button
 
 ## Clone an existing repo from Github
+
+### Console
+
+~~~
+$ git clone https://github.com/ckopec-dev/Stem-Cheatsheets.git
+~~~
+
+### VSCode
+
+- In Activity Bar: Choose Source Control, then click "Clone Repository"
+- Enter url of repo
+- Select folder to clone into (the parent folder where the repo folder will be created)
+
+### Visual Studio 2022
+
+- Git / Clone Repository
+- Where prompted, enter URL and Path (the folder where the repo will be created)
+  
 ## Stage changes
 ## Commit
 ## Push/pull
