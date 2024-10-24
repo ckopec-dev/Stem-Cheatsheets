@@ -1,9 +1,15 @@
 
 # Git Common Scenarios
 
-## Create a new local repo from scratch (or existing folder)
+## Console
 
-### Console
+### Clone an existing repo from Github
+
+~~~
+$ git clone https://github.com/ckopec-dev/Stem-Cheatsheets.git
+~~~
+
+### Create a new local repo from scratch (or existing folder)
 
 ~~~
 $ mkdir MyProject
@@ -11,58 +17,9 @@ $ cd MyProject
 $ git init
 ~~~
 
-### VSCode
-
-- Create or open a folder that will contain your repo
-- Open it in VSCode (File / Open Folder)
-- In Activity Bar: Choose Source Control, then click "Initialize Repository"
-
-### Visual Studio 2022
-
-- File / New / Repository...
-- Chose "Local only"
-- Fill out other options as desired
-- Click the "Create" button
-
-### Jetbrains Rider
-
-- Click "New Solution" button
-- Select "Empty Solution"
-- Fill out the other options as desired
-- Make sure "Create Git repository" is checked
-- Click the "Create" button
-
-## Clone an existing repo from Github
-
-### Console
+### Stage changes
 
 ~~~
-$ git clone https://github.com/ckopec-dev/Stem-Cheatsheets.git
-~~~
-
-### VSCode
-
-- In Activity Bar: Choose Source Control, then click "Clone Repository"
-- Enter url of repo
-- Select folder to clone into (the parent folder where the repo folder will be created)
-
-### Visual Studio 2022
-
-- Git / Clone Repository
-- Where prompted, enter URL and Path (the folder where the repo will be created)
-
-### Jetbrains Rider
-
-- With "Projects" selected, Click "Get from VCS" button
-- Enter url of repo
-- Select folder to clone into (the parent folder where the repo folder will be created)
-  
-## Stage changes
-
-### Console
-
-~~~
-
 # Create a new local repo (as per above)
 
 # Create sample files
@@ -76,14 +33,25 @@ $ git status
 # Add all unstaged created and modified files
 $ git add .
 $ git status
-
 ~~~
 
-## Commit
-## Push/pull
-## Create a branch
-## Create a PR
-## Reject a PR
-## Make changes and resubmitt a rejected PR 
-## Approve a PR
-## Merge branch 
+### Commit
+
+~~~
+# Stage changes (as per above)
+$ git commit -m "Commit message - something relevant about the changes"
+$ git status
+
+# Forgot to add a file, modify the prior commit
+$ touch file4.txt
+$ git add .
+$ git commit --ammend
+~~~
+
+### Push/pull
+### Create a branch
+### Create a PR
+### Reject a PR
+### Make changes and resubmitt a rejected PR 
+### Approve a PR
+### Merge branch 
