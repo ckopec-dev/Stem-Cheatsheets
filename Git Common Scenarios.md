@@ -50,6 +50,12 @@ $ git clone https://github.com/ckopec-dev/Stem-Cheatsheets.git
 
 - Git / Clone Repository
 - Where prompted, enter URL and Path (the folder where the repo will be created)
+
+### Jetbrains Rider
+
+- With "Projects" selected, Click "Get from VCS" button
+- Enter url of repo
+- Select folder to clone into (the parent folder where the repo folder will be created)
   
 ## Stage changes
 ## Commit
