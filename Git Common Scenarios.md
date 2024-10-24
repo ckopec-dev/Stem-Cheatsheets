@@ -58,6 +58,27 @@ $ git clone https://github.com/ckopec-dev/Stem-Cheatsheets.git
 - Select folder to clone into (the parent folder where the repo folder will be created)
   
 ## Stage changes
+
+### Console
+
+~~~
+
+# Create a new local repo (as per above)
+
+# Create sample files
+$ touch file1.txt
+$ touch file2.txt
+$ touch file3.txt
+
+# Add a single file and show status
+$ git add file1.txt
+$ git status
+# Add all unstaged created and modified files
+$ git add .
+$ git status
+
+~~~
+
 ## Commit
 ## Push/pull
 ## Create a branch
