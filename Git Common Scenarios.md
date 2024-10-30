@@ -48,7 +48,18 @@ $ git add .
 $ git commit --ammend
 ~~~
 
-### Push/pull
+### Push/Pull
+
+~~~
+# Commit changes (as per above)
+# Push changes on the main branch to the repo host (e.g. Github)
+$ git push origin main
+
+# Manually create a new file on repo host and commit it
+# Pull the new file
+$ git pull --all
+~~~
+
 ### Create a branch
 ### Create a PR
 ### Reject a PR
