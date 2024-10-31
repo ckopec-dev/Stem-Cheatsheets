@@ -21,6 +21,7 @@
 - Type(!!): explictly expresses type. E.g. company: !!str Microsoft
 - Anchor(&): marks a snippet as reusable
 - Alias(*): reuses an anchored snippet
+- Override(<<:): allows an anchor snippet to be overridden when reused
 
 ## Documents
 
