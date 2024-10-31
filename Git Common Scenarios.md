@@ -65,19 +65,25 @@ $ git pull --all
 ~~~
 # Create a branch named my_new_feature
 $ git branch my_new_feature
+
 # Show the main branch and the new branch we just created. The asterisk next to the branch name means it's the current branch.
 $ git branch
+
 # Switch to our new branch
 $ git checkout my_new_feature
+
 # Add a new file and commit it
 $ touch file5.txt
 $ git add .
 $ git commit -m 'Added file5.txt'
+
 # Switch back to main branch
 $ git checkout main
+
 # Merge changes from the new branch into main and push changes
 $ git merge my_new_feature
 $ git push
+
 # Delete feature branch now that it's been merged
 $ git -d my_new_feature
 ~~~
