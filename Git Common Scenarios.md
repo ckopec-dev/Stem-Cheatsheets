@@ -60,7 +60,7 @@ $ git push origin main
 $ git pull --all
 ~~~
 
-### Create a branch
+### Create/Merge a branch
 
 ~~~
 # Create a branch named my_new_feature
