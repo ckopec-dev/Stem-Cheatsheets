@@ -88,8 +88,3 @@ $ git push
 $ git -d my_new_feature
 ~~~
 
-### Create a PR
-### Reject a PR
-### Make changes and resubmitt a rejected PR 
-### Approve a PR
-### Merge branch 
