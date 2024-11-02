@@ -1,6 +1,10 @@
 
 # Linq Cheatsheet
 
+## Resources 
+
+- [Microsoft](https://learn.microsoft.com/en-us/dotnet/csharp/linq/)
+
 ## Syntax
 
 ### Lambda
