@@ -70,17 +70,32 @@
 
 Any metal in the series will drive out another metal below it and take its place in the salt.
 
+Reacts with cold water, replacing H:
+- Lithium
 - Potassium
-- Sodium
+- Barium
+- Strontium
 - Calcium
+- Sodium
+
+Reacts with steam (but not cold water), replacing H:
 - Magnesium
 - Aluminum
 - Zinc
 - Chromium
 - Iron
+- Cadmium
+
+Does not react with water. Reacts with acid, replacing H:
+- Cobalt
 - Nickel
 - Tin
 - Lead
+
+Hydrogen molecule:
+- H<sub>2</sub>
+
+Does not react with water or acid:
 - Copper
 - Mercury
 - Silver
