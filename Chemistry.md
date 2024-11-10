@@ -66,7 +66,7 @@
 - SO<sub>3</sub>: -2
 - SO<sub>4</sub>: -2
 
-## Replacement series
+## Replacement series (aka Activity series)
 
 Any metal in the series will drive out another metal below it and take its place in the salt.
 
