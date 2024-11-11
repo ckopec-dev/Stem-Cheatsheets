@@ -8,7 +8,6 @@
 ## Basics
 
 ~~~
-
 # Imports
 from skimage import data, color
 from matplotlib import pyplot as plt
@@ -25,7 +24,6 @@ rbg = color.gray2rgb(grayscale)
 # Display an image
 plt.imshow(image)
 plt.show()
-
 ~~~
 
 ## Using numpy with images

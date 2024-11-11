@@ -445,3 +445,35 @@ input {
   	- Http method: HEAD, GET, POST, PATCH, PUT, and DELETE
   	- Request body: when attaching json with cURL, use -data-binary option
   - Requests can use 15 or 18 character IDs, but responses always have 18 character IDs
+ 
+  ## Create a Connected App for API usage
+
+  - Go to Setup / Apps / App Manager
+  - Click the "New Connected App" button
+  - Enter a Connected App Name, e.g. API Demo
+  - API Name should auto-populate
+  - Enter your email for Contact Email
+  - Make sure Enable OAuth Settings is checked
+  - For Callback URL, enter https://localhost
+  - For Selected OAuth Scopes, select "Manage user data via APIs (api)"
+  - For Permitted Users, select "All users may self-authorize"
+  - Click the Save button
+ 
+    ## Retrieve and use and access token
+
+~~~
+# Request:
+$ curl -d 'grant_type=password'
+-d 'client_id=consumer-key' -d 'client_secret=consumer-secret' -d
+'username=my-login@domain.com' -d 'password=my-password' https://MyDomainName.my.salesforce.com/services/oauth2/token
+
+# Response:
+{"access_token":"00D5e000001N20Q!ASAAQEDBeG8bOwPu8NWGsvFwWNfqHOp5ZcjMpFsU6yEMxTKdBuRXNzSZ8xGVyAiY8xoy1KYkaadzRlA2F5Zd3JXqLVitOdNS",
+"instance_url":"https://MyDomainName.my.salesforce.com",
+"id":"https://login.salesforce.com/id/00D5e000001N20QEAS/0055e000003E8ooAAC",
+"token_type":"Bearer",
+"issued_at":"1627237872637",
+"signature":"jmaZOgQyqUxFKAesVPsqVfAWxI62O+aH/mJhDrc8KvQ="}
+~~~
+    
+    
