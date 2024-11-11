@@ -1,3 +1,6 @@
+
+reference: https://dev.mysql.com/doc/refman/8.4/en/
+
 ```
 Type '\help' or '\?' for help; '\quit' to exit.
 SHELL COMMANDS
