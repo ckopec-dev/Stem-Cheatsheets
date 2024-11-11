@@ -316,3 +316,50 @@ The --merged and --no-merged flags will filter the list to branches that you hav
  * Push to production
  * Switch back to story branch
 
+
+ ### Necessary 
+ ```
+ <git add .>
+ ```
+ * This command adds all changes in the current directory to the staging area.
+ ```
+ <git init>
+ ```
+ * Description: Initializes a new Git repository in the current directory. This creates a hidden .git directory where all the repository's configuration files and history will be stored.
+ ```
+ <git clone https://github.com/user/repository.git>
+ ```
+ * Description: Copies an existing Git repository from a remote server to your local machine.
+ ```
+ <git clone https://github.com/user/repository.git my-directory>
+ ```
+ Optionally, specify a directory name:
+ ```
+ <git status>
+ ```
+ Description: Shows the status of changes in the working directory. It displays which files are staged, which are not, and which files are not being tracked by Git.
+ ```
+ <git add filename>
+ ```
+ Description: Adds changes in the working directory to the staging area. This is the first step in preparing changes for a commit.
+ ```
+ <git add> .
+ ```
+ To add all changes:
+ 
+ Cloning into a New Directory and Replacing the Old One
+ You can clone into a temporary directory and then replace the old directory.This approach avoids deleting the original directory until after the clone operation has succeeded.
+ ```
+ <git clone https://github.com/user/repository.git /path/to/new-temp-directory>
+ 
+ rm -rf /path/to/existing/directory
+ 
+ mv /path/to/new-temp-directory /path/to/existing/directory
+ ```
+ ```
+ <git commit>
+ ```
+ 
+ ```
+ <git push>
+```
