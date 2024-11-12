@@ -1,13 +1,21 @@
 
-### Acronyms
+### Acronyms/jargons
 
-PIP : preferred installer program
+* PIP : Pip installs packages
 
-
-
-
+```pip``` stands for "Pip Installs Packages". It is the default package manager for Python, used to install and manage software packages written in Python. It connects to the **Python Package Index (PyPI)**, a repository of software packages for Python, to download and install these packages.
 
 
+* A console (or ‘terminal’, or ‘command prompt’) is a textual way to interact with your OS, just as the ‘desktop’, in conjunction with your mouse, is the graphical way to interact your system.
+
+Key Features of ```pip```:
+**Install Packages:** You can install any package from PyPI using 
+```pip install <package_name>```.
+**Manage Dependencies:** ```pip``` can automatically handle package dependencies by installing required packages for you.
+**Upgrade Packages:** You can upgrade installed packages to the latest version with pip install ```--upgrade <package_name>```.
+**Uninstall Packages:** You can remove packages you no longer need using ```pip uninstall <package_name>```.
+**List Installed Packages:** You can view all installed packages using ```pip list```.
+**Freeze Requirements:** You can export the list of installed packages and their versions using ```pip freeze > requirements.txt```.
 
 ### Kernel Vs Terminal
 
