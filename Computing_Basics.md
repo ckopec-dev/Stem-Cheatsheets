@@ -22,7 +22,7 @@ Here are some common commands:<br>
 
 Check if pip is installed and its version:
 
-```pip --version``
+```pip --version```
 
 **Install a Python package:**<br>
 ```pip install <package_name>```
