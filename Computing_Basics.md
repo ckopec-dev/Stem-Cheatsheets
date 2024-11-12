@@ -17,6 +17,68 @@ Key Features of ```pip```:<br>
 **List Installed Packages:** You can view all installed packages using ```pip list```.<br>
 **Freeze Requirements:** You can export the list of installed packages and their versions using ```pip freeze > requirements.txt```.<br>
 
+**Basic Usage of pip** <br>
+Here are some common commands:<br>
+
+Check if pip is installed and its version:
+
+```pip --version``
+
+**Install a Python package:**<br>
+```pip install <package_name>```
+
+For example:
+
+```pip install numpy```
+
+Install a specific version of a package:
+
+```pip install pandas==2.0.3```
+
+Upgrade an existing package:
+
+```pip install --upgrade requests```
+
+**Uninstall a package:**
+
+```pip uninstall matplotlib```
+
+List all installed packages:
+
+```pip list```
+
+Show detailed information about a specific package:
+
+```pip show scipy```
+
+Generate a requirements.txt file:
+
+```pip freeze > requirements.txt```
+
+This file can be shared with others or used to replicate the same environment.
+
+Install packages from a requirements.txt file:
+
+```pip install -r requirements.txt```
+
+How Does ```pip``` Work with Environments?<br>
+When you use ```pip``` inside a virtual environment (created using ```venv``` or Conda), it installs packages locally to that environment, keeping them isolated from other projects.<br>
+If you use ```pip``` globally (outside any environment), it installs packages to the system-wide Python installation, which might affect other projects or system tools.<br>
+Checking Installed Packages Path<br>
+To verify where pip is installing packages, you can use:
+
+```pip show <package_name>```
+
+This command shows the location of the installed package. It is useful when you want to check whether a package is installed globally or inside a virtual environment.
+
+**Upgrading** ```pip```
+To ensure you have the latest version of pip, you can upgrade it using:
+
+```python -m pip install --upgrade pip```
+**Conclusion**
+pip is a powerful tool for managing Python packages. It simplifies the process of installing, upgrading, and managing dependencies in Python projects. Using ```pip``` in combination with virtual environments or Conda is the best practice for avoiding package conflicts and ensuring reproducibility in your projects.
+
+
 ### Kernel Vs Terminal
 
 1. OS Kernel
