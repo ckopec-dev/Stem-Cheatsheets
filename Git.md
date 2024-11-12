@@ -1,6 +1,7 @@
 # Git Cheatsheet
 
  ### Necessary 
+
  ```
  <git add .>
  ```
