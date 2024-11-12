@@ -10,12 +10,12 @@
 
 Key Features of ```pip```:
 **Install Packages:** You can install any package from PyPI using 
-```pip install <package_name>```.
-**Manage Dependencies:** ```pip``` can automatically handle package dependencies by installing required packages for you.
-**Upgrade Packages:** You can upgrade installed packages to the latest version with pip install ```--upgrade <package_name>```.
-**Uninstall Packages:** You can remove packages you no longer need using ```pip uninstall <package_name>```.
-**List Installed Packages:** You can view all installed packages using ```pip list```.
-**Freeze Requirements:** You can export the list of installed packages and their versions using ```pip freeze > requirements.txt```.
+```pip install <package_name>```.<br>
+**Manage Dependencies:** ```pip``` can automatically handle package dependencies by installing required packages for you.<br>
+**Upgrade Packages:** You can upgrade installed packages to the latest version with pip install ```--upgrade <package_name>```.<br>
+**Uninstall Packages:** You can remove packages you no longer need using ```pip uninstall <package_name>```.<br>
+**List Installed Packages:** You can view all installed packages using ```pip list```.<br>
+**Freeze Requirements:** You can export the list of installed packages and their versions using ```pip freeze > requirements.txt```.<br>
 
 ### Kernel Vs Terminal
 
