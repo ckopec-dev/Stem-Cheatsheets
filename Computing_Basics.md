@@ -8,7 +8,7 @@
 
 * A console (or ‘terminal’, or ‘command prompt’) is a textual way to interact with your OS, just as the ‘desktop’, in conjunction with your mouse, is the graphical way to interact your system.
 
-Key Features of ```pip```:
+Key Features of ```pip```:<br>
 **Install Packages:** You can install any package from PyPI using 
 ```pip install <package_name>```.<br>
 **Manage Dependencies:** ```pip``` can automatically handle package dependencies by installing required packages for you.<br>
