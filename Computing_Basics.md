@@ -1,16 +1,15 @@
 
 ### Acronyms/jargons
 
-* PIP : Pip installs packages
+* PIP : Pip installs packages 
 
-```pip``` stands for "Pip Installs Packages". It is the default package manager for Python, used to install and manage software packages written in Python. It connects to the **Python Package Index (PyPI)**, a repository of software packages for Python, to download and install these packages.
+```pip``` stands for "Pip Installs Packages". It is an example of a **recursive acronym**. It is the default package manager for Python, used to install and manage software packages written in Python. It connects to the **Python Package Index (PyPI)**, a repository of software packages for Python, to download and install these packages.
 
 
 * A console (or ‘terminal’, or ‘command prompt’) is a textual way to interact with your OS, just as the ‘desktop’, in conjunction with your mouse, is the graphical way to interact your system.
 
 Key Features of ```pip```:<br>
-**Install Packages:** You can install any package from PyPI using 
-```pip install <package_name>```.<br>
+**Install Packages:** You can install any package from PyPI using ```pip install <package_name>```.<br>
 **Manage Dependencies:** ```pip``` can automatically handle package dependencies by installing required packages for you.<br>
 **Upgrade Packages:** You can upgrade installed packages to the latest version with pip install ```--upgrade <package_name>```.<br>
 **Uninstall Packages:** You can remove packages you no longer need using ```pip uninstall <package_name>```.<br>
@@ -85,7 +84,7 @@ pip is a powerful tool for managing Python packages. It simplifies the process o
 
 The kernel is the core part of an operating system (OS). It acts as a bridge between software applications and the underlying hardware of a computer. The kernel has complete control over the system, and its primary responsibilities include:
 
-Memory Management: Allocating and deallocating memory for different processes.
+**Memory Management:** Allocating and deallocating memory for different processes.
 Process Management: Managing the execution of processes, including multitasking and process scheduling.
 Device Management: Controlling and communicating with hardware devices through drivers.
 File System Management: Managing files on storage devices, including reading, writing, and accessing files.

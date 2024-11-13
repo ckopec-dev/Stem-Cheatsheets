@@ -1,7 +1,10 @@
 
+
 # Python Cheatsheet
 
 ## Basics
+
+https://opentechschool.github.io/python-beginners/en/getting_started.html#what-is-python-exactly
 
 ### Show installed version
 
