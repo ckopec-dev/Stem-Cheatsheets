@@ -2,6 +2,21 @@
 
 # Python Cheatsheet
 
+## working
+
+Check Installed Python Executables:<br>
+```where python```
+
+Windows comes with a Python launcher (```py```) that allows you to specify the version directly when running Python.<br>
+To use Python 3.10, run:<br>
+```py -3.10 --version```
+
+Similarly, to use Python 3.7, run:<br>
+```py -3.7 --version```
+
+
+
+
 ## Basics
 
 https://opentechschool.github.io/python-beginners/en/getting_started.html#what-is-python-exactly
