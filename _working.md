@@ -24,3 +24,11 @@
 ```conda remove <package_name>```
 ```conda remove package1 package2 package3```
 
+### CMD
+* To open a folder in vs code
+```code <path>```
+* Open the current directory in vs code
+```code .```
+
+
+
