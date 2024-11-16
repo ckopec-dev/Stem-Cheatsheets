@@ -1,6 +1,6 @@
 
 
-
+```conda info --envs```
 
 ```conda env list```
 
@@ -29,6 +29,32 @@
 ```code <path>```
 * Open the current directory in vs code
 ```code .```
+
+
+### environments_python on windows 10
+* create the environment "my_project" with python=3.10
+```mkdir my_project && cd my_project```<br>
+```py -m venv <environment_name> python=3.10```<br>
+
+* activate the environment
+```<environment_name>\Scripts\activate```
+
+* deactivate the environment
+```deactivate```
+
+* install the packages in the environment
+```pip install <package_name>```
+
+* list of packages installed
+```pip list```
+
+* list of environments installed
+```
+
+
+
+
+
 
 
 
