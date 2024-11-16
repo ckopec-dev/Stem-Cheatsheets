@@ -34,7 +34,7 @@
 ### environments_python on windows 10
 * create the environment "my_project" with python=3.10
 ```mkdir my_project && cd my_project```<br>
-```py -m venv <environment_name> python=3.10```<br>
+```py -3.10 -m venv <environment_name>```<br>
 
 * activate the environment
 ```<environment_name>\Scripts\activate```
