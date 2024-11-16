@@ -48,8 +48,17 @@
 * list of packages installed
 ```pip list```
 
-* list of environments installed
-```
+* list of environments installed : Python doesn't provide a direct command to list all virtual environments, so managing them requires keeping track of where you created them or using tools that can help organize them for you.
+
+* Delete the Virtual Environment Folder : Open File Explorer and navigate to the location where your environment is stored.Right-click the environment folder (e.g., <environment_name>) and select Delete.<br>
+Alternatively, you can delete the virtual environment via the command line:
+
+```rmdir /s /q <environment_path>```
+
+The ```/s``` flag removes all files and subdirectories, and ```/q``` ensures it deletes without asking for
+
+
+
 
 
 
