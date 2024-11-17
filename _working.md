@@ -1,4 +1,9 @@
 
+* windows:
+Edit the PATH Environment Variable:
+
+Press ```Win + X```, then click on System.
+
 
 ```conda info --envs```
 
