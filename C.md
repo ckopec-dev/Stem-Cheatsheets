@@ -125,3 +125,28 @@ int main(int argc, char **argv)
 	return EXIT_SUCCESS;
 }
 ~~~
+
+## Windows Programming
+
+### Basic demo
+~~~
+#include <Windows.h>
+
+int main()
+{
+        MessageBoxW(NULL, L"Hello world!", NULL, MB_OK);
+}
+~~~
+
+### Basic demo compilation
+~~~
+# Open developer command prompt in Terminal.
+C:\temp\demo.c
+
+# Compile normally
+C:\temp\cl demo.c user32.lib
+
+# Compile with minimal overhead. When compiling minimized, c libraries are not natively available.
+C:\temp\cl demo.c user32.lib /link /entry:main
+~~~
+
