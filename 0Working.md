@@ -1,6 +1,6 @@
 
 ### windows:
-Edit the PATH Environment Variable:
+* Edit the PATH Environment Variable:
 
 Press ```Win + X```, then click on System.
 
