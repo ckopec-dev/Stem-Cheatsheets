@@ -46,7 +46,6 @@ Time series data is time-ordered data.
 ### Example of loading + visualizing Google Trends data
 
 ~~~
-
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -58,5 +57,4 @@ df.index = pd.to_datetime(df.index)
 # Plot the time series
 df.plot(grid=True)
 plt.show()
-
 ~~~
