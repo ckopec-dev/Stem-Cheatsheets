@@ -1,4 +1,7 @@
 
+https://pandas-datareader.readthedocs.io/en/latest/readers/index.html
+
+
 ### windows:
 * Edit the PATH Environment Variable:
 
