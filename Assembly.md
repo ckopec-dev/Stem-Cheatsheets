@@ -47,5 +47,4 @@ $ ld -m elf_i386 -o hello_world hello_world.o
 
 # Execute
 $ ./hello_world
-
 ~~~
