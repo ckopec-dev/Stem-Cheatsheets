@@ -304,7 +304,7 @@ $ git switch -c <new-branch-name>
 
 `$ git branch -d <branch-to-be-deleted>`
 
-### Get a branch from a remote repo
+### Get a branch from a remote repo and switch to it
 
 ~~~
 $ git fetch origin
