@@ -311,6 +311,14 @@ $ git fetch origin
 $ git checkout --track origin/<branch-name>
 ~~~
 
+### Rename a branch
+~~~
+$ git checkout <branch-name>
+$ git branch -m <new-branch-name>
+# OR
+$ git branch -m <original-branch-name> <new-branch-name>
+~~~
+
 ## Common workflows 
 
 ### Work on a new user story/feature
