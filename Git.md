@@ -294,7 +294,6 @@ $ git switch -c <new-branch-name>
 ### Merge a branch into your current branch
 
 `$ git merge <branch-to-be-merged>`
-$ git switch -c <new-branch-name>
 
 ### Merge a branch into another branch
 
