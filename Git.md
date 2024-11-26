@@ -285,11 +285,16 @@ The --merged and --no-merged flags will filter the list to branches that you hav
 
 ### Create a new branch and switch to it with one command
 
-`$ git checkout -b <new-branch-name>`
+~~~
+$ git checkout -b <new-branch-name>
+# OR
+$ git switch -c <new-branch-name>
+~~~
 
 ### Merge a branch into your current branch
 
 `$ git merge <branch-to-be-merged>`
+$ git switch -c <new-branch-name>
 
 ### Merge a branch into another branch
 
