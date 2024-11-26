@@ -297,7 +297,12 @@ $ git switch -c <new-branch-name>
 
 ### Merge a branch into another branch
 
-`$ git merge <source-branch> <destination-branch>`
+~~~
+$ git merge <source-branch> <destination-branch>
+# OR
+$ git switch <destination-branch>
+$ git merge <source-branch>
+~~~
 
 ### Delete a branch
 
