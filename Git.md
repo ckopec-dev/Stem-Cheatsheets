@@ -334,7 +334,11 @@ The --merged and --no-merged flags will filter the list to branches that you hav
 
 ### Create a new branch and switch to it with one command
 
-`$ git checkout -b <new-branch-name>`
+~~~
+$ git checkout -b <new-branch-name>
+# OR
+$ git switch -c <new-branch-name>
+~~~
 
 ### Merge a branch into your current branch
 
@@ -342,11 +346,31 @@ The --merged and --no-merged flags will filter the list to branches that you hav
 
 ### Merge a branch into another branch
 
-`$ git merge <source-branch> <destination-branch>`
+~~~
+$ git merge <source-branch> <destination-branch>
+# OR
+$ git switch <destination-branch>
+$ git merge <source-branch>
+~~~
 
 ### Delete a branch
 
 `$ git branch -d <branch-to-be-deleted>`
+
+### Get a branch from a remote repo and switch to it
+
+~~~
+$ git fetch origin
+$ git checkout --track origin/<branch-name>
+~~~
+
+### Rename a branch
+~~~
+$ git checkout <branch-name>
+$ git branch -m <new-branch-name>
+# OR
+$ git branch -m <original-branch-name> <new-branch-name>
+~~~
 
 ## Common workflows 
 

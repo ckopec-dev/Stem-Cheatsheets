@@ -11,6 +11,10 @@ A container consists of code, dependencies, and a configuration. Building a cont
 - Installing dependencies
 - Configuration (ip addresses, etc)
 
+## Installation
+
+- On Ubuntu, docker-related data (images, etc) is stored by default in /var/lib/docker
+
 ## Container administration
 
 ### Run a container
