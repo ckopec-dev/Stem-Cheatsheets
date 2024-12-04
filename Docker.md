@@ -63,7 +63,17 @@ $ docker stop <container-id>
 
 ### Run a container with a name (which can be used in other commands in place of the id)
 
-`$ docker run --name <container-name> <image-name>`
+~~~
+# General format:
+$ docker run --name <container-name> <image-name>
+
+# Example
+$ docker run --name postgres -de POSTGRES_PASSWORD=123456 postgres
+# Stop it by name
+$ docker stop postgres
+# Start it again by name
+$ docker start postgres
+~~~
 
 ### List running containers
 
@@ -83,7 +93,18 @@ $ docker stop <container-id>
 
 ### Show container output
 
-`$ docker logs <container-id>`
+~~~
+# General format:
+$ docker logs <container-id>
+
+# Example:
+$ docker run --name postgres -de POSTGRES_PASSWORD=123456 postgres
+$ docker logs postgres
+# View (follow) logs in realtime
+$ docker logs -f postgres
+# Exit live log view
+$ CTRL-C
+~~~
 
 ### Show container output in real-time. Ctrl-C to exit
 
