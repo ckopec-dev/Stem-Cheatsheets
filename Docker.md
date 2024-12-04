@@ -112,7 +112,28 @@ $ CTRL-C
 
 ### Pull an image down from [dockerhub.com](https://hub.docker.com/)
 
-`$ docker pull <image-name>`
+~~~
+# General format:
+$ docker pull <image-name>
+
+# Examples:
+$ docker pull hello-world
+$ docker pull ubuntu
+# Pull specific version
+$ docker pull ubuntu:22.04
+# Pull specific version by tag
+$ docker pull ubuntu:jammy
+# Show all containers, including stopped ones
+$ docker ps -a
+# Remove all stopped containers
+$ docker container prune
+# Delete a local image (only possible when there are no containers that are based on it)
+$ docker image rm hello-world
+# Delete all dangling images (an image that is not tagged or referenced by any container)
+$ docker image prune
+# Delete all images without at least one container associated to them
+$ docker image prune -a
+~~~
 
 ### Pull a specific image version (syntax of version specification works with other commands)
 
