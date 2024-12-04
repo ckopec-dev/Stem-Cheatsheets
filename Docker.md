@@ -17,6 +17,10 @@ A container consists of code, dependencies, and a configuration. Building a cont
 
 ## Container administration
 
+### Show available local images
+
+`$ docker images`
+
 ### Run a container
 
 ~~~
@@ -45,7 +49,17 @@ $
 
 ### Run a container in the background
 
-`$ docker run -d <image-name>`
+~~~
+# General format:
+$ docker run -d <image-name>
+
+# Example (with passing args to container):
+$ docker run -de POSTGRES_PASSWORD=123456 postgres
+# Show running containers
+$ docker ps
+# Stop running container
+$ docker stop <container-id>
+~~~
 
 ### Run a container with a name (which can be used in other commands in place of the id)
 
@@ -98,10 +112,6 @@ $
 ### Rename an image
 
 `$ docker tag <old-image-name> <new-image-name>`
-
-### Show available local images
-
-`$ docker images`
 
 ### Remove an image (can't be used by existing containers)
 
