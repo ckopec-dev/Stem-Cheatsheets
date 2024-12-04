@@ -20,8 +20,9 @@ A container consists of code, dependencies, and a configuration. Building a cont
 ### Run a container
 
 ~~~
-# General format
+# General format:
 $ docker run <image-name>
+
 # Examples:
 $ docker run hello-world
 $ docker run ubuntu
