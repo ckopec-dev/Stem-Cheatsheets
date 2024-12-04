@@ -30,7 +30,18 @@ $ docker run ubuntu
 
 ### Run a container and return an interactive shell within the started container
 
-`$ docker run -it <image-name>`
+~~~
+# General format:
+$ docker run -it <image-name>
+
+# Example:
+$ docker run -it ubuntu
+# Show the ip address of the running container
+/# hostname -i
+# Exit the interactive shell of the container
+/# exit
+$
+~~~
 
 ### Run a container in the background
 
