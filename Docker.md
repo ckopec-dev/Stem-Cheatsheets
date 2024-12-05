@@ -260,3 +260,21 @@ ENV <var-name>=<var-values>
 ### Show instructions used to create an image
 
 `$ docker history <image-name>`
+
+## Creating volumes
+
+Volumes are persistent storage that live on the host.
+
+### Create a volume
+
+`$ docker volume create <volume-name>`
+
+### List volumes
+
+`$ docker volume ls`
+
+### Show volume metadata
+
+`$ docker volume inspect <volume-name>'
+
+
