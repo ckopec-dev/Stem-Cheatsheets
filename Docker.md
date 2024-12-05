@@ -281,3 +281,7 @@ Volumes are persistent storage that live on the host.
 
 `$ docker volume rm <volume-name>`
 
+### Run a container with a mounted volume
+
+`$ docker run -v <volume-name>:<local-path> <image-name>`
+
