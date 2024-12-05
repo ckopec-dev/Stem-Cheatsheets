@@ -241,6 +241,10 @@ ENV <var-name>=<var-values>
 
 `$ docker build -t <image-name> <dockerfile-path>`
 
+### Build an image with a dockerfile named something else
+
+`$ docker build -f <dockerfile-name> -t <image-name> . <dockerfile-path>`
+
 ### Specify a custom argument from the command line
 
 `$ docker build --build-arg <arg-name>=<arg-values>`
