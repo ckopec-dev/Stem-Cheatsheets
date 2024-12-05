@@ -275,6 +275,9 @@ Volumes are persistent storage that live on the host.
 
 ### Show volume metadata
 
-`$ docker volume inspect <volume-name>'
+`$ docker volume inspect <volume-name>`
 
+### Delete a volume 
+
+`$ docker volume rm <volume-name>`
 
