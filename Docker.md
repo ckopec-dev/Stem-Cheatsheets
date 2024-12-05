@@ -183,7 +183,13 @@ $ docker save -o postgres.tar postgres
 
 ### Load an image from a file
 
-`$ docker load -i <filename.tar>`
+~~~
+# General format:
+$ docker load -i <filename.tar>
+
+# Example:
+$ docker load -i postgres.tar
+~~~
 
 ## Creating images
 
