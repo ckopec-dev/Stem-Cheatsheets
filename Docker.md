@@ -35,7 +35,7 @@ $ docker run ubuntu
 ### Run a container and return an interactive shell within the started container
 
 ~~~
-# General format:
+# General format (this may not work if there is an ENTRYPOINT specified):
 $ docker run -it <image-name>
 
 # Example:
