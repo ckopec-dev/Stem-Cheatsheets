@@ -75,6 +75,10 @@ $ docker stop postgres
 $ docker start postgres
 ~~~
 
+### Run a container that has access to a directory on the host
+
+`$ docker run -v <HOST_PATH>:<LOCAL_PATH> <CONTAINTER-NAME>`
+
 ### List running containers
 
 `$ docker ps`
