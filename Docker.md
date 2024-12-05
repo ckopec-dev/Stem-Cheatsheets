@@ -173,7 +173,13 @@ $ docker image prune -a
 
 ### Save an image as a file
 
-`$ docker save -o <filename.tar> <image-name>`
+~~~
+# General format:
+$ docker save -o <filename.tar> <image-name>`
+
+# Example:
+$ docker save -o postgres.tar postgres
+~~~
 
 ### Load an image from a file
 
