@@ -79,6 +79,10 @@ $ docker start postgres
 
 `$ docker run -v <HOST_PATH>:<LOCAL_PATH> <CONTAINTER-NAME>`
 
+### Show container meta data
+
+`$ docker inspect <container-id>`
+
 ### List running containers
 
 `$ docker ps`
@@ -273,7 +277,7 @@ Volumes are persistent storage that live on the host.
 
 `$ docker volume ls`
 
-### Show volume metadata
+### Show volume meta data
 
 `$ docker volume inspect <volume-name>`
 
