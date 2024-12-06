@@ -290,3 +290,10 @@ Volumes are persistent storage that live on the host.
 ### Map a port from a host to a container
 
 `$ docker run -p <host-port>:<container-port> <image-name>`
+
+### Document an exposed port in a dockerfile (this doesn't actually expose the port; it's just documentation)
+
+~~~
+# port 8000 should be available
+EXPOSE 8000
+~~~
