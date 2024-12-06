@@ -338,7 +338,7 @@ EXPOSE 8000
 
 ## Docker Compose
 
-Specifies containers, networking, and storage in a single file called compose.yaml.
+Specifies containers, networking, and storage in a single file called compose.yaml
 
 ### Example
 
@@ -353,10 +353,14 @@ services:
     image: "redis:alpine"
 ~~~
 
-### Start a compose application with a compose.yaml in the current directory.
+### Start a compose application with a compose.yaml in the current directory
 
 `$ docker compose up`
 
-### Start a compose application by explicitly specifying the compose.yaml path.
+### Start a compose application by explicitly specifying the compose.yaml path
 
 `$ docker compose -f <path> up`
+
+### Start a compose application and detach from it
+
+`$ docker compose up -d`
