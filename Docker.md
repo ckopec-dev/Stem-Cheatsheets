@@ -353,9 +353,12 @@ services:
     image: "redis:alpine"
 ~~~
 
-### Start a compose application with a compose.yaml in the current directory
+### Start/stop a compose application with a compose.yaml in the current directory
 
-`$ docker compose up`
+~~~
+$ docker compose up
+$ docker compose down
+~~~
 
 ### Start a compose application by explicitly specifying the compose.yaml path
 
@@ -364,3 +367,7 @@ services:
 ### Start a compose application and detach from it
 
 `$ docker compose up -d`
+
+### Show status of compose applications
+
+`$ docker compose ls`
