@@ -346,7 +346,8 @@ Specifies containers, networking, and storage in a single file called compose.ya
 services:
   # Define the containers by name
   webapp:
-    image: "webapp"
+    container_name: webapp
+    image: webapp:latest
     ports:
       - "8000:5000"
   redis:
