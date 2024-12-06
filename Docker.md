@@ -291,6 +291,12 @@ Volumes are persistent storage that live on the host.
 
 ## Networking
 
+### Networking types/drivers
+
+- Bridge: allows communication between host, container, and outside world by exposing ports
+- Host: allows full communication
+- None: allows no communucation
+ 
 ### Map a port from a host to a container
 
 `$ docker run -p <host-port>:<container-port> <image-name>`
