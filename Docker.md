@@ -301,3 +301,7 @@ Volumes are persistent storage that live on the host.
 # port 8000 should be available
 EXPOSE 8000
 ~~~
+
+### Automatically assign random host ports
+
+`$ docker run -P <image-name>`
