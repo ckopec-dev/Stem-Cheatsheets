@@ -285,3 +285,8 @@ Volumes are persistent storage that live on the host.
 
 `$ docker run -v <volume-name>:<local-path> <image-name>`
 
+## Networking
+
+### Map a port from a host to a container
+
+`$ docker run -p <host-port>:<container-port> <image-name>`
