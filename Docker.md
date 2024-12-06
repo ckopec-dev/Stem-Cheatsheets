@@ -21,6 +21,10 @@ A container consists of code, dependencies, and a configuration. Building a cont
 
 `$ docker images`
 
+### Inspect an image
+
+`$ docker image inspect <image-name>`
+
 ### Run a container
 
 ~~~
@@ -331,3 +335,28 @@ EXPOSE 8000
 ### Automatically assign random host ports
 
 `$ docker run -P <image-name>`
+
+## Docker Compose
+
+Specifies containers, networking, and storage in a single file called compose.yaml.
+
+### Example
+
+~~~
+services:
+  # Define the containers by name
+  webapp:
+    image: "webapp"
+    ports:
+      - "8000:5000"
+  redis:
+    image: "redis:alpine"
+~~~
+
+### Start a compose application with a compose.yaml in the current directory.
+
+`$ docker compose up`
+
+### Start a compose application by explicitly specifying the compose.yaml path.
+
+`$ docker compose -f <path> up`
