@@ -25,9 +25,9 @@ The **Stochastic Oscillator** is a popular technical analysis indicator used to 
 
 **How is the Stochastic Oscillator Calculated?**
 The most common formula for the **%K** (the main line) is:
-\[
+$$
 \%K = \frac{(C - L)}{(H - L)} \times 100
-\]
+$$
 Where:
 - **C** = Current closing price
 - **L** = Lowest price over the past N periods
@@ -60,13 +60,13 @@ Suppose an asset has the following prices over the last 14 days:
 - **Current close** = 115
 
 The stochastic oscillator will be calculated as:
-\[
+$$
 \%K = \frac{(115 - 100)}{(120 - 100)} \times 100 = \frac{15}{20} \times 100 = 75
-\]
+$$
 If the previous **%K** values were 70 and 72, the 3-day SMA for **%D** would be:
-\[
+$$
 \%D = \frac{(70 + 72 + 75)}{3} = 72.33
-\]
+$$
 
 ---
 
@@ -104,9 +104,9 @@ The logic is simple:
 
 **2️⃣ EMA Formula**
 The **Exponential Moving Average (EMA)** for a given time period \(n\) is calculated using the following recursive formula:
-\[
+$$
 EMA_t = (P_t \cdot \alpha) + (EMA_{t-1} \cdot (1 - \alpha))
-\]
+$$
 Where:
 - \(EMA_t\) = Current EMA value at time \(t\)
 - \(P_t\) = Current price at time \(t\)
@@ -115,9 +115,9 @@ Where:
 
 **Initial EMA**: 
 - The first EMA is calculated as the **Simple Moving Average (SMA)** for the first \(n\) periods.
-  \[
+  $$
   SMA = \frac{P_1 + P_2 + P_3 + \cdots + P_n}{n}
-  \]
+  $$
   This SMA is then used as the starting point for subsequent EMA calculations.
 
 ---
@@ -126,20 +126,25 @@ Where:
 The **smoothing factor (\(\alpha\))** determines how much "weight" is given to the **most recent price** compared to previous EMA values. The higher the value of \(\alpha\), the more weight is placed on the recent prices.
 
 **Formula for Alpha:**
-\[
+$$
 \alpha = \frac{2}{n + 1}
-\]
+$$
 Where:
+$$
+$$
 - \(n\) = Time period (like 5, 10, 20, or 50)
-- \(\alpha\) controls the weight of the most recent price. 
-  - For \(n = 5\), 
-    \[
-    \alpha = \frac{2}{5 + 1} = \frac{2}{6} = 0.3333
-    \]
+
+- \(alpha\) controls the weight of the most recent price. 
+
+- For \(n = 5\), 
+$$
+\alpha = \frac{2}{5 + 1} = \frac{2}{6} = 0.3333
+$$
   - For \(n = 20\), 
-    \[
-    \alpha = \frac{2}{20 + 1} = \frac{2}{21} \approx 0.0952
-    \]
+$$
+\alpha = \frac{2}{20 + 1} = \frac{2}{21} \approx 0.0952
+$$
+
 
 **Why is Alpha Important?**
 - If \(\alpha\) is high, the EMA reacts **faster** to recent price changes.
@@ -198,20 +203,20 @@ Where:
 
 **Calculation Breakdown**
 1. **Step 1**: Calculate the SMA for the first 5 prices.
-   \[
+   $$
    SMA = \frac{100 + 102 + 104 + 103 + 105}{5} = 102.8
-   \]
+   $$
 2. **Step 2**: Apply the EMA formula for the next day (Day 6).
-   \[
+   $$
    EMA_t = (P_t \cdot \alpha) + (EMA_{t-1} \cdot (1 - \alpha))
-   \]
+   $$
    Where \(P_t = 107\), \(\alpha = 0.333\), and \(EMA_{t-1} = 102.8\):
-   \[
+   $$
    EMA_6 = (107 \cdot 0.333) + (102.8 \cdot 0.667)
-   \]
-   \[
+   $$
+   $$
    EMA_6 = 35.631 + 68.592 = 103.92
-   \]
+   $$
 3. **Step 3**: Continue this for the remaining days.
 
 ---
@@ -219,9 +224,9 @@ Where:
 **7️⃣ Key Takeaways**
 - The **Exponential Moving Average (EMA)** places **more weight on recent prices**, making it more responsive to changes.
 - The **smoothing factor (\(\alpha\))** controls how much weight is given to recent prices.
-  \[
+  $$
   \alpha = \frac{2}{n + 1}
-  \]
+  $$
 - For **short-term EMAs**, \(\alpha\) is high, making it respond **faster** to price changes.
 - For **long-term EMAs**, \(\alpha\) is low, making it respond **slowly** to price changes.
 - The initial EMA is based on the **SMA** of the first \(n\) prices, and subsequent EMAs use the **recursive formula**.
