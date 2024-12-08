@@ -28,7 +28,6 @@ plt.show()
 ### Count plot example
 
 ~~~
-
 # Import libraries
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -39,7 +38,6 @@ gender = ["F", "F", "M", "F", "M]
 # Plot data
 sns.countplot(x=gender)
 plt.show()
-
 ~~~
 
 ### Working with Pandas example
