@@ -12,7 +12,6 @@ Seaborn is a Python data visualization library built on top of matplotlib.
 ## Basic example
 
 ~~~
-
 # Import libraries
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -24,7 +23,6 @@ weights = [140, 122, 163]
 # Plot data
 sns.scatterplot(x=heights, y=weights)
 plt.show()
-
 ~~~
 
 ### Count plot example
