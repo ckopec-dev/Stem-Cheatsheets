@@ -11,3 +11,17 @@
 - AzureAD: manage Entra resources (e.g. users, groups)
 - AzureDevops: manage DevOps resources (e.g. pipelines)
 - AzureStack: manage Stack Hub resources (e.g. DNS, vnets)
+
+## Basic commands
+
+### Initialize terraform with main.tf configuration file in working directory
+
+`$ terraform init`
+
+### Apply a configuration (i.e. deploy the changes)
+
+`$ terraform apply`
+
+### Remove a configuration
+
+`$ terraform destroy`
