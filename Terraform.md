@@ -46,9 +46,23 @@ resource "docker_container" "nginx" {
 
 ### Initialize terraform with main.tf configuration file in working directory
 
-`$ terraform init`
+~~~
+# This downloads and installs the specified providers.
+$ terraform init
+~~~
 
-### Apply the configuration (i.e. deploy the docker container web server)
+### Format the configuration for readability
+
+~~~
+# Prints out the names of the files modified, if any.
+$ terraform fmt
+~~~
+
+### Verify the configuration is valid and consistent
+
+`$ terraform validate`
+
+### Create the infrastructure (i.e. deploy the docker container web server)
 
 `$ terraform apply`
 
