@@ -14,19 +14,7 @@
 
 ## Basic commands
 
-### Initialize terraform with main.tf configuration file in working directory
-
-`$ terraform init`
-
-### Apply a configuration (i.e. deploy the changes)
-
-`$ terraform apply`
-
-### Remove a configuration
-
-`$ terraform destroy`
-
-### Example configuraton for provisioning a docker-based web server
+### Example configuraton for provisioning a docker-based web server (save as main.tf)
 
 ~~~
 terraform {
@@ -55,3 +43,17 @@ resource "docker_container" "nginx" {
   }
 }
 ~~~
+
+### Initialize terraform with main.tf configuration file in working directory
+
+`$ terraform init`
+
+### Apply the configuration (i.e. deploy the docker container web server)
+
+`$ terraform apply`
+
+### Remove the configuration (stop the container)
+
+`$ terraform destroy`
+
+
