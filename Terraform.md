@@ -66,6 +66,14 @@ $ terraform fmt
 
 `$ terraform apply`
 
+### View the infrastructure state
+
+`$ terraform show
+
+### View the managed resources in your state
+
+`$ terraform state list`
+
 ### Remove the configuration (stop the container)
 
 `$ terraform destroy`
