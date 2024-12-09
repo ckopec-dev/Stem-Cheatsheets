@@ -17,6 +17,9 @@
 ### Example configuraton for provisioning a docker-based web server (save as main.tf)
 
 ~~~
+
+# This is a single line comment.
+
 terraform {
   required_providers {
     docker = {
