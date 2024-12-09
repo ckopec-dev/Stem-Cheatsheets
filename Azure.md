@@ -1,10 +1,26 @@
 # Azure Cheatsheet
 
-## Install the CLI on Windows and verify
+## Installation
+
+### On Windows and verify
 
 - [64 bit version](https://aka.ms/installazurecliwindowsx64)
 - C:\az --version
 
-## Update the CLI
+### On Ubuntu
 
-`C:\az upgrade`
+`$ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
+
+### Update the CLI
+
+`$az upgrade`
+
+## Basic usage
+
+## Log in
+
+~~~
+# This will spawn a browser to complete the login process.
+$ az login
+~~~
+
