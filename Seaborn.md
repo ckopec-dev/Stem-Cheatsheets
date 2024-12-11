@@ -61,7 +61,6 @@ plt.show()
 ### Working with 3d data
 
 ~~~
-
 # Import libraries
 import pandas as pd
 import seaborn as sns
@@ -76,7 +75,6 @@ hue_colors = {"Yes": "black", "No: "red"}
 # Plot data
 sns.scatterplot(x="total_bill", y="tip", data=tips, hue="smoker", hue_order=["Yes","No"], palette=hue_colors)
 plt.show()
-
 ~~~
 
 ### Relational scatter plots
