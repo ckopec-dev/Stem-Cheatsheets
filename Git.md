@@ -275,9 +275,13 @@ The --merged and --no-merged flags will filter the list to branches that you hav
 
 `$ git diff branch1 branch2`
 
-### Create a new branch
+### Create a new local branch
 
 `$ git branch <new-branch-name>`
+
+### Push a local branch to origin
+
+`$ git push -u origin <branch-name>`
 
 ### Switch to a different branch
 
