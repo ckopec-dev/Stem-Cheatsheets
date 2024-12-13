@@ -65,6 +65,10 @@ $ docker ps
 $ docker stop <container-id>
 ~~~
 
+### Automatically start container when the host reboots
+
+`$ docker update --restart=always  <container-id>`
+
 ### Run a container with a name (which can be used in other commands in place of the id)
 
 ~~~
