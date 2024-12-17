@@ -112,13 +112,11 @@ sns.regplot(x="total_bills", y="tip", data=tips, ci=None)
 ### Relational line plots
 
 ~~~
-
 # Similar to scatter plots. Use kind="line".
 
 sns.relplot(x="hour", y="brightness", data=sunlight, kind="line", hue="location", markers=True, dashes=False)
 
 # If there are multiple records per x value, the y values are aggregated into a mean and a confidence interval is displayed. To show the standard deviation, set ci="sd". To turn it off, set ci=None.
-
 ~~~
 
 ### Categorical plots 
