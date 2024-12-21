@@ -100,6 +100,9 @@ SELECT * FROM films WHERE release_year IS NOT NULL;
 -- Order films by title
 SELECT * FROM films ORDER BY title;
 
+-- Same sort except by position
+SELECT * FROM films ORDER BY 1;
+
 -- Order films by most largest gross
 SELECT * FROM films ORDER BY gross DESC;
 
