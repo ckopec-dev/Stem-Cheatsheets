@@ -14,3 +14,32 @@
 ### Show last time system was booted
 `$ who -b`
 
+### Show your working directory
+`$ pwd`
+
+### Change your working directory
+~~~
+# Absolute path
+$ cd /users/bob
+# Relative path
+$ cd spreadsheets
+~~~
+
+### List directory contents
+~~~
+# Basic list
+$ ls`
+# With hidden files in long format
+$ ls -la
+~~~
+
+### Show file contents
+`$ less {filename}`
+
+## Security commands
+
+### Change permissions
+`$ chmod {permissions} {file(s)}`
+
+### Show groups
+`$ groups
