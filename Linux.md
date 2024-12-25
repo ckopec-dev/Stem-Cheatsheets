@@ -42,4 +42,4 @@ $ ls -la
 `$ chmod {permissions} {file(s)}`
 
 ### Show groups
-`$ groups
+`$ groups`
