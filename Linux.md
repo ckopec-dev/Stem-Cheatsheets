@@ -43,3 +43,8 @@ $ ls -la
 
 ### Show groups
 `$ groups`
+
+### File and directory wildcards
+- *: match any characters
+- ?: match a single character
+- []: match any characters inside brackets
