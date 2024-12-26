@@ -40,7 +40,19 @@ $ ls -la
 - *: match any characters
 - ?: match a single character
 - []: match any characters inside brackets
-  
+
+### Create a directory
+`$ mkdir {directory-name}`
+
+### Copy a file
+`$ cp {old} {new}`
+
+### Move a file (also works to rename)
+`$ mv {old} {new}`
+
+### Delete a file
+`$ rm {filename}`
+
 ## Security commands
 
 ### Change permissions
@@ -48,5 +60,3 @@ $ ls -la
 
 ### Show groups
 `$ groups`
-
-
