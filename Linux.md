@@ -44,6 +44,9 @@ $ ls -la
 ### Create a directory
 `$ mkdir {directory-name}`
 
+### View file contents
+`$ cat {filename}`
+
 ### Copy a file
 `$ cp {old} {new}`
 
@@ -53,7 +56,7 @@ $ ls -la
 ### Delete a file
 `$ rm {filename}`
 
-## Security commands
+## Security
 
 ### Change permissions
 `$ chmod {permissions} {file(s)}`
