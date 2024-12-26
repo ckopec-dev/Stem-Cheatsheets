@@ -63,3 +63,14 @@ $ ls -la
 
 ### Show groups
 `$ groups`
+
+## Printing
+
+### Print a file
+`$ lp {filename}`
+
+### Show printer queue
+`$ lpq`
+
+### Cancel active job
+`$ lprm`
