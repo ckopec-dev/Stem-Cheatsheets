@@ -1,7 +1,7 @@
 
 [Stochastic Oscillator](#stochastic-oscillator)<br>
-[Exponential Moving Average](#exponential-moving-average)
-[Relative Strength Index](#relative-strength-index)
+[Exponential Moving Average](#exponential-moving-average)<br>
+[Relative Strength Index](#relative-strength-index)<br>
 
 
 
