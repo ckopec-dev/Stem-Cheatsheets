@@ -128,6 +128,8 @@ int main(int argc, char **argv)
 
 ## Windows Programming
 
+[GDI Reference](https://learn.microsoft.com/en-us/windows/win32/gdi/windows-gdi)
+
 ### Basic demo
 ~~~
 #include <Windows.h>
@@ -149,4 +151,5 @@ C:\temp\cl demo.c user32.lib
 # Compile with minimal overhead. When compiling minimized, c libraries are not natively available.
 C:\temp\cl demo.c user32.lib /link /entry:main
 ~~~
+
 
