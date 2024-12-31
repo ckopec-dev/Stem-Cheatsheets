@@ -152,4 +152,24 @@ C:\temp\cl demo.c user32.lib
 C:\temp\cl demo.c user32.lib /link /entry:main
 ~~~
 
+### GDI demo
+~~~
+#include <Windows.h>
+
+int main()
+{
+        // Get the device context of the entire screen.
+        HDC screen = GetDC(NULL);
+
+        // Repeatedly draw a rectangle.
+        for(;;)
+        {
+                Rectangle(screen, 100, 100, 500, 500);
+                Sleep(20);
+        }
+}
+~~~
+
+### GDI demo compilation
+`C:\temp\cl Gdi32.lib User32.lib gdi_demo.c`
 
