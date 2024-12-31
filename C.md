@@ -161,6 +161,10 @@ int main()
         // Get the device context of the entire screen.
         HDC screen = GetDC(NULL);
 
+        // Use a red brush.
+        HBRUSH redBrush = CreateSolidBrush(RGB(255, 0, 0));
+        SelectObject(screen, redBrush);
+
         // Repeatedly draw a rectangle.
         for(;;)
         {
