@@ -83,6 +83,9 @@ $ ls -la
 ### Delete a file
 `$ rm {filename}`
 
+### Create a symbolic link
+`$ ln -s {target-path} {link-name}`
+
 ### Display file type
 `$ file {filename}`
 
