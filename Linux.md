@@ -144,6 +144,20 @@ $ grep -v "{search-string}" {filename}
 ### Print last ten lines of a file
 `$ tail {filename}`
 
+### Alias commands
+~~~
+# List all aliases
+$ alias
+# OR
+$ cat ~/.bash_aliases
+
+# Create an alias
+$ alias {alias-name}='{command}'
+
+# Remove an alias
+$ unalias {alias-name}
+~~~
+
 ## Security
 
 ### Change permissions
