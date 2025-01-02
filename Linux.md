@@ -123,6 +123,21 @@ $ wc -l {filename}
 $ wc -w {filename}
 ~~~
 
+### Search file contents
+~~~
+# Search for a case-insensitive string
+$ grep -i "{search-string}" {filename}
+
+# Count the number of matches
+$ grep -c "{search-string}" {filename}
+
+# Display line number of match, along with the line itself
+$ grep -n "{search-string}" {filename}
+
+# Find lines that don't match
+$ grep -v "{search-string}" {filename}
+~~~
+
 ## Security
 
 ### Change permissions
