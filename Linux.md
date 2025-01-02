@@ -138,6 +138,12 @@ $ grep -n "{search-string}" {filename}
 $ grep -v "{search-string}" {filename}
 ~~~
 
+### Print first ten lines of a file
+`$ head {filename}`
+
+### Print last ten lines of a file
+`$ tail {filename}`
+
 ## Security
 
 ### Change permissions
