@@ -5,6 +5,9 @@
 ### End a terminal session
 `$ exit`
 
+### Print a message
+`$ echo "Hello, world!"`
+
 ### Show current date and time
 `$ date`
 
