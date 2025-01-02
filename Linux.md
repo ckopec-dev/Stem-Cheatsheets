@@ -2,6 +2,9 @@
 
 ## Command commands
 
+### End a terminal session
+`$ exit`
+
 ### Show current date and time
 `$ date`
 
