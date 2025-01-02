@@ -5,6 +5,9 @@
 ### Show current date and time
 `$ date`
 
+### Show a calendar of the current month
+`$ cal`
+
 ### Show current logged in user
 `$ whoami`
 
