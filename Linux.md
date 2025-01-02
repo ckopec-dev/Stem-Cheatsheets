@@ -5,8 +5,26 @@
 ### Show current date and time
 `$ date`
 
-### Show a calendar of the current month
-`$ cal`
+### Show a calendar
+~~~
+# The current month
+$ cal
+
+# The current year
+$ cal -y
+
+# A specific month
+$ cal 10 2012
+
+# A specific year
+$ cal 2018
+
+# Previous, current, and next month
+$ cal -3
+
+# Use julian format (days do not reset on 1st of month)
+$ cal -j
+~~~
 
 ### Show current logged in user
 `$ whoami`
