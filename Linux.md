@@ -83,6 +83,9 @@ $ ls -la
 ### Delete a file
 `$ rm {filename}`
 
+### Display file type
+`$ file {filename}`
+
 ## Security
 
 ### Change permissions
