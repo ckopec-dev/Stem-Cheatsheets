@@ -48,6 +48,7 @@ $ cal -j
 ~~~
 # Absolute path
 $ cd /users/bob
+
 # Relative path
 $ cd spreadsheets
 ~~~
@@ -56,6 +57,7 @@ $ cd spreadsheets
 ~~~
 # Basic list
 $ ls`
+
 # With hidden files in long format
 $ ls -la
 ~~~
@@ -93,14 +95,33 @@ $ ls -la
 ~~~
 # Remove dupes
 $ uniq {filename}
+
 # Show dupe counts
 $ uniq -c {filename}
+
 # Only show dupes
 $ uniq -d {filename}
+
 # Only show unique lines
 $ uniq -u {filename}
 ~~~
 
+### Show word count
+~~~
+# Single file
+$ wc {filename}
+# Output is {number-of-lines} {word-count} {byte-count} {filename}| 
+
+# Multiple files
+$ wc {filename1} {filename2}
+# Output is same as above, with one row per file.
+
+# Line count
+$ wc -l {filename}
+
+# Word count
+$ wc -w {filename}
+~~~
 
 ## Security
 
