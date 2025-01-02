@@ -89,6 +89,19 @@ $ ls -la
 ### Display file type
 `$ file {filename}`
 
+### Show unique lines
+~~~
+# Remove dupes
+$ uniq {filename}
+# Show dupe counts
+$ uniq -c {filename}
+# Only show dupes
+$ uniq -d {filename}
+# Only show unique lines
+$ uniq -u {filename}
+~~~
+
+
 ## Security
 
 ### Change permissions
