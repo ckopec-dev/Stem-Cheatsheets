@@ -70,7 +70,7 @@ $ terraform fmt
 
 ### View the infrastructure state
 
-`$ terraform show
+`$ terraform show`
 
 ### View the managed resources in your state
 
