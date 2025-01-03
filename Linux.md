@@ -158,6 +158,19 @@ $ alias {alias-name}='{command}'
 $ unalias {alias-name}
 ~~~
 
+### Securely copy from one server to another
+~~~
+# From local to remote
+$ scp {filename} {remoteuser}@{remotehost}:{remote-directory}
+# E.g. recipes.txt bob@10.0.0.1:/home/bob
+
+# From remote to local
+$ scp {remoteuser}@{remotehost}:{remote-file} .
+# E.g. carl@10.0.0.2:/home/carl/recipe.txt .
+
+# Use -r flag to copy entire directory recursively.
+~~~
+
 ## Security
 
 ### Change permissions
