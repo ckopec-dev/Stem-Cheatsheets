@@ -72,3 +72,23 @@ $ az find vnet
 
 ### Delete resource group
 `$ az group delete --name {name}`
+
+### List service credentials
+~~~
+# Formatted as a table
+$ az ad sp list --output table
+
+# Use --all if expected result is missing
+$ az ad sp list --all --output table
+~~~
+
+### Create a service principal
+~~~
+# Nothing specified
+$ az ad sp create-for-rbac
+
+# With a given name, role, and scope
+$ az ad sp create-for-rbac  --name myScope \
+                            --role reader \
+                            --scope /subscriptions/{subscription-id}
+~~~
