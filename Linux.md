@@ -171,6 +171,25 @@ $ scp {remoteuser}@{remotehost}:{remote-file} .
 # Use -r flag to copy entire directory recursively.
 ~~~
 
+### Secure FTP
+~~~
+# Open a ftp connection
+$ ftp-ssl {remote-server}
+
+# List remote directory contents
+ftp> dir
+
+# Set local working directory
+ftp> lcd {local-directory}
+
+# Get remote file
+ftp> get {remote-filename}
+
+# Exit
+ftp> quit
+$
+~~~
+
 ## Security
 
 ### Change permissions
