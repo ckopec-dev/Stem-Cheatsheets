@@ -24,10 +24,10 @@
 `$ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
 
 ### Update the CLI
-`$az upgrade`
+`$ az upgrade`
 
 ### Run in a Docker container
-`docker run -it mcr.microsoft.com/azure-cli:cbl-mariner2.0`
+`$ docker run -it mcr.microsoft.com/azure-cli:cbl-mariner2.0`
 
 ## Basic usage
 
@@ -37,7 +37,10 @@
 $ az login
 
 # Set active subscription
-az account set --subscription {name}
+$ az account set --subscription {name}
+
+# Show access token
+$ az account get-access-token
 ~~~
 
 ## Get list of subscriptions
