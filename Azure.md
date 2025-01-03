@@ -26,6 +26,9 @@
 ### Update the CLI
 `$az upgrade`
 
+### Run in a Docker container
+`docker run -it mcr.microsoft.com/azure-cli:cbl-mariner2.0`
+
 ## Basic usage
 
 ### Log in
