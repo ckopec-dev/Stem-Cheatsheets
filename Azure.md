@@ -66,3 +66,8 @@ $ az find vnet
 % az account list --help
 ~~~
 
+### List resource gruops
+`$ az group list --output table`
+
+### Delete resource group
+`$ az group delete --name {name}`
