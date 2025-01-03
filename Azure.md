@@ -43,13 +43,19 @@ $ az account set --subscription {name}
 $ az account get-access-token
 ~~~
 
-## Get list of subscriptions
+### Log out
+`$ az logout`
+
+### Get list of subscriptions
 ~~~
 # Json format
 % az account list
 # Table format
 $ az account list --output table
 ~~~
+
+### Clear subscription cache
+`$ az account clear`
 
 ### Find example commands and get help
 ~~~
