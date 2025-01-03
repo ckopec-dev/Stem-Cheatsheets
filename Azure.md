@@ -21,19 +21,36 @@
 - C:\az --version
 
 ### On Ubuntu
-
 `$ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
 
 ### Update the CLI
-
 `$az upgrade`
 
 ## Basic usage
 
-## Log in
-
+### Log in
 ~~~
 # This will spawn a browser to complete the login process.
 $ az login
+
+# Set active subscription
+az account set --subscription {name}
+~~~
+
+## Get list of subscriptions
+~~~
+# Json format
+% az account list
+# Table format
+$ az account list --output table
+~~~
+
+### Find example commands and get help
+~~~
+# Find examples
+$ az find vnet
+
+# Get help
+% az account list --help
 ~~~
 
