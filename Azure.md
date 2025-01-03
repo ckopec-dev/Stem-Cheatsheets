@@ -5,6 +5,7 @@
 - Resource: a purchased service (e.g. VM, database)
 - Resource Group: logical groupings of related resources that share life-cycle, permissions, and policies
 - Azure Resource Manager (ARM): centralized management layer for resources and resource groups
+- Service Principal: identity created for use with automated tools that has limited access to resources
 
 ### Core services
 
