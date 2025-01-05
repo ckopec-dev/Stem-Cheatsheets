@@ -22,14 +22,12 @@
 ### General syntax/workflow
 
 ~~~
-
 from sklearn.module import Model
 
 model = Model()
 model.fit(x, y)
 predictions = model.predict(new_observations_to_predict)
 print(predicitions)
-
 ~~~
 
 ### Classification
