@@ -33,7 +33,6 @@ print(predicitions)
 ### Classification
 
 ~~~
-
 from sklearn.neighbors import KNeighborsClassifier
 
 # Features
@@ -52,7 +51,6 @@ predictions = knn.predict(x_new)
 
 # Show predictions (a binary value for each observation, i.e. the predicted target)
 print("Predictions: {}".format(predictions))
-
 ~~~
 
 ### Measuring performance
