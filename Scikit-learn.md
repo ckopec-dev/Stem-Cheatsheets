@@ -56,7 +56,6 @@ print("Predictions: {}".format(predictions))
 ### Measuring performance
 
 ~~~
-
 from sklearn.model_selection import train_test_split
 
 # Split data into train and test sets
@@ -68,5 +67,4 @@ knn.fit(x_train, y_train)
 
 # Check accuracy. Score returns a decimal number from 0 to 1.
 print(knn.score(x_test, y_test))
-
 ~~~
