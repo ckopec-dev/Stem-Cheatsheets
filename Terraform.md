@@ -64,6 +64,13 @@ $ terraform fmt
 - State: a local file that tracks the infrastructure created
 - Variables: key-value pairs for input/output
 
+### Common configuration files
+
+- .tf: declare the provider and resources, along with all associated settings
+- .variables.tf (or variables.tf.json): declare input variables
+- terraform.tfvars: assign input variables
+- terraform.tfstate: state file created after Terraform is run
+
 ### Example configuraton for provisioning a docker-based web server (save as main.tf)
 ~~~
 # This is a single line comment.
