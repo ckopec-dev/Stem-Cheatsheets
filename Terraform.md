@@ -14,40 +14,6 @@
 
 ## Basic commands
 
-
-
-### Example configuraton for provisioning a docker-based web server (save as main.tf)
-
-~~~
-# This is a single line comment.
-
-terraform {
-  required_providers {
-    docker = {
-      source  = "kreuzwerker/docker"
-      version = "~> 3.0.1"
-    }
-  }
-}
-
-provider "docker" {}
-
-resource "docker_image" "nginx" {
-  name         = "nginx"
-  keep_locally = false
-}
-
-resource "docker_container" "nginx" {
-  image = docker_image.nginx.image_id
-  name  = "tutorial"
-
-  ports {
-    internal = 80
-    external = 8000
-  }
-}
-~~~
-
 ### Initialize terraform with main.tf configuration file in working directory
 
 ~~~
@@ -85,4 +51,46 @@ $ terraform fmt
 
 `$ terraform destroy`
 
+## Configurations
 
+### Core concepts
+
+- Apply: executes the plan
+- Data Source: allows data to be fetched by resources that are not managed in Terraform
+- Modules: set of Terraform config files in the same directory
+- PLan: determines what needs to be created, updated, or deleted
+- Providers: API plugin that interacts with infrastructure services to manage resources
+- Resources: a service that is defined by attributes
+- State: a local file that tracks the infrastructure created
+- Variables: key-value pairs for input/output
+
+### Example configuraton for provisioning a docker-based web server (save as main.tf)
+~~~
+# This is a single line comment.
+
+terraform {
+  required_providers {
+    docker = {
+      source  = "kreuzwerker/docker"
+      version = "~> 3.0.1"
+    }
+  }
+}
+
+provider "docker" {}
+
+resource "docker_image" "nginx" {
+  name         = "nginx"
+  keep_locally = false
+}
+
+resource "docker_container" "nginx" {
+  image = docker_image.nginx.image_id
+  name  = "tutorial"
+
+  ports {
+    internal = 80
+    external = 8000
+  }
+}
+~~~
