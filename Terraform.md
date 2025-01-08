@@ -14,6 +14,8 @@
 
 ## Basic commands
 
+
+
 ### Example configuraton for provisioning a docker-based web server (save as main.tf)
 
 ~~~
@@ -64,6 +66,9 @@ $ terraform fmt
 
 `$ terraform validate`
 
+### Compares Terraform state with the actual state of hte infrastructure
+`$ terraform plan`
+
 ### Create the infrastructure (i.e. deploy the docker container web server)
 
 `$ terraform apply`
@@ -76,7 +81,7 @@ $ terraform fmt
 
 `$ terraform state list`
 
-### Remove the configuration (stop the container)
+### Delete the managed resources
 
 `$ terraform destroy`
 
