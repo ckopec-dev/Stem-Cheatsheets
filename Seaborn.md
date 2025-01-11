@@ -80,7 +80,6 @@ plt.show()
 Similar to scatter plot, except with the ability to create subplots
 
 ~~~
-
 # Imports
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -106,7 +105,6 @@ plt.show()
 
 # Add a trendline
 sns.regplot(x="total_bills", y="tip", data=tips, ci=None)
-
 ~~~
 
 ### Relational line plots
