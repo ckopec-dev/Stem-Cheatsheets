@@ -74,10 +74,14 @@ SELECT * FROM films WHERE release_year IS NOT NULL;
 
 - &gt;: greater than
 - &gt;=: greater than or equal to
+- !&gt;: not greater than
 - <: less than
 - <=: less than or equal to
+- !<: not less than
 - =: equal to
-- <>: not equal to
+- <>, !=: not equal to
+- BETWEEN: between two specified values
+- IS NULL: is a null value
 
 ### Wildcards
 
