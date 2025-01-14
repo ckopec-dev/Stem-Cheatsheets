@@ -10,7 +10,7 @@
 ### Create an interactive session
 
 ~~~
-# Type "exit()" to exit.
+# Type "exit()" or CTRL-D to exit.
 $ python3
 ~~~
 
