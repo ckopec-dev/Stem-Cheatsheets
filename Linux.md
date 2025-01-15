@@ -68,6 +68,12 @@ $ ls`
 
 # With hidden files in long format
 $ ls -la
+
+# Show in a tree format with hidden files and directories
+$ tree -a
+
+# Show tree with permissions
+$ tree -p
 ~~~
 
 ### Show file contents
