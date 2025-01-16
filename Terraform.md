@@ -58,7 +58,7 @@ $ terraform fmt
 - Apply: executes the plan
 - Data Source: allows data to be fetched by resources that are not managed in Terraform
 - Modules: set of Terraform config files in the same directory
-- PLan: determines what needs to be created, updated, or deleted
+- Plan: determines what needs to be created, updated, or deleted
 - Providers: API plugin that interacts with infrastructure services to manage resources
 - Resources: a service that is defined by attributes
 - State: a local file that tracks the infrastructure created
