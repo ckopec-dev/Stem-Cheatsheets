@@ -36,6 +36,18 @@ void SayHello()
 }
 ~~~
 
+### Pointers
+
+A pointer is a variable that contains the address of another variable.
+
+~~~
+	// Declare a variable
+	int a; 
+
+	// Declare a pointer to a
+	int *p_a = &a;
+~~~
+
 ### Accept input
 
 ~~~
