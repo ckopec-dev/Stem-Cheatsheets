@@ -42,10 +42,10 @@ A pointer is a variable that contains the address of another variable.
 
 ~~~
 // Declare a variable
-int a; 
+int my_variable; 
 
-// Declare a pointer to a
-int *p_a = &a;
+// Declare a pointer to variable
+int *p_my_variable = &my_variable;
 ~~~
 
 ### Accept input
