@@ -92,3 +92,19 @@ $ az ad sp create-for-rbac  --name myScope \
                             --role reader \
                             --scope /subscriptions/{subscription-id}
 ~~~
+
+## Virtual Networks
+
+### Allowable ranges
+
+- 10.0.0.0 - 10.255.255.255 (10/8 prefix)
+- 172.16.0.0 - 172.31.255.255 (172.16/12 prefix)
+- 192.168.0.0 - 192.168.255.255 (192.168/16 prefix)
+
+### Good resource naming convention
+
+~~~
+{Resource-type}-{Workload/Application}-{Environment}-{Region}-{Instance}
+
+e.g. rg-sharepoint-uat-westus-001
+~~~
