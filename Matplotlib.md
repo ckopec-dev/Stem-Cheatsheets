@@ -21,6 +21,21 @@ plt.show()
 # plt.clf()
 ~~~ 
 
+## Windows 10 backend for rendering on Windows from code running on WSL
+
+`$ sudo pip install tk`
+
+## Specify backend
+
+~~~
+import matplotlib
+matplotlib.use('TkAgg')
+import matplotlib.pyplot as plt
+
+plt.plot([1, 2, 3, 4])
+plt.show()
+~~~
+
 ## Labels and legends
 
 ~~~
