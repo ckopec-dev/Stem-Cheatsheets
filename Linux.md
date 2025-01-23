@@ -170,6 +170,9 @@ $ alias {alias-name}='{command}'
 
 # Remove an alias
 $ unalias {alias-name}
+
+# Refresh bash_aliases without relogging
+$ source ~/.bash_aliases
 ~~~
 
 ### Securely copy from one server to another
@@ -222,3 +225,8 @@ $
 
 ### Cancel active job
 `$ lprm`
+
+## Hardware
+
+### List usb devices
+`$ sudo blkid`
