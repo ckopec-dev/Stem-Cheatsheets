@@ -242,3 +242,56 @@ decimal CalculateDiscount(Order order) =>
         var someObject => 0m,
     };
 ~~~
+
+## Multithreading
+
+### Async and await
+
+~~~
+public class MultithreadingDemo
+{
+    static void Main()
+    {
+        Demo();
+        Console.ReadLine();
+    }
+
+    public static void Demo()
+    {
+        // Wait for stove to heat before cooking.
+        HeatStove().Wait();
+
+        var task2 = CookBacon();
+        var task3 = CookEggs();
+
+        Task.WaitAll(task2, task3);
+    }
+
+    public static async Task HeatStove()
+    {
+        await Task.Run(() =>
+        {
+            Thread.Sleep(7500);
+            Console.WriteLine("Stove heated.");
+        });
+    }
+
+    public static async Task CookEggs()
+    {
+        await Task.Run(() =>
+        {
+            Thread.Sleep(3000);
+            Console.WriteLine("Eggs cooked.");
+        });
+    }
+
+    public static async Task CookBacon()
+    {
+        await Task.Run(() =>
+        {
+            Thread.Sleep(4000);
+            Console.WriteLine("Bacon cooked.");
+        });
+    }
+}
+~~~
