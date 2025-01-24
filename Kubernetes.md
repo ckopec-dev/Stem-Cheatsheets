@@ -1,6 +1,10 @@
 
 # Kubernetes Cheatsheet
 
+## Purpose
+
+- Maintain, update, and monitor containers
+
 ## Installation
 
 [Official guide with current commands](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
