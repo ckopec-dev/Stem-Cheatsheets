@@ -71,3 +71,9 @@ $ kubectl get pv
 
 - Load balancer: distributes network requests across all pods in a Service
 - Ingress: objects used to route traffic from outside the cluster to services inside the cluster. Rules define which requests are served by which service. Usually used in conjunction with load balancing.
+
+## Data pipelines
+
+- Set of steps to move, transform, or analyze data
+- ETL: Extract data from sources, transform it into a useful schema, and load it into a target (often a database)
+- ELT: Extract data from sources, load into a target, and transform it into a useful schema
