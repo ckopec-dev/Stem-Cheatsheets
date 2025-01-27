@@ -6,6 +6,10 @@
 - Infrastructure as a Service (IaaS): cloud service provider handles servers and networking
 - Platform as a Service (PaaS): cloud service provider manages runtime, middleware, and OS (plus IaaS)
 - Software as a Service (SaaS): cloud service provider manages everything
+- Resource: a purchased service (e.g. VM, database)
+- Resource Group: logical groupings of related resources that share life-cycle, permissions, and policies
+- Azure Resource Manager (ARM): centralized management layer for resources and resource groups
+- Service Principal: identity created for use with automated tools that has limited access to resources
 
 ### Services managed by cloud service provider
 
@@ -20,11 +24,6 @@
 ||Servers|Servers|Servers|
 ||Storage|Storage|Storage|
 ||Networking|Networking|Networking|
-
-- Resource: a purchased service (e.g. VM, database)
-- Resource Group: logical groupings of related resources that share life-cycle, permissions, and policies
-- Azure Resource Manager (ARM): centralized management layer for resources and resource groups
-- Service Principal: identity created for use with automated tools that has limited access to resources
 
 ### Core services
 
