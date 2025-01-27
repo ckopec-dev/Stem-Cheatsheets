@@ -1,9 +1,16 @@
 
 # Kubernetes Cheatsheet
 
-## Purpose
+## Overview
 
-- Maintain, update, and monitor containers
+- K8s: shorthand for Kubernetes
+- Purpose: maintain, update, and monitor containers
+- Cluster: set of connected computers (Nodes)
+- Control Plane: manages nodes
+- Nodes: worker machines running Kubelet (typically on Linux in a Docker container)
+- Pods: smallest deployable unit. Consists of 1 or more containers
+- Services: exposes network connectivity
+- Kubectl: main CLI for managing K8s objects (pods, services, etc.)
 
 ## Installation
 
