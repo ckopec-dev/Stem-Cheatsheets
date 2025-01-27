@@ -1,5 +1,9 @@
 # Azure Cheatsheet
 
+## Accounts
+
+- One account can have multiple subscriptions to separate resources by billing responsibility
+
 ## Terminology
 
 - On Premises: managing the full technology stack in your own infrastructure (hardware, software, connectivity, etc)
