@@ -66,3 +66,8 @@ $ kubectl get pvc
 # All deployed persistent volumes
 $ kubectl get pv
 ~~~
+
+## Networking
+
+- Load balancer: distributes network requests across all pods in a Service
+- Ingress: objects used to route traffic from outside the cluster to services inside the cluster. Rules define which requests are served by which service. Usually used in conjunction with load balancing.
