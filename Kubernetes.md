@@ -47,3 +47,22 @@ $ kubectl get po -A
 # Alias command
 $ alias kubectl="minikube kubectl --"
 ~~~
+
+## Persistent volumes
+
+- Fundamental objects for persistent storage, maintained in parallel to pods
+- Mapped to pods using Persistent Volume Claims (PVCs)
+- Storage Classes allow dynamic autonomous provisioning
+
+### Common storage commands
+
+~~~
+# All available storage classes
+$ kubectl get sc
+
+# All deployed PVCs
+$ kubectl get pvc
+
+# All deployed persistent volumes
+$ kubectl get pv
+~~~
