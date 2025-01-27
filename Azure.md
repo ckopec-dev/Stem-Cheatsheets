@@ -130,3 +130,10 @@ $ az ad sp create-for-rbac  --name myScope \
 
 e.g. rg-sharepoint-uat-westus-001
 ~~~
+
+## Load Balancing
+
+- Azure Load Balancer: zone redundant, supports all UDP and TCP protocols
+- Traffic Manager: dns-based traffic balancer working at the domain level
+- Azure Application Gateway: used to optimize web farm productivity
+- Azure Front Door: global load balancing and high availability for web apps
