@@ -2,6 +2,25 @@
 
 ## Terminology
 
+- On Premises: managing the full technology stack in your own infrastructure (hardware, software, connectivity, etc)
+- Infrastructure as a Service (IaaS): cloud service provider handles servers and networking
+- Platform as a Service (PaaS): cloud service provider manages runtime, middleware, and OS (plus IaaS)
+- Software as a Service (SaaS): cloud service provider manages everything
+
+### Services managed by cloud service provider
+
+|On Premises|IAAS|PAAS|SAAS|
+|-----------|----|----|----|
+||||Applications|
+||||Data|
+|||Runtime|Runtime|
+|||Middleware|Middleware|
+|||O/S|O/S|
+||Virtualization|Virtualization|Virtualization|
+||Servers|Servers|Servers|
+||Storage|Storage|Storage|
+||Networking|Networking|Networking|
+
 - Resource: a purchased service (e.g. VM, database)
 - Resource Group: logical groupings of related resources that share life-cycle, permissions, and policies
 - Azure Resource Manager (ARM): centralized management layer for resources and resource groups
