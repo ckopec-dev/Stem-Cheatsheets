@@ -2,7 +2,7 @@
 
 ## Accounts
 
-- One account can have multiple subscriptions to separate resources by billing responsibility
+- One account (tenant) can have multiple subscriptions to separate resources by billing responsibility
 
 ## Terminology
 
