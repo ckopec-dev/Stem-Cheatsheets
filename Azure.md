@@ -137,3 +137,14 @@ e.g. rg-sharepoint-uat-westus-001
 - Traffic Manager: dns-based traffic balancer working at the domain level
 - Azure Application Gateway: used to optimize web farm productivity
 - Azure Front Door: global load balancing and high availability for web apps
+
+## Application Gateway
+
+- Uses round-robin process to load balance requests to pool
+- Session stickiness makes sure client requests are routed to the same server each time
+
+### Main components
+
+- Front-end IP address: a single public address and/or a single private address
+- Listeners: accept traffic based on a combination of protocol, port, host, and IP
+- Routing rules: binds a listener to a backend pool
