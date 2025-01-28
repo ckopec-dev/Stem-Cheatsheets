@@ -36,15 +36,17 @@
 - Networking (e.g. CDN, vnet manager, vpn gateway)
 - Databases (e.g. Cosmo, SQL db, SQL managed instance)
 
-## CLI Installation
+## CLI 
 
-### On Windows and verify
+### Installation on Windows
 
 - [64 bit version](https://aka.ms/installazurecliwindowsx64)
-- C:\az --version
 
-### On Ubuntu
+### Installation on Ubuntu
 `$ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
+
+### Check version
+`$ az --version`
 
 ### Update the CLI
 `$ az upgrade`
@@ -138,7 +140,7 @@ e.g. rg-sharepoint-uat-westus-001
 - Azure Application Gateway: used to optimize web farm productivity
 - Azure Front Door: global load balancing and high availability for web apps
 
-## Application Gateway
+## Application Gateways
 
 - Uses round-robin process to load balance requests to pool
 - Session stickiness makes sure client requests are routed to the same server each time
