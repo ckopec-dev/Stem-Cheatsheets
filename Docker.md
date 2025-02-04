@@ -212,7 +212,6 @@ $ docker load -i postgres.tar
 An image specification is stored in a file called Dockerfile. Here is an example:
 
 ~~~
-
 # An image starts by specifying a base image.
 FROM ubuntu
 
@@ -246,7 +245,6 @@ COPY /local/path $path
 
 # Use an environment variable. Accessible after image is built
 ENV <var-name>=<var-values>
-
 ~~~
 
 ### Build an image
