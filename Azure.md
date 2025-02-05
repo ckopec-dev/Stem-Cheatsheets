@@ -150,3 +150,5 @@ e.g. rg-sharepoint-uat-westus-001
 - Front-end IP address: a single public address and/or a single private address
 - Listeners: accept traffic based on a combination of protocol, port, host, and IP
 - Routing rules: binds a listener to a backend pool
+
+## Azure SQL Databases
