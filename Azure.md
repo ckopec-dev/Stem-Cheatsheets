@@ -71,17 +71,6 @@ $ az account get-access-token
 ### Log out
 `$ az logout`
 
-### Get list of subscriptions
-~~~
-# Json format
-% az account list
-# Table format
-$ az account list --output table
-~~~
-
-### Clear subscription cache
-`$ az account clear`
-
 ### Find example commands and get help
 ~~~
 # Find examples
@@ -90,12 +79,6 @@ $ az find vnet
 # Get help
 % az account list --help
 ~~~
-
-### List resource gruops
-`$ az group list --output table`
-
-### Delete resource group
-`$ az group delete --name {name}`
 
 ### List service credentials
 ~~~
@@ -116,6 +99,56 @@ $ az ad sp create-for-rbac  --name myScope \
                             --role reader \
                             --scope /subscriptions/{subscription-id}
 ~~~
+
+## Azure Architecture
+
+### Subscriptions and nanagement groups
+
+#### Get list of subscriptions
+~~~
+# Json format
+% az account list
+# Table format
+$ az account list --output table
+~~~
+
+#### Clear subscription cache
+`$ az account clear`
+
+### Resources and Azure Resource Manager
+
+#### List resource groups
+`$ az group list --output table`
+
+#### Delete resource group
+`$ az group delete --name {name}`
+
+### Regions and availability zones
+
+## Azure Database Solutions
+
+### Azure Cosmos DB
+
+### Azure SQL Database
+
+- Analagous to a single Sql Server database 
+
+### Azure SQL Managed Instance
+
+- Analagous to a Sql Server
+
+### Azure Database for MySQL
+
+- Supports back in time recovery for up to 35 days in the past
+
+### Azure Database for PostgreSQL
+
+### Azure Synapse Analytics
+
+
+
+
+
 
 ## Virtual Networks
 
@@ -151,23 +184,7 @@ e.g. rg-sharepoint-uat-westus-001
 - Listeners: accept traffic based on a combination of protocol, port, host, and IP
 - Routing rules: binds a listener to a backend pool
 
-## Azure Cosmos DB
 
-## Azure SQL Database
-
-- Analagous to a single Sql Server database 
-
-## Azure SQL Managed Instance
-
-- Analagous to a Sql Server
-
-## Azure Database for MySQL
-
-- Supports back in time recovery for up to 35 days in the past
-
-## Azure Database for PostgreSQL
-
-## Azure Synapse Analytics
 
 - This service was formerly known as Azure SQL Data Warehouse
 - Combines data warehousing with analytics
