@@ -1,10 +1,10 @@
 # Azure Cheatsheet
 
-## Accounts
+## Overview
 
 - One account (tenant) can have multiple subscriptions to separate resources by billing responsibility
-
-## Terminology
+  
+### Terminology
 
 - On Premises: managing the full technology stack in your own infrastructure (hardware, software, connectivity, etc)
 - Infrastructure as a Service (IaaS): cloud service provider handles servers and networking
@@ -162,6 +162,8 @@ e.g. rg-sharepoint-uat-westus-001
 - Analagous to a Sql Server
 
 ## Azure Database for MySQL
+
+- Supports back in time recovery for up to 35 days in the past
 
 ## Azure Database for PostgreSQL
 
