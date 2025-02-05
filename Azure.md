@@ -100,7 +100,7 @@ $ az ad sp create-for-rbac  --name myScope \
                             --scope /subscriptions/{subscription-id}
 ~~~
 
-## Azure Architecture
+## Azure architecture
 
 ### Subscriptions and nanagement groups
 
@@ -117,6 +117,13 @@ $ az account list --output table
 
 ### Resources and Azure Resource Manager
 
+#### Good resource naming convention
+~~~
+{Resource-type}-{Workload/Application}-{Environment}-{Region}-{Instance}
+
+e.g. rg-sharepoint-uat-westus-001
+~~~
+
 #### List resource groups
 `$ az group list --output table`
 
@@ -125,7 +132,7 @@ $ az account list --output table
 
 ### Regions and availability zones
 
-## Azure Database Solutions
+## Azure data
 
 ### Azure Cosmos DB
 
@@ -145,40 +152,36 @@ $ az account list --output table
 
 ### Azure Synapse Analytics
 
+- This service was formerly known as Azure SQL Data Warehouse
+- Combines data warehousing with analytics
+  
+## Azure compute
 
+## Azure storage
 
+## Azure networking
 
+### Virtual Networks
 
-
-## Virtual Networks
-
-### Allowable ranges
+#### Allowable ranges
 
 - 10.0.0.0 - 10.255.255.255 (10/8 prefix)
 - 172.16.0.0 - 172.31.255.255 (172.16/12 prefix)
 - 192.168.0.0 - 192.168.255.255 (192.168/16 prefix)
 
-### Good resource naming convention
-
-~~~
-{Resource-type}-{Workload/Application}-{Environment}-{Region}-{Instance}
-
-e.g. rg-sharepoint-uat-westus-001
-~~~
-
-## Load Balancing
+#### Load Balancing
 
 - Azure Load Balancer: zone redundant, supports all UDP and TCP protocols
 - Traffic Manager: dns-based traffic balancer working at the domain level
 - Azure Application Gateway: used to optimize web farm productivity
 - Azure Front Door: global load balancing and high availability for web apps
 
-## Application Gateways
+#### Application Gateways
 
 - Uses round-robin process to load balance requests to pool
 - Session stickiness makes sure client requests are routed to the same server each time
 
-### Main components
+#### Main components
 
 - Front-end IP address: a single public address and/or a single private address
 - Listeners: accept traffic based on a combination of protocol, port, host, and IP
@@ -186,5 +189,4 @@ e.g. rg-sharepoint-uat-westus-001
 
 
 
-- This service was formerly known as Azure SQL Data Warehouse
-- Combines data warehousing with analytics
+
