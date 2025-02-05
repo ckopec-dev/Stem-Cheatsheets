@@ -20,5 +20,6 @@
   - Calculation: (P<sub>1</sub> + P<sub>2</sub> + ... + P<sub>n</sub>) / n
 - Exponential Moving Average (EMA): exponentially weighted average
   - Calculation: EMA<sub>n</sub> = P<sub>n</sub> * m + previous EMA * (1 - m), where m = 2 / (n + 1)
+  - Advantages: more sensitive to most recent price movement
 
 
