@@ -162,3 +162,10 @@ e.g. rg-sharepoint-uat-westus-001
 - Analagous to a Sql Server
 
 ## Azure Database for MySQL
+
+## Azure Database for PostgreSQL
+
+## Azure Synapse Analytics
+
+- This service was formerly known as Azure SQL Data Warehouse
+- Combines data warehousing with analytics
