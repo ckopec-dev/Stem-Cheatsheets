@@ -157,6 +157,16 @@ e.g. rg-sharepoint-uat-westus-001
   
 ## Azure compute
 
+### Azure Virtual Machines
+
+- Emulations of physical computers
+
+### Azure Container Instances
+
+### Azure App Service
+
+### Azure Functions
+
 ## Azure storage
 
 ## Azure networking
