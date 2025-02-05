@@ -151,6 +151,8 @@ e.g. rg-sharepoint-uat-westus-001
 - Listeners: accept traffic based on a combination of protocol, port, host, and IP
 - Routing rules: binds a listener to a backend pool
 
+## Azure Cosmos DB
+
 ## Azure SQL Database
 
 - Analagous to a single Sql Server database 
