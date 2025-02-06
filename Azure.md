@@ -102,7 +102,7 @@ $ az ad sp create-for-rbac  --name myScope \
 
 ## Azure architecture
 
-### Subscriptions and nanagement groups
+### Subscriptions and management groups
 
 #### Get list of subscriptions
 ~~~
@@ -129,6 +129,18 @@ e.g. rg-sharepoint-uat-westus-001
 
 #### Delete resource group
 `$ az group delete --name {name}`
+
+#### Role Based Access Control (RBAC)
+
+- Manages who has access to what resources, and what they can do with those resources.
+- A role assignment consists of three elements: security principal, role definition, and scope.
+- A security principal is an object (user, group, service principal, or managed identity) that is requesting access to Azure resources.
+- A role definition is a collection of actions that can be performed (e.g. R/W/D). 
+- Scope is the set of resources that the role access applies to. Four levels:
+  - Management group
+  - Subscription
+  - Resource group
+  - Resource
 
 ### Regions and availability zones
 
