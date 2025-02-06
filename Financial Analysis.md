@@ -25,9 +25,14 @@
 ### Signals
 
 - Triggers to long or short assets based on criteria, constructed using indicators and/or market data.
-- Example: buy long when price rises above the SMA, and exit when the price lowers below the SMA.
+- Examples:
+  - Buy long when price rises above the SMA, and exit when the price lowers below the SMA.
+  - Buy long when short-term EMA crosses above the long-term EMA.
+  - Buy short when short-term EMA crosses below the long-term EMA.
+  - Buy short when RSA > 70.
+  - Buy long when RSA < 30.
 
-### Straegies
+### Strategies
 
 - Trend-following: bets the price trend will continue
 - Mean reversion: bets the price tends to reverse back towards the mean
