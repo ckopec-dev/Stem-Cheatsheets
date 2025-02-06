@@ -166,14 +166,12 @@ e.g. rg-sharepoint-uat-westus-001
 - Lets you deploy and manage a set of identical load-balanced VMs-
   
 #### Azure Batch
-
-- Starts pool of VMs
-- Installs necessary software
-- Runs jobs
-- Identifies failures
-- Requeues work
-
 - Large scale high performance computing
+  - Starts pool of VMs
+  - Installs necessary software
+  - Runs jobs
+  - Identifies failures
+  - Requeues work
 
 ### Azure Container Instances
 
