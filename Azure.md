@@ -161,11 +161,17 @@ e.g. rg-sharepoint-uat-westus-001
 
 - Emulations of physical computers
 
+#### VM Scale Sets
+
+- Lets you deploy and manage a set of identical load-balanced VMs
+
 ### Azure Container Instances
 
 ### Azure App Service
 
 ### Azure Functions
+
+- Often used to provide a response to a REST request, or a message from another service
 
 ## Azure storage
 
