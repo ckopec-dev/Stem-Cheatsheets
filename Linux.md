@@ -230,3 +230,44 @@ $
 
 ### List usb devices
 `$ sudo blkid`
+
+## File sharing
+
+### Enabling
+
+~~~
+# Tested on fresh build of Ubuntu 24.04.
+
+# Install samba
+$ sudo apt install samba
+
+# Create folder to share
+$ mkdir /home/alice/data
+
+# Edit samba configuration
+$ sudo nano /etc/samba/smb.conf
+
+# Add to end of smb.conf
+[data]
+   comment = Data on Ubuntu
+   path = /home/alice/data
+   read only = no
+   guest ok = no
+   browsable = yes
+   create mask = 0755
+
+# Restart samba
+$ sudo service smbd restart
+
+# Set SMB password
+$ sudo smbpasswd -a alice
+
+# Show your configuration
+$ testparm
+
+# To map from Windows 10/11 in Explorer:
+# Right-click "This PC", select "Map Network Drive...".
+# Select a drive letter.
+# For Folder, enter "\\{Server-name}\{Share-name}".
+# Check both check boxes and click Finish.
+~~~
