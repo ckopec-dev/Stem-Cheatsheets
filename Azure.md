@@ -177,9 +177,10 @@ e.g. rg-sharepoint-uat-westus-001
 
 ### Azure App Service
 
-### Azure Functions
+### Azure Functions and Logic Apps
 
-- Often used to provide a response to a REST request, or a message from another service
+- Often used to provide a response to a REST request, or a message from another service.
+- Logic Apps are a GUI-based solution that perform a similar role as Azure Functions. Similar to Salesforce Flows.
 
 ## Azure storage
 
