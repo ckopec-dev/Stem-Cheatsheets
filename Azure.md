@@ -132,6 +132,7 @@ e.g. rg-sharepoint-uat-westus-001
 
 #### Role Based Access Control (RBAC)
 
+- RBAC is free and part of your Azure subscription.
 - Manages who has access to what resources, and what they can do with those resources.
 - A role assignment consists of three elements: security principal, role definition, and scope.
 - A security principal is an object (user, group, service principal, or managed identity) that is requesting access to Azure resources.
@@ -141,6 +142,7 @@ e.g. rg-sharepoint-uat-westus-001
   - Subscription
   - Resource group
   - Resource
+- A role assignment associates a role with a scope. Assignments are transitive and additive (effective permissions become the sum of assignments).
 
 ### Regions and availability zones
 
