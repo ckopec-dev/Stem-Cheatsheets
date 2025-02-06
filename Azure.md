@@ -163,7 +163,17 @@ e.g. rg-sharepoint-uat-westus-001
 
 #### VM Scale Sets
 
-- Lets you deploy and manage a set of identical load-balanced VMs
+- Lets you deploy and manage a set of identical load-balanced VMs-
+  
+#### Azure Batch
+
+- Starts pool of VMs
+- Installs necessary software
+- Runs jobs
+- Identifies failures
+- Requeues work
+
+- Large scale high performance computing
 
 ### Azure Container Instances
 
