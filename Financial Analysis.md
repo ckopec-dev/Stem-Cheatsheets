@@ -32,7 +32,7 @@
   - Buy short when RSA > 70.
   - Buy long when RSA < 30.
 
-### Strategies
+### Strategy Types
 
 - Trend-following: bets the price trend will continue
 - Mean reversion: bets the price tends to reverse back towards the mean
