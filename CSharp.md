@@ -295,3 +295,13 @@ public class MultithreadingDemo
     }
 }
 ~~~
+
+## Entity Framework Core
+
+### Installing the ef extension
+
+`$ dotnet tool install --global dotnet-if
+
+### Scaffold an existing database
+
+`$ dotnet ef dbcontext scaffold {Connection_String} --project {Project_Name} Microsoft.EntityFrameworkCore.SqlServer --use-database-names --output-dir {Output_Directory_Name} --context {Context_Name} --verbose --force`
