@@ -300,7 +300,7 @@ public class MultithreadingDemo
 
 ### Installing the ef extension
 
-`$ dotnet tool install --global dotnet-if
+`$ dotnet tool install --global dotnet-if`
 
 ### Scaffold an existing database
 
