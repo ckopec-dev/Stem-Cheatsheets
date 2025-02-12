@@ -231,6 +231,16 @@ $
 ### List usb devices
 `$ sudo blkid`
 
+### List mounted drives
+
+~~~
+# Everything in a tree format
+$ findmnt
+
+# Just ext4 drives
+$ sudo df -a -T -h -t ext4
+~~~
+
 ## File sharing
 
 ### Enabling
