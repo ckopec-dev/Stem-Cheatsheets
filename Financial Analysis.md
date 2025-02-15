@@ -29,8 +29,7 @@
   - Buy long when price rises above the SMA, and exit when the price lowers below the SMA.
   - Buy long when short-term EMA crosses above the long-term EMA.
   - Buy short when short-term EMA crosses below the long-term EMA.
-  - Buy short when RSA > 70.
-  - Buy long when RSA < 30.
+  
 
 ### Strategy Types
 
