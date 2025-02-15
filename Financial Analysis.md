@@ -2,7 +2,7 @@
 
 ## Trading
 
-### Types of traders
+### Trader Types
 
 - Day: holds positions for less than 48 hours
 - Swing: holds positions for a few days to several weeks
