@@ -16,6 +16,9 @@ $ sudo do-release-upgrade
 ### Show architecture
 `$ uname -m`
 
+### Show kernel version
+`$ uname -r`
+
 ### Print a message
 `$ echo "Hello, world!"`
 
