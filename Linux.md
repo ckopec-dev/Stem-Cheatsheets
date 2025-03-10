@@ -13,6 +13,9 @@ $ sudo apt dist-upgrade
 $ sudo do-release-upgrade
 ~~~
 
+### Show architecture
+`$ uname -m`
+
 ### Print a message
 `$ echo "Hello, world!"`
 
