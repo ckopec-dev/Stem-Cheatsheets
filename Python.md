@@ -190,7 +190,6 @@ index_people = people.index("sally")
 ### Slicing
 
 ~~~
-
 # Slice from index 0.
 ages[{start-index-inclusive}:{end-index-exclusive]
 
@@ -199,7 +198,6 @@ ages[:4]
 
 # Slice to end. Returns everything from 4th item to last item.
 ages[4:]
-
 ~~~
 
 ### Updating lists
