@@ -167,7 +167,6 @@ for label, row in df.iterrows() :
 ### Indexing
 
 ~~~
-
 # Basic example
 ages = [2, 19, 34]
 
@@ -186,7 +185,6 @@ names_and_ages[2][0]
 # Find index by string value
 people = ["bob", "sally"]
 index_people = people.index("sally")
-
 ~~~
 
 ### Slicing
