@@ -237,7 +237,6 @@ y = x
 ### Examples
 
 ~~~
-
 # Example of names + ages
 people = { "bob":34, "alice":14, "mark": 24 }
 
@@ -258,7 +257,6 @@ people["jeff"] = 64
 
 # Remove a key.
 del(people["jeff"])
-
 ~~~
 
 ## Tuples
