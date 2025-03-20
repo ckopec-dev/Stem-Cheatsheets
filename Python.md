@@ -203,7 +203,6 @@ ages[4:]
 ### Updating lists
 
 ~~~
-
 # Basic example.
 ages[0] = 3
 
@@ -216,7 +215,6 @@ names_and_ages.append(some_other_list)
 
 # Deleting from a list. Deletes item with index 2.
 del(names_and_ages[2])
-
 ~~~
 
 ### Create a new list from an existing list
