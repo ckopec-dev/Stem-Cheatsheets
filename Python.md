@@ -220,13 +220,11 @@ del(names_and_ages[2])
 ### Create a new list from an existing list
 
 ~~~
-
 # This value-copies items from x into y. I.e. they don't share the same reference. Slicing also achieves this.
 y = list(x)
 
 # This retains the reference to the same memory location, so updates to y will be reflected in x.
 y = x
-
 ~~~
 
 ## Dictionaries
