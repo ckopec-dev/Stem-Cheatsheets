@@ -2,30 +2,37 @@
 
 ## Installation and basic usage on Ubuntu
 
+### Install
+`$ sudo snap install ollama`
+
+### Show version
+`$ ollama --version`
+
+### Show help
+`$ ollama --help`
+
+### Pull a model locally
+
 ~~~
-$ curl -fsSL https://ollama.com/install.sh | sh
+# Good general purpose model
+$ ollama pull llama3.2
 
-# Start ollama
-$ ollama serve
-
-# Pull a model
-$ ollama pull llama3.1:latest
-
-# Show available models
-$ ollama list
-
-# Run a model
-$ ollama run llama3.1:latest
-
-# Ask a question
->>> How much does a duck weigh?
-
-# Exit the interactive interface
->>> /bye
-
-# Get help
-$ ollama help
-
-# Stop a running model
-$ ollama stop llama3.1:latest
+# Model for code generation
+$ ollama pull qwen2.5-coder
 ~~~
+
+### Run a model and ask it something
+
+~~~
+# Outputs a sort summary of topic
+$ ollama run llama3.2 "Explain the basics of machine learning."
+
+# Outputs python code
+$ ollama run qwen2.5-coder "Show quicksort algorithm in python."
+~~~
+
+### Show running models
+`$ ollama ps`
+
+### Show locally available models
+`$ ollama list`
