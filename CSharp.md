@@ -3,6 +3,22 @@
 
 ## Variables
 
+### Value types
+
+- bool: true/false
+- byte: 8-bit unsigned int
+- char: character
+- decimal: numerical type (useful for financial data)
+- double: double precision floating point
+- float: single precision floating point
+- int: integer
+- long: long integer
+- sbyte: 8-bit signed int
+- short: short integer
+- uint: unsigned int
+- ulong: unsigned long
+- ushort: unsigned short
+
 ### Assign a variable with scientific notation
 
 ~~~
