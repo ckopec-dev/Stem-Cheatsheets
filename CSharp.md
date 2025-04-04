@@ -6,18 +6,18 @@
 ### Value types
 
 - bool: true/false
-- byte: 8-bit unsigned int
+- byte: 8-bit unsigned int (0 to 255)
 - char: character
 - decimal: numerical type (useful for financial data)
 - double: double precision floating point
 - float: single precision floating point
-- int: integer
-- long: long integer
-- sbyte: 8-bit signed int
-- short: short integer
-- uint: unsigned int
-- ulong: unsigned long
-- ushort: unsigned short
+- int: integer (2147483658 to 2147483647)
+- long: long integer (-9223372036854775808 to 9223372036854775807)
+- sbyte: 8-bit signed int (-128 to 127)
+- short: short integer (-32768 to 32767)
+- uint: unsigned int (0 to 4294967295)
+- ulong: unsigned long (0 to 18446744073709551615)
+- ushort: unsigned short (0 to 65535)
 
 ### Assign a variable with scientific notation
 
