@@ -117,7 +117,6 @@ print(detected)
 ### Function to show detected faces
 
 ~~~ 
-
 def show_detected_face(result, detected, title="Face image"):
     plt.imshow(result)
     img_desc = plt.gca()
@@ -134,7 +133,6 @@ def show_detected_face(result, detected, title="Face image"):
                 fill=False,color='r',linewidth=2)
         )
     plt.show()
-
 ~~~
 
 ## Metadata
