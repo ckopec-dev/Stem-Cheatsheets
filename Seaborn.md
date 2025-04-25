@@ -223,7 +223,6 @@ sns.set_palette(hex_codes)
 ### Seaborn objects
 
 ~~~
-
 # Seaborn crates 2 types of objects: FacetGrid (rel and cat plots) and AxesSubplot (box and line plots)
 # To view the type:
 
@@ -244,5 +243,4 @@ g.set(xlabel="X Label", ylabel="Y Label")
 
 # Rotate x-axis labels
 plt.xticks(rotation=90)
-
 ~~~
