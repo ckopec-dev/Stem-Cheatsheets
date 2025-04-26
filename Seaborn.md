@@ -120,7 +120,6 @@ sns.relplot(x="hour", y="brightness", data=sunlight, kind="line", hue="location"
 ### Categorical plots 
 
 ~~~
-
 # Involve a categorical variable
 # Used to compare groups
 
@@ -139,7 +138,6 @@ plt.show()
 
 # To create a category bar plot, set kind="bar" and set y={y-values}.
 # Bar plots display mean of quantitative variable per category (95% confidence interval).
-
 ~~~
 
 ### Box plots
