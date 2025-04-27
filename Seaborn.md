@@ -143,7 +143,6 @@ plt.show()
 ### Box plots
 
 ~~~
-
 # Shows the distribution of quantitative data
 # Colored box represents the 25-75th percentile
 # The line inside the box represents the median
@@ -160,7 +159,6 @@ tips = sns.load_dataset("tips")
 # Create box plot
 sns.catplot(x="time", y="total_bill", data=tips, kind="box")
 plt.show()
-
 ~~~
 
 ### Point plots
