@@ -164,7 +164,6 @@ plt.show()
 ### Point plots
 
 ~~~
-
 # The mean of quantitative variable
 # Vertical bars represent 95% confidence intervals
 
@@ -182,7 +181,6 @@ plt.show()
 # Set join=False to remove lines between categories
 # To use median instead of mean, set estimator=median
 # To add caps to the end of the confidence intervals, set capsize={cap-size}
-
 ~~~
 
 ### Figure styles
