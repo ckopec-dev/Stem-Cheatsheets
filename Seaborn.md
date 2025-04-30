@@ -199,13 +199,11 @@ plt.show()
 ### Create a custom palette
 
 ~~~
-
 color_names = ["red", etc]
 sns.set_palette(color_names)
 
 hex_codes = ['#FBB4AE', etc]
 sns.set_palette(hex_codes)
-
 ~~~
 
 ### Change plot scale
