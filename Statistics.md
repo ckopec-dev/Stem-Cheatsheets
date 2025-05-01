@@ -16,7 +16,6 @@ Statistics is the practice and study of collecting and analyzing data.
 ## Measures of center
 
 ~~~
-
 import numpy as np
 import statistics
 
@@ -29,7 +28,6 @@ np.median()
 
 # Mode: the most frequent value in the data.
 statistics.mode()
-
 ~~~
 
 ### Measures of spread
