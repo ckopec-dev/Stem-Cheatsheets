@@ -72,7 +72,6 @@ iqr(df["ColumnA"])
 An outlier is a data point "substantially" different from the others. A general rule of thumb is: data < Q1 - 1.5 x IQR OR data > Q3 + 1.5 * IQR.
 
 ~~~
-
 import numpy as np
 from scipy.stats import iqr
 
@@ -82,7 +81,6 @@ upper_threshold = np.quantile(df["ColumnA"], 0.75) + 1.5 * iqr
 
 # Subset the outliers
 df[(df["ColumnA"] < lower_threshold) | (df["ColumnA"] > upper_threshold)]
-
 ~~~
 
 ## Probability
