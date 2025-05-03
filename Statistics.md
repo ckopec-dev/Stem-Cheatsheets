@@ -33,7 +33,6 @@ statistics.mode()
 ### Measures of spread
 
 ~~~
-
 import numpy as np
 from scipy.stats import iqr
 
@@ -66,7 +65,6 @@ np.quantile(df["ColumnA"], np.linspace(0, 1, 5))
 
 # Interquartile range: the 0.25 - 0.75 quartile range. Height of the box in a boxplot.
 iqr(df["ColumnA"])
-
 ~~~
 
 ### Outliers
