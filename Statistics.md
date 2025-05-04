@@ -90,7 +90,6 @@ The probability of an event is the number of ways it can happen divided by the t
 ### Random sampling
 
 ~~~
-
 import numpy as np
 
 # To insure reproducibility, set random seed
@@ -104,7 +103,6 @@ df.sample(2)
 
 # Get 2 random records with replacement
 df.sample(2, replace = True)
-
 ~~~
 
 ### Probability distribution
