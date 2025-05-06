@@ -158,7 +158,6 @@ norm.ppf(0.8, 162, 4)
 - Lambda: average number of events per time interval
 
 ~~~
-
 from scipy.stats import poisson
 
 # Examples
@@ -171,7 +170,6 @@ poisson.cdf(6, 14)
 
 # If average number of events per week is 14, what is the probability of more than 6 events in a week?
 1 - poisson.cdf(6, 14)
-
 ~~~
 
 ### Correlation coefficient
