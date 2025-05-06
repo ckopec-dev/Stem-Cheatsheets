@@ -127,7 +127,6 @@ df.sample(2, replace = True)
 ### Find percent of values less/more than given normal distribution
 
 ~~~
-
 from scipy.stats import norm
 norm.cdf({value}, {mean}, {std})
 norm.ppf({percent}, {mean}, {std})
@@ -145,7 +144,6 @@ norm.cdf(153, 162, 4) - norm.cdf(150, 162, 4)
 
 # What height are 80% of people shorter than?
 norm.ppf(0.8, 162, 4)
-
 ~~~
 
 ### The central limit theorum
