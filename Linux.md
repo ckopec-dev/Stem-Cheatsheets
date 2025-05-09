@@ -158,6 +158,15 @@ $ grep -n "{search-string}" {filename}
 $ grep -v "{search-string}" {filename}
 ~~~
 
+### Parse text data using Awk
+~~~
+# Parse out 2nd column using default delimiter (space)
+$ awk '{print $2}' myTextFile.txt
+
+# Parse out 4th column using comma delimiter
+$ awk -F, '{print $4}' myTextFile.txt
+~~~
+
 ### Print first ten lines of a file
 `$ head {filename}`
 
