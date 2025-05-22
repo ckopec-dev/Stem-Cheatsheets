@@ -109,7 +109,6 @@ print(my_vector[c("Monday", "Tuesday")]
 ### Vector comparisons
 
 ~~~
-
 # Comparison operators can be used on vectors
 my_vector(4, 5, 6) > 5
 # Result: FALSE FALSE TRUE
