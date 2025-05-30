@@ -70,7 +70,7 @@ $ cd spreadsheets
 ### List directory contents
 ~~~
 # Basic list
-$ ls`
+$ ls
 
 # With hidden files in long format
 $ ls -la
