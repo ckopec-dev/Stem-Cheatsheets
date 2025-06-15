@@ -28,6 +28,9 @@
 
 - Voltage is measured relatively, between two points in a circuit. Use the multimeter like a stethoscope. Set to volts.
 - Current measures the flow in a circuit - i.e. it must past through the meter. Set to milliamps.
+- The black wire plugs into the socket usually labeled "COM".
+- The red wire plugs into the socket usually labeled 'V" or "volts".
+- If the meter doesn't support autoranging, the numbered range positions mean "no higher than".
 
 ## Circuits
 
