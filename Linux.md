@@ -303,9 +303,8 @@ $ testparm
 
 # Display real-time system info
 $ top
-
-# Similar to top, but with interactivity
 $ htop
+$ btop
 
 # Show disk activity
 $ sudo iotop
