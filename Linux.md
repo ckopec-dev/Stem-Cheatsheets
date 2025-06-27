@@ -296,3 +296,25 @@ $ testparm
 # For Folder, enter "\\{Server-name}\{Share-name}".
 # Check both check boxes and click Finish.
 ~~~
+
+## Monitoring
+
+~~~
+
+# Display real-time system info
+$ top
+
+# Similar to top, but with interactivity
+$ htop
+
+# Show disk activity
+$ sudo iotop
+
+# Show network activity by process
+$ sudo nethogs
+
+# Show global network activity
+$ sudo iftop
+
+~~~
+
