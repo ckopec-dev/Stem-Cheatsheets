@@ -65,6 +65,37 @@ int main()
 }
 ~~~
 
+### Structs
+
+~~~
+#include <stdlib.h>
+#include <string.h>
+
+struct person
+{
+        int age;
+        char *name;
+};
+
+int main(void)
+{
+
+        struct person m;
+
+        m.age = 19;
+        m.name = malloc(5 * sizeof(char));
+        strcpy(m.name, "Fred");
+
+        // pointer to the struct
+        struct person *m_ptr = &m;
+
+        // set some data using the pointer
+        m_ptr -> age = 29;
+        m_ptr -> name = realloc(m_ptr -> name, 6 * sizeof(char));
+        strcpy(m_ptr -> name, "Fredy");
+}
+~~~
+
 ## Buffer overflows
 
 Overflow occurs when you write more data to memory than you have allocated. This can result in a corrupt stack or heap.
