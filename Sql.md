@@ -49,7 +49,7 @@ SELECT title FROM films WHERE release_year > 1960 AND country = 'Japan';
 SELECT title FROM films WHERE release_year > 1960 OR country = 'Japan';
 
 -- Select films released between 1960 and 1970
-SELECT title FROM films WHERE release_year BETWEEN 1960 and 1970
+SELECT title FROM films WHERE release_year BETWEEN 1960 AND 1970
 
 -- Between is inclusive, so the above is identical to
 SELECT title FROM films WHERE release_year >= 1960 AND release_year <= 1970
