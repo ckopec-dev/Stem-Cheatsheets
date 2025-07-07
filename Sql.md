@@ -127,7 +127,8 @@ SELECT DATEPART(yy, order_date) FROM orders
 - SIN()
 - SQRT()
 - TAN()
-
+- ROUND(number_to_round, decimal_places): if decimal_places is negative, the number will round to the left of the decimal point
+  
 ## Aggregating
 
 ### Common aggregate functions
@@ -171,9 +172,14 @@ ORDER BY title_count DESC;
 SELECT release_year, COUNT(title) AS title_count FROM films GROUP BY release_year HAVING COUNT(title) > 10; 
 ~~~
 
-## Other useful functions
+## Select ordering
 
-- ROUND(number_to_round, decimal_places): if decimal_places is negative, the number will round to the left of the decimal point
+- SELECT
+- FROM
+- WHERE
+- GROUP BY
+- HAVING
+- ORDER BY
 
 ## Order of execution
 
