@@ -161,6 +161,13 @@ SELECT
 FROM match;
 ~~~
 
+## Aliases
+
+~~~
+SELECT first_name + ' ' + last_name AS full_name
+SELECT unit_price * quantity AS cost
+~~~
+
 ## Joins
 
 ### Inner join
