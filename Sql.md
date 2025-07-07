@@ -138,6 +138,11 @@ SELECT DATEPART(yy, order_date) FROM orders
 - MAX()
 - COUNT()
 
+~~~
+-- To use aggregate on unique values, use the DISTINCT argument
+SELECT AVG(DISTINCT price) FROM product
+~~~
+
 ## Sorting and grouping
 
 ~~~
