@@ -88,6 +88,7 @@ SELECT * FROM films WHERE release_year IS NOT NULL;
 
 - %: match zero or more characters
 - _: match one character
+- []: specify a set of characters
 
 ## Aggregating
 
