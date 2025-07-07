@@ -82,6 +82,7 @@ SELECT * FROM films WHERE release_year IS NOT NULL;
 - <>, !=: not equal to
 - BETWEEN: between two specified values
 - IS NULL: is a null value
+- LIKE: for use with wildcard operators
 
 ### Wildcards
 
