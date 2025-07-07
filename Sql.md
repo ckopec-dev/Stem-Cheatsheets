@@ -90,6 +90,29 @@ SELECT * FROM films WHERE release_year IS NOT NULL;
 - _: match one character
 - []: specify a set of characters
 
+## Functions
+
+### Some common function examples
+
+~~~
+
+-- Left 3 chars and right 4 chars
+SELECT LEFT(phone, 3), RIGHT(phone, 4) FROM company
+
+-- The length of the field
+SELECT LEN(city) FROM company
+
+-- Lower/upper case of field
+SELECT LOWER(name), UPPER(state) FROM company
+
+-- Trims whitespace from left and right of field
+SELECT LTRIM(name), RTRIM(city) FROM company
+
+-- Returns soundex value (4-character code used to evaluate similarity of strings
+SELECT SOUNDEX('banana')
+
+~~~
+
 ## Aggregating
 
 ### Common aggregate functions
