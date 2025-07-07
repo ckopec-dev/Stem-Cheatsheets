@@ -92,10 +92,9 @@ SELECT * FROM films WHERE release_year IS NOT NULL;
 
 ## Functions
 
-### Some common function examples
+### Strings
 
 ~~~
-
 -- Left 3 chars and right 4 chars
 SELECT LEFT(phone, 3), RIGHT(phone, 4) FROM company
 
@@ -110,8 +109,24 @@ SELECT LTRIM(name), RTRIM(city) FROM company
 
 -- Returns soundex value (4-character code used to evaluate similarity of strings
 SELECT SOUNDEX('banana')
+~~~
+
+### Dates and times
 
 ~~~
+-- Get the year of a datetime
+SELECT DATEPART(yy, order_date) FROM orders
+~~~
+
+### Math
+
+- ABS()
+- COS()
+- EXP()
+- PI()
+- SIN()
+- SQRT()
+- TAN()
 
 ## Aggregating
 
