@@ -43,6 +43,59 @@ string[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
 ### Declare and assign multiple variables of the same type in the same statement
 
 `int x = 5, y = 6, z = 7;`
+
+## Control statements
+
+~~~
+// If then
+if(condition)
+  statement;
+else if (condition)
+  statement;
+...
+else (condition)
+  statement;
+
+// Switch
+switch(expression)
+{
+  case constant1:
+    statement sequence
+    break;
+  case constant2:
+    statement sequence
+    break;
+  default
+    statement sequence
+    break;
+}
+
+// For loop
+for(initialization; condition; iteration)
+{
+  statement sequence
+}
+
+// While loop
+while (condition) statement;
+
+// Do-while loop
+do
+{
+  statements;
+} while (condition);
+
+// Break out of a loop
+break;
+
+// Skip to next iteration of a loop
+continue;
+
+// Unconditional jump
+goto label;
+label:
+  statements;
+~~~
         
 ## Classes
 
