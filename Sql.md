@@ -392,6 +392,43 @@ SELECT firstname, lastname FROM customer_staging
 
 -- Create a new populated table using the result of a select
 SELECT * INTO customers FROM customer_import
+~~~
 
+## Updating
 
+~~~
+UPDATE customers SET active = 0 WHERE firstname = 'Frank' 
+~~~
+
+## Deleting
+~~~
+DELETE FROM customers WHERE lastname = 'Smith'
+~~~
+
+## Creating tables
+
+~~~
+CREATE TABLE customers
+(
+  customer_num  INTEGER      NOT NULL,
+  firstname     VARCHAR(20)  NOT NULL,
+  lastname      VARCHAR(20)  NOT NULL,
+  created       DATETIME     NOT NULL    DEFAULT GETDATE()
+);
+
+~~~
+
+## Altering tables
+
+~~~
+-- Add a column
+ALTER TABLE customers
+ADD phone VARCHAR(20) 
+
+-- Remove a column
+ALTER TABLE customers
+DROP COLUMN created
+
+-- Remove the table
+DROP TABLE customers
 ~~~
