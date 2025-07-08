@@ -432,3 +432,15 @@ DROP COLUMN created
 -- Remove the table
 DROP TABLE customers
 ~~~
+
+## Views
+
+~~~
+-- Views are essentially saved select queries
+CREATE VIEW customers_formatted AS
+SELECT firstname + ' ' + lastname AS 'Name'
+FROM customers
+
+-- Use the view
+select * from customers_formatted
+~~~
