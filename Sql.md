@@ -415,7 +415,6 @@ CREATE TABLE customers
   lastname      VARCHAR(20)  NOT NULL,
   created       DATETIME     NOT NULL    DEFAULT GETDATE()
 );
-
 ~~~
 
 ## Altering tables
