@@ -443,3 +443,29 @@ FROM customers
 -- Use the view
 select * from customers_formatted
 ~~~
+
+## Stored procedures
+
+~~~
+CREATE PROCEDURE spActiveCustomers AS
+SELECT * FROM customers WHERE active = 1
+GO;
+
+-- Use the sproc
+EXEC spActiveCustomers
+
+-- Enable data access
+SELECT @@ServerName
+EXEC sp_serveroption @@ServerName, 'DATA ACCESS', TRUE
+
+-- Save the sproc results to a temp table
+SELECT * INTO #tmp
+FROM OPENQUERY(YOURSERVERNAME, 'EXEC {db name}.{schema name}.{sproc name}')
+
+-- Select from the temp table
+SELECT * FROM #tmp
+
+-- The temp table lives in tempdb and will be dropped automatically when the session ends.
+~~~
+
+
