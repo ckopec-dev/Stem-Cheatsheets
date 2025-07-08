@@ -374,3 +374,24 @@ SELECT president, country, continent
 FROM presidents
 WHERE country NOT IN (SELECT country FROM states WHERE indep_year < 1800);
 ~~~
+
+## Inserting
+
+~~~
+-- Values for all fields in given table must be provided if not explicitly specified.
+INSERT INTO customers
+VALUES ('Bob', 'Smith', '555-555-1234')
+
+-- Explicitly specify fields
+INSERT INTO customers(firstname, lastname)
+VALUES ('Bob', 'Smith')
+
+-- Insert values using the result of a select
+INSERT INTO customers(firstname, lastname)
+SELECT firstname, lastname FROM customer_staging
+
+-- Create a new populated table using the result of a select
+SELECT * INTO customers FROM customer_import
+
+
+~~~
