@@ -468,4 +468,24 @@ SELECT * FROM #tmp
 -- The temp table lives in tempdb and will be dropped automatically when the session ends.
 ~~~
 
+## Transactions
 
+~~~
+-- Everything happens
+BEGIN TRANSACTION
+-- Do some inserts, updates, or deletes
+COMMIT TRANSACTION
+
+-- Nothing happens
+BEGIN TRANSACTION
+-- Do some inserts, updates, or deletes
+ROLLBACK TRANSACTION
+
+-- Use savepoints to do partial rollbacks 
+BEGIN TRANSACTION
+INSERT {some data}
+SAVEPOINT delete1
+DELETE {some data}
+-- Undo the delete
+ROLLBACK TO delete1 
+~~~
