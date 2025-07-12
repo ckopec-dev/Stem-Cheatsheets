@@ -13,6 +13,12 @@ $ sudo apt dist-upgrade
 $ sudo do-release-upgrade
 ~~~
 
+### Use a terminal calculator
+~~~
+# See https://www.geeksforgeeks.org/linux-unix/bc-command-linux-examples/
+$ echo "12+5" | bc
+~~~
+
 ### Show architecture
 `$ uname -m`
 
