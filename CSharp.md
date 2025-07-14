@@ -11,7 +11,7 @@
 - decimal: numerical type (useful for financial data)
 - double: double precision floating point
 - float: single precision floating point
-- int: integer (2147483658 to 2147483647)
+- int: integer (-2147483658 to 2147483647)
 - long: long integer (-9223372036854775808 to 9223372036854775807)
 - sbyte: 8-bit signed int (-128 to 127)
 - short: short integer (-32768 to 32767)
