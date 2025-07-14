@@ -16,6 +16,29 @@ $ gcc -Wall hello.c -o hello
 $ ./hello
 ~~~
 
+### How gcc compiles
+
+~~~
+# Preprocessing.
+# 'E' flag specifies to stop after the preprocessor.
+# 'code_preprocessed.c' is the output file.
+# 'code.c' is the input file (the source code).
+$ gcc -E -o code_temp.c code.c
+
+# Compilation
+# 'S' flag specifies to stop after compilation.
+# No output file is specified, so it uses the default of code_temp.s
+$ gcc -S code_temp.c
+
+# Assembly
+# 'c' flag specifies to compile but do not link.
+$ gcc -c code_temp.s
+
+# Linking
+# 'code' is the output file.
+$ gcc -o code code_temp.s
+~~~
+
 ### Create a function
 
 ~~~
