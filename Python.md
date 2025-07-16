@@ -448,3 +448,23 @@ for number in range(5):
     print(number)
 
 ~~~
+
+## Virtual Environments
+
+~~~
+# Craete a folder for the VE
+$ mkdir ~/virts
+
+# Create a VE in the new folder
+$ cd virts
+$ python -m venv myproject
+
+# Active the VE
+$ source myproject/bin/activate
+
+# Deactivate the VE
+$ deactivate
+
+# Delete the VE
+$ rm -fr myproject
+~~~
