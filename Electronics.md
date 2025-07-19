@@ -41,6 +41,14 @@
   - Total resistance = (R1 * R2) / (R1 + R2)
   - Total capacitance is the sum of each capacitance
 
+### How to limit current through a component with a resistor
+
+- Example starting circuit: -5V at 0.02A power supply -> LED (only needs 2V) -> +5V.
+- Resistor therefore needs to drop 3V (5V - 2V).
+- Use Ohm's law to calculate resistor size: E=IR, 3V = 0.02A * R. Solve for R: 155 Ohms.
+- Find resistor equal to or greater than solution: 220 Ohms.
+- New current limited circuit: -5V -> LED -> Resistor -> +5V.
+
 ## Gates
 
 Gates are logic circuits. They take binary input and produce binary output. 0 = no electricity, 1 = positive electricity.
