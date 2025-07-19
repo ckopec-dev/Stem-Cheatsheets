@@ -276,6 +276,10 @@ Can be used to rename files.
 - [...]: any character inside brackets
 - {...}: any comma-separated patterns inside the curly brackets, e.g. {*.txt, *.csv}
 
+### Show size of items in current directory
+
+`$ du -hsc *`
+
 ## Text data manipulation
 
 ### View a file's contents
