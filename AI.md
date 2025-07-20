@@ -3,9 +3,9 @@
 
 ## Text to text
 
-### Ollama
-
 - See Ollama Cheatsheet
+
+## Text to code
 
 ## Text to image
 
