@@ -36,3 +36,16 @@ $ ollama run qwen2.5-coder "Show quicksort algorithm in python."
 
 ### Show locally available models
 `$ ollama list`
+
+### Run as an api service
+
+~~~
+# This will run ollama on localhost port 11434
+$ ollama serve
+
+curl http://localhost:11434/api/chat -d '{
+  "model": "deepseek-r1",
+  "messages": [{ "role": "user", "content": "Solve: 25 * 25" }],
+  "stream": false
+}'
+~~~
