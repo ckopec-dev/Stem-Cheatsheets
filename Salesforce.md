@@ -102,9 +102,9 @@ A dedicated, configurable, and short-term Salesforce environment that you can qu
 ### Data types
 
 - Primitives
-  - Integer
+  - Integer (-2,147,483,648 to 2,147,483,647)
   - Double
-  - Long
+  - Long (64 bit
   - Date
   - Datetime
   - String
@@ -116,8 +116,22 @@ A dedicated, configurable, and short-term Salesforce environment that you can qu
   - Set
   - Map
 - Enum: typed list of values
-- User-defined Apex classes
-- System-suppled Apex classes
+- User-defined Apex classes, objects, and interfaces
+- System-supplied Apex classes
+
+~~~
+/* Examples */
+Integer i = 100;
+system.debug('value of i: ' + i);
+Boolean active = true;
+Date dtShipped = date.today();
+Long debt = 100000000000000L;
+Account acct = new Account(Name = 'ACME');
+MyClass cls = new MyClass();
+String name = 'Bob';
+public enum Status {Open, Closed}
+Status s = Status.Open;
+~~~
 
 ### Lists
 
