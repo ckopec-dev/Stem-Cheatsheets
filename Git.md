@@ -6,6 +6,29 @@
 
 `$ sudo apt install git`
 
+### Configure server on linux
+
+~~~
+# Create a user
+$ sudo adduser git
+
+# Create directory for all repos and set permissions
+$ sudo mkdir /home/git/storage
+$ sudo chown git:git /home/git/storage
+
+# Switch to git usr
+$ su -l git
+
+# Create a bare repo
+$ cd storage
+$ mkdir myproject
+$ git init --bare
+$ exit
+
+# Clone repo from client
+$ git clone git@server:/home/git/storage/myproject
+~~~
+
 ### Show installed version
 
 `$ git --version`
