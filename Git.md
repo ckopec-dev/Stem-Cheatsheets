@@ -22,6 +22,7 @@ $ su -l git
 # Create a bare repo
 $ cd storage
 $ mkdir myproject
+$ cd myproject
 $ git init --bare
 $ exit
 
