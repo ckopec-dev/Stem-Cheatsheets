@@ -34,3 +34,5 @@ $ ollama pull llava:7b
 # Make request
 $ ollama run llava:7b "What's in this image? ./duck.jpg"
 ~~~
+
+## Paper to text (OCR)
