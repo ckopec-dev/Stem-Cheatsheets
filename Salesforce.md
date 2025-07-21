@@ -133,6 +133,26 @@ public enum Status {Open, Closed}
 Status s = Status.Open;
 ~~~
 
+### String functions
+
+~~~
+// Does string a contain string b?
+Boolean result = a.contains(b);
+
+// Is string a equal to string b?
+Boolean result = a.equalsIgnoreCase(b);
+
+// Remove string b from string a
+String result = a.remove(b);
+
+// Remove string b from the end of string a
+String result = a.removeEndIgnoreCase(b);
+
+// Does string a start with string b?
+Boolean result = a.startsWith(b);
+
+~~~
+
 ### Lists
 
 Hold ordered collections of objects. Synonymous and interchangable with arrays.
