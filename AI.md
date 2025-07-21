@@ -26,3 +26,11 @@ $ ollama run qwen2.5-coder "Show quicksort algorithm in python."
 ## Image to image
 
 ## Image to text
+
+~~~
+# Pull model
+$ ollama pull llava:7b
+
+# Make request
+$ ollama run llava:7b "What's in this image? ./duck.jpg"
+~~~
