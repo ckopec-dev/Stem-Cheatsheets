@@ -23,6 +23,46 @@ $ ollama run qwen2.5-coder "Show quicksort algorithm in python."
 
 ## Text to image
 
+~~~
+# Create a virtual environment
+$ python -m venv my_ai_project
+
+# Activate it
+$ source my_ai_project/bin/activate
+
+# Install the requirements
+$ pip install diffusers torch transformers accelerate
+
+# Create a python script to run the generator:
+
+from diffusers import StableDiffusionPipeline
+import torch
+
+# Fully disable safety checker
+def dummy(images, **kwargs):
+    return images, [False] * len(images)
+
+model_id = "runwayml/stable-diffusion-v1-5"
+
+# Force CPU and float32
+pipe = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float32, safety_checker=None)
+pipe.safety_checker = dummy
+pipe = pipe.to("cpu")
+
+# Prompt that won't trigger safety
+prompt = "a serene landscape with mountains, lake, and sunrise, detailed painting"
+
+# Generate and save
+image = pipe(prompt).images[0]
+image.save("output.png")
+print("Image saved to output.png")
+
+# Execute the script
+$ python the_script.py
+
+# See https://huggingface.co/models and https://civitai.com/ for other models.
+~~~
+
 ## Image to image
 
 ## Image to text
