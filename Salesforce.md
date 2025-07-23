@@ -189,6 +189,32 @@ for (Integer i = 0; i < myProducts.size(); i++)
 }
 ~~~
 
+### Constants
+
+Values do not change once assigned.
+
+~~~
+static final Double standardDiscount = 0.05;
+~~~
+
+### Conditionals
+
+~~~
+if ({condition}) {statements} else if ({condition}) {statements} else {statements}
+if (a == b)
+{
+	// Do something
+}
+else if (a == c)
+{
+	// Do something
+}
+else
+{
+	// Do something
+}
+~~~
+
 ### Classes
 
 ~~~
