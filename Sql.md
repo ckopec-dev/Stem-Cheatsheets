@@ -6,6 +6,12 @@
 -- Check installed version and edition
 SELECT @@VERSION
 SELECT SERVERPROPERTY('Edition')
+
+-- Create an index
+CREATE INDEX IDX_Name ON account (name);
+
+-- Reindex a table
+DBCC DBREINDEX('dbo.mytable');
 ~~~
 
 ## Selecting
