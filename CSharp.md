@@ -34,10 +34,19 @@ double d = 6e21D;
 ### Create and assign members to an array
 
 ~~~
+// Single-dimensional
 string[] cars = new string[4];
 string[] cars = new string[4] {"Volvo", "BMW", "Ford", "Mazda"};
 string[] cars = new string[] {"Volvo", "BMW", "Ford", "Mazda"};
 string[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+
+// Multi-dimensional
+int[,] table = new int[5, 5];
+table[3, 4] = 19;
+
+// Jagged (array of arrays)
+int[][] j = new int[3,4];
+j[0] = new int[2];
 ~~~
 
 ### Declare and assign multiple variables of the same type in the same statement
@@ -55,6 +64,9 @@ else if (condition)
 ...
 else (condition)
   statement;
+
+// ?
+bool expression ? true expression2 : false expression;
 
 // Switch
 switch(expression)
