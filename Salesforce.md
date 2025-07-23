@@ -171,6 +171,24 @@ for(Integer i = 0; i < colors.size(); i++) {
 }
 ~~~
 
+### Arrays
+
+Functionally the same as lists with a different syntax.
+
+~~~
+// Declare an array.
+String[] myProducts = new List<String>();
+
+// Add element to an array.
+myProducts.add('Widget');
+
+// Iterate over the array.
+for (Integer i = 0; i < myProducts.size(); i++)
+{
+	system.debug('Value: ' + myProducts[i]);
+}
+~~~
+
 ### Classes
 
 ~~~
