@@ -76,3 +76,19 @@ $ ollama run llava:7b "What's in this image? ./duck.jpg"
 ~~~
 
 ## Paper to text (OCR)
+
+## Background remover
+
+~~~
+# Create a virtual environment and activate it
+$ python -m venv rembg
+$ source rembg/bin/activate
+
+# Install needed packages
+$ pip install rembg onnxruntime click filetype watchdog aiohttp gradio asyncer
+
+# Remove a background from an image
+$ rembg -i {input_image_path} {output_image_path}
+# Example:
+$ rembg -i ~/temp/duck.jpg ~/temp/duck_no_background.jpg
+~~~
