@@ -65,6 +65,39 @@ $ python the_script.py
 
 ## Image to image
 
+~~~
+# Create a virtual environment and activate it
+$ python -m venv img2img
+$ source img2img/bin/activate
+
+# Install needed packages
+$ pip install diffusers transformers torch accelerate
+
+# Create a python script to run the generator:
+
+from diffusers import StableDiffusionImg2ImgPipeline
+import torch
+from PIL import Image
+
+def dummy(images, **kwargs):
+        return images, [False] * len(images)
+
+model_id = "CompVis/stable-diffusion-v1-4"
+
+pipe = StableDiffusionImg2ImgPipeline.from_pretrained(model_id, torch_dtype=torch.float32, safety_checker=None)
+pipe.safety_checker = dummy
+pip = pipe.to("cpu")
+
+init_image = Image.open("~/temp/duck.jpg").convert("RGB")
+prompt = "make it look like a duck boat"
+
+image = pipe(prompt=prompt, image=init_image, strength=0.75, guidance_scale=7.5).images[0]
+image.save("output.jpg")
+
+# Execute the script
+$ python the_script.py
+~~~
+
 ## Image to text
 
 ~~~
