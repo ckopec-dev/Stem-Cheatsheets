@@ -201,7 +201,7 @@ static final Double standardDiscount = 0.05;
 
 ~~~
 // If then else
-if ({condition}) {statements} else if ({condition}) {statements} else {statements}
+if ({condition}) {code block} else if ({condition}) {code block} else {code block}
 if (a == b)
 {
 	// Do something
@@ -215,13 +215,41 @@ else
 	// Do something
 }
 
-// for loop
-for ({variable : list or set}) {statements}
+// c-like for loop
+for ({initial statement}; {exit condition}; {increment statement}) {code block}
+for (Integer i = 0; i < 3; i++)
+{
+	// Do something
+}
+
+// for loop with list
+for ({variable : list or set}) {code block}
 List<Account> lst = [SELECT Id, Name From Account];
 for (Account a : lst)
 {
 	// Do something
 }
+
+// for loop with soql
+for (variable : [{soql query}]) {code block}
+for (Account a : [SELECT Id, Name FROM Account])
+{
+	// Do something
+}
+
+// while loop
+while ({boolean condition}) {code block}
+while (i < 3)
+{
+	// Do something
+}
+
+// do while loop
+do {code block} while ({boolean condition});
+do
+{
+	// Do something
+} while (i < 3);
 ~~~
 
 ### Classes
