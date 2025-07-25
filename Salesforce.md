@@ -197,9 +197,10 @@ Values do not change once assigned.
 static final Double standardDiscount = 0.05;
 ~~~
 
-### Conditionals
+### Control statements
 
 ~~~
+// If then else
 if ({condition}) {statements} else if ({condition}) {statements} else {statements}
 if (a == b)
 {
@@ -210,6 +211,14 @@ else if (a == c)
 	// Do something
 }
 else
+{
+	// Do something
+}
+
+// for loop
+for ({variable : list or set}) {statements}
+List<Account> lst = [SELECT Id, Name From Account];
+for (Account a : lst)
 {
 	// Do something
 }
