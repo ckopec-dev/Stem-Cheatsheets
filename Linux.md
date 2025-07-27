@@ -228,6 +228,26 @@ ftp> quit
 $
 ~~~
 
+### Convert pdf to text
+
+~~~
+$ sudo apt install poppler-utils
+$ pdftotext input.pdf output.txt
+
+# Alternatively
+$ sudo apt install xpdf-utils
+$ pdf2text input.pdf output.txt
+
+# With python
+$ pip install PyPDF2
+
+import PyPDF2
+with open("input.pdf", "rb") as f:
+    reader = PyPDF2.PdfReader(f)
+    for page in reader.pages:
+        print(page.extract_text())
+~~~
+
 ## Security
 
 ### Change permissions
