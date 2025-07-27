@@ -111,8 +111,6 @@ $ ollama pull llava:7b
 $ ollama run llava:7b "What's in this image? ./duck.jpg"
 ~~~
 
-## Paper to text (OCR)
-
 ## Background remover
 
 ~~~
