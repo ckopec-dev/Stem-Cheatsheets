@@ -9,6 +9,9 @@ $ ollama pull llama3.2
 
 # Make request
 $ ollama run llama3.2 "Explain the basics of machine learning."
+
+# Example: pipe a text file into the prompt
+$ ollama run llama3.2 "Summarize this article." < my_article.txt
 ~~~
 
 ## Text to code
