@@ -162,6 +162,9 @@ List<String> colors = new List<String>();
 // Equivalent to:
 String[] colors = new List<String();
 
+// Initialize 
+colors = new List<string> {'red', 'blue', 'green'};
+
 // Add item to list
 colors.add('red');
 
@@ -170,6 +173,14 @@ for(Integer i = 0; i < colors.size(); i++) {
  System.debug(colors[i]);
 }
 ~~~
+
+### Sets
+
+Like a list, except items are unordered and unique.
+
+### Maps
+
+Similar to dictionaries in other languages.
 
 ### Arrays
 
