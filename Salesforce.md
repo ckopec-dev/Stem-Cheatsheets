@@ -265,6 +265,14 @@ do
 
 ### Classes
 
+- Private: not available to outside classes
+- Public: available to other classes in the same namespace
+- Global: available everywhere
+- With sharing: respect sharing rules
+- Without sharing: ignores sharing rules
+- Virtual: class can be extended
+- Abstract: class used as base for other classes
+
 ~~~
 public class EmailMananger {
 
