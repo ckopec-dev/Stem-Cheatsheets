@@ -66,5 +66,20 @@ curl http://localhost:11434/api/chat -d '{
 ### llama3.1
 ~~~
 # General purpose text-to-text model. 
-$ ollama run llama3.1:8b "Explain the basics of machine learning."
+$ ollama run llama3.1:latest "Explain the basics of machine learning."
+
+            518.80 msec task-clock                       #    0.001 CPUs utilized
+             6,032      context-switches                 #   11.627 K/sec
+             1,150      cpu-migrations                   #    2.217 K/sec
+             3,271      page-faults                      #    6.305 K/sec
+       618,756,209      cycles                           #    1.193 GHz                         (51.11%)
+                 0      stalled-cycles-frontend                                                 (50.68%)
+                 0      stalled-cycles-backend                                                  (50.61%)
+       246,402,399      instructions                     #    0.40  insn per cycle              (49.60%)
+        53,257,442      branches                         #  102.655 M/sec                       (49.97%)
+         3,487,837      branch-misses                    #    6.55% of all branches             (49.79%)
+
+     620.295709235 seconds time elapsed
+       0.214825000 seconds user
+       0.333389000 seconds sys
 ~~~
