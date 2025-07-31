@@ -8,6 +8,8 @@
 $ sudo snap install ollama
 # or
 $ curl -fsSL https://ollama.com/install.sh | sh
+$ sudo systemctl enable ollama
+$ sudo systemctl start ollama
 ~~~
 
 ### Show version
