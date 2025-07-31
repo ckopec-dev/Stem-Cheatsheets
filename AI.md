@@ -1,6 +1,8 @@
 
 # AI Cheatsheet
 
+Examples below primarily focus on CPUs for computations instead of GPUs, to minimize hardware requirements for maximum reproduciblity.
+
 ## Text to text
 
 ~~~
