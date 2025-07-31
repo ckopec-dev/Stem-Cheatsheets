@@ -107,8 +107,6 @@ print("Image saved to output.png")
 
 # Execute the script
 $ python the_script.py
-
-# See https://huggingface.co/models and https://civitai.com/ for other models.
 ~~~
 
 ## Image to image
