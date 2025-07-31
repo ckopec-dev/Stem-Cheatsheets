@@ -48,6 +48,7 @@
 - Use Ohm's law to calculate resistor size: E=IR, 3V = 0.02A * R. Solve for R: 155 Ohms.
 - Find resistor equal to or greater than solution: 220 Ohms.
 - New current limited circuit: -5V -> LED -> Resistor -> +5V.
+- It does not matter which side of the circuit the resistor goes on (before or after the LED).
 
 ## Gates
 
