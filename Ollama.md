@@ -57,3 +57,11 @@ curl http://localhost:11434/api/chat -d '{
   "stream": false
 }'
 ~~~
+
+## Models
+
+### llama3.1
+~~~
+# General purpose text-to-text model. 
+$ ollama run llama3.1:8b "Explain the basics of machine learning."
+~~~
