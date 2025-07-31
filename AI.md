@@ -3,7 +3,7 @@
 
 Examples below primarily focus on CPUs for computations instead of GPUs, to minimize hardware requirements for maximum reproduciblity.
 
-For more models, see https://huggingface.co/models and https://civitai.com/.
+For more models, see https://ollama.com/library, https://huggingface.co/models, and https://civitai.com/.
 
 ## General experimental workflow
 
