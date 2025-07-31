@@ -341,5 +341,23 @@ $ sudo nethogs
 # Show global network activity
 $ sudo iftop
 
+# Measure execution duration of a process
+$ time ls -la
+
+# Measure execution duration of a shell script
+#!/bin/bash
+
+start_time=$(date +%s.%N) # Get start time with nanosecond precision
+
+# Your command or script goes here
+sleep 2
+
+end_time=$(date +%s.%N) # Get end time with nanosecond precision
+
+runtime=$(echo "$end_time - $start_time" | bc) # Calculate difference using 'bc' for floating-point arithmetic
+echo "The script took $runtime seconds to execute."
+
+# Get performance analysis metrics of a process
+$ sudo perf stat ls -la
 ~~~
 
