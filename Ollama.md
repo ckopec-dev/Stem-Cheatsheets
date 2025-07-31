@@ -58,6 +58,9 @@ curl http://localhost:11434/api/chat -d '{
 }'
 ~~~
 
+### Remove a local model
+`$ ollama rm {model-name}`
+
 ## Models
 
 ### llama3.1
