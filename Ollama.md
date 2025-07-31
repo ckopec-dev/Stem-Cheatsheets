@@ -3,7 +3,12 @@
 ## Installation and basic usage on Ubuntu
 
 ### Install
-`$ sudo snap install ollama`
+
+~~~
+$ sudo snap install ollama
+# or
+$ curl -fsSL https://ollama.com/install.sh | sh
+~~~
 
 ### Show version
 `$ ollama --version`
