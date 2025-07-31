@@ -3,6 +3,47 @@
 
 Examples below primarily focus on CPUs for computations instead of GPUs, to minimize hardware requirements for maximum reproduciblity.
 
+## General experimental workflow
+
+### For bash projects
+
+~~~
+# Create a project directory and navigate to it
+$ mkdir my_project && cd $_
+
+# Create a script to perform needed installs, etc.
+$ nano init.sh
+
+# Execute the script
+$ ./init.sh
+
+# Do the experiment
+~~~
+
+### For python projects
+
+~~~
+# Create a virtual environment
+$ python -m venv my_ai_project
+
+# Activate it
+$ source my_ai_project/bin/activate
+
+# Navigate to it
+$ cd my_ai_project
+
+# Create a script to perform needed installs, etc.
+$ nano init.sh
+
+# Execute the script
+$ ./init.sh
+
+# Do the experiment
+
+# Deactivate the VE
+$ deactivate
+~~~
+
 ## Text to text
 
 ~~~
