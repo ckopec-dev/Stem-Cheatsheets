@@ -64,8 +64,9 @@ curl http://localhost:11434/api/chat -d '{
 ## Models
 
 ### llama3.1
+
 ~~~
-# General purpose text-to-text model.
+# Text-to-text.
 
 $ ollama run llama3.1:latest "Explain the basics of machine learning."
 
@@ -96,4 +97,17 @@ $ ollama run llama3.1:70b "Explain the basics of machine learning."
     real    11m10.060s
     user    0m0.063s
     sys     0m0.089s
+~~~
+
+### qwen3-coder
+
+~~~
+# Text-to-code.
+
+$ ollama run qwen3-coder "Show quicksort algorithm in python."
+
+    Benchmark test B:
+    real    1m4.136s
+    user    0m0.065s
+    sys     0m0.127s
 ~~~
