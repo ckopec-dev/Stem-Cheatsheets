@@ -99,17 +99,18 @@ $ ollama run llama3.1:70b "Explain the basics of machine learning."
     sys     0m0.089s
 ~~~
 
-### qwen3-coder
+### deepseek-r1
 
 ~~~
 # Text-to-code.
 
-$ ollama run qwen3-coder "Show quicksort algorithm in python."
+$ ollama run deepseek-r1:1.5b "Explain the basics of machine learning."
 
     Benchmark test B:
-    real    1m4.136s
-    user    0m0.065s
-    sys     0m0.127s
+    real    0m33.382s
+    user    0m0.077s
+    sys     0m0.130s
+
 ~~~
 
 ### mistral-small3.2
@@ -123,4 +124,17 @@ $ ollama run mistral-small3.2:24b "Explain the basics of machine learning."
     real    19m19.772s
     user    0m0.532s
     sys     0m0.665s
+~~~
+
+### qwen3-coder
+
+~~~
+# Text-to-code.
+
+$ ollama run qwen3-coder "Show quicksort algorithm in python."
+
+    Benchmark test B:
+    real    1m4.136s
+    user    0m0.065s
+    sys     0m0.127s
 ~~~
