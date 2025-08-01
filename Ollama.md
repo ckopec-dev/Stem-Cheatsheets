@@ -65,7 +65,8 @@ curl http://localhost:11434/api/chat -d '{
 
 ### llama3.1
 ~~~
-# General purpose text-to-text model. 
+# General purpose text-to-text model.
+
 $ ollama run llama3.1:latest "Explain the basics of machine learning."
 
     Benchmark test A:
@@ -88,4 +89,11 @@ $ ollama run llama3.1:latest "Explain the basics of machine learning."
     real    0m51.176s
     user    0m0.059s
     sys     0m0.073s
+
+$ ollama run llama3.1:70b "Explain the basics of machine learning."
+
+    Benchmark test B:
+    real    11m10.060s
+    user    0m0.063s
+    sys     0m0.089s
 ~~~
