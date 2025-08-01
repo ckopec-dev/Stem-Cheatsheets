@@ -111,3 +111,16 @@ $ ollama run qwen3-coder "Show quicksort algorithm in python."
     user    0m0.065s
     sys     0m0.127s
 ~~~
+
+### mistral-small3.2
+
+~~~
+# Text-to-code.
+
+$ ollama run mistral-small3.2:24b "Explain the basics of machine learning."
+
+    Benchmark test B:
+    real    19m19.772s
+    user    0m0.532s
+    sys     0m0.665s
+~~~
