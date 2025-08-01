@@ -167,7 +167,7 @@ $ ollama run deepseek-r1:32b "Explain the basics of machine learning."
     user    0m0.087s
     sys     0m0.126s
 
-$ run deepseek-r1:70b "Explain the basics of machine learning."
+$ ollama run deepseek-r1:70b "Explain the basics of machine learning."
 
     Benchmark test B:
     real    24m6.046s
@@ -179,6 +179,20 @@ $ run deepseek-r1:70b "Explain the basics of machine learning."
 ~~~
 # Text-to-text, image-to-text, audio-to-text.
 
+$ ollama run gemma3n:e2b "Explain the basics of machine learning."
+
+    Benchmark test A:
+
+    Benchmark test B:
+    real    1m13.451s
+    user    0m0.081s
+    sys     0m0.139s
+
+$ ollama run gemma3n:e4b "Explain the basics of machine learning."
+
+    Benchmark test A:
+
+    Benchmark test B:
 
 ~~~
 
