@@ -63,6 +63,37 @@ curl http://localhost:11434/api/chat -d '{
 
 ## Models
 
+### deepseek-r1
+
+~~~
+# Text-to-code.
+
+$ ollama run deepseek-r1:1.5b "Explain the basics of machine learning."
+
+    Benchmark test A:
+            806.79 msec task-clock                       #    0.002 CPUs utilized
+             7,600      context-switches                 #    9.420 K/sec
+             2,840      cpu-migrations                   #    3.520 K/sec
+             3,269      page-faults                      #    4.052 K/sec
+       964,847,524      cycles                           #    1.196 GHz                         (47.68%)
+                 0      stalled-cycles-frontend                                                 (46.88%)
+                 0      stalled-cycles-backend                                                  (51.72%)
+       334,623,529      instructions                     #    0.35  insn per cycle              (52.80%)
+        69,727,138      branches                         #   86.425 M/sec                       (53.28%)
+         5,325,708      branch-misses                    #    7.64% of all branches             (48.64%)
+
+     537.352191971 seconds time elapsed
+
+       0.361164000 seconds user
+       0.473059000 seconds sys
+
+    Benchmark test B:
+    real    0m33.382s
+    user    0m0.077s
+    sys     0m0.130s
+
+~~~
+
 ### llama3.1
 
 ~~~
@@ -97,20 +128,6 @@ $ ollama run llama3.1:70b "Explain the basics of machine learning."
     real    11m10.060s
     user    0m0.063s
     sys     0m0.089s
-~~~
-
-### deepseek-r1
-
-~~~
-# Text-to-code.
-
-$ ollama run deepseek-r1:1.5b "Explain the basics of machine learning."
-
-    Benchmark test B:
-    real    0m33.382s
-    user    0m0.077s
-    sys     0m0.130s
-
 ~~~
 
 ### mistral-small3.2
