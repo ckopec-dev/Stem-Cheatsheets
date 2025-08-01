@@ -160,12 +160,6 @@ $ ollama run deepseek-r1:14b "Explain the basics of machine learning."
     user    0m0.096s
     sys     0m0.132s
 
-$ ollama run deepseek-r1:14b "Explain the basics of machine learning."
-
-    Benchmark test A:
-
-    Benchmark test B:
-
 $ ollama run deepseek-r1:32b "Explain the basics of machine learning."
 
     Benchmark test A:
