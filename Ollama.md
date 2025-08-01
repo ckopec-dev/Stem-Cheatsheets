@@ -68,6 +68,7 @@ curl http://localhost:11434/api/chat -d '{
 # General purpose text-to-text model. 
 $ ollama run llama3.1:latest "Explain the basics of machine learning."
 
+    Benchmark test A:
             518.80 msec task-clock                       #    0.001 CPUs utilized
              6,032      context-switches                 #   11.627 K/sec
              1,150      cpu-migrations                   #    2.217 K/sec
@@ -82,4 +83,9 @@ $ ollama run llama3.1:latest "Explain the basics of machine learning."
      620.295709235 seconds time elapsed
        0.214825000 seconds user
        0.333389000 seconds sys
+
+    Benchmark test B:
+    real    0m51.176s
+    user    0m0.059s
+    sys     0m0.073s
 ~~~
