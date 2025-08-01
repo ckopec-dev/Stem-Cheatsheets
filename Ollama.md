@@ -83,7 +83,6 @@ $ ollama run deepseek-r1:1.5b "Explain the basics of machine learning."
          5,325,708      branch-misses                    #    7.64% of all branches             (48.64%)
 
      537.352191971 seconds time elapsed
-
        0.361164000 seconds user
        0.473059000 seconds sys
 
@@ -92,6 +91,28 @@ $ ollama run deepseek-r1:1.5b "Explain the basics of machine learning."
     user    0m0.077s
     sys     0m0.130s
 
+$ ollama run deepseek-r1:7b "Explain the basics of machine learning."
+
+    Benchmark test A:
+            607.68 msec task-clock                       #    0.001 CPUs utilized
+             6,694      context-switches                 #   11.016 K/sec
+             1,568      cpu-migrations                   #    2.580 K/sec
+             3,195      page-faults                      #    5.258 K/sec
+       724,547,949      cycles                           #    1.192 GHz                         (49.81%)
+                 0      stalled-cycles-frontend                                                 (52.62%)
+                 0      stalled-cycles-backend                                                  (53.38%)
+       301,312,826      instructions                     #    0.42  insn per cycle              (50.60%)
+        64,672,186      branches                         #  106.424 M/sec                       (47.85%)
+         4,103,756      branch-misses                    #    6.35% of all branches             (47.03%)
+
+     850.357542925 seconds time elapsed
+       0.280679000 seconds user
+       0.355879000 seconds sys
+
+    Benchmark test B:
+    real    1m30.386s
+    user    0m0.075s
+    sys     0m0.114s
 ~~~
 
 ### llama3.1
