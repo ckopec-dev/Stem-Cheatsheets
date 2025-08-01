@@ -170,6 +170,16 @@ $ ollama run deepseek-r1:32b "Explain the basics of machine learning."
 $ run deepseek-r1:70b "Explain the basics of machine learning."
 
     Benchmark test B:
+    real    24m6.046s
+    user    0m0.113s
+    sys     0m0.246s
+~~~
+
+### gemma3n
+~~~
+# Text-to-text, image-to-text, audio-to-text.
+
+
 ~~~
 
 ### llama3.1
