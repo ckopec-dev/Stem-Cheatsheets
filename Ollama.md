@@ -175,6 +175,37 @@ $ ollama run deepseek-r1:70b "Explain the basics of machine learning."
     sys     0m0.246s
 ~~~
 
+### gemma3
+
+~~~
+# Text-to-text.
+
+$ ollama run gemma3:1b "Explain the basics of machine learning."
+
+    Benchmark test A:
+            525.46 msec task-clock                       #    0.002 CPUs utilized
+             5,108      context-switches                 #    9.721 K/sec
+             1,268      cpu-migrations                   #    2.413 K/sec
+             3,203      page-faults                      #    6.096 K/sec
+       627,999,644      cycles                           #    1.195 GHz                         (50.80%)
+                 0      stalled-cycles-frontend                                                 (53.41%)
+                 0      stalled-cycles-backend                                                  (52.14%)
+       223,243,353      instructions                     #    0.36  insn per cycle              (49.77%)
+        50,680,348      branches                         #   96.450 M/sec                       (47.06%)
+         3,443,723      branch-misses                    #    6.79% of all branches             (48.54%)
+
+     261.467038840 seconds time elapsed
+       0.217555000 seconds user
+       0.327515000 seconds sys
+
+    Benchmark test B:
+    real    0m12.747s
+    user    0m0.046s
+    sys     0m0.093s
+
+# Image-to-text.
+~~~
+
 ### gemma3n
 
 ~~~
