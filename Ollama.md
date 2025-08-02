@@ -204,6 +204,14 @@ $ ollama run gemma3:1b "Explain the basics of machine learning."
     sys     0m0.093s
 
 # Image-to-text.
+
+$ ollama run gemma3:4b "Describe this image" /duck.jpg
+# Note: the output description was completely inaccurate.
+
+    Benchmark test B:
+    real    0m8.924s
+    user    0m0.030s
+    sys     0m0.066s
 ~~~
 
 ### gemma3n
