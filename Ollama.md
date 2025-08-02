@@ -315,6 +315,19 @@ $ ollama run mistral-small3.2:24b "Explain the basics of machine learning."
     sys     0m0.665s
 ~~~
 
+### qwen3
+
+~~~
+# Text-to-text.
+
+$ ollama run qwen3:8b "Explain the basics of machine learning."
+
+    Benchmark test B:
+    real    2m9.977s
+    user    0m0.083s
+    sys     0m0.118s
+~~~
+
 ### qwen3-coder
 
 ~~~
