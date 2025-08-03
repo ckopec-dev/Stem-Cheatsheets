@@ -296,6 +296,18 @@ public class EmailMananger {
 EmailManager.ShowLog();
 ~~~
 
+### Methods
+
+Functions that have a return type for output and accept parameters as input.
+
+- Private: not available outside the class
+- Public: available inside and outside the class
+- Global: can be exposed as a web service method
+
+### Constructors
+
+Called when an object is created from the class.
+
 ### sObjects
 
 Every record in SFDC is represented as an sObject in Apex.
