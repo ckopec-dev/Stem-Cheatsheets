@@ -326,6 +326,14 @@ $ ollama run qwen2.5vl:7b "Explain the basics of machine learning."
     real    0m34.101s
     user    0m0.048s
     sys     0m0.074s
+
+# Text-to-image.
+$ ollama run qwen2.5vl:7b "What's in this image? ./duck.jpg"
+
+  Benchmark test B:
+  real    1m21.230s
+  user    0m0.136s
+  sys     0m0.184s
 ~~~
 
 ### qwen3
