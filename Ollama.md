@@ -328,12 +328,16 @@ $ ollama run qwen2.5vl:7b "Explain the basics of machine learning."
     sys     0m0.074s
 
 # Text-to-image.
+
 $ ollama run qwen2.5vl:7b "What's in this image? ./duck.jpg"
 
   Benchmark test B:
   real    1m21.230s
   user    0m0.136s
   sys     0m0.184s
+
+# Output bounding boxes for detected objects.
+$ ollama run qwen2.4vl:7b "Detect all ducks in the image and return their locations in the form of coordinates. The format of output should be like {“bbox_2d”: [x1, y1, x2, y2], “label”: “duck”}. /duck.jpg"
 ~~~
 
 ### qwen3
