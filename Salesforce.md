@@ -308,6 +308,10 @@ Functions that have a return type for output and accept parameters as input.
 
 Called when an object is created from the class.
 
+### Interfaces
+
+An interface is like a class with unimplemented methods. Used to provide an abstraction layer.
+
 ### sObjects
 
 Every record in SFDC is represented as an sObject in Apex.
