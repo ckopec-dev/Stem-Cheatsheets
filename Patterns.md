@@ -1,0 +1,84 @@
+# Patterns Cheatsheet
+
+## Builder
+
+The Builder Pattern in software design is a creational design pattern used to construct complex objects step-by-step, separating the construction process from the representation of the object.
+
+~~~
+using System;
+
+// Immutable Product
+public sealed class House
+{
+    public string Walls { get; }
+    public string Roof { get; }
+    public int Windows { get; }
+
+    public House(string walls, string roof, int windows)
+    {
+        Walls = walls;
+        Roof = roof;
+        Windows = windows;
+    }
+
+    public override string ToString()
+    {
+        return $"House with {Walls} walls, {Roof} roof, and {Windows} windows.";
+    }
+}
+
+// Immutable Builder
+public sealed class HouseBuilder
+{
+    public string Walls { get; }
+    public string Roof { get; }
+    public int Windows { get; }
+
+    // Private constructor for internal use
+    private HouseBuilder(string walls, string roof, int windows)
+    {
+        Walls = walls;
+        Roof = roof;
+        Windows = windows;
+    }
+
+    // Default constructor
+    public HouseBuilder() : this("Unknown", "Unknown", 0) { }
+
+    public HouseBuilder WithWalls(string walls) =>
+        new HouseBuilder(walls, Roof, Windows);
+
+    public HouseBuilder WithRoof(string roof) =>
+        new HouseBuilder(Walls, roof, Windows);
+
+    public HouseBuilder WithWindows(int count) =>
+        new HouseBuilder(Walls, Roof, count);
+
+    public House Build() =>
+        new House(Walls, Roof, Windows);
+}
+
+// Usage
+class Program
+{
+    static void Main()
+    {
+        var builder = new HouseBuilder()
+            .WithWalls("Brick")
+            .WithRoof("Gable")
+            .WithWindows(4);
+
+        House house = builder.Build();
+
+        Console.WriteLine(house);
+
+        // Thread-safe usage example
+        var builder1 = builder.WithWalls("Wood");
+        var builder2 = builder.WithWalls("Concrete");
+
+        // No shared state is mutated; safe for concurrent builds
+        Console.WriteLine(builder1.Build());
+        Console.WriteLine(builder2.Build());
+    }
+}
+~~~
