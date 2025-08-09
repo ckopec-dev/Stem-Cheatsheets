@@ -12,6 +12,9 @@ Major compilation components:
 - Assembler: turns target assembly into relocatable machine code
 - Loader: relocatable machine code into absolute machine code
 
+Compilation phases:
+- Source program -> Lexical analyzer -> Syntax analyzer -> Semantic analyzer -> Intermediate code generator -> Code optimizer -> Code generator -> Target program
+
 Lexical analysis:
 - The source is read left-to-right and grouped into sequences of characters called tokens which have a collective meaning.
 
