@@ -11,3 +11,9 @@ Major compilation components:
 - Compiler: turns source into target assembly
 - Assembler: turns target assembly into relocatable machine code
 - Loader: relocatable machine code into absolute machine code
+
+Lexical analysis:
+- The source is read left-to-right and grouped into sequences of characters called tokens which have a collective meaning.
+
+Syntax analysis:
+- Tokens are grouped into nested collections with collective meaning, typically represented by a parse tree.
