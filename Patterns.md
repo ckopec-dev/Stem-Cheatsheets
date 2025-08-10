@@ -82,3 +82,67 @@ class Program
     }
 }
 ~~~
+
+## Factory
+
+The Factory Pattern (often called the Factory Method Pattern or Factory Design Pattern) is a creational software design pattern that provides a way to create objects without exposing the creation logic to the client and instead lets subclasses or a dedicated method decide which object to instantiate.
+
+~~~
+using System;
+
+// Product interface
+public interface IVehicle
+{
+    void Drive();
+}
+
+// Concrete Products
+public class SportsCar : IVehicle
+{
+    public void Drive() => Console.WriteLine("Driving a fast sports car!");
+}
+
+public class PickupTruck : IVehicle
+{
+    public void Drive() => Console.WriteLine("Hauling cargo in a pickup truck!");
+}
+
+// Creator (abstract)
+public abstract class VehicleFactory
+{
+    // Factory Method
+    public abstract IVehicle CreateVehicle();
+
+    // Common logic for all factories
+    public void TestDrive()
+    {
+        var vehicle = CreateVehicle();
+        Console.WriteLine("Test driving vehicle:");
+        vehicle.Drive();
+    }
+}
+
+// Concrete Creators
+public class SportsCarFactory : VehicleFactory
+{
+    public override IVehicle CreateVehicle() => new SportsCar();
+}
+
+public class PickupTruckFactory : VehicleFactory
+{
+    public override IVehicle CreateVehicle() => new PickupTruck();
+}
+
+// Client
+class Program
+{
+    static void Main()
+    {
+        VehicleFactory factory1 = new SportsCarFactory();
+        factory1.TestDrive();  // Uses SportsCar
+
+        VehicleFactory factory2 = new PickupTruckFactory();
+        factory2.TestDrive();  // Uses PickupTruck
+    }
+}
+~~~
