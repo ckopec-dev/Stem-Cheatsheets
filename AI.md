@@ -165,6 +165,41 @@ print("Image saved to output.png")
 $ python the_script.py
 ~~~
 
+## Text to sql 
+
+~~~
+$ pip install ollama
+
+# Create a python script:
+
+r = ollama.generate(
+    model='duckdb-nsql',
+    system='''Here is the database schema that the SQL query will run on:
+CREATE TABLE taxi (
+    VendorID bigint,
+    tpep_pickup_datetime timestamp,
+    tpep_dropoff_datetime timestamp,
+    passenger_count double,
+    trip_distance double,
+    fare_amount double,
+    extra double,
+    tip_amount double,
+    tolls_amount double,
+    improvement_surcharge double,
+    total_amount double,
+);''',
+    prompt='get all columns ending with _amount from taxi table',
+)
+
+print(r['response'])
+
+# Execute the script
+$ python the_script.py
+
+# Will output something like this:
+# SELECT COLUMNS('.*_amount') FROM taxi;
+~~~
+
 ## Image to image
 
 ~~~
