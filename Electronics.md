@@ -147,3 +147,13 @@ Shows how each component is connected to each other. Each component type has a u
   - SPST: Single pole, single throw. Two terminal switch
   - SPDT: 3 terminal switch. Connects one terminal to either of the other
   - DPDT: Double pole, double throw. 6 terminal switch, connects a pair of terminals to either of the other two pairs
+
+## Units and formulas
+
+| Ohms | Expressed as | Abbreviated as |
+| - | - | - |
+| 1000 ohms | 1 kilohm | 1K $\\Omega$ or 1K
+| 10000 ohms | 10 kilohm | 10K $\\Omega$ or 10K
+| 100000 ohms | 1 kilohm | 100K $\\Omega$ or 100K
+| 1000000 ohms | 1 kilohm | 1M $\\Omega$ or 1M
+| 10000000 ohms | 1 kilohm | 10M $\\Omega$ or 10M
