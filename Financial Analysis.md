@@ -118,3 +118,21 @@
 - Dividend Capture (buy before ex-dividend, sell after)
 - Index Arbitrage (mispricing between futures and index)
 - High-Frequency Trading (HFT)
+
+## Stock Trading Strategies Comparison
+
+| Strategy Type          | Example Strategies                            | Goal/Approach                                | Risk Level | Best Use Case |
+|------------------------|-----------------------------------------------|----------------------------------------------|------------|---------------|
+| **Day Trading**        | Intraday trades, news-based scalps            | Profit from small intraday price moves       | 🔴 High    | Volatile stocks, news catalysts |
+| **Swing Trading**      | Trend reversals, channel trading              | Capture medium-term price swings             | 🟠 Medium  | Stocks with momentum over days/weeks |
+| **Position Trading**   | Long-term holds, trend following              | Ride multi-month or year-long trends         | 🟢 Low-Med | Strong fundamentals, growth sectors |
+| **Scalping**           | Ultra-fast buys/sells (seconds/minutes)       | Accumulate many small gains                  | 🔴 Very High | Highly liquid stocks/ETFs |
+| **Technical Analysis** | Breakouts, reversals, momentum                | Predict price based on charts & indicators   | Varies     | Traders who rely on chart patterns |
+| **Fundamental Analysis** | Value, Growth, Income, Contrarian          | Find under/over-valued companies             | 🟢 Low-Med | Long-term investing, dividend seekers |
+| **Quant/Algo Trading** | Mean reversion, pairs trading, ML models      | Use math/statistics to exploit inefficiencies| 🔴 High    | Automated/quant funds, HFT |
+| **Bull Market**        | Buy dips, momentum, leverage                  | Maximize upside in rising markets            | 🟠 Medium  | Expanding economy, bullish sectors |
+| **Bear Market**        | Short selling, inverse ETFs, puts             | Profit/hedge during declines                 | 🔴 High    | Recessions, market crashes |
+| **Sideways Market**    | Range trading, options spreads                | Profit when market is flat                   | 🟠 Medium  | Low-volatility environments |
+| **Options Strategies** | Covered calls, straddles, condors             | Leverage, hedge, or generate income          | Varies     | Traders with options knowledge |
+| **Risk Management**    | Stop-loss, diversification, hedging           | Protect capital, control losses              | 🟢 Low     | All market conditions |
+| **Specialized**        | Sector rotation, event-driven, dividend capture | Exploit specific events or cycles           | Varies     | Earnings season, mergers, dividends |
