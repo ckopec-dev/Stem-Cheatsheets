@@ -136,3 +136,16 @@
 | **Options Strategies** | Covered calls, straddles, condors             | Leverage, hedge, or generate income          | Varies     | Traders with options knowledge |
 | **Risk Management**    | Stop-loss, diversification, hedging           | Protect capital, control losses              | 🟢 Low     | All market conditions |
 | **Specialized**        | Sector rotation, event-driven, dividend capture | Exploit specific events or cycles           | Varies     | Earnings season, mergers, dividends |
+
+## Swing Trading Comparison
+
+# Swing Trading Strategies Comparison
+
+| Strategy               | Tools / Indicators                          | Entry Rules                                         | Exit Rules                               | Risk Level |
+|------------------------|---------------------------------------------|----------------------------------------------------|------------------------------------------|------------|
+| **Trend Following**    | 20/50/200 MA, ADX, Trendlines               | Enter when price confirms uptrend (above MA)        | Exit if price closes below trendline/MA  | 🟠 Medium  |
+| **Breakout Trading**   | Support/Resistance, Bollinger Bands, Volume | Buy when price breaks above resistance on volume    | Exit if breakout fails (returns inside)  | 🔴 High    |
+| **Pullback Trading**   | Fibonacci, RSI, EMA (9/21)                  | Enter after retracement to 38–61% with reversal     | Exit if retracement breaks deeper levels | 🟠 Medium  |
+| **Momentum Trading**   | RSI, MACD, Relative Volume                  | Buy when RSI > 60 and volume spikes on strong move  | Exit when momentum fades / RSI < 50      | 🔴 High    |
+| **Range Trading**      | Support/Resistance, Stochastic, Bollinger   | Buy near support, sell near resistance              | Exit if price breaks out of range        | 🟢 Low-Med |
+| **Earnings Trading**   | IV (Implied Volatility), Support/Resistance | Buy before earnings if historical trend supports    | Exit after post-earnings move/gap        | 🔴 Very High |
