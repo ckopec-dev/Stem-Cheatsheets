@@ -137,7 +137,98 @@
 | **Risk Management**    | Stop-loss, diversification, hedging           | Protect capital, control losses              | 🟢 Low     | All market conditions |
 | **Specialized**        | Sector rotation, event-driven, dividend capture | Exploit specific events or cycles           | Varies     | Earnings season, mergers, dividends |
 
-## Swing Trading Comparison
+## Swing Trading 
+
+### 1. Trend Following Swing Strategy
+- **Approach:** Ride the medium-term trend (up or down) by entering after confirmation of direction.  
+- **Indicators Used:**  
+  - Moving Averages (20-day, 50-day, 200-day)  
+  - ADX (Average Directional Index) for trend strength  
+  - Trendlines/Channels  
+- **Example:**  
+  - Buy when price bounces off the 50-day moving average in an uptrend.  
+  - Sell when price closes below it.  
+- ✅ Pros: Simple, works in trending markets.  
+- ❌ Cons: Fails in choppy/sideways markets.  
+
+---
+
+### 2. Breakout Trading
+- **Approach:** Enter when a stock breaks above resistance (or below support for shorts).  
+- **Indicators Used:**  
+  - Support & Resistance levels  
+  - Bollinger Bands (to catch volatility expansion)  
+  - Volume spikes for confirmation  
+- **Example:**  
+  - A stock consolidates between $45–$50 for 2 weeks.  
+  - Buy if it breaks $50 on high volume.  
+- ✅ Pros: Can catch big moves early.  
+- ❌ Cons: Many false breakouts ("fakeouts").  
+
+---
+
+### 3. Pullback (Retracement) Trading
+- **Approach:** Enter after a short-term correction in the direction of the larger trend.  
+- **Indicators Used:**  
+  - Fibonacci retracement levels (38.2%, 50%, 61.8%)  
+  - RSI (for short-term oversold in uptrend)  
+  - EMA (9-day, 21-day for timing entries)  
+- **Example:**  
+  - Stock in uptrend from $100 → $120.  
+  - Wait for pullback to ~$112 (38.2% retracement).  
+  - Enter long when it shows reversal signals.  
+- ✅ Pros: Better risk/reward than chasing breakouts.  
+- ❌ Cons: Pullback may turn into full trend reversal.  
+
+---
+
+### 4. Momentum Swing Trading
+- **Approach:** Ride strong price moves with heavy volume.  
+- **Indicators Used:**  
+  - RSI (above 60 shows bullish momentum)  
+  - MACD crossover  
+  - High Relative Volume (RVOL > 2)  
+- **Example:**  
+  - Buy a stock that gaps up 5%+ on strong earnings and continues higher on above-average volume.  
+- ✅ Pros: Quick profits during strong moves.  
+- ❌ Cons: Requires fast reaction; moves can reverse suddenly.  
+
+---
+
+### 5. Range Trading (Channel Swing Strategy)
+- **Approach:** Buy at support and sell at resistance within a sideways channel.  
+- **Indicators Used:**  
+  - Horizontal support/resistance  
+  - Stochastic oscillator or RSI for overbought/oversold levels  
+  - Bollinger Bands (price bouncing within bands)  
+- **Example:**  
+  - Stock bounces between $60 (support) and $70 (resistance).  
+  - Buy near $60, sell near $70, repeat until breakout.  
+- ✅ Pros: Consistent in flat markets.  
+- ❌ Cons: Losses if stock breaks out strongly.  
+
+---
+
+### 6. Earnings Swing Trading
+- **Approach:** Trade around earnings reports or other major news events.  
+- **Indicators Used:**  
+  - Implied Volatility (IV) from options market  
+  - Support/resistance zones before earnings  
+  - Post-earnings price gap direction  
+- **Example:**  
+  - Stock historically rallies after earnings.  
+  - Buy 1 week before and sell after the gap up.  
+- ✅ Pros: Big moves possible in short time.  
+- ❌ Cons: Very high risk, unpredictable.  
+
+---
+
+## 📌 Swing Trading Best Practices
+- Use **stop-loss orders** (below support or recent swing low).  
+- Risk **1–2% of account per trade** (position sizing).  
+- Confirm entries with **multiple indicators** (trend + volume + oscillator).  
+- Avoid overtrading — fewer, high-quality setups beat constant trading.  
+
 
 # Swing Trading Strategies Comparison
 
