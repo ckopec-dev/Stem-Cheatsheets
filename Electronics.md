@@ -171,3 +171,13 @@ Shows how each component is connected to each other. Each component type has a u
 | 0.01 amps | 10 milliamp | 10mA |
 | 0.1 amps | 100 milliamp | 100mA |
 | 1 amp | 1 amp | 1A |
+
+| Watts | Expresses as | Abbreviated as |
+| - | - | - |
+| 0.001 watts | 1 milliwatt | 1mW |
+| 0.01 watts | 10 milliwatt | 10mW |
+| 0.1 watts | 100 milliwatt | 100mW |
+| 1 watts | 1 watt | 1W |
+| 1000 watts | 1 kilowatt | 1KW |
+| 1000000 watts | 1 megawatt | 1MW |
+
