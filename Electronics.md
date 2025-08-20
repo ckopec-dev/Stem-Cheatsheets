@@ -152,8 +152,22 @@ Shows how each component is connected to each other. Each component type has a u
 
 | Ohms | Expressed as | Abbreviated as |
 | - | - | - |
-| 1000 ohms | 1 kilohm | 1K $\\Omega$ or 1K
-| 10000 ohms | 10 kilohm | 10K $\\Omega$ or 10K
-| 100000 ohms | 1 kilohm | 100K $\\Omega$ or 100K
-| 1000000 ohms | 1 kilohm | 1M $\\Omega$ or 1M
-| 10000000 ohms | 1 kilohm | 10M $\\Omega$ or 10M
+| 1000 ohms | 1 kilohm | 1K $\\Omega$ or 1K |
+| 10000 ohms | 10 kilohm | 10K $\\Omega$ or 10K |
+| 100000 ohms | 1 kilohm | 100K $\\Omega$ or 100K |
+| 1000000 ohms | 1 kilohm | 1M $\\Omega$ or 1M |
+| 10000000 ohms | 1 kilohm | 10M $\\Omega$ or 10M |
+
+| Volts | Expresses as | Abbreviated as |
+| - | - | - |
+| 0.001 volts | 1 millivolt | 1mV |
+| 0.01 volts | 10 millivolt | 10mV |
+| 0.1 volts | 100 millivolt | 100mV |
+| 1 volt | 10000 millivolt | 1V |
+
+| Amps | Expresses as | Abbreviated as |
+| - | - | - |
+| 0.001 amps | 1 milliamp | 1mA |
+| 0.01 amps | 10 milliamp | 10mA |
+| 0.1 amps | 100 milliamp | 100mA |
+| 1 amp | 1 amp | 1A |
