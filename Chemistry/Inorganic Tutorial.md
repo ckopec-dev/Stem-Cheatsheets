@@ -1,4 +1,4 @@
-# Comprehensive Inorganic Chemistry Tutorial
+# Inorganic Chemistry Tutorial
 
 ## Table of Contents
 1. [Introduction to Inorganic Chemistry](#introduction)
