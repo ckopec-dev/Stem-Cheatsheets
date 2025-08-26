@@ -12,7 +12,9 @@
 - Pan around entire scene: shift + middle mouse click
 - Zoom in/out: mouse wheel
 - Move selected object: g (for grab) + mouse move, left mouse click to release
-  - To lock movementg to an axis, press x, y, or z after the g
+  - To lock movement to an axis, press x, y, or z after the g
+- Scale selected object: s (for scale) + mouse move, left mouse click to release
+  - To lock movement to an axis, press x, y, or z after the s
 - Render the scene as an image: F12
 - Switch to camera view: Number pad 0
 - Change properties (e.g. color) of an object in the Properties window
