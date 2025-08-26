@@ -15,3 +15,4 @@
   - To lock movementg to an axis, press x, y, or z after the g
 - Render the scene as an image: F12
 - Switch to camera view: Number pad 0
+- Change properties (e.g. color) of an object in the Properties window
