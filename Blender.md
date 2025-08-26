@@ -15,6 +15,8 @@
   - To lock movement to an axis, press x, y, or z after the g
 - Scale selected object: s (for scale) + mouse move, left mouse click to release
   - To lock movement to an axis, press x, y, or z after the s
+- Rotate selected object: r (for rotate) + mouse move, left mouse click to release
+  - To lock movement to an axis, press x, y, or z after the r
 - Render the scene as an image: F12
 - Switch to camera view: Number pad 0
 - Change properties (e.g. color) of an object in the Properties window
