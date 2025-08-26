@@ -361,3 +361,27 @@ echo "The script took $runtime seconds to execute."
 $ sudo perf stat ls -la
 ~~~
 
+## Jobs
+
+~~~
+# Run script
+$ ./my_script.sh
+
+# Run script and show commands it uses
+$ bash -x my_script.sh
+
+# Pause execution of script
+$ ctrl-z
+
+# Show running jobs
+$ jobs
+
+# Continue runnning job in background
+$ bg {job number}
+
+# Continue running job in foreground
+$ fg {job number}
+
+# Cancel job
+$ ctrl-c
+~~~
