@@ -13,3 +13,5 @@
 - Zoom in/out: mouse wheel
 - Move selected object: g (for grab) + mouse move, left mouse click to release
   - To lock movementg to an axis, press x, y, or z after the g
+- Render the scene as an image: F12
+- Switch to camera view: Number pad 0
