@@ -8,6 +8,7 @@
 
 - Select object: left click
 - Add item to scene: shift + A
+- Remove item from scene: left-click to select, then Delete key
 - Pan around selected object: middle mouse click
 - Pan around entire scene: shift + middle mouse click
 - Zoom in/out: mouse wheel
