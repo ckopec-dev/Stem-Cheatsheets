@@ -6,6 +6,10 @@
 
 ## Basic navigation
 
-- Shift-A: add a new item to the scene. Mesh contains the primitives (cube, cone, etc).
-- Middle mouse wheel/button-Click: pan around the selected object.
-- Mouse wheel: zoom in/out on selected object.
+- Select object: left click
+- Add item to scene: shift + A
+- Pan around selected object: middle mouse click
+- Pan around entire scene: shift + middle mouse click
+- Zoom in/out: mouse wheel
+- Move selected object: g (for grab) + mouse move, left mouse click to release
+  - To lock movementg to an axis, press x, y, or z after the g
