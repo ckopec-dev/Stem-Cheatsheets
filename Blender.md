@@ -21,3 +21,7 @@
 - Render the scene as an image: F12
 - Switch to camera view: Number pad 0
 - Change properties (e.g. color) of an object in the Properties window
+
+## Modeling
+
+- Make selected object appear smoother: right-click, select Shade Smooth
