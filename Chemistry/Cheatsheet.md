@@ -29,8 +29,8 @@
 
 ## Equations
 
-- Create a trial equation, for example: reacting aluminum with hydrochloric acid – Al + HCl -> AlCl + H.
-- Check valences of compounds and correct ratios: Al + HCl -> AlCl<sub>3</sub> + H<sub>2</sub>. 
+- Create a trial equation, for example: reacting aluminum with hydrochloric acid – Al + HCl &rarr; AlCl + H.
+- Check valences of compounds and correct ratios: Al + HCl &rarr; AlCl<sub>3</sub> + H<sub>2</sub>. 
 - Balance: 2AL + 6HCl -> 2AlCl<sub>3</sub> + 3H<sub>2</sub> &uarr;.
 - Up arrow refers to a gas.
 - Down arrow refers to a precipitate.
@@ -226,6 +226,21 @@ To determine specific gravity:
 	
 - Neutralize an acid or base to determine its strength. 
 
+## Oxides
 
+Compounds formed by the combining of any element with oxygen.
+- Element + oxygen &rarr; x oxide
+- Calcium + oxygen &rarr; calcium oxide
+- Copper + oxygen &rarr; copper oxide
+- Carbon + oxygen &rarr; carbon dioxide
+- Sulfur + oxygen &rarr; sulfur dioxide
+
+Acidic oxides are oxides of non-metals that form acids in water.
+- Carbon dioxide + water &rarr; carbonic acid
+- Sulfur dioxide + water &rarr; sulfurous acid
+
+Basic oxides are oxides of metals that form bases in water.
+- Calcium oxide + water &rarr; calcium hydroxide
+- Copper oxide + water &rarr; copper hydroxide
 
 
