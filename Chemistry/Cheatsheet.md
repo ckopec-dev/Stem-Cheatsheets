@@ -226,6 +226,17 @@ To determine specific gravity:
 	
 - Neutralize an acid or base to determine its strength. 
 
+## Metals
+
+- Have a luster
+- Good conductors of heat and electricity
+- Found in bases and salts
+- The base forming elements
+
+## Non-metals
+
+- The acid forming elements
+
 ## Oxides
 
 Compounds formed by the combining of any element with oxygen.
