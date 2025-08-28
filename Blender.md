@@ -26,4 +26,5 @@
 
 - Make selected object appear smoother: right-click, select Shade Smooth
 - Edit the object's mesh: change "Object Mode" to "Edit Mode" (upper left 2nd menu). Left-click to select mesh point. G to grab point and move and left-click to release.
-- Edit with proportional editing: o-key. Now grabbing affects everything in the circle, which can be adjusted with the mouse wheel. 
+- Edit with proportional editing: o-key. Now grabbing affects everything in the circle, which can be adjusted with the mouse wheel.
+- Duplicate selected object: shift-D
