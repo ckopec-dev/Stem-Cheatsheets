@@ -156,3 +156,29 @@ $ dotnet restore
 $ dotnet run
 ~~~
 
+## Adding secret environment variables to IIS
+
+To add secret environment variables for an ASP.NET Core application hosted in IIS, follow these steps:
+
+~~~
+// Example appsettings.json (strongly typed class not shown)
+{
+  "MySettings": {
+    "ApiKey": "default_api_key"
+  }
+}
+~~~
+
+- **Open IIS Manager:** Navigate to your application's site in IIS Manager.
+- **Access Configuration Editor:** In the "Management" section, double-click on "Configuration Editor."
+- **Select System.webServer/aspNetCore:** From the "Section" dropdown, select system.webServer/aspNetCore.
+- **Edit Environment Variables:**
+  - Locate the environmentVariables collection.
+  - Click the ellipsis (...) next to the (Collection) value to open the collection editor.
+- **Add Secret Variables:**
+  - Click "Add" in the right panel.
+  - Enter the name of your environment variable (MySettings__ApiKey).
+  - Enter the value of your secret (e.g., MySuperSecretValue123).
+- Repeat for all necessary secret variables.
+- **Apply Changes:** Close the collection editor and click "Apply" in the Actions pane of the Configuration Editor to save the changes.
+- **Recycle the Application Pool:** After adding or modifying environment variables in IIS, you must recycle the application pool associated with your ASP.NET Core application for the changes to take effect. You can do this by right-clicking on the application pool and selecting Recycle.
