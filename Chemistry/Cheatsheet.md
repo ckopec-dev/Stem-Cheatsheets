@@ -254,4 +254,10 @@ Basic oxides are oxides of metals that form bases in water.
 - Calcium oxide + water &rarr; calcium hydroxide
 - Copper oxide + water &rarr; copper hydroxide
 
+## Acids
 
+Compounds of hyrogen, a non-metal, and sometimes oxygen. If it contains oxygen, it's called a ternary or oxy-acid. The non-metal and oxygen is called the acid radical. If it does not contain oxygen, it's called a binary or hydro-acid. In a reaction with an acid, the hydrogen and acid radical split.
+- Hydrogen + chlorine (hydrochloric acid) = acid radical
+- Hydrogen + iodine (hydriodic acid) = acid radical
+- Hydrogen + sulfur + oxygen (sulfuric acid) = acid radical
+- Hydrogen + nitrogen + oxygen (nitric acid) = acid radical
