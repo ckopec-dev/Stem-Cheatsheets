@@ -9,6 +9,12 @@
 - Scene: this is the game world (imagine your head is facing a movie set).
   - Right-click and hold to move the view around (like moving your head around).
   - Up/down arrows move you forward and backward (like moving your head closer or farther).
+- Inspector: properties and behaviors of GameObjects.
 
 ### Scene toolbar (in upper left of scene)
   - Pan: looks like a hand. Select and left-click the scene to pan around (like moving your head left/right and up/down).
+
+### Scene modes (the tab buttons and play controls)
+  - Scene (the default)
+  - Game: the view through the camera
+  - Play: the running game
