@@ -261,3 +261,19 @@ Compounds of hyrogen, a non-metal, and sometimes oxygen. If it contains oxygen, 
 - Hydrogen + iodine (hydriodic acid) = acid radical
 - Hydrogen + sulfur + oxygen (sulfuric acid) = acid radical
 - Hydrogen + nitrogen + oxygen (nitric acid) = acid radical
+
+## Salts
+
+Compounds of a metal, a non-metal, and sometimes oxygen. Contains an acid radical. Formed by interaction of an acid and a base, giving the acid radical, and the metal. When two elements are present, the compound ends with "ide." When oxygen is present, it is "ate" or "ite." The compounds that end in "ite" have less oxygen than the corresponding "ate."
+- Sodium + bromine &rarr; sodium bromide
+- Potassium + bromine &rarr; potassium bromide
+- Sodium + nitrogen + oxygen &rarr; sodium nitrate
+- Silver + nitrogen + oxygen &rarr; silver nitrate
+- Sodium + carbon + oxygen &rarr; sodium carbonate
+- Sodium + nitrogen + oxygen &rarr; sodium nitrite
+
+## Correspondence to organic chemistry
+- Oxides &rarr; ethers
+- Acids &rarr; organic acids
+- Bases &rarr; alcohols
+- Salts &rarr; esters
