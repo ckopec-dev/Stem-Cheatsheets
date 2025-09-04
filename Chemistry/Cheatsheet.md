@@ -39,33 +39,47 @@
 - Calculate weight of all components to determine inputs and outputs.
 
 ## Common valences
+- Ag: 1
+- Al: 3
+- As: 3, 5
+- B: 3
+- Ba: 2
+- Bi: 3, 5
+- Br: 1
+- C: 4
+- Ca: 2
+- Cl: 1
+- Cu: 1, 2
+- Fe: 2, 3
+- H: 1
+- Hg: 1, 2
+- I: 1
+- K: 1
+- Mg: 2
+- Mn: 2
+- N: 3, 4
+- Na: 1
+- Ni: 2, 3
+- O: 2
+- P: 3, 5
+- Pb: 2, 4
+- S: 2, 4, 6
+- Sb: 3, 5
+- Sn: 2, 4
+- Si: 4
+- Zn: 2
 
-- Ag: +1
-- Al: +3
-- B: +3
-- C: +4
-- Ca: +2
-- Cu: +1, +2
-- Fe: +2, +3
-- H: +1
-- K: +1
-- Mg: +2
-- Mn: +2
-- Na: +1
-- S: +4, +6
-- Si: +4
-- NH<sub>4</sub>: +1
-- Cl: -1
-- I: -1
-- N: -3
-- O: -2
-- S: -2
-- O<sub>3</sub>: -2
-- NO<sub>3</sub>: -1
-- OH: -1
-- SO<sub>3</sub>: -2
-- SO<sub>4</sub>: -2
-
+### Radicals
+- NH<sub>4</sub> (ammonium): 1
+- CO<sub>3</sub> (carbonate): 2
+- OH (hydroxide): 1
+- NO<sub>3</sub> (nitrate): 1
+- NO<sub>2</sub> (nitrite): 1
+- PO<sub>4</sub> (phosphate): 3
+- PO<sub>3</sub> (phosphite): 3
+- SO<sub>4</sub> (sulfate): 2
+- SO<sub>3</sub> (sulfite): 2
+ 
 ## Replacement series (aka Activity series)
 
 Any metal in the series will drive out another metal below it and take its place in the salt.
