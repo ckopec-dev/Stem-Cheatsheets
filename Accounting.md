@@ -20,3 +20,12 @@ Example expenses
 - Internet and phone services
 - Professional services and fees
 - Materials used to develop product
+
+## Income and expenses
+
+- Income: all monies received by the business in any given period of time (sales of goods, services, interest, etc.) Should always deposits.
+- Expenses: all monies paid out by the business (by check, cash, etc.) Four main categories but some items cover multiple:
+  - Cost of goods sold (inventory)
+  - Variable (selling) expenses (e.g. marketing costs, r&d)
+  - Fixed administrative (office overhead of accounting, legal, utilities, etc.)
+  - Other (interest income, etc.)
