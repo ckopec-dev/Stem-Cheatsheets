@@ -36,3 +36,18 @@ Example expenses
   - Depreciable: deducted over a fixed number of years
     - Property not be resold that has an expected life of more than a year.
     - E.g. buildings, machinery, equipment
+
+## Cash vs accrual accounting
+
+These two types are exclusive and should be established as early as possible. Very different to change.
+
+- Cash: the reporting of income and expenses at the time they were received or paid.
+ - Most common method because it is simple and direct.
+ - Can use single entry.
+ - Taxes are paid on the cash received.
+- Accrual: the reporting of income and expenses at the time they are incurred, regardless of when the transaction actually happened.
+ - Generally used when company has inventory and/or over gross receipts over $5 million and/or is a C corp.
+ - Provides better insight into how sales map to transactions.
+ - Requires double entry.
+ - Taxes are paid on invoices (not necessarily paid.)
+ 
