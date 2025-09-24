@@ -16,6 +16,6 @@ $ transmission-show filename.torrent
 # Install aria2 console app
 $ apt install aria2
 
-# Download to current directory (may consist of multiple files)
-$ aria2c filename.torrent
+# Download to current directory (may consist of multiple files), then exit
+$ aria2c --seed-time=0 filename.torrent
 ~~~
