@@ -50,4 +50,12 @@ These two types are exclusive and should be established as early as possible. Ve
  - Provides better insight into how sales map to transactions.
  - Requires double entry.
  - Taxes are paid on invoices (not necessarily paid.)
+
+## Basic bookkeeping methods
+
+- Single entry: uses only income and expense accounts. main requirements:
+  - Revenue & expense journal: recording receipts and expenditures
+  - General records: petty cash, fixed assets, accounts payable + receivable, inventory, mileage, travel, and customer info
+- Double entry: every transaction is recorded as debits and credits because every transaction has two sides
+  - The debits and credits should always equal
  
