@@ -62,3 +62,44 @@ These two types are exclusive and should be established as early as possible. Ve
 ## A chart of accounts (COA)
 
 A comprehensive, organized list of all the financial accounts a company uses to record its transactions. It acts as the foundation of an accounting system, assigning each financial category, such as assets, liabilities, equity, revenue, and expenses, a unique identifier.
+
+### Balance sheet accounts
+
+- Assets
+  - Cash in bank
+  - Petty cash
+  - Accounts receivable
+  - Inventory
+  - Prepaid expenses
+  - Fixed assets (land, vehicles, etc)
+  - Accumulated depreciation
+- Liabilities
+  - Notes payable
+  - Accounts payable
+  - Taxes payable
+- Capital
+
+## Income statement accounts
+
+- Revenues (income)
+  - Product sales, taxable
+  - Product sales, nontaxable
+  - Services income
+- Cost of goods sold
+  - Materials & labor
+  - Products purchased for resale
+- Expenses
+  - Accounting, legal
+  - Sales commissions
+  - Depreciation expenses
+  - Insurance
+  - Interest expense
+  - Marketing/Ads
+  - Payroll taxes
+  - Salaries/Wages
+  - Rent
+  - Repairs & maintenance
+  - Taxes
+  - Travel
+  - Utilities
+  - Vehicle expenses
