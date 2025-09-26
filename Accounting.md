@@ -59,3 +59,6 @@ These two types are exclusive and should be established as early as possible. Ve
 - Double entry: every transaction is recorded as debits and credits because every transaction has two sides
   - The debits and credits should always equal
  
+## A chart of accounts (COA)
+
+A comprehensive, organized list of all the financial accounts a company uses to record its transactions. It acts as the foundation of an accounting system, assigning each financial category, such as assets, liabilities, equity, revenue, and expenses, a unique identifier.
