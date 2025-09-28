@@ -103,3 +103,7 @@ A comprehensive, organized list of all the financial accounts a company uses to 
   - Travel
   - Utilities
   - Vehicle expenses
+ 
+## Debits and credits
+
+The entity giving in the transaction is the credit and the one receiving is the debit. E.g. if you sell an hour of your service, the service revenue is the giver (credited) and the cash in the bank is receiver (debitor)
