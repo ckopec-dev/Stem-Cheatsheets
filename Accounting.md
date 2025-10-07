@@ -56,6 +56,7 @@ These two types are exclusive and should be established as early as possible. Ve
 - Single entry: uses only income and expense accounts. main requirements:
   - Revenue & expense journal: recording receipts and expenditures
   - General records: petty cash, fixed assets, accounts payable + receivable, inventory, mileage, travel, and customer info
+  - Flow of data: **transaction** &larr;&rarr; **document** &larr;&rarr; **revenue & expense journal**
 - Double entry: every transaction is recorded as debits and credits because every transaction has two sides
   - The debits and credits should always equal
  
