@@ -51,12 +51,26 @@ These two types are exclusive and should be established as early as possible. Ve
  - Requires double entry.
  - Taxes are paid on invoices (not necessarily paid.)
 
-## Basic bookkeeping methods
+## Single entry accounting
 
-- Single entry: uses only income and expense accounts. main requirements:
+- Uses only income and expense accounts. main requirements:
   - Revenue & expense journal: recording receipts and expenditures
   - General records: petty cash, fixed assets, accounts payable + receivable, inventory, mileage, travel, and customer info
   - Flow of data: **transaction** &larr;&rarr; **document** &larr;&rarr; **revenue & expense journal**
+
+### Revenue & expense journal
+
+Used to record the transactions of a business. 
+
+- Revenues are transactions for which monies are received.
+- Expenses are transactions for which monies are paid out.
+- Each entry is recorded **twice**: once as a summary, and then as the detail.
+- Basic columns: check number, date, transaction, revenue, expense. Additional columns are for the revenue and expense categories/details.
+- A final miscellanous column will handle anything outside the scope of the core columns.
+- Every column should be totaled.
+
+## Double entry accounting
+
 - Double entry: every transaction is recorded as debits and credits because every transaction has two sides
   - The debits and credits should always equal
  
