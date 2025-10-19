@@ -26,6 +26,49 @@ dotnet run
 
 Visit `https://localhost:5001` to verify the application runs correctly.
 
+To make `dotnet run` listen on all network interfaces in Linux, you need to bind to `0.0.0.0` instead of `localhost`. Here are the main ways to do this:
+
+**Quick method - command line:**
+```bash
+dotnet run --urls "http://0.0.0.0:5000"
+```
+
+**Set it in `launchSettings.json`:**
+Edit `Properties/launchSettings.json` in your project:
+```json
+{
+  "profiles": {
+    "YourProjectName": {
+      "commandName": "Project",
+      "applicationUrl": "http://0.0.0.0:5000",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
+```
+
+**Environment variable:**
+```bash
+export ASPNETCORE_URLS="http://0.0.0.0:5000"
+dotnet run
+```
+
+**In Program.cs (for more control):**
+```csharp
+var builder = WebApplication.CreateBuilder(args);
+builder.WebHost.UseUrls("http://0.0.0.0:5000");
+```
+
+After starting, you can access the site from another PC using `http://YOUR_LINUX_IP:5000`.
+
+**Important notes:**
+- Make sure your firewall allows incoming connections on port 5000 (or whatever port you choose)
+- `0.0.0.0` means "listen on all network interfaces"
+- For HTTPS, use `https://0.0.0.0:5001` (you'll need to handle certificates)
+- In production, consider using a reverse proxy like nginx
+  
 ## Step 2: Create a Dockerfile
 
 In your project root directory, create a file named `Dockerfile` (no extension):
