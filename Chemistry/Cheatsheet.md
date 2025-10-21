@@ -116,7 +116,15 @@ Does not react with water or acid:
 - Platinum
 - Gold
 
-## Solubility of salts and hydroxides in water
+### Solubility
+
+[Wikipedia - Solubility](https://en.wikipedia.org/wiki/Solubility)
+
+[Chart](https://en.wikipedia.org/wiki/Solubility_chart)
+
+[Table](https://en.wikipedia.org/wiki/Solubility_table)
+
+## Salts and hydroxides in water
 
 - Nitrates: soluble without exception
 - Acetates: soluble without exception
