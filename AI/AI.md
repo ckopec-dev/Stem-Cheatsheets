@@ -9,7 +9,7 @@ For more models, see https://ollama.com/library, https://huggingface.co/models, 
 
 ### For bash projects
 
-~~~
+~~~bash
 # Create a project directory and navigate to it
 $ mkdir my_project && cd $_
 
@@ -24,7 +24,7 @@ $ ./init.sh
 
 ### For python projects
 
-~~~
+~~~bash
 # Create a virtual environment
 $ python -m venv my_ai_project
 
@@ -48,7 +48,7 @@ $ deactivate
 
 ## Text to text
 
-~~~
+~~~bash
 # Pull model
 $ ollama pull llama3.2
 
@@ -61,14 +61,14 @@ $ ollama run llama3.2 "Summarize this article." < my_article.txt
 
 ### Qwen
 
-- https://ollama.com/library/qwen3
-- https://qwenlm.github.io/blog/qwen3/
+- [Ollama](https://ollama.com/library/qwen3)
+- [Qwen3](https://qwenlm.github.io/blog/qwen3/)
 
 `$ pip install diffusers torch transformers accelerate modelscope`
 
 Generate.py
 
-~~~
+~~~python
 from modelscope import AutoModelForCausalLM, AutoTokenizer
 
 model_name = "Qwen/Qwen3-30B-A3B"
@@ -117,7 +117,7 @@ print("content:", content)
 
 ## Text to code
 
-~~~
+~~~bash
 # Pull model
 $ ollama pull qwen2.5-coder
 
@@ -127,7 +127,7 @@ $ ollama run qwen2.5-coder "Show quicksort algorithm in python."
 
 ## Text to image
 
-~~~
+~~~python
 # Create a virtual environment
 $ python -m venv my_ai_project
 
@@ -167,7 +167,7 @@ $ python the_script.py
 
 ## Text to sql 
 
-~~~
+~~~python
 $ pip install ollama
 
 # Create a python script:
@@ -202,7 +202,7 @@ $ python the_script.py
 
 ## Image to image
 
-~~~
+~~~bash
 # Create a virtual environment and activate it
 $ python -m venv img2img
 $ source img2img/bin/activate
@@ -237,7 +237,7 @@ $ python the_script.py
 
 ## Image to text
 
-~~~
+~~~bash
 # Pull model
 $ ollama pull llava:7b
 
@@ -247,7 +247,7 @@ $ ollama run llava:7b "What's in this image? ./duck.jpg"
 
 ## Background remover
 
-~~~
+~~~bash
 # Create a virtual environment and activate it
 $ python -m venv rembg
 $ source rembg/bin/activate
