@@ -195,28 +195,6 @@ To determine specific gravity:
 - Pour solution in to 100 ml graduated cylinder. 
 - Add distilled water to bring it to 50 ml.
 
-### Make phenolphthalein indicator solution
-	
-- Dissolve 0.05g phenolphthalein powder in 50 ml denatured alcohol.
-
-### Make iodine indicator
-	
-- Dissolve 0.10g corn starch in 5 ml distilled water.
-- Heat 100 ml water to boiling.
-- Add mixture to boiling water and stir to combine.
-- Remove from heat and let cool.
-- Solution turns bright blue when iodine is present.
-- Can test with medicinal iodine tincture.
-
-### Detect acids
-
-- Acids turn blue litmus paper red.
-
-### Detect bases
-
-- Bases turn red litmus paper blue.
--	Bases turn phenolphthalein solution pink.
-
 ### Decantation
 	
 - Let liquid stand until insoluble matter has settled.
@@ -299,3 +277,34 @@ Compounds of a metal, a non-metal, and sometimes oxygen. Contains an acid radica
 - Acids &rarr; organic acids
 - Bases &rarr; alcohols
 - Salts &rarr; esters
+
+## Identification
+
+### Make phenolphthalein indicator solution
+	
+- Dissolve 0.05g phenolphthalein powder in 50 ml denatured alcohol.
+
+### Make iodine indicator
+	
+- Dissolve 0.10g corn starch in 5 ml distilled water.
+- Heat 100 ml water to boiling.
+- Add mixture to boiling water and stir to combine.
+- Remove from heat and let cool.
+- Solution turns bright blue when iodine is present.
+- Can test with medicinal iodine tincture.
+
+### Detect acids
+
+- Acids turn blue litmus paper red.
+
+### Detect bases
+
+- Bases turn red litmus paper blue and phenolphthalein solution pink.
+
+### Detect hydrogen gas
+
+- Gas in test tube will burn with a pop when a lit splinter is intersted.
+
+### Detect oxygen gas
+
+- Gas in test tube will cause inserted extinguished splinter to reignite.
