@@ -249,6 +249,43 @@ HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
 ### HTTPS Support
 For HTTPS in production, you'll need to configure certificates. Mount certificate files as volumes or use a reverse proxy like Nginx.
 
+~~~bash
+openssl req -x509 -newkey rsa:2048 -nodes -keyout private.key -out certificate.crt -days 365 -subj "/CN=your_hostname_or_ip" -addext "subjectAltName=DNS:your_hostname_or_ip,IP:your_ip_address"
+~~~
+
+~~~dockerfile
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+WORKDIR /app
+EXPOSE 80
+EXPOSE 443
+
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+COPY ["YourRazorApp.csproj", "./"]
+RUN dotnet restore "YourRazorApp.csproj"
+COPY . .
+WORKDIR "/src/"
+RUN dotnet build "YourRazorApp.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "YourRazorApp.csproj" -c Release -o /app/publish /p:UseAppHost=false
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+
+# Copy the certificate and key into the container
+COPY certificate.crt /app/certificate.crt
+COPY private.key /app/private.key
+
+# Configure ASP.NET Core to use the certificate
+ENV ASPNETCORE_URLS="https://+;http://+"
+ENV ASPNETCORE_Kestrel__Certificates__Default__Path="/app/certificate.crt"
+ENV ASPNETCORE_Kestrel__Certificates__Default__KeyPath="/app/private.key"
+
+ENTRYPOINT ["dotnet", "YourRazorApp.dll"]
+~~~
+
 ## Troubleshooting
 
 ### Container won't start
