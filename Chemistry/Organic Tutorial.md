@@ -44,29 +44,34 @@ Carbon has six electrons with the configuration 1s² 2s² 2p². In organic compo
 
 ### Hybridization
 
-**sp³ Hybridization**
+**sp³ Hybridization**:
+
 - Forms four equivalent sigma bonds
 - Tetrahedral geometry (109.5° bond angles)
 - Examples: methane, ethane, alkanes
 
-**sp² Hybridization**
+**sp² Hybridization**:
+
 - Forms three sigma bonds and one pi bond
 - Trigonal planar geometry (120° bond angles)
 - Examples: ethylene, carbonyl compounds
 
-**sp Hybridization**
+**sp Hybridization**:
+
 - Forms two sigma bonds and two pi bonds
 - Linear geometry (180° bond angles)
 - Examples: acetylene, nitriles
 
 ### Bond Types
 
-**Sigma (σ) Bonds**
+**Sigma (σ) Bonds**:
+
 - Head-to-head orbital overlap
 - Allow free rotation
 - Present in all single bonds
 
-**Pi (π) Bonds**
+**Pi (π) Bonds**:
+
 - Side-to-side orbital overlap
 - Restrict rotation
 - Present in double and triple bonds alongside sigma bonds
@@ -79,18 +84,21 @@ Carbon has six electrons with the configuration 1s² 2s² 2p². In organic compo
 
 Alkanes contain only single C-C and C-H bonds with the general formula CₙH₂ₙ₊₂.
 
-**Naming Alkanes**
+**Naming Alkanes**:
+
 - Identify the longest carbon chain
 - Number from the end giving substituents the lowest numbers
 - Name substituents as alkyl groups
 
 **Examples**:
+
 - Methane: CH₄
 - Ethane: C₂H₆
 - Propane: C₃H₈
 - Butane: C₄H₁₀
 
 **Properties**:
+
 - Generally unreactive (saturated)
 - Undergo combustion and radical substitution
 - Boiling points increase with molecular weight
@@ -99,17 +107,20 @@ Alkanes contain only single C-C and C-H bonds with the general formula CₙH₂�
 
 Alkenes contain at least one C=C double bond with the general formula CₙH₂ₙ.
 
-**Naming Alkenes**
+#### **Naming Alkenes**
+
 - Use suffix "-ene"
 - Number the chain to give the double bond the lowest number
 - Indicate position of double bond
 
-**Examples**:
+#### **Examples**
+
 - Ethene (ethylene): C₂H₄
 - Propene: C₃H₆
 - 1-Butene: C₄H₈
 
-**Properties**:
+#### **Properties**
+
 - More reactive than alkanes
 - Undergo addition reactions
 - Show geometric isomerism (cis/trans or E/Z)
@@ -119,10 +130,12 @@ Alkenes contain at least one C=C double bond with the general formula CₙH₂�
 Alkynes contain at least one C≡C triple bond with the general formula CₙH₂ₙ₋₂.
 
 **Examples**:
+
 - Ethyne (acetylene): C₂H₂
 - Propyne: C₃H₄
 
 **Properties**:
+
 - Highly reactive
 - Linear geometry around triple bond
 - Terminal alkynes are weakly acidic
@@ -177,21 +190,25 @@ Stereochemistry deals with the three-dimensional arrangement of atoms in molecul
 
 ### Isomerism
 
-**Constitutional Isomers**
+**Constitutional Isomers**:
+
 - Same molecular formula, different connectivity
 - Examples: butane vs. isobutane
 
-**Stereoisomers**
+**Stereoisomers**:
+
 - Same connectivity, different spatial arrangement
 - Include enantiomers and diastereomers
 
 ### Chirality
 
-**Chiral Centers**
+**Chiral Centers**:
+
 - Carbon atoms bonded to four different groups
 - Create non-superimposable mirror images (enantiomers)
 
-**R/S Configuration**
+**R/S Configuration**:
+
 - Cahn-Ingold-Prelog priority rules
 - Assign priorities based on atomic number
 - Determine clockwise (R) or counterclockwise (S) arrangement
@@ -216,24 +233,28 @@ Understanding how reactions occur at the molecular level is crucial for predicti
 
 ### Types of Electron Movement
 
-**Heterolytic Cleavage**
+**Heterolytic Cleavage**:
+
 - Bond breaks unevenly
 - One atom keeps both electrons
 - Forms ions
 
-**Homolytic Cleavage**
+**Homolytic Cleavage**:
+
 - Bond breaks evenly
 - Each atom keeps one electron
 - Forms radicals
 
 ### Thermodynamics vs. Kinetics
 
-**Thermodynamic Control**
+**Thermodynamic Control**:
+
 - Products determined by stability
 - Reversible conditions
 - Equilibrium-controlled
 
-**Kinetic Control**
+**Kinetic Control**:
+
 - Products determined by reaction rates
 - Irreversible conditions
 - Rate-controlled
@@ -245,18 +266,20 @@ Understanding how reactions occur at the molecular level is crucial for predicti
 ### SN2 Mechanism
 
 **Characteristics**:
+
 - Bimolecular (rate depends on both substrate and nucleophile)
 - Concerted (one step)
 - Inversion of configuration
 - Back-side attack
 
-**Rate Law**: Rate = k[RX][Nu⁻]
+**Rate Law**: Rate = k[RX]*[Nu⁻]
 
 **Substrate Preferences**: Methyl > 1° > 2° >> 3° (steric hindrance)
 
 ### SN1 Mechanism
 
 **Characteristics**:
+
 - Unimolecular (rate depends only on substrate)
 - Two-step mechanism
 - Carbocation intermediate
@@ -268,12 +291,14 @@ Understanding how reactions occur at the molecular level is crucial for predicti
 
 ### Factors Affecting Substitution
 
-**Nucleophile Strength**
+**Nucleophile Strength**:
+
 - Charge: Anions > neutral molecules
 - Electronegativity: Less electronegative = stronger nucleophile
 - Size: Smaller = stronger nucleophile (in protic solvents)
 
-**Leaving Group Ability**
+**Leaving Group Ability**:
+
 - Stability of leaving group as anion
 - Weak bases are good leaving groups
 - Order: I⁻ > Br⁻ > Cl⁻ > F⁻
@@ -285,16 +310,18 @@ Understanding how reactions occur at the molecular level is crucial for predicti
 ### E2 Mechanism
 
 **Characteristics**:
+
 - Bimolecular elimination
 - Concerted mechanism
 - Anti-periplanar geometry required
 - Follows Zaitsev's rule (more substituted alkene favored)
 
-**Rate Law**: Rate = k[RX][Base]
+**Rate Law**: Rate = k[RX]*[Base]
 
 ### E1 Mechanism
 
 **Characteristics**:
+
 - Unimolecular elimination
 - Two-step mechanism via carbocation
 - Follows Zaitsev's rule
@@ -316,21 +343,25 @@ Understanding how reactions occur at the molecular level is crucial for predicti
 
 ### Alkene Addition Reactions
 
-**Hydrohalogenation (HX addition)**
+**Hydrohalogenation (HX addition)**:
+
 - Markovnikov's rule: H goes to carbon with more H atoms
 - Carbocation intermediate
 - Anti-Markovnikov possible with peroxides (radical mechanism)
 
-**Hydration (H₂O addition)**
+**Hydration (H₂O addition)**:
+
 - Acid-catalyzed
 - Markovnikov addition
 - Oxymercuration-demercuration for syn addition
 
-**Halogenation (X₂ addition)**
+**Halogenation (X₂ addition)**:
+
 - Anti addition through cyclic halonium intermediate
 - Stereospecific
 
-**Hydrogenation (H₂ addition)**
+**Hydrogenation (H₂ addition)**:
+
 - Catalytic (Pd, Pt, Ni)
 - Syn addition
 - Reduction of alkenes to alkanes
@@ -350,6 +381,7 @@ Understanding how reactions occur at the molecular level is crucial for predicti
 **Hückel's Rule**: Aromatic compounds have (4n+2) π electrons in a cyclic, planar system.
 
 **Characteristics of Benzene**:
+
 - Planar hexagonal structure
 - All C-C bonds equal length (1.40 Å)
 - Delocalized π system
@@ -358,10 +390,12 @@ Understanding how reactions occur at the molecular level is crucial for predicti
 ### Electrophilic Aromatic Substitution
 
 **General Mechanism**:
+
 1. Formation of σ-complex (arenium ion)
 2. Loss of proton to restore aromaticity
 
 **Common Reactions**:
+
 - Nitration (HNO₃/H₂SO₄)
 - Halogenation (X₂/FeX₃)
 - Sulfonation (SO₃/H₂SO₄)
@@ -371,10 +405,12 @@ Understanding how reactions occur at the molecular level is crucial for predicti
 ### Substituent Effects
 
 **Activating Groups** (ortho/para directing):
+
 - Electron-donating
 - Examples: -OH, -OR, -NH₂, -R
 
 **Deactivating Groups**:
+
 - Meta-directing: -NO₂, -COOH, -SO₃H, -CN
 - Ortho/para-directing: Halogens (-F, -Cl, -Br, -I)
 
@@ -384,11 +420,13 @@ Understanding how reactions occur at the molecular level is crucial for predicti
 
 ### Aldehydes and Ketones
 
-**Nucleophilic Addition**
+**Nucleophilic Addition**:
+
 - Carbonyl carbon is electrophilic
 - Addition of nucleophiles to C=O bond
 
 **Common Reactions**:
+
 - Hydration (H₂O addition)
 - Alcohol addition (acetal/ketal formation)
 - Amine addition (imine/enamine formation)
@@ -398,15 +436,18 @@ Understanding how reactions occur at the molecular level is crucial for predicti
 ### Enolate Chemistry
 
 **Enol/Enolate Formation**:
+
 - α-hydrogen is acidic (pKa ~20)
 - Base removes α-hydrogen to form enolate
 
 **Aldol Reactions**:
+
 - Enolate acts as nucleophile
 - Attacks carbonyl carbon of another molecule
 - Forms β-hydroxyaldehyde or ketone
 
 **Claisen Condensation**:
+
 - Between two esters
 - Forms β-ketoester
 
@@ -417,11 +458,13 @@ Understanding how reactions occur at the molecular level is crucial for predicti
 ### Carboxylic Acids (RCOOH)
 
 **Properties**:
+
 - Acidic (pKa ~4-5)
 - Form hydrogen bonds
 - Higher boiling points
 
 **Reactions**:
+
 - Acid-base reactions
 - Reduction to primary alcohols
 - Conversion to derivatives
@@ -430,18 +473,22 @@ Understanding how reactions occur at the molecular level is crucial for predicti
 
 **Relative Reactivity**: Acid chlorides > Anhydrides > Esters > Amides
 
-**Acid Chlorides (RCOCl)**
+**Acid Chlorides (RCOCl)**:
+
 - Most reactive derivative
 - React with nucleophiles to form other derivatives
 
-**Anhydrides (RCO-O-COR)**
+**Anhydrides (RCO-O-COR)**:
+
 - React with alcohols (esterification) and amines (amidation)
 
-**Esters (RCOOR')**
+**Esters (RCOOR')**:
+
 - Formed from acids and alcohols
 - Undergo hydrolysis (saponification with base)
 
-**Amides (RCONH₂)**
+**Amides (RCONH₂)**:
+
 - Least reactive derivative
 - Formed from acid chlorides and amines
 - Can be reduced to amines
@@ -466,18 +513,22 @@ Understanding how reactions occur at the molecular level is crucial for predicti
 ### Reactions
 
 **Basicity**:
+
 - React with acids to form ammonium salts
 - pKb values typically 3-5
 
 **Alkylation**:
+
 - SN2 reactions with alkyl halides
 - Can lead to over-alkylation
 
 **Acylation**:
+
 - React with acid chlorides to form amides
 - Useful for protection and synthesis
 
 **Diazotization** (Primary aromatic amines):
+
 - React with NaNO₂/HCl to form diazonium salts
 - Diazonium salts undergo various substitution reactions
 
@@ -488,11 +539,13 @@ Understanding how reactions occur at the molecular level is crucial for predicti
 ### Mass Spectrometry (MS)
 
 **Principles**:
+
 - Ionization of molecules
 - Separation by mass-to-charge ratio (m/z)
 - Detection and measurement
 
 **Information Provided**:
+
 - Molecular weight (molecular ion peak, M⁺)
 - Fragmentation patterns
 - Structural information from fragment ions
@@ -500,10 +553,12 @@ Understanding how reactions occur at the molecular level is crucial for predicti
 ### Infrared Spectroscopy (IR)
 
 **Principles**:
+
 - Absorption of IR radiation causes molecular vibrations
 - Different functional groups absorb at characteristic frequencies
 
 **Key Absorption Regions**:
+
 - O-H stretch: 3200-3600 cm⁻¹ (broad)
 - N-H stretch: 3300-3500 cm⁻¹ (sharp)
 - C-H stretch: 2800-3100 cm⁻¹
@@ -514,17 +569,20 @@ Understanding how reactions occur at the molecular level is crucial for predicti
 ### Nuclear Magnetic Resonance (NMR)
 
 **¹H NMR**:
+
 - Detects hydrogen atoms in different chemical environments
 - Chemical shift (δ) indicates electronic environment
 - Integration shows relative number of protons
 - Coupling patterns show neighboring protons
 
 **¹³C NMR**:
+
 - Detects carbon atoms
 - Usually proton-decoupled (no splitting)
 - Chemical shifts characteristic of carbon environments
 
 **Key Chemical Shift Ranges**:
+
 - Aromatic protons: 7-8 ppm
 - Alkene protons: 5-6 ppm
 - Protons α to carbonyls: 2-3 ppm
