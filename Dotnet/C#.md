@@ -20,7 +20,7 @@
 
 ### Assign a variable with scientific notation
 
-~~~
+~~~csharp
 float f = 5e20F;  
 double d = 6e21D;  
 ~~~
@@ -32,7 +32,7 @@ double d = 6e21D;
 
 ### Create and assign members to an array
 
-~~~
+~~~csharp
 // Single-dimensional
 string[] cars = new string[4];
 string[] cars = new string[4] {"Volvo", "BMW", "Ford", "Mazda"};
@@ -54,7 +54,7 @@ j[0] = new int[2];
 
 ## Control statements
 
-~~~
+~~~csharp
 // If then
 if(condition)
   statement;
@@ -107,21 +107,23 @@ goto label;
 label:
   statements;
 ~~~
-        
+
 ## Classes
 
 ### Declaration
 
 Header consists of:
+
 - The attributes and modifiers of the class
 - The name of the class
 - The base class (when inheriting from a base class)
 - The interfaces implemented by the class
-    
+
 Body consists of:
+
 - A list of member declarations written between the delimiters { and }.
 
-~~~
+~~~csharp
 // Simple delcaration example
 public class Point
 {
@@ -166,7 +168,7 @@ foreach (var point in factory.CreatePoints())
 
 ### How to Use placeholders in strings with string interpolation
 
-~~~
+~~~csharp
 string firstName = "John";
 string lastName = "Doe";
 string name = $"My full name is: {firstName} {lastName}";
@@ -180,7 +182,7 @@ string name = $"My full name is: {firstName} {lastName}";
 
 ### How to use directives
 
-~~~
+~~~csharp
 static void Main(string[] args)
 {
     for (int i = 0; i < 10; i++)
@@ -221,14 +223,15 @@ static void Main(string[] args)
 ## IO
 
 General process for working with a file
+
 1. Open/create the file.
 2. Set up a stream to to/from the file.
 3. Read/write the stream.
 4. Close the stream/file.
-   
+
 ### Read/write text data
 
-~~~
+~~~csharp
 public static void Read()
 {
     string buffer;
@@ -267,7 +270,7 @@ public static void WriteAll()
 
 ### Read/write binary data
 
-~~~
+~~~csharp
 public static void Read()
 {
     FileStream myFile = new FileStream("binary.dat", FileMode.Open);
@@ -301,7 +304,7 @@ public static void Write()
 
 ### How to use relational patterns in switch statements
 
-~~~
+~~~csharp
 string WaterState(int tempInFahrenheit) =>
     tempInFahrenheit switch
     {
@@ -327,7 +330,7 @@ decimal CalculateDiscount(Order order) =>
 
 ### Async and await
 
-~~~
+~~~csharp
 public class MultithreadingDemo
 {
     static void Main()

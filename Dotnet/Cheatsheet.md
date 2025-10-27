@@ -3,9 +3,7 @@
 
 ## Installing on Ubuntu 22.04
 
-~~~
-# Accurate as of 9/7/24
-
+~~~bash
 $ wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
 
 $ chmod +x ./dotnet-install.sh
@@ -17,7 +15,6 @@ $ ./dotnet-install.sh --version latest
 export PATH="$PATH:/home/<!username!>/.dotnet
 
 # Relog
-~~~
 
 ## Using with VS Code on Ubuntu 22.04
 
@@ -26,7 +23,7 @@ export PATH="$PATH:/home/<!username!>/.dotnet
 
 ## Create a desktop app on Ubuntu
 
-~~~
+~~~bash
 $ sudo apt-get install libgtk-3-dev
 $ mkdir HelloWorldGtk
 $ cd HelloWorldGtk
@@ -160,7 +157,7 @@ $ dotnet run
 
 To add secret environment variables for an ASP.NET Core application hosted in IIS, follow these steps:
 
-~~~
+~~~json
 // Example appsettings.json (strongly typed class not shown)
 {
   "MySettings": {

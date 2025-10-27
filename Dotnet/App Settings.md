@@ -1,6 +1,7 @@
 # Complete .NET Core appsettings Tutorial
 
 ## Table of Contents
+
 1. [Introduction](#introduction)
 2. [Basic Configuration](#basic-configuration)
 3. [Configuration File Hierarchy](#configuration-file-hierarchy)
