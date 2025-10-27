@@ -1,4 +1,4 @@
-# Plugin Tutorial 
+# Plugin Tutorial
 
 * a simple attribute + plugin interface
 * a loader that finds plugins in the current AppDomain or a folder

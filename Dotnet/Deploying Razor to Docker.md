@@ -29,12 +29,14 @@ Visit `https://localhost:5001` to verify the application runs correctly.
 To make `dotnet run` listen on all network interfaces in Linux, you need to bind to `0.0.0.0` instead of `localhost`. Here are the main ways to do this:
 
 **Quick method - command line:**
+
 ```bash
 dotnet run --urls "http://0.0.0.0:5000"
 ```
 
 **Set it in `launchSettings.json`:**
 Edit `Properties/launchSettings.json` in your project:
+
 ```json
 {
   "profiles": {
@@ -50,12 +52,14 @@ Edit `Properties/launchSettings.json` in your project:
 ```
 
 **Environment variable:**
+
 ```bash
 export ASPNETCORE_URLS="http://0.0.0.0:5000"
 dotnet run
 ```
 
 **In Program.cs (for more control):**
+
 ```csharp
 var builder = WebApplication.CreateBuilder(args);
 builder.WebHost.UseUrls("http://0.0.0.0:5000");
@@ -64,6 +68,7 @@ builder.WebHost.UseUrls("http://0.0.0.0:5000");
 After starting, you can access the site from another PC using `http://YOUR_LINUX_IP:5000`.
 
 **Important notes:**
+
 - Make sure your firewall allows incoming connections on port 5000 (or whatever port you choose)
 - `0.0.0.0` means "listen on all network interfaces"
 - For HTTPS, use `https://0.0.0.0:5001` (you'll need to handle certificates)
@@ -107,7 +112,7 @@ ENTRYPOINT ["dotnet", "MyRazorApp.dll"]
 
 Create a `.dockerignore` file in your project root to exclude unnecessary files:
 
-```
+```bash
 bin/
 obj/
 *.md
@@ -126,6 +131,7 @@ docker build -t myrazorapp:1.0 .
 ```
 
 This command:
+
 - `-t myrazorapp:1.0` tags the image with name and version
 - `.` specifies the current directory as build context
 
@@ -138,6 +144,7 @@ docker run -d -p 8080:8080 --name myrazorapp-container myrazorapp:1.0
 ```
 
 Parameters explained:
+
 - `-d` runs in detached mode (background)
 - `-p 8080:8080` maps host port 8080 to container port 8080
 - `--name` gives the container a friendly name
@@ -156,21 +163,25 @@ docker logs myrazorapp-container
 ## Step 7: Manage Your Container
 
 ### Stop the container
+
 ```bash
 docker stop myrazorapp-container
 ```
 
 ### Start the container
+
 ```bash
 docker start myrazorapp-container
 ```
 
 ### Remove the container
+
 ```bash
 docker rm myrazorapp-container
 ```
 
 ### View running containers
+
 ```bash
 docker ps
 ```
@@ -182,16 +193,19 @@ To share your image or deploy to production:
 1. Create an account on [Docker Hub](https://hub.docker.com)
 
 2. Log in via CLI:
+
 ```bash
 docker login
 ```
 
 3. Tag your image with your Docker Hub username:
+
 ```bash
 docker tag myrazorapp:1.0 yourusername/myrazorapp:1.0
 ```
 
 4. Push to Docker Hub:
+
 ```bash
 docker push yourusername/myrazorapp:1.0
 ```
@@ -229,6 +243,7 @@ docker-compose down
 ## Production Considerations
 
 ### Environment Variables
+
 Set production environment variables:
 
 ```bash
@@ -239,6 +254,7 @@ docker run -d -p 8080:8080 \
 ```
 
 ### Health Checks
+
 Add health checks to your Dockerfile:
 
 ```dockerfile
@@ -247,13 +263,14 @@ HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
 ```
 
 ### HTTPS Support
+
 For HTTPS in production, you'll need to configure certificates. Mount certificate files as volumes or use a reverse proxy like Nginx.
 
-~~~bash
-openssl req -x509 -newkey rsa:2048 -nodes -keyout private.key -out certificate.crt -days 365 -subj "/CN=your_hostname_or_ip" -addext "subjectAltName=DNS:your_hostname_or_ip,IP:your_ip_address"
-~~~
+```bash
+openssl req -x509 -newkey rsa:2048 -nodes -keyout private.key -out certificate.crt -days 365 -subj "/CN=your_hostname_or_ip" -addext "subjectAltName=DNS:your_hostname_or_ip,IP your_ip_address"
+```
 
-~~~dockerfile
+```dockerfile
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
 EXPOSE 80
@@ -284,17 +301,20 @@ ENV ASPNETCORE_Kestrel__Certificates__Default__Path="/app/certificate.crt"
 ENV ASPNETCORE_Kestrel__Certificates__Default__KeyPath="/app/private.key"
 
 ENTRYPOINT ["dotnet", "YourRazorApp.dll"]
-~~~
+```
 
 ## Troubleshooting
 
 ### Container won't start
+
 Check logs: `docker logs myrazorapp-container`
 
 ### Port already in use
+
 Change the host port: `docker run -p 8081:8080 ...`
 
 ### Permission issues
+
 Run Docker commands with appropriate permissions or add your user to the docker group.
 
 ## Next Steps
