@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD029 -->
+
 # Javascript Cheatsheet
 
 ## **1. Introduction to JavaScript**

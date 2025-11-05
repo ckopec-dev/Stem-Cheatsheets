@@ -13,7 +13,7 @@
 
 ### Crontab entries
 
-~~~
+~~~text
 * * * * * command to execute
 
 1st star: minute (0-59)

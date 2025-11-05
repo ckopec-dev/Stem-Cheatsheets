@@ -58,7 +58,7 @@ The **Domain Name System (DNS)** is like the phonebook of the Internet. It trans
 
 **Diagram of DNS Query Flow:**
 
-```
+```text
 Client → Recursive Resolver → Root → TLD → Authoritative → IP
 ```
 
@@ -77,7 +77,7 @@ Client → Recursive Resolver → Root → TLD → Authoritative → IP
 
 **Zone file for `example.com`:**
 
-```
+```text
 $TTL 86400
 @   IN  SOA ns1.example.com. admin.example.com. (
         2025092201 ; serial
@@ -124,7 +124,7 @@ If `A` record has `TTL=3600`, clients may cache it for 1 hour before re-querying
 | `ping`       | Test connectivity     | `ping example.com`         |
 | `traceroute` | Trace route to server | `traceroute example.com`   |
 
-**Example: Querying MX records**
+## **Example: Querying MX records**
 
 ```bash
 dig example.com MX +short
@@ -187,6 +187,7 @@ dig example.com MX +short
    dig example.com ANY
    nslookup example.com
    ```
+
 2. **Check propagation**
 
    * Use online tools like `whatsmydns.net`

@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD033 -->
 
 # Chemistry Cheatsheet
 
@@ -30,7 +31,7 @@
 ## Equations
 
 - Create a trial equation, for example: reacting aluminum with hydrochloric acid – Al + HCl &rarr; AlCl + H.
-- Check valences of compounds and correct ratios: Al + HCl &rarr; AlCl<sub>3</sub> + H<sub>2</sub>. 
+- Check valences of compounds and correct ratios: Al + HCl &rarr; AlCl<sub>3</sub> + H<sub>2</sub>.
 - Balance: 2AL + 6HCl -> 2AlCl<sub>3</sub> + 3H<sub>2</sub> &uarr;.
 - Up arrow refers to a gas.
 - Down arrow refers to a precipitate.
@@ -39,6 +40,7 @@
 - Calculate weight of all components to determine inputs and outputs.
 
 ## Common valences
+
 - Ag: 1
 - Al: 3
 - As: 3, 5

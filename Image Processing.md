@@ -7,7 +7,7 @@
 
 ## Basics
 
-~~~
+~~~python
 # Imports
 from skimage import data, color
 from matplotlib import pyplot as plt
@@ -36,7 +36,7 @@ plt.show()
 
 `red = image[:, :, 0]`
 
-### Show the shape 
+### Show the shape
 
 `image.shape`
 
@@ -54,38 +54,31 @@ plt.show()
 
 ### Show histogram for the red channel
 
-~~~
-
+~~~python
 red = image[:, :, 0]
 plt.hist(red.ravel(), bins=256)
-
 ~~~
 
 ### Edge detection with sobel
 
-~~~
-
+~~~python
 from skimage.filters import sobel
 edge_sobel = sobel(img)
-
 ~~~
 
 ### Edge detection with canny
 
-~~~
-
+~~~python
 from skimage.feature import canny
 
 # Need to convert to grayscale first.
 # sigma varies from 0 to 1. Lower sigma means more edges.
 canny_edges = canny(grayscale_image, sigma=0.5)
-
 ~~~
 
 ### Corner detection with harris
 
-~~~
-
+~~~python
 from skimage.feature import corner_harris
 
 # Need to convert to grayscale first.
@@ -94,29 +87,23 @@ measure_image = corner_harris(grayscale_image)
 # Return the corner peaks.
 # min_distance is the minimum separation of the corners.
 coords = corner_peaks(corner_harris(grayscale_image), min_distance=5)
-
 ~~~
 
 ### Face detection
 
-~~~
-
+~~~python
 from skimage.feature import Cascade
 
 # Load the built-in trained detection file
 trained_file = data.lbp_frontal_face_cascade_filename()
-
 detector = Cascade(trained_file)
-
 detected = detector.detect_multi_scale(img=image, scale_factor=1.2, step_ratio=1, min_size=(10, 10), max_size=(200, 200))
-
 print(detected)
-
 ~~~
 
 ### Function to show detected faces
 
-~~~ 
+~~~python
 def show_detected_face(result, detected, title="Face image"):
     plt.imshow(result)
     img_desc = plt.gca()
@@ -139,7 +126,7 @@ def show_detected_face(result, detected, title="Face image"):
 
 ### Extract all image metadata from a directory containing images into a csv file
 
-~~~
+~~~python
 
 # If needed:
 $ sudo apt install exiftool
@@ -151,5 +138,4 @@ $ exiftool -csv >{MyCsv.csv} {directory_containing_images}
 $ exiftool -csv >out.txt ~/Code/images/*
 
 # For quick analysis, import into Access database and query table.
-
 ~~~

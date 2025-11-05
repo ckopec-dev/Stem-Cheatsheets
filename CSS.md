@@ -4,24 +4,6 @@ CSS (Cascading Style Sheets) is used to style HTML elements. It controls layout,
 
 ---
 
-## Table of Contents
-
-1. [Introduction](#introduction)
-2. [CSS Syntax and Selectors](#css-syntax-and-selectors)
-3. [Colors and Fonts](#colors-and-fonts)
-4. [Box Model](#box-model)
-5. [Layout Techniques](#layout-techniques)
-6. [Positioning](#positioning)
-7. [Flexbox](#flexbox)
-8. [Grid](#grid)
-9. [Responsive Design](#responsive-design)
-10. [Pseudo-classes and Pseudo-elements](#pseudo-classes-and-pseudo-elements)
-11. [Transitions and Animations](#transitions-and-animations)
-12. [Advanced CSS Techniques](#advanced-css-techniques)
-13. [Best Practices](#best-practices)
-
----
-
 ## 1. Introduction
 
 CSS separates content (HTML) from presentation (CSS).
@@ -325,4 +307,3 @@ p {
 This tutorial covers **CSS from beginner to advanced level**. Once you master these, you can combine CSS with frameworks like **Tailwind, Bootstrap, or Material UI** for faster development.
 
 ---
-

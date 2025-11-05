@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD014 -->
+
 # Git Cheatsheet
 
 ## Installation and configuration
@@ -8,7 +10,7 @@
 
 ### Configure server on linux
 
-~~~
+~~~bash
 # Create a user
 $ sudo adduser git
 
@@ -61,8 +63,7 @@ Origins are usually where the "main" code is hosted (e.g. github)
 
 ### Add an existing project to Github
 
-~~~
-
+~~~bash
 # Create the repo on Github using the web UI.
 
 $ git init
@@ -73,7 +74,6 @@ $ git push -u -f origin master
 
 # For username, enter {username}
 # For password, enter the personal token
-
 ~~~
 
 ## Recording changes to the repo
@@ -234,7 +234,7 @@ This will work if nobody else has done a similar push before you have, otherwise
 
 `$ git remote rename <oldname> <newname>`
 
-### Remove a remote 
+### Remove a remote
 
 `$ git remote remove <remote>`
 
@@ -313,7 +313,7 @@ The --merged and --no-merged flags will filter the list to branches that you hav
 
 ### Create a new branch and switch to it with one command
 
-~~~
+~~~bash
 $ git checkout -b <new-branch-name>
 # OR
 $ git switch -c <new-branch-name>
@@ -325,7 +325,7 @@ $ git switch -c <new-branch-name>
 
 ### Merge a branch into another branch
 
-~~~
+~~~bash
 $ git merge <source-branch> <destination-branch>
 # OR
 $ git switch <destination-branch>
@@ -338,33 +338,33 @@ $ git merge <source-branch>
 
 ### Get a branch from a remote repo and switch to it
 
-~~~
+~~~bash
 $ git fetch origin
 $ git checkout --track origin/<branch-name>
 ~~~
 
 ### Rename a branch
-~~~
+
+~~~bash
 $ git checkout <branch-name>
 $ git branch -m <new-branch-name>
 # OR
 $ git branch -m <original-branch-name> <new-branch-name>
 ~~~
 
-## Common workflows 
+## Common workflows
 
 ### Work on a new user story/feature
 
-* Create a new branch for the story
-* Do work on the branch (coding/etc)
-* Submit pull request
-* Approved PR gets merged
+- Create a new branch for the story
+- Do work on the branch (coding/etc)
+- Submit pull request
+- Approved PR gets merged
 
- ### Work on a hotfix while working on a new story/feature
+### Work on a hotfix while working on a new story/feature
 
- * Switch to production branch
- * Create a new branch for the hotfix
- * Merge the hotfix branch
- * Push to production
- * Switch back to story branch
-
+- Switch to production branch
+- Create a new branch for the hotfix
+- Merge the hotfix branch
+- Push to production
+- Switch back to story branch

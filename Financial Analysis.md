@@ -1,3 +1,6 @@
+<!-- markdownlint-disable MD029 -->
+<!-- markdownlint-disable MD033 -->
+
 # Financial Analysis Cheatsheet
 
 ## Trading
@@ -36,9 +39,10 @@
 - Trend-following: bets the price trend will continue
 - Mean reversion: bets the price tends to reverse back towards the mean
 
-# Stock Trading Strategies
+## Stock Trading Strategies
 
-## 📈 By Time Horizon
+### 📈 By Time Horizon
+
 1. **Day Trading**
    - Buy and sell within the same day.
    - Relies on intraday price movements.
@@ -60,7 +64,8 @@
 
 ---
 
-## 📊 By Analytical Method
+### 📊 By Analytical Method
+
 5. **Technical Analysis Strategies**
    - Trend Following
    - Breakout Trading
@@ -81,7 +86,8 @@
 
 ---
 
-## ⚡ By Market Condition
+### ⚡ By Market Condition
+
 8. **Bull Market Strategies**
    - Buy the dips
    - Growth and momentum stocks
@@ -99,7 +105,8 @@
 
 ---
 
-## 🛠 By Tools Used
+### 🛠 By Tools Used
+
 11. **Options Strategies**
     - Covered Calls, Protective Puts
     - Straddles & Strangles
@@ -112,14 +119,15 @@
 
 ---
 
-## 🌍 Specialized Strategies
+### 🌍 Specialized Strategies
+
 - Sector Rotation (economic cycles)
 - Event-Driven Trading (earnings, mergers, news)
 - Dividend Capture (buy before ex-dividend, sell after)
 - Index Arbitrage (mispricing between futures and index)
 - High-Frequency Trading (HFT)
 
-## Stock Trading Strategies Comparison
+### Stock Trading Strategies Comparison
 
 | Strategy Type          | Example Strategies                            | Goal/Approach                                | Risk Level | Best Use Case |
 |------------------------|-----------------------------------------------|----------------------------------------------|------------|---------------|
@@ -137,9 +145,10 @@
 | **Risk Management**    | Stop-loss, diversification, hedging           | Protect capital, control losses              | 🟢 Low     | All market conditions |
 | **Specialized**        | Sector rotation, event-driven, dividend capture | Exploit specific events or cycles           | Varies     | Earnings season, mergers, dividends |
 
-## Swing Trading 
+### Swing Trading 
 
-### 1. Trend Following Swing Strategy
+#### 1. Trend Following Swing Strategy
+
 - **Approach:** Ride the medium-term trend (up or down) by entering after confirmation of direction.  
 - **Indicators Used:**  
   - Moving Averages (20-day, 50-day, 200-day)  
@@ -153,7 +162,8 @@
 
 ---
 
-### 2. Breakout Trading
+#### 2. Breakout Trading
+
 - **Approach:** Enter when a stock breaks above resistance (or below support for shorts).  
 - **Indicators Used:**  
   - Support & Resistance levels  
@@ -167,7 +177,8 @@
 
 ---
 
-### 3. Pullback (Retracement) Trading
+#### 3. Pullback (Retracement) Trading
+
 - **Approach:** Enter after a short-term correction in the direction of the larger trend.  
 - **Indicators Used:**  
   - Fibonacci retracement levels (38.2%, 50%, 61.8%)  
@@ -182,7 +193,8 @@
 
 ---
 
-### 4. Momentum Swing Trading
+#### 4. Momentum Swing Trading
+
 - **Approach:** Ride strong price moves with heavy volume.  
 - **Indicators Used:**  
   - RSI (above 60 shows bullish momentum)  
@@ -195,7 +207,8 @@
 
 ---
 
-### 5. Range Trading (Channel Swing Strategy)
+#### 5. Range Trading (Channel Swing Strategy)
+
 - **Approach:** Buy at support and sell at resistance within a sideways channel.  
 - **Indicators Used:**  
   - Horizontal support/resistance  
@@ -209,7 +222,8 @@
 
 ---
 
-### 6. Earnings Swing Trading
+#### 6. Earnings Swing Trading
+
 - **Approach:** Trade around earnings reports or other major news events.  
 - **Indicators Used:**  
   - Implied Volatility (IV) from options market  
@@ -223,14 +237,15 @@
 
 ---
 
-## 📌 Swing Trading Best Practices
+### 📌 Swing Trading Best Practices
+
 - Use **stop-loss orders** (below support or recent swing low).  
 - Risk **1–2% of account per trade** (position sizing).  
 - Confirm entries with **multiple indicators** (trend + volume + oscillator).  
 - Avoid overtrading — fewer, high-quality setups beat constant trading.  
 
 
-# Swing Trading Strategies Comparison
+## Swing Trading Strategies Comparison
 
 | Strategy               | Tools / Indicators                          | Entry Rules                                         | Exit Rules                               | Risk Level |
 |------------------------|---------------------------------------------|----------------------------------------------------|------------------------------------------|------------|

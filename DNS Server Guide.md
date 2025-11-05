@@ -36,7 +36,7 @@ BIND’s main configuration files are in `/etc/bind/`.
 
 ### Example: Configure Forward and Reverse Zones
 
-1. **Edit local zones file:**
+**Edit local zones file:**
 
 ```bash
 sudo nano /etc/bind/named.conf.local
@@ -56,13 +56,13 @@ zone "1.168.192.in-addr.arpa" {
 };
 ```
 
-2. **Create zone directory:**
+**Create zone directory:**
 
 ```bash
 sudo mkdir /etc/bind/zones
 ```
 
-3. **Create forward zone file:**
+**Create forward zone file:**
 
 ```bash
 sudo nano /etc/bind/zones/db.example.com
@@ -84,7 +84,7 @@ ns1     IN      A       192.168.1.10
 www     IN      A       192.168.1.20
 ```
 
-4. **Create reverse zone file:**
+**Create reverse zone file:**
 
 ```bash
 sudo nano /etc/bind/zones/db.192
