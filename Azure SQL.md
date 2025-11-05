@@ -1,6 +1,6 @@
-# Azure SQL
 
-# Azure SQL Database Tutorial  
+# Azure SQL Database Tutorial
+
 *Getting started with Azure SQL Database in the cloud.*
 
 ---
@@ -10,12 +10,14 @@
 Azure SQL Database is Microsoft’s fully managed, cloud-based relational database service built on SQL Server.  
 
 **Key benefits:**
+
 - Fully managed (patching, backups, high availability handled by Azure)
 - Scalable performance (DTU or vCore models)
 - Built-in security (encryption, firewall rules, threat detection)
 - Integration with Azure services (Power BI, Azure Functions, Logic Apps)
 
 This tutorial will guide you through:
+
 1. Creating an Azure SQL Database.
 2. Configuring firewall and authentication.
 3. Connecting with Azure Data Studio / SQL Server Management Studio (SSMS).
@@ -28,6 +30,7 @@ This tutorial will guide you through:
 ## 1️⃣ Create an Azure SQL Database
 
 ### Steps (Portal)
+
 1. Sign in to [Azure Portal](https://portal.azure.com/).
 2. Click **Create a resource** → **Databases** → **SQL Database**.
 3. Fill in:
@@ -41,6 +44,7 @@ This tutorial will guide you through:
 4. Review and **Create**.
 
 ### CLI Example
+
 ```bash
 # Variables
 RESOURCE_GROUP="my-rg"
@@ -76,11 +80,13 @@ az sql db create \
 By default, Azure SQL blocks all external connections.
 
 **Portal:**
+
 1. Navigate to your SQL Server in the portal.
 2. Click **Firewalls and virtual networks**.
 3. Add your client IP and save.
 
 **CLI:**
+
 ```bash
 az sql server firewall-rule create \
   --resource-group $RESOURCE_GROUP \
@@ -95,11 +101,13 @@ az sql server firewall-rule create \
 ## 3️⃣ Connect to Azure SQL
 
 You can connect using:
+
 - **Azure Data Studio** (cross-platform)
 - **SQL Server Management Studio** (Windows)
 - **Command-line tools** (`sqlcmd`)
 
 **Example (sqlcmd):**
+
 ```bash
 sqlcmd -S $SERVER_NAME.database.windows.net \
   -U $ADMIN_USER \
@@ -112,6 +120,7 @@ sqlcmd -S $SERVER_NAME.database.windows.net \
 ## 4️⃣ Run SQL Queries
 
 ### Create a Table
+
 ```sql
 CREATE TABLE Employees (
     EmployeeID INT PRIMARY KEY IDENTITY(1,1),
@@ -122,12 +131,14 @@ CREATE TABLE Employees (
 ```
 
 ### Insert Data
+
 ```sql
 INSERT INTO Employees (FirstName, LastName, HireDate)
 VALUES ('John', 'Doe', '2023-01-15');
 ```
 
 ### Query Data
+
 ```sql
 SELECT * FROM Employees;
 ```
@@ -137,15 +148,18 @@ SELECT * FROM Employees;
 ## 5️⃣ Backup and Restore
 
 Azure SQL automatically:
+
 - Backs up databases (7–35 days retention based on service tier)
 - Enables **Point-in-Time Restore**
 
 **Portal Restore:**
+
 1. Go to the database → **Restore**.
 2. Choose a restore point.
 3. Provide a new database name.
 
 **CLI Restore:**
+
 ```bash
 az sql db restore \
   --dest-name myazuresqldb-restore \
@@ -160,9 +174,11 @@ az sql db restore \
 ## 6️⃣ Scale Performance
 
 **Portal:**
+
 - Go to the database → **Compute + storage** → Change DTU/vCore.
 
 **CLI:**
+
 ```bash
 az sql db update \
   --name $DB_NAME \
@@ -174,6 +190,7 @@ az sql db update \
 ---
 
 ## 🔒 Security Best Practices
+
 - Use **Azure Active Directory authentication** for central identity management.
 - Enable **Transparent Data Encryption (TDE)** (on by default).
 - Turn on **Advanced Threat Protection**.
@@ -182,6 +199,7 @@ az sql db update \
 ---
 
 ## 📚 Useful Links
+
 - [Azure SQL Documentation](https://learn.microsoft.com/azure/azure-sql/)
 - [Azure CLI SQL Commands](https://learn.microsoft.com/cli/azure/sql)
 - [Security Best Practices](https://learn.microsoft.com/azure/azure-sql/database/security-overview)
@@ -189,4 +207,3 @@ az sql db update \
 ---
 
 ✅ You now have a working Azure SQL database in the cloud with firewall rules, connections, queries, and scaling in place.
-

@@ -1,5 +1,5 @@
 
-# Calling Win32 APIs from C#
+# Calling Win32 APIs from C-Sharp
 
 Call the `MessageBox` function from `user32.dll`.
 
@@ -21,7 +21,7 @@ class Program
 }
 ```
 
-### Explanation
+## Explanation
 
 1. **`[DllImport]`** – Attribute tells the runtime we’re importing an unmanaged function from a DLL.
 2. **`user32.dll`** – Contains Windows user interface APIs.

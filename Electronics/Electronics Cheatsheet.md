@@ -13,7 +13,7 @@
 - Ground: zero voltage. A.k.a. 0V, minus terminal, earth, GND. Usually color-coded black.
 - Insulators: materials with a high resistance, eg. clay, plastics
 - Ohm (greek omega symbol): measure of resistance
-- Ohm's law: V = I * R (volts = amps * resistance)
+- Ohm's law: V = I*R (volts = amps x resistance)
 - Open circuit vs closed circuit: circuit is open if electricity cannot flow through a device.
 - Power (P): amount of work a circuit is doing.
 - Short circuit: an umwanted conductive bridge.
@@ -53,6 +53,7 @@
 ## Gates
 
 Gates are logic circuits. They take binary input and produce binary output. 0 = no electricity, 1 = positive electricity.
+
 - AND: both 1 inputs = 1 output
 - OR: one or more 1 inputs = 1 output
 - NOT: one 0 input = 1 output (known as inverter circuit)
@@ -117,7 +118,7 @@ Shows how each component is connected to each other. Each component type has a u
 - 2 common types:
   - Ceramic: brown with a disc shape. Non-polarized
   - Electrolytic: Cylinder shape. Polarized
- 
+
 ### Diodes
 
 - One way street for electrons
@@ -180,4 +181,3 @@ Shows how each component is connected to each other. Each component type has a u
 | 1 watts | 1 watt | 1W |
 | 1000 watts | 1 kilowatt | 1KW |
 | 1000000 watts | 1 megawatt | 1MW |
-

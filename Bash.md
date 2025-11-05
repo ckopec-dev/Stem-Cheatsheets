@@ -30,13 +30,14 @@ The output contains a number followed by the command. To rerun a command, type !
 `$ hostname`
 
 ### Enable a ssh client to remotely access shell
+
 `$ sudo apt install openssh-server`
 
 ### Linux freezes after login
 
 This can be due to a bad kernel. To revert to a prior kernel, follow this procedure:
 
-~~~
+~~~bash
 Need to switch to older kernel when booting (from grub menu). Or access via SSH.
 $ sudo nano /etc/default/grub
 set GRUB_DEFAULT=saved
@@ -49,11 +50,11 @@ manually select current kernel. grub will remember your selection and use it by 
 reboot again to verify
 ~~~
 
-## Printing
+### Printing
 
-### Print from the console
+#### Print from the console
 
-~~~
+~~~bash
 # For printers in Gnome/Settings/Printers
 
 # Check if a default print is installed
@@ -71,12 +72,13 @@ $ lpr {filename}
 $ lpq
 ~~~
 
-### Show installed pip packages 
+#### Show installed pip packages
+
 `$ pip list`
 
 ### Start Ubuntu in console mode
 
-~~~
+~~~bash
 If you are using Grub2, then in /etc/default/grub replace:
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
 
@@ -91,7 +93,7 @@ Remove splash to disable the splash screen and/or quiet to make the boot process
 To go graphical after booting up, use startx or start gdm.
 ~~~
 
-## Process management
+## Processes
 
 ### Redo last command as root
 
@@ -134,7 +136,7 @@ Levels (in order of gracefullness):
 
 ### Various terminal "screensavers"
 
-~~~
+~~~bash
 # Displays various stats related to processes, ram usage, etc.
 $ top
 
@@ -150,12 +152,15 @@ $ cmatrix
 ## Disk management
 
 ### Create a fast temporary ram disk
+
 `$ mkdir -p /mnt/ram ; mount -t tmpfs tmpfs /mnt/ram -o size=8129M`
 
 ### Show disk usage
+
 `$ du -h`
 
 ### Show disk usage in current directory, inclusive
+
 `$ du -s`
 
 ### Reference a USB drive
@@ -165,10 +170,10 @@ Then reference like any other directory. E.g. $ ls /media/user1/usbkey1
 
 ## File management
 
-The working directory is the current directory. Unless you tell the OS otherwise, all commands apply to your working directory.   
+The working directory is the current directory. Unless you tell the OS otherwise, all commands apply to your working directory.
 Absolute path: the full path of the file or directory starting with the root directory. E.g. /users/john.  
 Relative path: the path relative to the working directory. It never starts with a slash.  
-Navigation: to move up the directory tree, use “..”.   
+Navigation: to move up the directory tree, use “..”.
 Names that begin with a dot are hidden. All characters are legal in a filename except “/”, and they cannot begin with a “-“.  
 
 ### File permissions (as shown with ls -l command): 10 characters {0111222333}
@@ -190,7 +195,7 @@ Names that begin with a dot are hidden. All characters are legal in a filename e
 - *: any number of characters
 - ?: a single character
 - []: surround a group of single characters to match
-        
+
 ### Show the current directory
 
 `$ pwd`
@@ -213,7 +218,7 @@ A path of '/' means the root directory.
 
 ### Create an alias for a directory
 
-~~~
+~~~bash
 $ nano ~/.bashrc
 # Add to end:
 # shopt -s cdable_vars
@@ -296,7 +301,7 @@ When specifying multiple paths, use ':n' to go to the next file, and ':q' to qui
 
 `$ head {path}`
 
-Shows 10 lines by default. 
+Shows 10 lines by default.
 Use '-n {lines}' to specify the number of lines.
 
 ### View the end of a file
@@ -353,7 +358,7 @@ Returns all lines from files which contain search-text.
 
 ### Examples
 
-~~~
+~~~bash
 # Find string 'Hello World' in file1.doc and file2.doc:
 $ grep -i 'Hello World' file1.doc file2.doc 
 
@@ -417,7 +422,7 @@ Available everywhere
 
 ### Create a Hello World script
 
-~~~
+~~~bash
 #!/bin/bash
 
 echo "Hello World!"
@@ -425,7 +430,7 @@ echo "Hello World!"
 
 ### Pass arguments to a script
 
-~~~
+~~~bash
 #!/bin/bash
 
 # Based on position of arguments that are passed in.
@@ -450,7 +455,7 @@ or
 
 ### Basic IF statement syntax
 
-~~~
+~~~bash
 if [ CONDITION ]; then
       # CODE TO EXECUTE IF TRUE
 else 
@@ -470,7 +475,7 @@ if $(grep -q SomeText MyFile.txt); then
 
 ### Multiple condition examples
 
-~~~
+~~~bash
 if [ CONDITION A ] && [ CONDITION B ]; then # A AND B
 if [ CONDITION A && CONDITION B ]; then # A AND B (same as above)
 if [ CONDITION A ] || [ CONDITION B ]; then # A OR B
@@ -487,6 +492,7 @@ if [ CONDITION A || CONDITION B ]; then # A OR B (same as above)
 | -w | if the file exists and is writable |
 
 ### Arithmetic conditional flags
+
 | Flag | Description |
 | ---- | ----------- |
 | -eq | equal to |
@@ -498,7 +504,7 @@ if [ CONDITION A || CONDITION B ]; then # A OR B (same as above)
 
 ### Basic FOR statement syntax
 
-~~~
+~~~bash
 for ITEM in ITEMS
 do
       # Do something
@@ -519,7 +525,7 @@ for loggile in $(ls logfiles/ | grep -i 'ftp')
 
 ### Basic WHILE statement syntax
 
-~~~
+~~~bash
 while [ CONDITION ]; # Syntax is similar to IF condtition syntax.
 do
       # Do something
@@ -528,7 +534,7 @@ done
 
 ### Basic CASE statement syntax
 
-~~~
+~~~bash
 case STRING OR VARIABLE in
       PATTERN1)
       COMMAND1;;
@@ -549,7 +555,7 @@ esac
 
 ### Accessing a Windows share from Linux
 
-~~~
+~~~bash
 *** IMPORTANT! cifs is not secure, so this example isn't either. Use only in test/isolated environments.
 
 # Pre-req installs
@@ -573,4 +579,3 @@ $ sudo nano /etc/fstab
         add a line: {remote share, e.g. //192.168.0.10/WindowsShare} {local mount location, e.g. /mnt/windowsshare} cifs auto,gid=users,credentials=/etc/sambapasswords,file_mode=0777,dir_mode=0777 0 0
 $ sudo shutdown -r now
 ~~~
-

@@ -1,6 +1,3 @@
-Here’s a **comprehensive Arduino tutorial** that takes you from absolute beginner to intermediate level, covering the hardware, software, programming concepts, and real projects. I’ll structure it like a step-by-step guide so you can follow along as a self-contained course.
-
----
 
 # 🌟 Arduino Comprehensive Tutorial
 

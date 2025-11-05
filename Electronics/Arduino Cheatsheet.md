@@ -23,7 +23,7 @@
 
 ### Barebones example
 
-~~~
+~~~cpp
 void setup()
 {
     // Runs once when device is powered on, or has been programmed.  

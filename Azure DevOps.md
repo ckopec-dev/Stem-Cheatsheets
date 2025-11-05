@@ -8,6 +8,7 @@
 ## 📌 Overview
 
 Azure DevOps is Microsoft’s cloud-based platform for:
+
 - **Source Control** (Git repositories or TFVC)
 - **Work Tracking** (Boards, Kanban, Scrum)
 - **Continuous Integration / Continuous Deployment (CI/CD)**
@@ -15,6 +16,7 @@ Azure DevOps is Microsoft’s cloud-based platform for:
 - **Test Management**
 
 This tutorial will guide you through:
+
 1. Setting up an Azure DevOps organization and project.
 2. Managing code with Repos.
 3. Planning work with Boards.
@@ -27,6 +29,7 @@ This tutorial will guide you through:
 ## 1️⃣ Create an Azure DevOps Organization and Project
 
 ### Steps:
+
 1. **Sign in** to [Azure DevOps](https://dev.azure.com/).
 2. Click **New organization** → give it a name.
 3. Create a **New Project**:
@@ -45,6 +48,7 @@ Azure Repos supports **Git** (distributed) and **TFVC** (centralized).
 We’ll use Git here.
 
 ### Clone Your Repo
+
 ```bash
 # Clone repository to local machine
 git clone https://dev.azure.com/{organization}/{project}/_git/{repo-name}
@@ -53,6 +57,7 @@ cd {repo-name}
 ```
 
 ### Push Code to Azure Repos
+
 ```bash
 # Create a new file
 echo "# My Azure DevOps Project" > README.md
@@ -70,6 +75,7 @@ git push origin main
 Azure Boards is great for tracking tasks, bugs, and features.
 
 ### Create a Work Item
+
 1. Go to **Boards → Work items → New Work Item**.
 2. Choose **Task**, **Bug**, or **User Story**.
 3. Assign it to a user, set a priority, and save.
@@ -83,6 +89,7 @@ Azure Boards is great for tracking tasks, bugs, and features.
 Pipelines automate your build, test, and deployment process.
 
 ### Create a YAML Pipeline
+
 1. Go to **Pipelines → Create Pipeline**.
 2. Select **Azure Repos Git** → choose your repository.
 3. Use the following example `azure-pipelines.yml`:
@@ -112,7 +119,7 @@ steps:
     ArtifactName: 'drop'
 ```
 
-4. Commit and run the pipeline.
+4 Commit and run the pipeline.
 
 ---
 
@@ -131,6 +138,7 @@ steps:
 Azure Artifacts lets you host **NuGet**, **npm**, **Maven**, and **Python** packages.
 
 ### Example: Publish npm package
+
 ```bash
 npm install -g azure-devops-node-api
 npm login --registry=https://pkgs.dev.azure.com/{organization}/_packaging/{feed-name}/npm/registry/ --scope=@my-scope
@@ -150,6 +158,7 @@ npm publish
 ---
 
 ## 📚 Useful Links
+
 - [Azure DevOps Documentation](https://learn.microsoft.com/azure/devops/)
 - [YAML Pipeline Reference](https://learn.microsoft.com/azure/devops/pipelines/yaml-schema)
 - [Azure Repos Git Guide](https://learn.microsoft.com/azure/devops/repos/git/)
@@ -159,14 +168,15 @@ npm publish
 ✅ **You now have a full DevOps workflow** — from code commit → CI → deployment → work tracking.  
 Next step: start automating more processes and integrating with other Azure services.
 
-# 🚀 Advanced Azure DevOps Guide  
+## 🚀 Advanced Azure DevOps Guide
+
 *Real-world CI/CD with multi-stage pipelines, approvals, and deployment strategies.*
 
 ---
 
-## 📌 Overview  
+### 📌 Advanced Overview
 
-This guide builds on the [Beginner Azure DevOps Tutorial](#) and covers **production-grade** Azure DevOps usage:  
+This guide builds on the Beginner Azure DevOps Tutorial and covers **production-grade** Azure DevOps usage:  
 
 - Multi-stage YAML pipelines (Build → Test → Deploy)  
 - Environment-based deployments (Dev, QA, Staging, Prod)  
@@ -178,7 +188,7 @@ This guide builds on the [Beginner Azure DevOps Tutorial](#) and covers **produc
 
 ---
 
-## 1️⃣ Advanced Git & Branching Strategy  
+### 1️⃣ Advanced Git & Branching Strategy  
 
 A strong branching strategy ensures stability and fast delivery.  
 
@@ -193,6 +203,7 @@ hotfix/*  → Critical fixes for production
 ```
 
 **Azure DevOps Policies**:
+
 - Require PR build validation before merge  
 - Require at least **2 reviewers**  
 - Enforce branch naming conventions with **branch policies**  
@@ -200,7 +211,7 @@ hotfix/*  → Critical fixes for production
 
 ---
 
-## 2️⃣ Multi-Stage YAML Pipeline Example  
+### 2️⃣ Multi-Stage YAML Pipeline Example  
 
 Below is a **full production CI/CD** pipeline for a Node.js app.  
 
@@ -289,11 +300,12 @@ stages:
 
 ---
 
-## 3️⃣ Approvals & Gates  
+### 3️⃣ Approvals & Gates  
 
 **Why?** Ensure human review before critical deployments.  
 
 **How to Set Up:**
+
 1. Go to **Pipelines → Environments**  
 2. Select your environment (e.g., "Prod")  
 3. Enable **Approvals and Checks**:
@@ -303,9 +315,10 @@ stages:
 
 ---
 
-## 4️⃣ Deployment Strategies  
+### 4️⃣ Deployment Strategies  
 
 ### **Blue/Green Deployment**
+
 - Two identical environments: Blue (current) & Green (new)  
 - Switch traffic to Green only after successful validation  
 
@@ -324,6 +337,7 @@ strategy:
 ```
 
 ### **Canary Release**
+
 - Gradually route traffic to the new version (10% → 50% → 100%)  
 
 ---
@@ -346,7 +360,7 @@ strategy:
 
 ---
 
-## 6️⃣ Pipeline Caching for Faster Builds  
+### 6️⃣ Pipeline Caching for Faster Builds  
 
 ```yaml
 - task: Cache@2
@@ -359,7 +373,7 @@ strategy:
 
 ---
 
-## 7️⃣ Artifact Versioning & Tagging  
+### 7️⃣ Artifact Versioning & Tagging  
 
 Tag builds automatically:  
 
@@ -372,7 +386,7 @@ Tag builds automatically:
 
 ---
 
-## 📚 Additional Recommendations  
+### 📚 Additional Recommendations  
 
 - **SonarCloud Integration** → Code quality and security scanning  
 - **Infrastructure as Code** → Use Terraform or Bicep in pipelines  
@@ -381,7 +395,8 @@ Tag builds automatically:
 
 ---
 
-## 🔗 Useful Links  
+### 🔗 Useful Links  
+
 - [Multi-Stage Pipeline Docs](https://learn.microsoft.com/azure/devops/pipelines/process/stages)  
 - [Azure Deployment Strategies](https://learn.microsoft.com/azure/devops/pipelines/deploy/strategies)  
 - [Key Vault Task](https://learn.microsoft.com/azure/devops/pipelines/tasks/deploy/azure-key-vault)  

@@ -22,12 +22,14 @@
    ```bash
    dotnet --version
    ```
+
 2. Create a new Razor Pages project:
 
    ```bash
    dotnet new webapp -o RazorRestApi
    cd RazorRestApi
    ```
+
 3. Install necessary packages:
 
    ```bash
@@ -339,8 +341,6 @@ public static async Task InitializeAsync(IServiceProvider services)
 ```csharp
 var key = Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!);
 builder.Services
-```
-
 
 .AddAuthentication(options =>
 {
@@ -360,10 +360,10 @@ ValidAudience = builder.Configuration\["Jwt\:Audience"],
 IssuerSigningKey = new SymmetricSecurityKey(key)
 };
 });
-
-````
+```
 
 **AuthEndpoints.cs**:
+
 ```csharp
 public static void MapAuthEndpoints(this IEndpointRouteBuilder app, IConfiguration config)
 {

@@ -36,28 +36,33 @@
 - Networking (e.g. CDN, vnet manager, vpn gateway)
 - Databases (e.g. Cosmo, SQL db, SQL managed instance)
 
-## CLI 
+## CLI
 
 ### Installation on Windows
 
 - [64 bit version](https://aka.ms/installazurecliwindowsx64)
 
 ### Installation on Ubuntu
+
 `$ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
 
 ### Check version
+
 `$ az --version`
 
 ### Update the CLI
+
 `$ az upgrade`
 
 ### Run in a Docker container
+
 `$ docker run -it mcr.microsoft.com/azure-cli:cbl-mariner2.0`
 
 ## Basic usage
 
 ### Log in
-~~~
+
+~~~bash
 # This will spawn a browser to complete the login process.
 $ az login
 
@@ -69,10 +74,12 @@ $ az account get-access-token
 ~~~
 
 ### Log out
+
 `$ az logout`
 
 ### Find example commands and get help
-~~~
+
+~~~bash
 # Find examples
 $ az find vnet
 
@@ -81,7 +88,8 @@ $ az find vnet
 ~~~
 
 ### List service credentials
-~~~
+
+~~~bash
 # Formatted as a table
 $ az ad sp list --output table
 
@@ -90,7 +98,8 @@ $ az ad sp list --all --output table
 ~~~
 
 ### Create a service principal
-~~~
+
+~~~bash
 # Nothing specified
 $ az ad sp create-for-rbac
 
@@ -105,29 +114,33 @@ $ az ad sp create-for-rbac  --name myScope \
 ### Subscriptions and management groups
 
 #### Get list of subscriptions
-~~~
+
+~~~bash
 # Json format
-% az account list
+$ az account list
 # Table format
 $ az account list --output table
 ~~~
 
 #### Clear subscription cache
+
 `$ az account clear`
 
 ### Resources and Azure Resource Manager
 
 #### Good resource naming convention
-~~~
-{Resource-type}-{Workload/Application}-{Environment}-{Region}-{Instance}
 
+~~~bash
+{Resource-type}-{Workload/Application}-{Environment}-{Region}-{Instance}
 e.g. rg-sharepoint-uat-westus-001
 ~~~
 
 #### List resource groups
+
 `$ az group list --output table`
 
 #### Delete resource group
+
 `$ az group delete --name {name}`
 
 #### Role Based Access Control (RBAC)
@@ -152,7 +165,7 @@ e.g. rg-sharepoint-uat-westus-001
 
 ### Azure SQL Database
 
-- Analagous to a single Sql Server database 
+- Analagous to a single Sql Server database
 
 ### Azure SQL Managed Instance
 
@@ -180,6 +193,7 @@ e.g. rg-sharepoint-uat-westus-001
 - Lets you deploy and manage a set of identical load-balanced VMs-
   
 #### Azure Batch
+
 - Large scale high performance computing
   - Starts pool of VMs
   - Installs necessary software
@@ -225,7 +239,3 @@ e.g. rg-sharepoint-uat-westus-001
 - Front-end IP address: a single public address and/or a single private address
 - Listeners: accept traffic based on a combination of protocol, port, host, and IP
 - Routing rules: binds a listener to a backend pool
-
-
-
-

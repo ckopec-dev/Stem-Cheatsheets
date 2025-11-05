@@ -6,7 +6,7 @@
 * an advanced variant using `AssemblyLoadContext` (unloadable plugins)
 * notes on safety, DI, versioning, and improvements
 
-# 1) Core contract & attribute
+## 1) Core contract & attribute
 
 ```csharp
 // IPlugin.cs
@@ -35,7 +35,7 @@ public sealed class PluginAttribute : Attribute
 * `IPlugin` is the runtime contract.
 * `PluginAttribute` marks classes as plugins and optionally carries metadata (id/version).
 
-# 2) A basic plugin implementation (example)
+## 2) A basic plugin implementation (example)
 
 ```csharp
 // HelloWorldPlugin.cs (in a plugin assembly)
@@ -56,7 +56,7 @@ public class HelloWorldPlugin : IPlugin
 }
 ```
 
-# 3) Simple reflection-based plugin loader (search loaded assemblies)
+## 3) Simple reflection-based plugin loader (search loaded assemblies)
 
 ```csharp
 using System.Reflection;
@@ -141,7 +141,7 @@ foreach(var p in plugins)
     p.Execute();
 ```
 
-# 4) Loading plugin assemblies from a folder
+## 4) Loading plugin assemblies from a folder
 
 If you want drop-in plugins (DLLs in `./plugins`), load them and discover:
 
@@ -163,7 +163,7 @@ var plugins = loader.InstantiatePlugins(descriptors);
 
 Caveat: `Assembly.LoadFrom` will lock files and keep them loaded in the default context so you can't easily update/unload them. For unloadable plugins see the next section.
 
-# 5) Advanced: unloadable plugins using AssemblyLoadContext (for .NET Core/.NET 5+)
+## 5) Advanced: unloadable plugins using AssemblyLoadContext (for .NET Core/.NET 5+)
 
 This pattern lets you load plugin assemblies into a collectible `AssemblyLoadContext`, then unload them. Short version:
 
@@ -230,7 +230,7 @@ await UnloadablePluginHost.UnloadAsync(alc);
 
 Important: unloading only succeeds when no managed references to types from the plugin assembly remain (including static events, timers, unresolved delegates). Clean your references.
 
-# 6) Suggestions & best practices
+## 6) Suggestions & best practices
 
 * **Security**: plugins mean executing third-party code. Run untrusted plugins in sandbox processes or with restricted permissions. Consider process isolation.
 * **Versioning / compatibility**: include a `HostVersion` requirement in the attribute or an interface method for `bool IsCompatibleWith(string hostVersion)` to avoid breaking changes.
@@ -240,7 +240,7 @@ Important: unloading only succeeds when no managed references to types from the 
 * **Testing**: keep plugin APIs small and well-documented; unit test both plugins and the loader.
 * **Hot-reload**: use `AssemblyLoadContext` + reload pattern to update plugins at runtime.
 
-# 7) Simple host program (complete quick example)
+## 7) Simple host program (complete quick example)
 
 ```csharp
 class Program
@@ -270,7 +270,7 @@ class Program
 }
 ```
 
-# 8) Quick checklist to get this running
+## 8) Quick checklist to get this running
 
 1. Create three projects (Recommended):
 

@@ -18,14 +18,16 @@
 - Stop codon: the codon that indicates the end of the protein sequence
 - Terminator: where the ribosome releases the RNA
 
-# 🧬 Biology Fundamentals Tutorial  
+## 🧬 Biology Fundamentals Tutorial  
+
 *An introduction to the science of life.*
 
 ---
 
-## 📌 Overview
+### 📌 Overview
 
 **Biology** is the scientific study of life and living organisms. It explores:
+
 - How life is structured
 - How organisms function
 - How life evolves and interacts with the environment
@@ -34,9 +36,10 @@ Biology spans many fields, including genetics, ecology, physiology, microbiology
 
 ---
 
-## 1️⃣ The Characteristics of Life
+### 1️⃣ The Characteristics of Life
 
 All living things share certain traits:
+
 1. **Cellular organization** – Made of one or more cells.
 2. **Metabolism** – Chemical reactions that sustain life.
 3. **Homeostasis** – Maintaining internal stability.
@@ -47,9 +50,10 @@ All living things share certain traits:
 
 ---
 
-## 2️⃣ Levels of Biological Organization
+### 2️⃣ Levels of Biological Organization
 
 From smallest to largest:
+
 1. **Atom** → Carbon, hydrogen, oxygen  
 2. **Molecule** → DNA, proteins  
 3. **Organelle** → Mitochondria, chloroplasts  
@@ -65,13 +69,15 @@ From smallest to largest:
 
 ---
 
-## 3️⃣ The Cell – The Basic Unit of Life
+### 3️⃣ The Cell – The Basic Unit of Life
 
 Two main types:
+
 - **Prokaryotic cells** – No nucleus (bacteria, archaea)
 - **Eukaryotic cells** – Have a nucleus and organelles (plants, animals, fungi, protists)
 
-### Common cell structures:
+### Common cell structures
+
 - **Cell membrane** – Controls entry/exit of substances
 - **Cytoplasm** – Gel-like fluid inside cell
 - **Nucleus** – Contains DNA
@@ -81,7 +87,7 @@ Two main types:
 
 ---
 
-## 4️⃣ DNA and Genetics
+### 4️⃣ DNA and Genetics
 
 - **DNA** (Deoxyribonucleic acid) stores genetic instructions.
 - **Genes** are segments of DNA coding for proteins.
@@ -90,15 +96,15 @@ Two main types:
 - **Phenotype** – Observable traits.
 
 **Central Dogma of Molecular Biology**:
-```
+
+```bash
 DNA → RNA → Protein
 ```
 
----
-
-## 5️⃣ Energy in Biology
+### 5️⃣ Energy in Biology
 
 Organisms need energy to live:
+
 - **Autotrophs** – Make their own food (plants via photosynthesis).
 - **Heterotrophs** – Consume other organisms (animals, fungi).
 
@@ -106,7 +112,7 @@ Organisms need energy to live:
 
 ---
 
-## 6️⃣ Evolution and Natural Selection
+### 6️⃣ Evolution and Natural Selection
 
 - **Evolution** – Change in populations over time.
 - **Natural selection** – Traits that improve survival become more common.
@@ -114,11 +120,12 @@ Organisms need energy to live:
 
 ---
 
-## 7️⃣ Ecology Basics
+### 7️⃣ Ecology Basics
 
 Ecology studies interactions between organisms and their environment.
 
 Key terms:
+
 - **Habitat** – Where an organism lives.
 - **Niche** – Role an organism plays.
 - **Food chain** – Sequence of who eats whom.
@@ -127,7 +134,7 @@ Key terms:
 
 ---
 
-## 🔬 Practical Biology Skills
+### 🔬 Practical Biology Skills
 
 1. **Microscopy** – Using microscopes to view cells and microorganisms.
 2. **Observation** – Recording natural phenomena.
@@ -136,7 +143,7 @@ Key terms:
 
 ---
 
-## 📚 Further Learning
+### 📚 Further Learning
 
 - [Khan Academy Biology](https://www.khanacademy.org/science/biology)
 - [Crash Course Biology on YouTube](https://www.youtube.com/playlist?list=PL3EED4C1D684D3ADF)
@@ -147,14 +154,15 @@ Key terms:
 ✅ You now have the fundamentals of biology — from the structure of cells to ecosystems and evolution.  
 Next step: dive into a specific branch such as genetics, microbiology, or ecology for deeper study.
 
-# 🧬 Advanced Biology Tutorial  
+## 🧬 Advanced Biology Tutorial  
+
 *Deep dive into molecular biology, biotechnology, and systems biology.*
 
 ---
 
-## 📌 Overview
+### 📌 Advanced Overview
 
-This guide expands on the [Biology Fundamentals Tutorial](#) and covers **advanced-level** biology topics:
+This guide expands on the Biology Fundamentals Tutorial and covers **advanced-level** biology topics:
 
 - Molecular and cellular processes in detail
 - Advanced genetics and genomics
@@ -165,41 +173,46 @@ This guide expands on the [Biology Fundamentals Tutorial](#) and covers **advanc
 
 ---
 
-## 1️⃣ Biochemistry – The Chemical Basis of Life
+### 1️⃣ Biochemistry – The Chemical Basis of Life
 
 Biochemistry studies the chemical processes within living organisms.
 
 **Key Molecules:**
+
 - **Carbohydrates** – Energy storage & structural support
 - **Lipids** – Membranes, hormones, long-term energy storage
 - **Proteins** – Enzymes, structural, transport, signaling
 - **Nucleic acids** – DNA & RNA
 
 **Advanced Concepts:**
+
 - **Enzyme kinetics** – Michaelis–Menten model
 - **Protein folding** – Structure determines function
 - **Metabolic pathways** – Glycolysis, Krebs cycle, oxidative phosphorylation
 
 ---
 
-## 2️⃣ Molecular Biology
+### 2️⃣ Molecular Biology
 
 **Central Dogma (Advanced View):**
-```
+
+```bash
 DNA ↔ RNA → Protein
 ```
+
 - **Reverse transcription** (RNA → DNA) via retroviruses & reverse transcriptase.
 - **RNA processing** – Splicing, capping, polyadenylation.
 - **Post-translational modifications** – Phosphorylation, glycosylation.
 
 **Regulation of Gene Expression:**
+
 - **Epigenetics** – DNA methylation, histone modification
 - **Transcription factors** – Proteins that regulate transcription
 - **Non-coding RNAs** – miRNA, siRNA
 
 ---
 
-## 3️⃣ Genetics & Genomics
+### 3️⃣ Genetics & Genomics
 
 - **Classical genetics** – Mendelian inheritance patterns
 - **Population genetics** – Allele frequency changes, Hardy–Weinberg equilibrium
@@ -207,81 +220,92 @@ DNA ↔ RNA → Protein
 - **CRISPR-Cas9** – Genome editing technology
 
 **Applications:**
+
 - Gene therapy
 - Personalized medicine
 - Synthetic biology
 
 ---
 
-## 4️⃣ Cell Signaling & Communication
+### 4️⃣ Cell Signaling & Communication
 
 - **Signal transduction pathways** – MAPK, PI3K-AKT
 - **Hormonal signaling** – Endocrine, paracrine, autocrine
 - **Second messengers** – cAMP, Ca²⁺, IP₃
 
 **Example Pathway:**
-```
+
+```bash
 Ligand → Receptor → G-Protein activation → cAMP production → Protein kinase activation → Cellular response
 ```
 
 ---
 
-## 5️⃣ Systems Biology & Bioinformatics
+### 5️⃣ Systems Biology & Bioinformatics
 
 **Systems Biology:**
+
 - Models entire biological systems, not just parts.
 - Uses computational modeling to predict behavior.
 
 **Bioinformatics:**
+
 - Sequence alignment (BLAST, Clustal Omega)
 - Genome annotation
 - Protein structure prediction (AlphaFold)
 
 **Data Sources:**
+
 - NCBI, UniProt, PDB
 
 ---
 
-## 6️⃣ Laboratory & Research Techniques
+### 6️⃣ Laboratory & Research Techniques
 
 **Molecular Techniques:**
+
 - PCR (Polymerase Chain Reaction)
 - qPCR (Quantitative PCR)
 - Gel electrophoresis
 - DNA sequencing (Sanger, Next-Gen)
 
 **Protein Techniques:**
+
 - Western blotting
 - ELISA
 - Mass spectrometry
 
 **Cell Culture:**
+
 - Aseptic techniques
 - Stem cell culture
 - Organoids
 
 ---
 
-## 7️⃣ Biotechnology & Applied Biology
+### 7️⃣ Biotechnology & Applied Biology
 
 **Medical Applications:**
+
 - Monoclonal antibodies
 - CAR-T cell therapy
 - Vaccine development
 
 **Agricultural Applications:**
+
 - GM crops
 - Pest-resistant plants
 - Biofortification
 
 **Industrial Applications:**
+
 - Bioreactors
 - Fermentation
 - Enzyme production
 
 ---
 
-## 8️⃣ Current Research Frontiers
+### 8️⃣ Current Research Frontiers
 
 - Single-cell genomics
 - Epigenome editing
@@ -291,7 +315,7 @@ Ligand → Receptor → G-Protein activation → cAMP production → Protein kin
 
 ---
 
-## 🔬 Best Practices in Research
+### 🔬 Best Practices in Research
 
 - Keep a detailed **lab notebook**
 - Follow **biosafety protocols**
@@ -301,7 +325,8 @@ Ligand → Receptor → G-Protein activation → cAMP production → Protein kin
 
 ---
 
-## 📚 Useful Links
+### 📚 Useful Links
+
 - [NCBI](https://www.ncbi.nlm.nih.gov/)
 - [Ensembl Genome Browser](https://www.ensembl.org/)
 - [Nature Reviews Molecular Cell Biology](https://www.nature.com/nrm/)
@@ -309,4 +334,3 @@ Ligand → Receptor → G-Protein activation → cAMP production → Protein kin
 ---
 
 ✅ You now have a solid grasp of advanced biology topics and techniques — ready to explore specific specializations or join research projects.
-

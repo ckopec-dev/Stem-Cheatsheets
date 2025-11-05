@@ -159,4 +159,3 @@ sc start MyWindowsService
 6. Debug using a console wrapper or attach to process.
 
 ---
-

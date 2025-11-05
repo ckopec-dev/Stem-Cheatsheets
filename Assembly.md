@@ -1,17 +1,20 @@
 # Assembly Cheatsheet
 
 ## Install the developer documentation on Linux
+
 `$ sudo apt install manpages-posix-dev`
 
 ## View a syscall man page
+
 `$ man 2 write`
 
 ## Install the assembler
+
 `$ sudo apt install nasm`
 
 ## Hello world example
 
-~~~
+~~~asm
 $ nano hello_world.asm
 
 ; this is a commnent
@@ -49,24 +52,27 @@ $ ld -m elf_i386 -o hello_world hello_world.o
 $ ./hello_world
 ~~~
 
-# Hands-On Assembly Programming Tutorial
+## Hands-On Assembly Programming Tutorial
 
-## 1. Introduction
+### 1. Introduction
+
 Assembly is a low-level language that directly maps to CPU instructions. This tutorial uses **x86 Assembly** with **NASM** on Linux.
 
 - **Pros:** High control, fast execution, learning CPU internals  
 - **Cons:** Verbose, platform-specific  
 
-## 2. Setup
+### 2. Setup
 
-~~~
+~~~bash
+# Update package repo
 $ sudo apt update
+# Install compiler
 $ sudo apt install nasm gcc
 ~~~
 
-## 3. Hello World
+### 3. Hello World
 
-~~~
+~~~asm
 ; hello.asm
 section .data
 msg db "Hello, Assembly!", 0xA
@@ -87,17 +93,20 @@ _start:
     int 0x80
 ~~~
 
-~~~
+~~~bash
+# Create object file
 $ nasm -f elf32 hello.asm -o hello.o
+# Create machine code
 $ ld -m elf_i386 hello.o -o hello
+# Run code
 $ ./hello
 ~~~
 
-## 4. Arithmetic Operations
+### 4. Arithmetic Operations
 
 Adds two numbers and stores the result in memory.
 
-~~~
+~~~asm
 ; arithmetic.asm
 section .data
 num1 db 5
@@ -117,9 +126,9 @@ _start:
     int 0x80
 ~~~
 
-## 5. Loops
+### 5. Loops
 
-~~~
+~~~asm
 ; loop.asm
 section .data
 count db 5
@@ -140,11 +149,11 @@ loop_start:
     int 0x80
 ~~~
 
-## 6. Functions / Procedures
+### 6. Functions / Procedures
 
 call pushes return address, ret returns.
 
-~~~
+~~~asm
 ; function.asm
 section .text
 global _start
@@ -164,18 +173,18 @@ add_numbers:
     ret
 ~~~
 
-## 7. Stack Operations
+### 7. Stack Operations
 
 Useful for temporary storage and passing function arguments.
 
-~~~
+~~~asm
 push eax   ; push register onto stack
 pop ebx    ; pop stack into register
 ~~~
 
-## 8. Conditional Execution
+### 8. Conditional Execution
 
-~~~
+~~~asm
 ; compare.asm
 section .data
 a db 5
@@ -197,9 +206,9 @@ end:
     int 0x80
 ~~~
 
-## 9. Array Processing Example
+### 9. Array Processing Example
 
-~~~
+~~~asm
 ; array_sum.asm
 section .data
 arr db 1,2,3,4,5
@@ -226,7 +235,7 @@ sum_loop:
     int 0x80
 ~~~
 
-## Tips & Best Practices
+### Tips & Best Practices
 
 - Always clear registers before use (xor eax, eax).
 - Use comments for clarity.
