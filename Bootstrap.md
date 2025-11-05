@@ -302,7 +302,7 @@ $primary: #ff5733;
 
 This tutorial gives you a **solid foundation** and covers most of Bootstrap’s core features.
 
-# Example
+## Example
 
 ```html
 <!DOCTYPE html>
