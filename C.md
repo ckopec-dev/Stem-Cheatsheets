@@ -5,7 +5,7 @@
 
 ### How to compile
 
-~~~
+~~~c
 $ gcc -Wall hello.c -o hello 
 
 // Wall shows all errors and warnings
@@ -18,7 +18,7 @@ $ ./hello
 
 ### How gcc compiles
 
-~~~
+~~~c
 # Preprocessing.
 # 'E' flag specifies to stop after the preprocessor.
 # 'code_preprocessed.c' is the output file.
@@ -41,7 +41,7 @@ $ gcc -o code code_temp.s
 
 ### Create a function
 
-~~~
+~~~c
 #include <stdio.h>
 
 // Function prototype. Not strictly necessary, but helps compiler verify that 
@@ -50,12 +50,12 @@ void SayHello();
 
 int main()
 {
-	SayHello();
+  SayHello();
 }
 
 void SayHello()
 {
-	printf("Hello!\n");
+  printf("Hello!\n");
 }
 ~~~
 
@@ -63,7 +63,7 @@ void SayHello()
 
 A pointer is a variable that contains the address of another variable.
 
-~~~
+~~~c
 // Declare a variable
 int my_variable; 
 
@@ -73,49 +73,45 @@ int *p_my_variable = &my_variable;
 
 ### Accept input
 
-~~~
+~~~c
 #include <stdio.h>
 
 int main()
 {
-	int a;
-
-	printf("Enter a number: ");
-
-	scanf("%d", &a);
-
-	printf("You entered: %d\n", a);
+  int a;
+  printf("Enter a number: ");
+  scanf("%d", &a);
+  printf("You entered: %d\n", a);
 }
 ~~~
 
 ### Structs
 
-~~~
+~~~c
 #include <stdlib.h>
 #include <string.h>
 
 struct person
 {
-        int age;
-        char *name;
+  int age;
+  char *name;
 };
 
 int main(void)
 {
+  struct person m;
 
-        struct person m;
+  m.age = 19;
+  m.name = malloc(5 * sizeof(char));
+  strcpy(m.name, "Fred");
 
-        m.age = 19;
-        m.name = malloc(5 * sizeof(char));
-        strcpy(m.name, "Fred");
+  // pointer to the struct
+  struct person *m_ptr = &m;
 
-        // pointer to the struct
-        struct person *m_ptr = &m;
-
-        // set some data using the pointer
-        m_ptr -> age = 29;
-        m_ptr -> name = realloc(m_ptr -> name, 6 * sizeof(char));
-        strcpy(m_ptr -> name, "Fredy");
+  // set some data using the pointer
+  m_ptr -> age = 29;
+  m_ptr -> name = realloc(m_ptr -> name, 6 * sizeof(char));
+  strcpy(m_ptr -> name, "Fredy");
 }
 ~~~
 
@@ -123,30 +119,30 @@ int main(void)
 
 Overflow occurs when you write more data to memory than you have allocated. This can result in a corrupt stack or heap.
 
-## Structs
-~~~
+## Structures
+
+~~~c
 #include <stdio.h>
 #include <string.h>
 
 // Define a struct
 struct company {
-	char *name;
-	int employee_count;
+        char *name;
+        int employee_count;
 };
 
 int main(void) {
+        // Create a company struct
+        struct company comp;
 
-	// Create a company struct
-	struct company comp;
+        // Assign some values
+        comp.name = malloc(5 * sizeof(char));
+        strcpy(comp.name, "Acme");
 
-	// Assign some values
-	comp.name = malloc(5 * sizeof(char));
-	strcpy(comp.name, "Acme");
+        // Create pointer to struct
+        struct company *comp_ptr = &em;
 
-	// Create pointer to struct
-	struct company *comp_ptr = &em;
-
-	// Do something with the struct...
+        // Do something with the struct...
 }
 ~~~
 
@@ -154,41 +150,38 @@ int main(void) {
 
 ### Basic demo
 
-~~~
+~~~c
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h> 
 
 void *entry_point(void *value) 
 {
-	printf("Hello from the second thread.\n");
-
-	int *num = (int *) value;
-
-	printf("The value of value is %d.\n", *num);
-
-	return NULL;
+        printf("Hello from the second thread.\n");
+        int *num = (int *) value;
+        printf("The value of value is %d.\n", *num);
+        return NULL;
 }
 
 int main(int argc, char **argv) 
 {
-	pthread_t thread;
+        pthread_t thread;
 
-	printf("Hello from the first thread.\n");
+        printf("Hello from the first thread.\n");
 
-	int num = 123;
+        int num = 123;
 
-	// Args: 
-	// reference to thread struct
-	// pthread attributes
-	// entry point function for new thread 	
-	// value to send to function
-	pthread_create(&thread, NULL, entry_point, &num);
+        // Args: 
+        // reference to thread struct
+        // pthread attributes
+        // entry point function for new thread 	
+        // value to send to function
+        pthread_create(&thread, NULL, entry_point, &num);
 
-	// Wait for the 2nd thread to finish.
-	pthread_join(thread, NULL); 
+        // Wait for the 2nd thread to finish.
+        pthread_join(thread, NULL); 
 
-	return EXIT_SUCCESS;
+        return EXIT_SUCCESS;
 }
 ~~~
 
@@ -196,8 +189,9 @@ int main(int argc, char **argv)
 
 [GDI Reference](https://learn.microsoft.com/en-us/windows/win32/gdi/windows-gdi)
 
-### Basic demo
-~~~
+### Basic windows programming demo
+
+~~~c
 #include <Windows.h>
 
 int main()
@@ -207,7 +201,8 @@ int main()
 ~~~
 
 ### Basic demo compilation
-~~~
+
+~~~c
 # Open developer command prompt in Terminal.
 C:\temp\demo.c
 
@@ -219,7 +214,8 @@ C:\temp\cl demo.c user32.lib /link /entry:main
 ~~~
 
 ### GDI demo
-~~~
+
+~~~c
 #include <Windows.h>
 
 int main()
@@ -241,5 +237,5 @@ int main()
 ~~~
 
 ### GDI demo compilation
-`C:\temp\cl Gdi32.lib User32.lib gdi_demo.c`
 
+`C:\temp\cl Gdi32.lib User32.lib gdi_demo.c`
