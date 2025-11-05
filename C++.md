@@ -5,7 +5,7 @@
 
 ### How to compile
 
-~~~
+~~~bash
 $ g++ -o main main.cpp
 
 // To execute:
@@ -13,18 +13,18 @@ $ g++ -o main main.cpp
 $ ./main
 ~~~
 
-### Hello World!
+### Hello World
 
-~~~
+~~~cpp
 #include "iostream"
 
 int main(void) {
-	std::cout << "Hello World!";
-	return 0;
+        std::cout << "Hello World!";
+        return 0;
 }
 ~~~
 
-# C++ Ready-to-Run Projects Collection
+## C++ Ready-to-Run Projects Collection
 
 A collection of **ready-to-run C++ projects** in Markdown. Each project includes
 
@@ -35,7 +35,7 @@ A collection of **ready-to-run C++ projects** in Markdown. Each project includes
 
 ---
 
-## Table of Contents
+### Table of Contents
 
 1. [Quick setup & compile notes](#quick-setup--compile-notes)
 2. [Project 1 — CLI Calculator (basic)](#project-1---cli-calculator-basic)
@@ -47,41 +47,41 @@ A collection of **ready-to-run C++ projects** in Markdown. Each project includes
 
 ---
 
-## Quick setup & compile notes
+### Quick setup & compile notes
 
 These projects target **C++17** and use only the standard library (no external deps).
 
 Compile with g++/clang++:
 
-```bash
+~~~bash
 # compile (example)
 g++ -std=c++17 -O2 project.cpp -o project
 # run
 ./project
-```
+~~~
 
 On Windows with MinGW:
 
-```bash
+~~~bash
 g++ -std=c++17 project.cpp -o project.exe
 project.exe
-```
+~~~
 
 If a project uses multiple files, compile with:
 
-```bash
+~~~bash
 g++ -std=c++17 -O2 file1.cpp file2.cpp -o app
-```
+~~~
 
 ---
 
-## Project 1 - CLI Calculator (basic)
+### Project 1 - CLI Calculator (basic)
 
 **Description:** A simple command-line calculator that supports `+ - * / %` and parentheses via shunting-yard parsing.
 
 **File:** `calculator.cpp`
 
-```cpp
+~~~cpp
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -156,16 +156,16 @@ int main(){
     }
     return 0;
 }
-```
+~~~
 
-**Build & run**
+#### Build & run
 
-```bash
+~~~bash
 g++ -std=c++17 -O2 calculator.cpp -o calculator
 ./calculator
-```
+~~~
 
-**Exercises**
+#### Exercises
 
 * Add support for unary minus (negative numbers)
 * Add functions like `sin`, `cos`, `sqrt` using `<cmath>`
@@ -173,13 +173,13 @@ g++ -std=c++17 -O2 calculator.cpp -o calculator
 
 ---
 
-## Project 2 - Simple File Manager (list & copy)
+### Project 2 - Simple File Manager (list & copy)
 
 **Description:** List files in a directory and copy files. Uses C++17 `std::filesystem`.
 
 **File:** `file_manager.cpp`
 
-```cpp
+~~~cpp
 #include <iostream>
 #include <filesystem>
 #include <fstream>
@@ -225,37 +225,32 @@ int main(int argc, char** argv){
         cout << "Unknown command\n";
     }
 }
-```
+~~~
 
-**Build & run**
+#### Build
 
-```bash
+~~~bash
 g++ -std=c++17 -O2 file_manager.cpp -o file_manager
 # list current directory
 ./file_manager ls .
 # copy file
 ./file_manager cp source.txt dest.txt
-```
+~~~
 
-**Notes**
+#### Notes
 
 * `std::filesystem` is available in C++17 with recent compilers.
 * On older compilers you may need `-lstdc++fs` (rare nowadays).
 
-**Exercises**
-
-* Add delete (`rm`) and move (`mv`) commands
-* Add recursive listing and simple filtering by extension
-
 ---
 
-## Project 3 - Tic-Tac-Toe (console game)
+### Project 3 - Tic-Tac-Toe (console game)
 
 **Description:** Two-player console Tic-Tac-Toe with a simple AI (random or minimax option).
 
 **File:** `tictactoe.cpp`
 
-```cpp
+~~~cpp
 #include <iostream>
 #include <array>
 #include <random>
@@ -297,29 +292,22 @@ int main(){
         player = (player=='X'?'O':'X');
     }
 }
-```
+~~~
 
-**Build & run**
-
-```bash
+~~~bash
 g++ -std=c++17 -O2 tictactoe.cpp -o tictactoe
 ./tictactoe
-```
-
-**Exercises**
-
-* Implement a computer opponent using Minimax
-* Add a nicer UI and board coordinate mapping (row/col)
+~~~
 
 ---
 
-## Project 4 - To-Do List (file-backed)
+### Project 4 - To-Do List (file-backed)
 
 **Description:** Simple command-line to-do list persisted to a text file.
 
 **File:** `todo.cpp`
 
-```cpp
+~~~cpp
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -362,29 +350,22 @@ int main(){
         }
     }
 }
-```
+~~~
 
-**Build & run**
-
-```bash
+~~~bash
 g++ -std=c++17 -O2 todo.cpp -o todo
 ./todo
-```
-
-**Exercises**
-
-* Add edit (`edit <idx> <text>`) command
-* Use JSON or CSV to store timestamps and completed flag
+~~~
 
 ---
 
-## Project 5 - Multithreaded Prime Finder (worker threads)
+### Project 5 - Multithreaded Prime Finder (worker threads)
 
 **Description:** Spawn worker threads to test ranges for primes and report results. Demonstrates `<thread>` and synchronization.
 
 **File:** `primes_mt.cpp`
 
-```cpp
+~~~cpp
 #include <iostream>
 #include <thread>
 #include <vector>
@@ -424,29 +405,19 @@ int main(){
     for(auto &t: workers) t.join();
     cout << "Done.\n";
 }
-```
+~~~
 
-**Build & run**
-
-```bash
+~~~bash
 g++ -std=c++17 -O2 -pthread primes_mt.cpp -o primes_mt
 ./primes_mt
-```
-
-**Notes**
+~~~
 
 * Use `-pthread` when compiling on Linux.
 * This is a simple work-stealing style loop using `atomic` counter.
 
-**Exercises**
-
-* Collect primes into a vector with synchronized push
-* Implement segmented sieve for better performance
-* Add a progress indicator shared between threads
-
 ---
 
-## Next steps & learning exercises
+### Next steps & learning exercises
 
 * **Refactor** each project into multiple `.cpp`/`.hpp` files and use a Makefile or CMake.
 * Add **unit tests** using a framework (Catch2, GoogleTest).
