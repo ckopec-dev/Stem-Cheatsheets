@@ -1,12 +1,15 @@
-# Compiler Design Cheatsheet
+<!-- markdownlint-disable MD024 -->
 
 # 🖥️ Compiler Design Handbook
+
 *A complete guide — from beginner fundamentals to advanced compiler construction.*
 
 ---
 
 ## 📌 Overview
+
 This handbook covers:
+
 - **Beginner Concepts** – What a compiler is, how it works, key phases.
 - **Advanced Concepts** – Optimizations, JIT, LLVM, DSLs, real-world compiler architectures.
 
@@ -15,16 +18,20 @@ This handbook covers:
 ## 1️⃣ Introduction to Compiler Design
 
 ### 🔹 Beginner
+
 A **compiler** is a program that:
+
 1. Reads **source code** written in a high-level language.
 2. Checks for **syntax and semantic correctness**.
 3. Produces **machine code**, **bytecode**, or another target language.
 
 **Why use a compiler?**
+
 - Efficiency: Machine-executable programs run faster than interpreted code.
 - Portability: Same high-level code can be compiled for different platforms.
 
 **Examples of Compilers:**
+
 - GCC (C/C++)
 - javac (Java)
 - Clang (C/C++/Objective-C)
@@ -32,7 +39,9 @@ A **compiler** is a program that:
 ---
 
 ### 🔹 Advanced
+
 Compilers can be categorized by:
+
 - **Compilation Strategy:**
   - Ahead-of-Time (AOT)
   - Just-In-Time (JIT)
@@ -52,17 +61,20 @@ Compilers can be categorized by:
 ### 2.1 Lexical Analysis
 
 #### Beginner:
+
 - Converts **character stream** into **tokens**.
 - Removes whitespace and comments.
 - Uses **regular expressions** to define token patterns.
 
 Example:
+
 ```text
 int x = 5 + 10;
 Tokens: [int] [identifier:x] [=] [5] [+] [10] [;]
 ```
 
-#### Advanced:
+#### Advanced
+
 - Implemented using **Finite Automata**.
 - Performance tuned with **buffered I/O** and **token lookahead**.
 - Tools: **Lex**, **Flex**, **ANTLR**.
@@ -71,15 +83,18 @@ Tokens: [int] [identifier:x] [=] [5] [+] [10] [;]
 
 ### 2.2 Syntax Analysis
 
-#### Beginner:
+#### Beginner
+
 - Checks if tokens form a valid structure using **grammars**.
 - Produces **Parse Tree** or **Abstract Syntax Tree (AST)**.
 
 Parsing methods:
+
 - **Top-down**: LL(1), Recursive Descent.
 - **Bottom-up**: LR, SLR, LALR.
 
-#### Advanced:
+#### Advanced
+
 - Error recovery strategies: Panic mode, Phrase-level recovery.
 - Ambiguity resolution in grammar.
 - Parser generators: **Bison**, **ANTLR**.
@@ -88,12 +103,14 @@ Parsing methods:
 
 ### 2.3 Semantic Analysis
 
-#### Beginner:
+#### Beginner
+
 - Checks meaning according to language rules.
 - Type checking, scope resolution.
 - Uses a **symbol table**.
 
-#### Advanced:
+#### Advanced
+
 - Attribute grammars.
 - Constant propagation.
 - Inline type inference (e.g., C++ `auto`, TypeScript type inference).
@@ -102,18 +119,21 @@ Parsing methods:
 
 ### 2.4 Intermediate Code Generation
 
-#### Beginner:
+#### Beginner
+
 - Produces a platform-independent code representation.
 - Common form: **Three-Address Code (TAC)**.
 
 Example:
+
 ```text
 t1 = 5
 t2 = 10
 t3 = t1 + t2
 ```
 
-#### Advanced:
+#### Advanced
+
 - Static Single Assignment (SSA) form.
 - IR optimizations: Loop unrolling, strength reduction.
 - LLVM IR, JVM bytecode.
@@ -122,11 +142,13 @@ t3 = t1 + t2
 
 ### 2.5 Code Optimization
 
-#### Beginner:
+#### Beginner
+
 - Removes inefficiencies without changing output.
 - Examples: Constant folding, Dead code elimination.
 
-#### Advanced:
+#### Advanced
+
 - Machine-independent optimizations: Loop fusion, Common subexpression elimination.
 - Machine-dependent optimizations: Register allocation, Instruction scheduling.
 - PGO (Profile-Guided Optimization) & LTO (Link-Time Optimization).
@@ -135,11 +157,13 @@ t3 = t1 + t2
 
 ### 2.6 Code Generation
 
-#### Beginner:
+#### Beginner
+
 - Translates IR to target machine code.
 - Assigns registers, generates instructions.
 
-#### Advanced:
+#### Advanced
+
 - Peephole optimization.
 - Instruction selection using DAG covering.
 - JIT compilation with runtime profiling.
@@ -148,11 +172,13 @@ t3 = t1 + t2
 
 ### 2.7 Linking & Loading
 
-#### Beginner:
+#### Beginner
+
 - Combines object files into an executable.
 - Resolves function calls and global variables.
 
-#### Advanced:
+#### Advanced
+
 - Dynamic linking.
 - Relocation tables.
 - Symbol resolution across shared libraries.
@@ -160,7 +186,8 @@ t3 = t1 + t2
 ---
 
 ## 3️⃣ Compiler Architecture Diagram
-```
+
+```text
 Source Code
     ↓
 Lexical Analysis → Syntax Analysis → Semantic Analysis
@@ -201,20 +228,20 @@ Linking → Executable
 **Language:** Simple arithmetic expressions
 
 **Workflow:**
+
 1. **Lexing:** Tokenize `3 + 4 * 5`.
 2. **Parsing:** Build AST.
 3. **Semantic Analysis:** Check operand types.
 4. **Intermediate Code:**
-    ```
-    t1 = 4 * 5
-    t2 = 3 + t1
-    ```
+  t1 = 4 * 5
+  t2 = 3 + t1
 5. **Optimization:** Constant folding → `t2 = 3 + 20`
 6. **Code Generation:** Emit target instructions.
 
 ---
 
 ## 📚 References
+
 - [Compilers: Principles, Techniques, and Tools (Dragon Book)](https://en.wikipedia.org/wiki/Compilers:_Principles,_Techniques,_and_Tools)
 - [LLVM Project](https://llvm.org/)
 - [ANTLR Documentation](https://www.antlr.org/)
@@ -223,4 +250,3 @@ Linking → Executable
 ---
 
 ✅ This handbook serves as **both a crash course for beginners** and a **technical reference for advanced compiler developers**.
-

@@ -8,7 +8,7 @@ A **working minimal x86 compiler in C#**. This compiler will:
 
 ---
 
-### 1. C# Compiler Code
+## 1. C# Compiler Code
 
 ```csharp
 using System;
@@ -89,17 +89,17 @@ class CodeGen
     public string GetAssembly()
     {
         var header = @"
-global _start
-extern print_int
-section .text
-_start:
-    mov rbp, rsp
-";
-        var footer = @"
-    mov rax, 60
-    xor rdi, rdi
-    syscall
-";
+        global _start
+        extern print_int
+        section .text
+        _start:
+        mov rbp, rsp
+        ";
+                var footer = @"
+        mov rax, 60
+        xor rdi, rdi
+        syscall
+        ";
         return header + string.Join("\n", Lines) + footer;
     }
 }
@@ -137,7 +137,7 @@ class Compiler
 
 ---
 
-### 2. Print Function in Assembly (`print_int.asm`)
+## 2. Print Function in Assembly (`print_int.asm`)
 
 ```asm
 global print_int
@@ -155,7 +155,7 @@ print_int:
 
 ---
 
-### 3. Assemble and Run
+## 3. Assemble and Run
 
 ```bash
 nasm -f elf64 program.asm -o program.o
@@ -165,7 +165,7 @@ gcc program.o print_int.o -o program
 
 Expected output:
 
-```
+```bash
 8
 ```
 
@@ -176,4 +176,3 @@ This is a **fully working minimal compiler** that:
 * Parses a tiny language.
 * Generates x86\_64 assembly.
 * Prints the result.
-

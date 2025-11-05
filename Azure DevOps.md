@@ -1,6 +1,6 @@
-# Azure DevOps Cheatsheet
 
-# Azure DevOps Tutorial  
+# Azure DevOps Tutorial
+
 *Getting started with Azure DevOps for CI/CD, Project Management, and Code Collaboration.*
 
 ---
@@ -28,7 +28,7 @@ This tutorial will guide you through:
 
 ## 1️⃣ Create an Azure DevOps Organization and Project
 
-### Steps:
+### Steps
 
 1. **Sign in** to [Azure DevOps](https://dev.azure.com/).
 2. Click **New organization** → give it a name.
