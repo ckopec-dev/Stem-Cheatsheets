@@ -9,7 +9,7 @@
 
 ### Create an interactive session
 
-~~~
+~~~bash
 # Type "exit()" or CTRL-D to exit.
 $ python3
 ~~~
@@ -24,7 +24,7 @@ $ python3
 
 ### Make a python script executable
 
-~~~
+~~~bash
 # Add "#!/usr/bin/python3" to first line of script (it MUST be the first line)
 # Make it executable with "chmod + x myscript.py"
 # Execute with "./myscript.py"
@@ -64,7 +64,7 @@ $ python3
 
 ### Use random numbers
 
-~~~
+~~~python
 import random
 print (random.randrange(1,10))
 ~~~
@@ -73,7 +73,7 @@ print (random.randrange(1,10))
 
 ### If-then-else
 
-~~~
+~~~python
 if condition :
     expression
 elif :
@@ -84,14 +84,14 @@ else :
 
 ### While loops
 
-~~~
+~~~python
 while condition :
     expression
 ~~~
 
 ### For loops
 
-~~~
+~~~python
 # General syntax
 for var in seq :
     expression
@@ -142,7 +142,7 @@ for label, row in df.iterrows() :
 - Tuples
 - Dictionaries
 - Sets
- 
+
 ### Explicit type conversion
 
 - float({variable})
@@ -166,7 +166,7 @@ for label, row in df.iterrows() :
 
 ### Indexing
 
-~~~
+~~~python
 # Basic example
 ages = [2, 19, 34]
 
@@ -189,7 +189,7 @@ index_people = people.index("sally")
 
 ### Slicing
 
-~~~
+~~~python
 # Slice from index 0.
 ages[{start-index-inclusive}:{end-index-exclusive]
 
@@ -202,7 +202,7 @@ ages[4:]
 
 ### Updating lists
 
-~~~
+~~~python
 # Basic example.
 ages[0] = 3
 
@@ -219,7 +219,7 @@ del(names_and_ages[2])
 
 ### Create a new list from an existing list
 
-~~~
+~~~python
 # This value-copies items from x into y. I.e. they don't share the same reference. Slicing also achieves this.
 y = list(x)
 
@@ -234,7 +234,7 @@ y = x
   
 ### Examples
 
-~~~
+~~~python
 # Example of names + ages
 people = { "bob":34, "alice":14, "mark": 24 }
 
@@ -262,8 +262,7 @@ del(people["jeff"])
 - Similar to lists
 - Immutable: values can't be modified
 
-~~~
-
+~~~python
 even_nums = (2, 4, 6)
 a, b, c = even_nums
 print(even_nums[1])
@@ -271,7 +270,6 @@ print(even_nums[1])
 # Combine tubles using zip(), resulting in a iterator of tuples
 odd_nums = {1, 3, 5}
 z = zip(even_nums, odd_nums)
-
 ~~~
 
 ## Modules
@@ -290,8 +288,7 @@ z = zip(even_nums, odd_nums)
 
 ### Import modules
 
-~~~
-
+~~~python
 # Import pandas with an alias
 import pandas as pd
 
@@ -306,7 +303,6 @@ df = pd.read_csv('data.csv')
 # Matplotlib plots it
 plt.plot(df.columnA, df.columnB)
 plt.show()
-
 ~~~
 
 ### Install a package
@@ -340,7 +336,7 @@ plt.show()
 
 Describe a function
 
-~~~
+~~~python
 # Example
 def do_something(argA, argB):
     """Explains what the function does.
@@ -364,8 +360,7 @@ def do_something(argA, argB):
 
 ### Custom functions
 
-~~~
-
+~~~python
 # Define the function
 def raise_to_power(num, power):
     # Docstrings describe what the function does. 
@@ -383,13 +378,11 @@ def my_func():
 
     # Create a tuple to return multiple values
     return my_tuple
-
 ~~~
 
 ### Lambda functions
 
-~~~
-
+~~~python
 # Lambdas are "quick and dirty" functions
 
 # Example
@@ -397,7 +390,6 @@ raise_to_power = lambda x, y: x ** y
 
 # Call it
 raise_to_power(2, 3)
-
 ~~~
 
 ### Scope
@@ -408,8 +400,7 @@ raise_to_power(2, 3)
 
 ## Error handling
 
-~~~
-
+~~~python
 # Explicitly raise an exception
 raise ValueError("explanation here")
 
@@ -424,7 +415,6 @@ except TypeError:
 # To catch general exceptions
 except:
     {code that executes if something went wrong}
-
 ~~~
 
 ## Iterators
@@ -432,8 +422,7 @@ except:
 - An object is iterable, it has an iter() method
 - Examples: lists, strings, dictionaries, file connections
 
-~~~
-
+~~~python
 # Iterate over a list
 employees = ["Bob", "Mark", "Sam"]
 for employee in employees:
@@ -446,12 +435,11 @@ for letter in "HelloWorld":
 # Iterate over a range of numbers
 for number in range(5):
     print(number)
-
 ~~~
 
 ## Virtual Environments
 
-~~~
+~~~bash
 # Craete a folder for the VE
 $ mkdir ~/virts
 

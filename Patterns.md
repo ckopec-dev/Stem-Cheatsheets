@@ -4,7 +4,7 @@
 
 The Builder Pattern in software design is a creational design pattern used to construct complex objects step-by-step, separating the construction process from the representation of the object.
 
-~~~
+~~~csharp
 using System;
 
 // Immutable Product
@@ -87,7 +87,7 @@ class Program
 
 The Factory Pattern (often called the Factory Method Pattern or Factory Design Pattern) is a creational software design pattern that provides a way to create objects without exposing the creation logic to the client and instead lets subclasses or a dedicated method decide which object to instantiate.
 
-~~~
+~~~csharp
 using System;
 
 // Product interface
@@ -152,7 +152,7 @@ class Program
 The Singleton Pattern is a creational software design pattern that ensures a class has exactly one instance in the entire application, and it provides a global point of access to that 
 instance.
 
-~~~
+~~~csharp
 using System;
 
 public sealed class Logger
@@ -186,11 +186,11 @@ class Program
 }
 ~~~
 
-## Proxy 
+## Proxy
 
 The Proxy Pattern is a structural design pattern in software development that provides a surrogate or placeholder object which controls access to another object — usually called the real subject.
 
-~~~
+~~~csharp
 using System;
 
 // Subject interface
@@ -258,7 +258,7 @@ class Program
 
 The Command Pattern is a behavioral design pattern in software programming that turns a request into a standalone object containing all the information needed to perform an action at a later time.
 
-~~~
+~~~csharp
 using System;
 
 // Command interface
@@ -327,7 +327,7 @@ Instead, messages are published to a channel or topic, and subscribers that have
 
 It’s commonly used in event-driven architectures, message brokers, and UI frameworks.
 
-~~~
+~~~csharp
 using System;
 using System.Collections.Generic;
 

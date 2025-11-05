@@ -6,12 +6,15 @@ Pandas is a python library for working with data (analyzing, cleaning, importing
 ## Basics
 
 ### Installation
+
 `$ pip3 install pandas`
 
 ### Import pandas
+
 `import pandas as pd`
 
 ### Check version
+
 `print(pd.__version__)`
 
 ## Series
@@ -19,7 +22,7 @@ Pandas is a python library for working with data (analyzing, cleaning, importing
 A Pandas Series is analogous to a column in a database table.
 It is a one-dimensional array consisting of a single type.
 
-~~~
+~~~python
 import pandas as pd
 
 s = [1, 3, 5]
@@ -27,12 +30,13 @@ my_series = pd.Series(s)
 print(my_series)
 ~~~
 
-### The values are labeled with their zero-based index number, unless specified.  
+### The values are labeled with their zero-based index number, unless specified.
+
 `print(my_series[0])`
 
 ### To customize the labels
 
-~~~
+~~~python
 import pandas as pd
 
 s = [1, 3, 5]
@@ -42,7 +46,7 @@ print(my_series)
 
 ### Create a series from a dictionary (the keys become the labels)
 
-~~~
+~~~python
 import pandas as pd
 
 s = {"a": 1, "b": 3, "c": 5}
@@ -52,7 +56,7 @@ print(my_series)
 
 ### Create a series from a dictionary using only select keys
 
-~~~
+~~~python
 import pandas as pd
 
 s = {"a": 1, "b": 3, "c": 5}
@@ -64,7 +68,7 @@ print(my_series)
 
 A Pandas DataFrame is analogous to a database table, i.e. a 2d structure with rows and columns.
 
-~~~
+~~~python
 import pandas as pd
 
 data = {
@@ -85,18 +89,20 @@ df = pd.DataFrame((dict_of_Lists)
 ~~~
 
 ### Locate a row by row index
+
 `print(df.loc[0])`
 
 When using single brackets, the result is a Series.
 
 ### Locate multiple rows by row indexes
+
 `print(df.loc[[0, 1, 2]])`
 
 When using double brackets, the result is a DataFrame.
 
-### Add a custom index to give each row an indentifier/name.
+### Add a custom index to give each row an indentifier/name
 
-~~~
+~~~python
 import pandas as pd
 
 data = {
@@ -109,13 +115,14 @@ print(df)
 ~~~
 
 ### Return a row by index name
+
 `print(df.loc["bob"])`
 
 ## Reading file data
 
 ### From/To CSV
 
-~~~
+~~~python
 import pandas as pd
 
 df = pd.read_csv('data.csv')
@@ -136,7 +143,7 @@ for chunk in pd.read_csv('data.csv', chunksize=1000):
 
 ### From JSON
 
-~~~
+~~~python
 import pandas as pd
 
 df = pd.read_json('data.json')
@@ -145,35 +152,43 @@ print(df)
 
 ## Analyzing data
 
-### Show first n rows. If n is not specified, it will return 5 by default.
+### Show first n rows. If n is not specified, it will return 5 by default
+
 `print(df.head(n))`
 
-### Show last n rows. If n is not specified, it will return 5 by default.
+### Show last n rows. If n is not specified, it will return 5 by default
+
 `print(df.tail(n))`
 
 ### Show dataframe info
+
 `print(df.info())`
 
 ### Print the number of rows and columns
+
 `print(df.shape)`
 
 ### Show summary stats
+
 `print(df.describe())`
 
 ### Get 2d numpy array of values
+
 `df.values`
 
 ### Get index of column names
+
 `df.columns`
 
 ### Get index of rows
+
 `df.index`
 
 ## Data cleaning
 
 ### Show missing values
 
-~~~
+~~~python
 import pandas as pd
 
 df = pd.read_csv("data.csv")
@@ -188,9 +203,9 @@ print(df.isna().any())
 print(df.isna().sum())
 ~~~
 
-### Remove rows with one or more empty cells 
+### Remove rows with one or more empty cells
 
-~~~
+~~~python
 import pandas as pd
 
 df = pd.read_csv("data.csv")
@@ -204,7 +219,7 @@ df.dropna(inplace = True)
 
 ### Replace empty values with new value
 
-~~~
+~~~python
 import pandas as pd
 
 df = pd.read_csv("data.csv")
@@ -222,7 +237,7 @@ df["ColumnA"]fillna(m, inplace = True)
 
 ### Replacing data in the wrong format
 
-~~~
+~~~python
 import pandas as pd
 
 df = pd.read_csv("data.csv")
@@ -233,11 +248,12 @@ df.dropna(subset=["Date"], inplace = True)
 ~~~
 
 ### Replace data in a specific row and column
+
 `df.loc[15, "ColumnA"] = 123`
 
 ### To loop through all rows and replace or delete them with a rule
 
-~~~
+~~~python
 for i in df.index:
     if df.loc[i, "ColumnA"] > 100:
 
@@ -250,7 +266,7 @@ for i in df.index:
 
 ### Deduplicate rows
 
-~~~
+~~~python
 import pandas as pd
 
 df = pd.read_csv("data.csv")
@@ -273,7 +289,7 @@ A "good" correlation is >= 0.6 or <= -0.6.
 
 ### Sort a single column
 
-~~~
+~~~python
 import pandas as pd
 
 df = pd.read_csv("data.csv")
@@ -287,7 +303,7 @@ df.sort_values(by=["ColumnA"], inplace=True, ascending=False)
 
 ### Sort by multiple columns
 
-~~~
+~~~python
 import pandas as pd
 
 df = pd.read_csv("data.csv")
@@ -301,7 +317,7 @@ df.sort_values(by=["ColumnA", "ColumnB"], inplace=True, ascending=[False, True])
 
 ### Sort by index
 
-~~~
+~~~python
 import pandas as pd
 
 data = {
@@ -337,7 +353,7 @@ df.sort_index(ascending=False)
 - cummin()
 - cumprod()
 
-### Count 
+### Count
 
 `df.["columnA"].value_counts(sort=True)`
 
@@ -346,11 +362,12 @@ df.sort_index(ascending=False)
 `df.["columnA"].value_counts(normalize=True)`
 
 ### Group summaries
+
 `df.groupby("columnA")["columnB"].mean()`
 
 ### Pivot tables
 
-~~~
+~~~python
 # By default, aggregation is by mean
 df.pivot_table(values="columnA", index="columnB")
 
@@ -369,20 +386,25 @@ dogs.pivot_table(values="columnA", index="columnB", columns="columnC", fill_valu
 ## Feature engineering
 
 ### Adding a new derived column
+
 `df["ColumnA"] = df["ColumnB"] / 100`
 
 ## Subsetting
 
 ### Create a new DataFrame with selected columns of an existing DataFrame
+
 `new_df = df[["ColumnA", "ColumnB"]]`
 
 ### Create a new DataFrame with filtered rows of an existing DataFrame
+
 `new_df = df[df["ColumnA"] > 100]`
 
 ### Create a new DataFrame with specific columns and filtered rows of an existing DataFrame
+
 `new_df = df.loc[df["ColumnA"] > 100, "ColumnB"]`
 
 ### Create a new DataFrame with specific row and column indexes
+
 `new_df = df.iloc[9:25, 2:5]`
 
 ## Data visualization
@@ -391,7 +413,7 @@ dogs.pivot_table(values="columnA", index="columnB", columns="columnC", fill_valu
 
 Creates buckets of variable counts.
 
-~~~
+~~~python
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -409,7 +431,7 @@ plt.show()
 
 Show relationship between a categorical variable and a numeric variable.
 
-~~~
+~~~python
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -427,7 +449,7 @@ plt.show()
 
 For visualizing changes in numeric variables over time.
 
-~~~
+~~~python
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -445,7 +467,7 @@ plt.show()
 
 For visualizing relationships between two numeric variables.
 
-~~~
+~~~python
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -458,7 +480,7 @@ plt.show()
 
 ### Stacking plots
 
-~~~
+~~~python
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -480,7 +502,7 @@ plt.show()
 
 ### Combining data from dataframes with different columns
 
-~~~
+~~~python
 # This combines the wards DF with the census DF, joining on the ward column in a 1-1 relationship.
 # If the same column appears in both DFs, each will be given a suffix to distinguish them.
 wards_census = wards.merge(census, on="ward")
@@ -502,7 +524,7 @@ original_sequels = sequels.merge(sequels, left_on="sequel", right_on="id", suffi
 
 ### Combining multiple dataframes
 
-~~~
+~~~python
 # Merge on two columns
 grants.merge(licenses, on=["address", "zip"])
 
@@ -522,7 +544,7 @@ grants_licenses_ward = grants.merge(licenses, on["address", "zip").merge(wards, 
 
 ### Vertical concatenation
 
-~~~
+~~~python
 # Basic exmaple of combining multiple dataframes vertically
 df = pd.concat([inv_jan, inv_feb, inv_mar])
 
@@ -543,7 +565,7 @@ df = pd.concat([inv_jan, inv_feb], join="inner")
 - merge_asof() method is similar to merge_ordered(), however matches on nearest key and not exact matches
 - merge_asof() requires "on" columns to be pre-sorted
 
-~~~
+~~~python
 # Merge apple + microsoft stock history
 pd.merge_ordered(appl_stock, msft_stock, on="date", suffixes=("_appl", "_msft"))
 
@@ -555,7 +577,7 @@ pd.merge_ordered(appl_stock, msft_stock, on="date", suffixes=("_appl", "_msft"),
 
 - query('{selection statement}'): similar to SQL WHERE clause
 
-~~~
+~~~python
 # Select rows where Apple close price is greater than or equal to 60
 stocks.query('stock=="appl" and close_price >= 60)
 ~~~
@@ -563,10 +585,10 @@ stocks.query('stock=="appl" and close_price >= 60)
 ## Melting data
 
 - melt(): converts wide format data to long format data
-    - wide format: each column specifies an attribute of the record (this is the usual way data is stored in sql)
-    - long format: data about each record spans multiple rows (for example, with attribute/value columns)
+- wide format: each column specifies an attribute of the record (this is the usual way data is stored in sql)
+- long format: data about each record spans multiple rows (for example, with attribute/value columns)
 
-~~~
+~~~python
 # This keeps columns A + B, and turns data from columns C + D into variable/value columns named year and dollars.
 df_melted = df.melt(id_vars=["ColumnA", "ColumnB"], value_vars=["ColumnC", "ColumnD"], var_name=["year"], value_name="dollars")
 ~~~
@@ -578,7 +600,7 @@ df_melted = df.melt(id_vars=["ColumnA", "ColumnB"], value_vars=["ColumnC", "Colu
 
 ### Manually create a date
 
-~~~
+~~~python
 import pandas as pd
 from datetime import datetime
 time_stamp = pd.Timestamp(datetime(2023, 9, 1))

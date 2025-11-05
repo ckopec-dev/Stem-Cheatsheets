@@ -5,7 +5,7 @@
 
 ### How to change the resolution on a linux vm
 
-~~~
+~~~bash
 $ sudo nano /etc/default/grub
 
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash video=hyperv_fb:1920x1080"
@@ -29,4 +29,3 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet splash video=hyperv_fb:1920x1080"
 - Settings -> Sharing -> Remote Desktop -> Password: update to regular login password
 - Reboot
 - When connecting from Windows, make sure 32-bit color is selected. Lower depth may fail due to bug in Window’s RDP client.
-

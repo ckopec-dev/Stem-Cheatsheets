@@ -21,7 +21,7 @@
 
 ### General syntax/workflow
 
-~~~
+~~~python
 from sklearn.module import Model
 
 model = Model()
@@ -32,7 +32,7 @@ print(predicitions)
 
 ### Classification
 
-~~~
+~~~python
 from sklearn.neighbors import KNeighborsClassifier
 
 # Features
@@ -55,7 +55,7 @@ print("Predictions: {}".format(predictions))
 
 ### Measuring performance
 
-~~~
+~~~python
 from sklearn.model_selection import train_test_split
 
 # Split data into train and test sets

@@ -24,13 +24,14 @@ A dedicated, configurable, and short-term Salesforce environment that you can qu
  `$ npm install @salesforce/cli --global`
 
 ### Update Salesforce CLI
+
 `$ sudo npm install --global @salesforce/cli`
 
 ### Check CLI version
 
 `$ sfdx --version`
   
-### Update 
+### Update
 
 `$ sudo snap refresh`  
 `$ sudo apt update`  
@@ -93,7 +94,7 @@ A dedicated, configurable, and short-term Salesforce environment that you can qu
 
 ### Comments
 
-~~~
+~~~apex
 // This is a single-line comment.
 /* This is a
    multiple-line comment. */
@@ -104,7 +105,7 @@ A dedicated, configurable, and short-term Salesforce environment that you can qu
 - Primitives
   - Integer (-2,147,483,648 to 2,147,483,647)
   - Double
-  - Long (64 bit
+  - Long (64 bit)
   - Date
   - Datetime
   - String
@@ -119,7 +120,7 @@ A dedicated, configurable, and short-term Salesforce environment that you can qu
 - User-defined Apex classes, objects, and interfaces
 - System-supplied Apex classes
 
-~~~
+~~~apex
 /* Examples */
 Integer i = 100;
 system.debug('value of i: ' + i);
@@ -135,7 +136,7 @@ Status s = Status.Open;
 
 ### String functions
 
-~~~
+~~~apex
 // Does string a contain string b?
 Boolean result = a.contains(b);
 
@@ -157,7 +158,7 @@ Boolean result = a.startsWith(b);
 
 Hold ordered collections of objects. Synonymous and interchangable with arrays.
 
-~~~
+~~~apex
 List<String> colors = new List<String>();
 // Equivalent to:
 String[] colors = new List<String();
@@ -186,7 +187,7 @@ Similar to dictionaries in other languages.
 
 Functionally the same as lists with a different syntax.
 
-~~~
+~~~apex
 // Declare an array.
 String[] myProducts = new List<String>();
 
@@ -196,7 +197,7 @@ myProducts.add('Widget');
 // Iterate over the array.
 for (Integer i = 0; i < myProducts.size(); i++)
 {
-	system.debug('Value: ' + myProducts[i]);
+        system.debug('Value: ' + myProducts[i]);
 }
 ~~~
 
@@ -204,33 +205,31 @@ for (Integer i = 0; i < myProducts.size(); i++)
 
 Values do not change once assigned.
 
-~~~
-static final Double standardDiscount = 0.05;
-~~~
+`static final Double standardDiscount = 0.05;`
 
 ### Control statements
 
-~~~
+~~~apex
 // If then else
 if ({condition}) {code block} else if ({condition}) {code block} else {code block}
 if (a == b)
 {
-	// Do something
+        // Do something
 }
 else if (a == c)
 {
-	// Do something
+        // Do something
 }
 else
 {
-	// Do something
+        // Do something
 }
 
 // c-like for loop
 for ({initial statement}; {exit condition}; {increment statement}) {code block}
 for (Integer i = 0; i < 3; i++)
 {
-	// Do something
+        // Do something
 }
 
 // for loop with list
@@ -238,28 +237,28 @@ for ({variable : list or set}) {code block}
 List<Account> lst = [SELECT Id, Name From Account];
 for (Account a : lst)
 {
-	// Do something
+        // Do something
 }
 
 // for loop with soql
 for (variable : [{soql query}]) {code block}
 for (Account a : [SELECT Id, Name FROM Account])
 {
-	// Do something
+        // Do something
 }
 
 // while loop
 while ({boolean condition}) {code block}
 while (i < 3)
 {
-	// Do something
+        // Do something
 }
 
 // do while loop
 do {code block} while ({boolean condition});
 do
 {
-	// Do something
+        // Do something
 } while (i < 3);
 ~~~
 
@@ -273,7 +272,7 @@ do
 - Virtual: class can be extended
 - Abstract: class used as base for other classes
 
-~~~
+~~~apex
 public class EmailMananger {
 
   // Public method
@@ -316,7 +315,7 @@ An interface is like a class with unimplemented methods. Used to provide an abst
 
 Every record in SFDC is represented as an sObject in Apex.
 
-~~~
+~~~apex
 // Create a sObject variable
 Account acct = new Account(Name='Acme');
 
@@ -340,7 +339,7 @@ There is a DML limit of 150 statements per Apex transaction.
 - undelete
 - merge
 
-~~~
+~~~apex
 // Create the account sObject 
 Account acct = new Account(Name='Acme', Phone='(415)555-1212', NumberOfEmployees=100);
 
@@ -359,7 +358,7 @@ System.debug('ID = ' + acctID);
 
 ### Bulk DML
 
-~~~
+~~~apex
 // Create a list of contacts
 List<Contact> conList = new List<Contact> {
     new Contact(FirstName='Joe',LastName='Smith',Department='Finance'),
@@ -388,7 +387,7 @@ update listToUpdate;
 
 ### Upserts
 
-~~~
+~~~apex
 // Insert the Josh contact
 Contact josh = new Contact(FirstName='Josh',LastName='Kaplan',Department='Finance');       
 insert josh;
@@ -410,7 +409,7 @@ upsert contacts;
 
 ### DML Exceptions
 
-~~~
+~~~apex
 try {
     // This causes an exception because the required Name field is not provided.
     Account acct = new Account();
@@ -433,7 +432,7 @@ Similar to DML statements, but allow partial success.
 - Database.undelete()
 - Database.merge()
 
-~~~
+~~~apex
 // Create a list of contacts
 List<Contact> conList = new List<Contact> {
         new Contact(FirstName='Joe',LastName='Smith',Department='Finance'),
@@ -455,7 +454,7 @@ for (Database.SaveResult sr : srList) {
             System.debug('The following error has occurred.');
             System.debug(err.getStatusCode() + ': ' + err.getMessage());
             System.debug('Contact fields that affected this error: ' + err.getFields());
-	 }
+        }              
     }
 }
 ~~~
@@ -481,7 +480,7 @@ You must specify every field you want to get explicitly.
 
 ### Access Apex variables
 
-~~~
+~~~apex
 String targetDepartment = 'Wingo';
 Contact[] techContacts = [SELECT FirstName,LastName 
                           FROM Contact WHERE Department=:targetDepartment];
@@ -489,7 +488,7 @@ Contact[] techContacts = [SELECT FirstName,LastName
 
 ### Query related records
 
-~~~
+~~~apex
 Account[] acctsWithContacts = [SELECT Name, (SELECT FirstName,LastName FROM Contacts)
                                FROM Account 
                                WHERE Name = 'SFDC Computing'];
@@ -528,7 +527,7 @@ Used to perform text searches in records.
 
 ### Apex example
 
-~~~
+~~~apex
 String soslFindClause = 'Wingo OR SFDC';
 List<List<sObject>> searchList = [FIND :soslFindClause IN ALL FIELDS
                     RETURNING Account(Name),Contact(FirstName,LastName,Department)];
@@ -552,7 +551,7 @@ for (Contact c : searchContacts) {
 
 ### Hello world example
 
-~~~
+~~~html
 <!-- Html -->
 <template>
   <input value={message}></input>
@@ -573,29 +572,29 @@ input {
 ### Events
 
 - Information can be passed up using events and event listeners.
-	- The child component dispatches the event and the parent component listens for it. Dispatching the event includes creating an event object the child can pass to the parent component. The parent has a handler to respond to the event.
+  - The child component dispatches the event and the parent component listens for it. Dispatching the event includes creating an event object the child can pass to the parent component. The parent has a handler to respond to the event.
 - Information can be passed down using public properties and public methods.
-	- You can make a component property public by prefacing it with the @api decorator. Then, set the public property by an external component.
+  - You can make a component property public by prefacing it with the @api decorator. Then, set the public property by an external component.
 
 ## Rest API
 
 - User must have API Enabled permission in their profile. For Developer edition, this is enabled by default.
 - Some things you can do with the API:
-	- CRUD records (incl querying + searching)
- 	- Retrieve metadata
-  	- Retrieve instance configuration info
+  - CRUD records (incl querying + searching)
+  - Retrieve metadata
+  - Retrieve instance configuration info
 - Elements used in a request:
-	- URI, basic structure: https://MyDomainName.my.salesforce.com/services/data/vXX.X/resource/
- 	- Headers: used to pass params and options, e.g.:
-  		- Http Accept: format the cllient accepts in the response body, e.g. application/json
-    		- Http Content-type: format of the request body, e.g. application/json
-        	- Http Authorization: provides OAuth 2.0 token to authorize the client
-           	- Compression header: compresses the request or response
-           	- Conditional header request: validates records against a precondition
-  	- Http method: HEAD, GET, POST, PATCH, PUT, and DELETE
-  	- Request body: when attaching json with cURL, use -data-binary option
+  - URI, basic structure: https://MyDomainName.my.salesforce.com/services/data/vXX.X/resource/
+    - Headers: used to pass params and options, e.g.:
+      - Http Accept: format the cllient accepts in the response body, e.g. application/json
+      - Http Content-type: format of the request body, e.g. application/json
+      - Http Authorization: provides OAuth 2.0 token to authorize the client
+      - Compression header: compresses the request or response
+      - Conditional header request: validates records against a precondition
+    - Http method: HEAD, GET, POST, PATCH, PUT, and DELETE
+    - Request body: when attaching json with cURL, use -data-binary option
   - Requests can use 15 or 18 character IDs, but responses always have 18 character IDs
- 
+
   ## Create a Connected App for API usage
 
   - Go to Setup / Apps / App Manager
@@ -608,10 +607,10 @@ input {
   - For Selected OAuth Scopes, select "Manage user data via APIs (api)"
   - For Permitted Users, select "All users may self-authorize"
   - Click the Save button
- 
+
     ## Retrieve and use and access token
 
-~~~
+~~~bash
 # Request:
 $ curl -d 'grant_type=password'
 -d 'client_id=consumer-key' -d 'client_secret=consumer-secret' -d
@@ -625,5 +624,3 @@ $ curl -d 'grant_type=password'
 "issued_at":"1627237872637",
 "signature":"jmaZOgQyqUxFKAesVPsqVfAWxI62O+aH/mJhDrc8KvQ="}
 ~~~
-    
-    

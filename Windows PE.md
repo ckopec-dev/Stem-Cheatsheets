@@ -5,7 +5,7 @@
 
 ### Clean and format new or used drive
 
-~~~
+~~~dos
 > diskpart
 > list disk
 > select disk <disk-number>
@@ -23,7 +23,7 @@ reboot
 
 ### Just clean
 
-~~~
+~~~dos
 > diskpart
 > list disk
 > select disk <disk-number>

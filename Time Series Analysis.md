@@ -45,7 +45,7 @@ Time series data is time-ordered data.
 
 ### Example of loading + visualizing Google Trends data
 
-~~~
+~~~python
 import pandas as pd
 import matplotlib.pyplot as plt
 

@@ -15,7 +15,7 @@ Statistics is the practice and study of collecting and analyzing data.
 
 ## Measures of center
 
-~~~
+~~~python
 import numpy as np
 import statistics
 
@@ -32,7 +32,7 @@ statistics.mode()
 
 ### Measures of spread
 
-~~~
+~~~python
 import numpy as np
 from scipy.stats import iqr
 
@@ -71,7 +71,7 @@ iqr(df["ColumnA"])
 
 An outlier is a data point "substantially" different from the others. A general rule of thumb is: data < Q1 - 1.5 x IQR OR data > Q3 + 1.5 * IQR.
 
-~~~
+~~~python
 import numpy as np
 from scipy.stats import iqr
 
@@ -89,7 +89,7 @@ The probability of an event is the number of ways it can happen divided by the t
 
 ### Random sampling
 
-~~~
+~~~python
 import numpy as np
 
 # To insure reproducibility, set random seed
@@ -126,7 +126,7 @@ df.sample(2, replace = True)
 
 ### Find percent of values less/more than given normal distribution
 
-~~~
+~~~python
 from scipy.stats import norm
 norm.cdf({value}, {mean}, {std})
 norm.ppf({percent}, {mean}, {std})
@@ -157,7 +157,7 @@ norm.ppf(0.8, 162, 4)
 - Probability of some # of events happening over a fixed period of time
 - Lambda: average number of events per time interval
 
-~~~
+~~~python
 from scipy.stats import poisson
 
 # Examples
@@ -178,7 +178,7 @@ poisson.cdf(6, 14)
 
 ## Making predictioms
 
-~~~
+~~~python
 
 # The dataset
 bream = fish[fish["species"] == "Bream"]

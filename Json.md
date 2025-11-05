@@ -1,13 +1,12 @@
 
 # Json Cheatsheet
 
-# JSON Cheat Sheet
-
 A compact, printable reference for JSON syntax, types, examples, and common operations.
 
 ---
 
 ## Basics
+
 - **JSON** = JavaScript Object Notation — lightweight data interchange format.
 - Two primary structures:
   - **Object**: `{ "key": value }` — unordered collection of key/value pairs.
@@ -30,13 +29,14 @@ A compact, printable reference for JSON syntax, types, examples, and common oper
 ---
 
 ## Syntax Rules
+
 - Key/value pair: `"key": value`
 - Strings and keys must use double quotes.
 - No trailing commas in objects or arrays.
 - Values can be nested objects and arrays.
 - Whitespace (spaces, tabs, newlines) is ignored — use indentation for readability.
 
-~~~
+~~~json
 {
   "person": {
     "name": "Alice",
@@ -49,7 +49,8 @@ A compact, printable reference for JSON syntax, types, examples, and common oper
 ## Examples
 
 ### Simple object
-~~~
+
+~~~json
 {
   "name": "John",
   "age": 25,
@@ -58,7 +59,8 @@ A compact, printable reference for JSON syntax, types, examples, and common oper
 ~~~
 
 ### Array of objects
-~~~
+
+~~~json
 [
   { "name": "Alice", "age": 30 },
   { "name": "Bob", "age": 25 }
@@ -66,7 +68,8 @@ A compact, printable reference for JSON syntax, types, examples, and common oper
 ~~~
 
 ### Nested object
-~~~
+
+~~~json
 {
   "company": "TechCorp",
   "employees": [
@@ -77,7 +80,8 @@ A compact, printable reference for JSON syntax, types, examples, and common oper
 ~~~
 
 ### Mixed types
-~~~
+
+~~~json
 {
   "string": "Hello",
   "number": 42,
@@ -91,7 +95,8 @@ A compact, printable reference for JSON syntax, types, examples, and common oper
 ## Common Operations
 
 ### Javascript
-~~~
+
+~~~javascript
 // Parse JSON string -> object
 const obj = JSON.parse('{"name":"Alice"}');
 
@@ -108,7 +113,8 @@ console.log(obj.hobbies[0]);   // reading
 ~~~
 
 ### Python
-~~~
+
+~~~python
 import json
 
 # String -> dict

@@ -4,7 +4,7 @@
 
 - Nesting is created by whitespace indentation, not tabs.
 
-# Comments
+## Comments
 
 \# This is a comment
 
@@ -26,5 +26,3 @@
 ## Documents
 
 - A section of yaml is called a document. A yaml file may contain multiple documents. A document begins with '---' and ends with '...'.
-
-

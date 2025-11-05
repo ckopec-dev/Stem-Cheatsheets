@@ -1,6 +1,7 @@
 # Comprehensive TCL Tutorial
 
 ## Table of Contents
+
 1. [Introduction](#introduction)
 2. [Getting Started](#getting-started)
 3. [Basic Syntax](#basic-syntax)
@@ -23,6 +24,7 @@
 **TCL (Tool Command Language)** is a powerful, easy-to-learn scripting language designed by John Ousterhout in 1988. It's widely used for rapid prototyping, scripted applications, GUIs (with Tk), and testing. TCL is particularly popular in network management, EDA (Electronic Design Automation) tools, and embedded systems.
 
 ### Key Features
+
 - Simple, consistent syntax
 - Everything is a string
 - Extensive string manipulation capabilities
@@ -38,10 +40,12 @@
 ### Installation
 
 **Windows:**
+
 - Download ActiveTcl from activestate.com
 - Or install via package managers like Chocolatey: `choco install tcl`
 
 **Linux:**
+
 ```bash
 # Debian/Ubuntu
 sudo apt-get install tcl
@@ -56,16 +60,19 @@ brew install tcl-tk
 ### Running TCL
 
 **Interactive Shell:**
+
 ```bash
 tclsh
 ```
 
 **Running a Script:**
+
 ```bash
 tclsh script.tcl
 ```
 
 **Shebang for Unix/Linux:**
+
 ```tcl
 #!/usr/bin/env tclsh
 # Your code here
@@ -83,6 +90,7 @@ tclsh script.tcl
 4. **Substitutions happen before command execution**
 
 ### Comments
+
 ```tcl
 # This is a single-line comment
 
@@ -95,6 +103,7 @@ if 0 {
 ```
 
 ### Basic Commands
+
 ```tcl
 # Print to console
 puts "Hello, World!"

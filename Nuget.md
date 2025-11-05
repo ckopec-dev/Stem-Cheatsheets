@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD029 -->
+
 # How to Create NuGet Packages
 
 NuGet is the package manager for .NET, allowing you to share reusable code libraries with other developers. This tutorial will walk you through creating your first NuGet package.
@@ -168,6 +170,7 @@ Include a package icon by adding to your `.csproj`:
 ### Versioning Best Practices
 
 Follow semantic versioning:
+
 - **Major**: Breaking changes (2.0.0)
 - **Minor**: New features, backward compatible (1.1.0)
 - **Patch**: Bug fixes (1.0.1)
@@ -199,11 +202,11 @@ dotnet pack --include-symbols --include-source
 
 Creating NuGet packages is a great way to share your code with the .NET community. Start small, follow best practices, and iterate based on user feedback!
 
-# How to Release Updates to NuGet Packages
+## How to Release Updates to NuGet Packages
 
 Releasing updates to your NuGet package is straightforward, but requires careful version management and testing. Here's how to do it properly.
 
-## Step 1: Update Your Version Number
+### Step 1: Update Your Version Number
 
 Edit your `.csproj` file and increment the version number according to semantic versioning:
 
@@ -213,13 +216,13 @@ Edit your `.csproj` file and increment the version number according to semantic 
 </PropertyGroup>
 ```
 
-### Semantic Versioning Guidelines
+#### Semantic Versioning Guidelines
 
 - **Patch (1.0.0 → 1.0.1)**: Bug fixes, no breaking changes
 - **Minor (1.0.0 → 1.1.0)**: New features, backward compatible
 - **Major (1.0.0 → 2.0.0)**: Breaking changes
 
-## Step 2: Document Your Changes
+### Step 2: Document Your Changes
 
 Create or update a `CHANGELOG.md` file to track what changed:
 
@@ -251,11 +254,11 @@ You can also add release notes directly in your `.csproj`:
 </PropertyGroup>
 ```
 
-## Step 3: Make Your Code Changes
+### Step 3: Make Your Code Changes
 
 Update your code with bug fixes, new features, or improvements. Ensure backward compatibility for minor/patch releases.
 
-## Step 4: Test Thoroughly
+### Step 4: Test Thoroughly
 
 Before releasing, test your changes:
 
@@ -277,7 +280,7 @@ dotnet pack --configuration Release
 dotnet add package MyAwesomeLibrary --version 1.0.1 --source ../MyAwesomeLibrary/bin/Release
 ```
 
-## Step 5: Pack and Publish
+### Step 5: Pack and Publish
 
 Once testing is complete, publish the new version:
 
@@ -289,7 +292,7 @@ dotnet pack --configuration Release
 dotnet nuget push bin/Release/MyAwesomeLibrary.1.0.1.nupkg --api-key YOUR_API_KEY --source https://api.nuget.org/v3/index.json
 ```
 
-## Step 6: Verify the Update
+### Step 6: Verify the Update
 
 After publishing:
 
@@ -302,13 +305,13 @@ After publishing:
 dotnet add package MyAwesomeLibrary --version 1.0.1
 ```
 
-## Best Practices for Updates
+### Best Practices for Updates
 
-### Always Increment the Version
+#### Always Increment the Version
 
 NuGet versions are immutable. Once published, you cannot replace version 1.0.0 with different code. You must publish a new version number.
 
-### Use Pre-release Versions for Testing
+#### Use Pre-release Versions for Testing
 
 Test major changes with pre-release versions first:
 
@@ -323,11 +326,12 @@ dotnet add package MyAwesomeLibrary --version 2.0.0-beta.1
 ```
 
 Pre-release suffixes:
+
 - `-alpha`: Very early, unstable
 - `-beta`: Feature complete, needs testing
 - `-rc` (release candidate): Nearly ready for production
 
-### Consider Deprecation for Breaking Changes
+#### Consider Deprecation for Breaking Changes
 
 If you're making breaking changes, consider:
 
@@ -371,6 +375,7 @@ If you published a bad version but users already downloaded it:
 3. Click "Unlist"
 
 Unlisted packages:
+
 - Don't appear in search results
 - Don't show as the latest version
 - Can still be installed by exact version number
@@ -378,6 +383,7 @@ Unlisted packages:
 ### Deleting a Package (Avoid This)
 
 You can only delete within 72 hours of publishing. Deletion should be rare and only for:
+
 - Accidentally published secrets
 - Legal issues
 - Critical security vulnerabilities

@@ -2,7 +2,7 @@
 
 ## Server administration
 
-~~~
+~~~sql
 -- Check installed version and edition
 SELECT @@VERSION
 SELECT SERVERPROPERTY('Edition')
@@ -16,7 +16,7 @@ DBCC DBREINDEX('dbo.mytable');
 
 ## Selecting
 
-~~~
+~~~sql
 -- Select two columns from a single table
 SELECT columnA, columnnB FROM mytable;
 
@@ -41,7 +41,7 @@ SELECT * FROM mytable LIMIT 10;
 
 ## Filtering
 
-~~~
+~~~sql
 -- Select films released after 1960
 SELECT title FROM films WHERE release_year > 1960;
 
@@ -100,7 +100,7 @@ SELECT * FROM films WHERE release_year IS NOT NULL;
 
 ### Strings
 
-~~~
+~~~sql
 -- Left 3 chars and right 4 chars
 SELECT LEFT(phone, 3), RIGHT(phone, 4) FROM company
 
@@ -119,7 +119,7 @@ SELECT SOUNDEX('banana')
 
 ### Dates and times
 
-~~~
+~~~sql
 -- Get the year of a datetime
 SELECT DATEPART(yy, order_date) FROM orders
 ~~~
@@ -145,14 +145,14 @@ SELECT DATEPART(yy, order_date) FROM orders
 - MAX()
 - COUNT()
 
-~~~
+~~~sql
 -- To use aggregate on unique values, use the DISTINCT argument
 SELECT AVG(DISTINCT price) FROM product
 ~~~
 
 ## Sorting and grouping
 
-~~~
+~~~sql
 -- Order films by title
 SELECT * FROM films ORDER BY title;
 
@@ -205,7 +205,8 @@ SELECT release_year, COUNT(title) AS title_count FROM films GROUP BY release_yea
 ## Case
 
 - Similar to case statements in other languages.
-~~~
+
+~~~sql
 SELECT
   home_goal,
   away_goal,
@@ -218,7 +219,7 @@ FROM match;
 
 ## Aliases
 
-~~~
+~~~sql
 SELECT first_name + ' ' + last_name AS full_name
 SELECT unit_price * quantity AS cost
 ~~~
@@ -230,7 +231,7 @@ SELECT unit_price * quantity AS cost
 - Looks for records in both tables that match on given field(s).
 - It is generally easier to construct the query by building the joins first.
 
-~~~
+~~~sql
 -- Inner join of presidents and prime_ministers, joining on country
 SELECT prime_ministers.country, prime_ministers.continent, prime_minister, president
 FROM prime_ministers
@@ -263,7 +264,7 @@ USING(prime_minister);
 - Returns all records in the left table, and records in the right table that match on given field(s).
 - This is a type of outer join.
 
-~~~
+~~~sql
 -- Left join of presidents and prime_ministers, joining on country
 SELECT p1.country, prime_minister, president
 FROM prime_ministers AS p1
@@ -277,7 +278,7 @@ USING(country);
 - This is another type of outer join.
 - Uncommon, since it can be rewritten as an equivalent left join.
 
-~~~
+~~~sql
 -- Right join of presidents and prime_ministers, joining on country
 SELECT p1.country, prime_minister, president
 FROM prime_ministers AS p1
@@ -290,7 +291,7 @@ USING(country);
 - Combines a left join and a right join.
 - This is another type of outer join.
 
-~~~
+~~~sql
 -- Full join of presidents and prime_ministers, joining on country
 SELECT p1.country, prime_minister, president
 FROM prime_ministers AS p1
@@ -307,7 +308,7 @@ USING(country);
 - Used to join a table with itself.
 - Aliasing is required.
 
-~~~
+~~~sql
 -- Self join of every country with every other country on the same continent
 SELECT p1.country AS country1, p2.country AS country2, p1.continent
 FROM prime_ministers AS p1
@@ -321,7 +322,7 @@ ON p1.continent = p2.continent AND p1.country <> p2.country
 
 - Takes two tables and returns all rows from both tables (unless the rows are identical, in which case only one of them is returned).
 
-~~~
+~~~sql
 SELECT * FROM left_table
 UNION
 SELECT * FROM right_table;
@@ -331,7 +332,7 @@ SELECT * FROM right_table;
 
 - Same as union except duplicates are included.
 
-~~~
+~~~sql
 SELECT * FROM left_table
 UNION ALL
 SELECT * FROM right_table;
@@ -341,7 +342,7 @@ SELECT * FROM right_table;
 
 - Takes two tables and returns rows that are identical in both tables.
 
-~~~
+~~~sql
 SELECT id, val FROM left_table
 INTERSECT
 SELECT id, val FROM right_table;
@@ -351,7 +352,7 @@ SELECT id, val FROM right_table;
 
 - Takes two tables and returns rows in the left table that are not in the right table.
 
-~~~
+~~~sql
 SELECT id, val FROM left_table
 EXCEPT
 SELECT id, val FROM right_table;
@@ -364,7 +365,7 @@ SELECT id, val FROM right_table;
 - Selects records in the first table table where a condition is met in the second table.
 - Unlike other joins, a semi join is implemented via a subquery.
 
-~~~
+~~~sql
 SELECT president, country, continent
 FROM presidents
 WHERE country IN (SELECT country FROM states WHERE indep_year < 1800);
@@ -375,7 +376,7 @@ WHERE country IN (SELECT country FROM states WHERE indep_year < 1800);
 - Similar to semi join, except records are excluded when a condition is met.
 - Also implemented via a subquery.
 
-~~~
+~~~sql
 SELECT president, country, continent
 FROM presidents
 WHERE country NOT IN (SELECT country FROM states WHERE indep_year < 1800);
@@ -383,7 +384,7 @@ WHERE country NOT IN (SELECT country FROM states WHERE indep_year < 1800);
 
 ## Inserting
 
-~~~
+~~~sql
 -- Values for all fields in given table must be provided if not explicitly specified.
 INSERT INTO customers
 VALUES ('Bob', 'Smith', '555-555-1234')
@@ -402,18 +403,19 @@ SELECT * INTO customers FROM customer_import
 
 ## Updating
 
-~~~
+~~~sql
 UPDATE customers SET active = 0 WHERE firstname = 'Frank' 
 ~~~
 
 ## Deleting
-~~~
+
+~~~sql
 DELETE FROM customers WHERE lastname = 'Smith'
 ~~~
 
 ## Creating tables
 
-~~~
+~~~sql
 CREATE TABLE customers
 (
   customer_num  INTEGER      NOT NULL,
@@ -425,7 +427,7 @@ CREATE TABLE customers
 
 ## Altering tables
 
-~~~
+~~~sql
 -- Add a column
 ALTER TABLE customers
 ADD phone VARCHAR(20) 
@@ -440,7 +442,7 @@ DROP TABLE customers
 
 ## Views
 
-~~~
+~~~sql
 -- Views are essentially saved select queries
 CREATE VIEW customers_formatted AS
 SELECT firstname + ' ' + lastname AS 'Name'
@@ -452,7 +454,7 @@ select * from customers_formatted
 
 ## Stored procedures
 
-~~~
+~~~sql
 CREATE PROCEDURE spActiveCustomers AS
 SELECT * FROM customers WHERE active = 1
 GO;
@@ -476,7 +478,7 @@ SELECT * FROM #tmp
 
 ## Transactions
 
-~~~
+~~~sql
 -- Everything happens
 BEGIN TRANSACTION
 -- Do some inserts, updates, or deletes

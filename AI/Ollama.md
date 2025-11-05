@@ -4,7 +4,7 @@
 
 ### Install
 
-~~~
+~~~bash
 $ sudo snap install ollama
 # or
 $ curl -fsSL https://ollama.com/install.sh | sh
@@ -13,14 +13,16 @@ $ sudo systemctl start ollama
 ~~~
 
 ### Show version
+
 `$ ollama --version`
 
 ### Show help
+
 `$ ollama --help`
 
 ### Pull a model locally
 
-~~~
+~~~bash
 # Good general purpose model
 $ ollama pull llama3.2
 
@@ -30,7 +32,7 @@ $ ollama pull qwen2.5-coder
 
 ### Run a model and ask it something
 
-~~~
+~~~bash
 # Outputs a sort summary of topic
 $ ollama run llama3.2 "Explain the basics of machine learning."
 
@@ -39,14 +41,16 @@ $ ollama run qwen2.5-coder "Show quicksort algorithm in python."
 ~~~
 
 ### Show running models
+
 `$ ollama ps`
 
 ### Show locally available models
+
 `$ ollama list`
 
 ### Run as an api service
 
-~~~
+~~~bash
 # This will run ollama on localhost port 11434
 $ ollama serve
 
@@ -59,13 +63,14 @@ curl http://localhost:11434/api/chat -d '{
 ~~~
 
 ### Remove a local model
+
 `$ ollama rm {model-name}`
 
 ## Models
 
 ### deepseek-r1
 
-~~~
+~~~bash
 # Text-to-code.
 
 $ ollama run deepseek-r1:1.5b "Explain the basics of machine learning."
@@ -177,7 +182,7 @@ $ ollama run deepseek-r1:70b "Explain the basics of machine learning."
 
 ### gemma3
 
-~~~
+~~~bash
 # Text-to-text.
 
 $ ollama run gemma3:1b "Explain the basics of machine learning."
@@ -216,7 +221,7 @@ $ ollama run gemma3:4b "Describe this image" /duck.jpg
 
 ### gemma3n
 
-~~~
+~~~bash
 # Text-to-text.
 
 $ ollama run gemma3n:e2b "Explain the basics of machine learning."
@@ -268,7 +273,7 @@ $ ollama run gemma3n:e4b "Explain the basics of machine learning."
 
 ### llama3.1
 
-~~~
+~~~bash
 # Text-to-text.
 
 $ ollama run llama3.1:latest "Explain the basics of machine learning."
@@ -304,7 +309,7 @@ $ ollama run llama3.1:70b "Explain the basics of machine learning."
 
 ### mistral-small3.2
 
-~~~
+~~~bash
 # Text-to-code.
 
 $ ollama run mistral-small3.2:24b "Explain the basics of machine learning."
@@ -317,7 +322,7 @@ $ ollama run mistral-small3.2:24b "Explain the basics of machine learning."
 
 ### qwen2.5vl
 
-~~~
+~~~bash
 # Text-to-text.
 
 $ ollama run qwen2.5vl:7b "Explain the basics of machine learning."
@@ -342,7 +347,7 @@ $ ollama run qwen2.4vl:7b "Detect all ducks in the image and return their locati
 
 ### qwen3
 
-~~~
+~~~bash
 # Text-to-text.
 
 $ ollama run qwen3:8b "Explain the basics of machine learning."
@@ -355,7 +360,7 @@ $ ollama run qwen3:8b "Explain the basics of machine learning."
 
 ### qwen3-coder
 
-~~~
+~~~bash
 # Text-to-code.
 
 $ ollama run qwen3-coder "Show quicksort algorithm in python."

@@ -22,5 +22,3 @@ Open cmd prompt as admin
 6. From Chrome, go to chrome://certificate-manager/. Select Custom -> Import -> choose the file you just created.
 7. In IIS, select your site. Go to Bindings. Add new binding. Choose the IP address you created. Choose the SSL certificate you created. Restart site.
 8. It may be necessary to close all instances of Chrome.
-
-

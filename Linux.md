@@ -1,12 +1,16 @@
+<!-- markdownlint-disable MD014 -->
+
 # Linux Cheatsheet
 
 ## Command commands
 
 ### End a terminal session
+
 `$ exit`
 
 ### Perform release upgrade
-~~~
+
+~~~bash
 $ sudo apt update
 $ sudo apt upgrade
 $ sudo apt dist-upgrade
@@ -14,25 +18,31 @@ $ sudo do-release-upgrade
 ~~~
 
 ### Use a terminal calculator
-~~~
+
+~~~bash
 # See https://www.geeksforgeeks.org/linux-unix/bc-command-linux-examples/
 $ echo "12+5" | bc
 ~~~
 
 ### Show architecture
+
 `$ uname -m`
 
 ### Show kernel version
+
 `$ uname -r`
 
 ### Print a message
+
 `$ echo "Hello, world!"`
 
 ### Show current date and time
+
 `$ date`
 
 ### Show a calendar
-~~~
+
+~~~bash
 # The current month
 $ cal
 
@@ -53,19 +63,24 @@ $ cal -j
 ~~~
 
 ### Show current logged in user
+
 `$ whoami`
 
 ### Show all logged in users
+
 `$ who`
 
 ### Show last time system was booted
+
 `$ who -b`
 
 ### Show your working directory
+
 `$ pwd`
 
 ### Change your working directory
-~~~
+
+~~~bash
 # Absolute path
 $ cd /users/bob
 
@@ -74,7 +89,8 @@ $ cd spreadsheets
 ~~~
 
 ### List directory contents
-~~~
+
+~~~bash
 # Basic list
 $ ls
 
@@ -89,36 +105,46 @@ $ tree -p
 ~~~
 
 ### Show file contents
+
 `$ less {filename}`
 
 ### File and directory wildcards
+
 - *: match any characters
 - ?: match a single character
 - []: match any characters inside brackets
 
 ### Create a directory
+
 `$ mkdir {directory-name}`
 
 ### View file contents
+
 `$ cat {filename}`
 
 ### Copy a file
+
 `$ cp {old} {new}`
 
 ### Move a file (also works to rename)
+
 `$ mv {old} {new}`
 
 ### Delete a file
+
 `$ rm {filename}`
 
 ### Create a symbolic link
+
 `$ ln -s {target-path} {link-name}`
 
 ### Display file type
+
 `$ file {filename}`
 
 ### Show unique lines
-~~~
+
+~~~bash
 # Remove dupes
 $ uniq {filename}
 
@@ -133,7 +159,8 @@ $ uniq -u {filename}
 ~~~
 
 ### Show word count
-~~~
+
+~~~bash
 # Single file
 $ wc {filename}
 # Output is {number-of-lines} {word-count} {byte-count} {filename}| 
@@ -150,7 +177,8 @@ $ wc -w {filename}
 ~~~
 
 ### Search file contents
-~~~
+
+~~~bash
 # Search for a case-insensitive string
 $ grep -i "{search-string}" {filename}
 
@@ -165,7 +193,8 @@ $ grep -v "{search-string}" {filename}
 ~~~
 
 ### Parse text data using Awk
-~~~
+
+~~~bash
 # Parse out 2nd column using default delimiter (space)
 $ awk '{print $2}' myTextFile.txt
 
@@ -174,13 +203,16 @@ $ awk -F, '{print $4}' myTextFile.txt
 ~~~
 
 ### Print first ten lines of a file
+
 `$ head {filename}`
 
 ### Print last ten lines of a file
+
 `$ tail {filename}`
 
 ### Alias commands
-~~~
+
+~~~bash
 # List all aliases
 $ alias
 # OR
@@ -197,7 +229,8 @@ $ source ~/.bash_aliases
 ~~~
 
 ### Securely copy from one server to another
-~~~
+
+~~~bash
 # From local to remote
 $ scp {filename} {remoteuser}@{remotehost}:{remote-directory}
 # E.g. recipes.txt bob@10.0.0.1:/home/bob
@@ -210,7 +243,8 @@ $ scp {remoteuser}@{remotehost}:{remote-file} .
 ~~~
 
 ### Secure FTP
-~~~
+
+~~~bash
 # Open a ftp connection
 $ ftp-ssl {remote-server}
 
@@ -230,7 +264,7 @@ $
 
 ### Convert pdf to text
 
-~~~
+~~~bash
 $ sudo apt install poppler-utils
 $ pdftotext input.pdf output.txt
 
@@ -251,30 +285,36 @@ with open("input.pdf", "rb") as f:
 ## Security
 
 ### Change permissions
+
 `$ chmod {permissions} {file(s)}`
 
 ### Show groups
+
 `$ groups`
 
 ## Printing
 
 ### Print a file
+
 `$ lp {filename}`
 
 ### Show printer queue
+
 `$ lpq`
 
 ### Cancel active job
+
 `$ lprm`
 
 ## Hardware
 
 ### List usb devices
+
 `$ sudo blkid`
 
 ### List mounted drives
 
-~~~
+~~~bash
 # Everything in a tree format
 $ findmnt
 
@@ -286,7 +326,7 @@ $ sudo df -a -T -h -t ext4
 
 ### Enabling
 
-~~~
+~~~bash
 # Tested on fresh build of Ubuntu 24.04.
 
 # Install samba
@@ -325,8 +365,7 @@ $ testparm
 
 ## Monitoring
 
-~~~
-
+~~~bash
 # Display real-time system info
 $ top
 $ htop
@@ -363,7 +402,7 @@ $ sudo perf stat ls -la
 
 ## Jobs
 
-~~~
+~~~bash
 # Run script
 $ ./my_script.sh
 

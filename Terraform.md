@@ -16,14 +16,14 @@
 
 ### Initialize terraform with main.tf configuration file in working directory
 
-~~~
+~~~bash
 # This downloads and installs the specified providers.
 $ terraform init
 ~~~
 
 ### Format the configuration for readability
 
-~~~
+~~~bash
 # Prints out the names of the files modified, if any.
 $ terraform fmt
 ~~~
@@ -33,6 +33,7 @@ $ terraform fmt
 `$ terraform validate`
 
 ### Compares Terraform state with the actual state of hte infrastructure
+
 `$ terraform plan`
 
 ### Create the infrastructure (i.e. deploy the docker container web server)
@@ -72,7 +73,8 @@ $ terraform fmt
 - terraform.tfstate: state file created after Terraform is run
 
 ### Example configuraton for provisioning a docker-based web server (save as main.tf)
-~~~
+
+~~~bash
 # This is a single line comment.
 
 terraform {

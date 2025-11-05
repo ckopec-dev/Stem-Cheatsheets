@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD024 -->
+
 # TensorFlow Keras Cheatsheet
 
 ## Import and Setup
@@ -19,6 +21,7 @@ tf.random.set_seed(42)
 ## Model Creation
 
 ### Sequential Model
+
 ```python
 model = keras.Sequential([
     layers.Dense(64, activation='relu', input_shape=(784,)),
@@ -34,6 +37,7 @@ model.add(layers.Dense(10, activation='softmax'))
 ```
 
 ### Functional API
+
 ```python
 inputs = keras.Input(shape=(784,))
 x = layers.Dense(64, activation='relu')(inputs)
@@ -43,6 +47,7 @@ model = keras.Model(inputs=inputs, outputs=outputs)
 ```
 
 ### Subclassing API
+
 ```python
 class MyModel(keras.Model):
     def __init__(self):
@@ -62,6 +67,7 @@ model = MyModel()
 ## Common Layers
 
 ### Dense Layers
+
 ```python
 layers.Dense(units=64, activation='relu')
 layers.Dense(10, activation='softmax')
@@ -69,6 +75,7 @@ layers.Dense(1, activation='sigmoid')
 ```
 
 ### Convolutional Layers
+
 ```python
 layers.Conv2D(32, (3, 3), activation='relu')
 layers.Conv1D(64, 3, activation='relu')
@@ -77,6 +84,7 @@ layers.GlobalAveragePooling2D()
 ```
 
 ### Recurrent Layers
+
 ```python
 layers.LSTM(50, return_sequences=True)
 layers.GRU(32)
@@ -85,6 +93,7 @@ layers.Bidirectional(layers.LSTM(50))
 ```
 
 ### Regularization Layers
+
 ```python
 layers.Dropout(0.5)
 layers.BatchNormalization()
@@ -92,6 +101,7 @@ layers.LayerNormalization()
 ```
 
 ### Embedding and Preprocessing
+
 ```python
 layers.Embedding(vocab_size, embedding_dim)
 layers.TextVectorization(max_tokens=10000)
@@ -129,6 +139,7 @@ model.compile(
 ```
 
 ### Common Optimizers
+
 ```python
 keras.optimizers.Adam(learning_rate=0.001)
 keras.optimizers.SGD(learning_rate=0.01, momentum=0.9)
@@ -137,6 +148,7 @@ keras.optimizers.AdamW(learning_rate=0.001, weight_decay=0.01)
 ```
 
 ### Common Loss Functions
+
 ```python
 # Classification
 'binary_crossentropy'
@@ -152,6 +164,7 @@ keras.optimizers.AdamW(learning_rate=0.001, weight_decay=0.01)
 ## Training
 
 ### Basic Training
+
 ```python
 history = model.fit(
     x_train, y_train,
@@ -163,6 +176,7 @@ history = model.fit(
 ```
 
 ### With Callbacks
+
 ```python
 callbacks = [
     keras.callbacks.EarlyStopping(patience=3, restore_best_weights=True),
@@ -182,6 +196,7 @@ history = model.fit(
 ## Data Preprocessing
 
 ### Image Data
+
 ```python
 # Using tf.data
 dataset = tf.data.Dataset.from_tensor_slices((x_train, y_train))
@@ -196,6 +211,7 @@ data_augmentation = keras.Sequential([
 ```
 
 ### Text Data
+
 ```python
 # Tokenization
 tokenizer = keras.preprocessing.text.Tokenizer(num_words=10000)
@@ -243,6 +259,7 @@ with open('model.json', 'w') as f:
 ## Custom Components
 
 ### Custom Layer
+
 ```python
 class CustomLayer(layers.Layer):
     def __init__(self, units):
@@ -260,6 +277,7 @@ class CustomLayer(layers.Layer):
 ```
 
 ### Custom Loss Function
+
 ```python
 def custom_loss(y_true, y_pred):
     return tf.reduce_mean(tf.square(y_true - y_pred))
@@ -268,6 +286,7 @@ model.compile(optimizer='adam', loss=custom_loss)
 ```
 
 ### Custom Metric
+
 ```python
 def custom_accuracy(y_true, y_pred):
     return tf.reduce_mean(tf.cast(tf.equal(y_true, tf.round(y_pred)), tf.float32))
@@ -334,6 +353,7 @@ tensorboard_callback = keras.callbacks.TensorBoard(log_dir="logs")
 ## Common Model Architectures
 
 ### CNN for Image Classification
+
 ```python
 model = keras.Sequential([
     layers.Conv2D(32, (3, 3), activation='relu', input_shape=(28, 28, 1)),
@@ -348,6 +368,7 @@ model = keras.Sequential([
 ```
 
 ### LSTM for Sequence Classification
+
 ```python
 model = keras.Sequential([
     layers.Embedding(vocab_size, 64),
@@ -357,6 +378,7 @@ model = keras.Sequential([
 ```
 
 ### Autoencoder
+
 ```python
 # Encoder
 encoder = keras.Sequential([
@@ -376,9 +398,10 @@ decoder = keras.Sequential([
 autoencoder = keras.Sequential([encoder, decoder])
 ```
 
-# TensorFlow Keras Tutorial - Complete Beginner's Guide
+## TensorFlow Keras Tutorial - Complete Beginner's Guide
 
-## Table of Contents
+### Table of Contents
+
 1. [What is TensorFlow and Keras?](#what-is-tensorflow-and-keras)
 2. [Installation](#installation)
 3. [Basic Concepts](#basic-concepts)
@@ -388,19 +411,20 @@ autoencoder = keras.Sequential([encoder, decoder])
 7. [Advanced Topics](#advanced-topics)
 8. [Best Practices](#best-practices)
 
-## What is TensorFlow and Keras?
+### What is TensorFlow and Keras?
 
 **TensorFlow** is an open-source machine learning framework developed by Google. It's designed for building and deploying machine learning models at scale.
 
 **Keras** is a high-level neural networks API that runs on top of TensorFlow. It makes building deep learning models simple and intuitive.
 
-### Key Features:
+#### Key Features
+
 - **User-friendly**: Simple, consistent interface
 - **Modular**: Easy to configure neural networks
 - **Extensible**: Easy to add new modules
 - **Python-based**: Leverages Python's simplicity
 
-## Installation
+### Installation
 
 ```bash
 # Install TensorFlow (includes Keras)
@@ -415,7 +439,8 @@ python -c "import tensorflow as tf; print(tf.__version__)"
 
 ## Basic Concepts
 
-### 1. Tensors
+#### 1. Tensors
+
 Tensors are multi-dimensional arrays - the fundamental data structure in TensorFlow.
 
 ```python
@@ -433,7 +458,7 @@ print(f"Vector shape: {vector.shape}")
 print(f"Matrix shape: {matrix.shape}")
 ```
 
-### 2. Keras Layers
+#### 2. Keras Layers
 Layers are the building blocks of neural networks.
 
 ```python
@@ -446,7 +471,7 @@ conv_layer = layers.Conv2D(32, (3, 3), activation='relu')  # Convolutional layer
 dropout_layer = layers.Dropout(0.5)  # Regularization layer
 ```
 
-### 3. Models
+#### 3. Models
 Models define the architecture of your neural network.
 
 ```python
@@ -465,7 +490,7 @@ outputs = layers.Dense(10, activation='softmax')(x)
 model = keras.Model(inputs=inputs, outputs=outputs)
 ```
 
-## Your First Neural Network
+### Your First Neural Network
 
 Let's build a simple neural network to classify handwritten digits using the MNIST dataset.
 
@@ -528,9 +553,9 @@ print(f"Predicted classes: {predicted_classes}")
 print(f"Actual classes: {y_test[:5]}")
 ```
 
-## Working with Different Data Types
+### Working with Different Data Types
 
-### Image Classification (CNN)
+#### Image Classification (CNN)
 
 ```python
 # For image data, use Convolutional Neural Networks
@@ -559,7 +584,7 @@ cnn_model.compile(
 )
 ```
 
-### Text Classification (RNN/LSTM)
+#### Text Classification (RNN/LSTM)
 
 ```python
 # For sequential data like text
@@ -583,9 +608,9 @@ text_model.compile(
 )
 ```
 
-## Model Training and Evaluation
+### Model Training and Evaluation
 
-### Training with Callbacks
+#### Training with Callbacks
 
 ```python
 # Define callbacks for better training control
@@ -619,7 +644,7 @@ history = model.fit(
 )
 ```
 
-### Visualizing Training History
+#### Visualizing Training History
 
 ```python
 def plot_training_history(history):
@@ -648,7 +673,7 @@ def plot_training_history(history):
 plot_training_history(history)
 ```
 
-### Model Evaluation
+#### Model Evaluation
 
 ```python
 # Detailed evaluation
@@ -672,9 +697,9 @@ plt.xlabel('Predicted')
 plt.show()
 ```
 
-## Advanced Topics
+### Advanced Topics
 
-### Custom Layers
+#### Custom Layers
 
 ```python
 class CustomDenseLayer(layers.Layer):
@@ -702,7 +727,7 @@ class CustomDenseLayer(layers.Layer):
         return output
 ```
 
-### Transfer Learning
+#### Transfer Learning
 
 ```python
 # Use pre-trained models
@@ -725,7 +750,7 @@ model = keras.Sequential([
 ])
 ```
 
-### Data Augmentation
+#### Data Augmentation
 
 ```python
 # Create data augmentation pipeline
@@ -744,33 +769,38 @@ model = keras.Sequential([
 ])
 ```
 
-## Best Practices
+### Best Practices
 
-### 1. Data Preparation
+#### 1. Data Preparation
+
 - **Normalize your data**: Scale features to similar ranges
 - **Handle missing values**: Impute or remove missing data
 - **Split data properly**: Use train/validation/test splits
 - **Data augmentation**: Increase dataset size artificially
 
-### 2. Model Architecture
+#### 2. Model Architecture
+
 - **Start simple**: Begin with simple models, add complexity gradually
 - **Use appropriate activation functions**: ReLU for hidden layers, softmax for multi-class
 - **Add regularization**: Use dropout, batch normalization
 - **Choose right optimizer**: Adam is often a good default
 
-### 3. Training
+#### 3. Training
+
 - **Monitor overfitting**: Use validation data and early stopping
 - **Use callbacks**: EarlyStopping, ReduceLROnPlateau, ModelCheckpoint
 - **Experiment with batch sizes**: Larger batches = more stable gradients
 - **Learning rate scheduling**: Reduce learning rate during training
 
-### 4. Evaluation
+#### 4. Evaluation
+
 - **Use multiple metrics**: Don't rely on accuracy alone
 - **Cross-validation**: For smaller datasets
 - **Test on unseen data**: Final evaluation on test set
 - **Visualize results**: Confusion matrices, training curves
 
-### 5. Model Deployment
+#### 5. Model Deployment
+
 ```python
 # Save model
 model.save('my_model.h5')
@@ -789,7 +819,7 @@ converter = tf.lite.TFLiteConverter.from_keras_model(model)
 tflite_model = converter.convert()
 ```
 
-## Next Steps
+### Next Steps
 
 1. **Practice with real datasets**: Kaggle competitions, UCI ML repository
 2. **Learn specialized architectures**: ResNet, BERT, Transformer
@@ -797,7 +827,7 @@ tflite_model = converter.convert()
 4. **Study MLOps**: Model versioning, monitoring, A/B testing
 5. **Join the community**: TensorFlow forums, GitHub, Stack Overflow
 
-## Resources
+### Resources
 
 - **Official Documentation**: https://www.tensorflow.org/guide
 - **Keras Documentation**: https://keras.io/

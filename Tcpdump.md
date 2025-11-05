@@ -2,7 +2,7 @@
 
 ## Basic usage
 
-~~~
+~~~bash
 # List interfaces available to scan on
 $ sudo tcpdump -D
 
@@ -10,7 +10,7 @@ $ sudo tcpdump -D
 $ sudo tcpdump -i 3
 
 # Scan udp on interface 3
-$ sudo tcpdump -i 3 udp		
+$ sudo tcpdump -i 3 udp
 
 # Ignore port 22 (for example, if using from a remote ssh connection)
 $ sudo tcpdump -i 3 port not 22 

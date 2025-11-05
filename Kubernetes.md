@@ -16,7 +16,7 @@
 
 [Official guide with current commands](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
 
-~~~
+~~~bash
 # Download
 $ curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 $ curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl.sha256"
@@ -33,7 +33,7 @@ $ kubectl version --client
 
 [Official guide)[https://minikube.sigs.k8s.io/docs/start/?arch=%2Flinux%2Fx86-64%2Fstable%2Fbinary+download]
 
-~~~
+~~~bash
 # Download
 $ curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 
@@ -56,7 +56,7 @@ $ alias kubectl="minikube kubectl --"
 
 ### Common storage commands
 
-~~~
+~~~bash
 # All available storage classes
 $ kubectl get sc
 

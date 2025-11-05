@@ -11,7 +11,7 @@ Seaborn is a Python data visualization library built on top of matplotlib.
 
 ## Basic example
 
-~~~
+~~~python
 # Import libraries
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -27,7 +27,7 @@ plt.show()
 
 ### Count plot example
 
-~~~
+~~~python
 # Import libraries
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -42,7 +42,7 @@ plt.show()
 
 ### Working with Pandas example
 
-~~~
+~~~python
 # Import libraries
 import pandas as pd
 import seaborn as sns
@@ -58,7 +58,7 @@ plt.show()
 
 ### Working with 3d data
 
-~~~
+~~~python
 # Import libraries
 import pandas as pd
 import seaborn as sns
@@ -79,7 +79,7 @@ plt.show()
 
 Similar to scatter plot, except with the ability to create subplots
 
-~~~
+~~~python
 # Imports
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -109,7 +109,7 @@ sns.regplot(x="total_bills", y="tip", data=tips, ci=None)
 
 ### Relational line plots
 
-~~~
+~~~python
 # Similar to scatter plots. Use kind="line".
 
 sns.relplot(x="hour", y="brightness", data=sunlight, kind="line", hue="location", markers=True, dashes=False)
@@ -117,9 +117,9 @@ sns.relplot(x="hour", y="brightness", data=sunlight, kind="line", hue="location"
 # If there are multiple records per x value, the y values are aggregated into a mean and a confidence interval is displayed. To show the standard deviation, set ci="sd". To turn it off, set ci=None.
 ~~~
 
-### Categorical plots 
+### Categorical plots
 
-~~~
+~~~python
 # Involve a categorical variable
 # Used to compare groups
 
@@ -142,7 +142,7 @@ plt.show()
 
 ### Box plots
 
-~~~
+~~~python
 # Shows the distribution of quantitative data
 # Colored box represents the 25-75th percentile
 # The line inside the box represents the median
@@ -163,7 +163,7 @@ plt.show()
 
 ### Point plots
 
-~~~
+~~~python
 # The mean of quantitative variable
 # Vertical bars represent 95% confidence intervals
 
@@ -198,7 +198,7 @@ plt.show()
 
 ### Create a custom palette
 
-~~~
+~~~python
 color_names = ["red", etc]
 sns.set_palette(color_names)
 
@@ -214,7 +214,7 @@ sns.set_palette(hex_codes)
 
 ### Seaborn objects
 
-~~~
+~~~python
 # Seaborn crates 2 types of objects: FacetGrid (rel and cat plots) and AxesSubplot (box and line plots)
 # To view the type:
 
