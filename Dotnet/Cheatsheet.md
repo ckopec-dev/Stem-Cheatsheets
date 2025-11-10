@@ -15,6 +15,7 @@ $ ./dotnet-install.sh --version latest
 export PATH="$PATH:/home/<!username!>/.dotnet
 
 # Relog
+~~~
 
 ## Using with VS Code on Ubuntu 22.04
 
@@ -24,11 +25,14 @@ export PATH="$PATH:/home/<!username!>/.dotnet
 ## Create a desktop app on Ubuntu
 
 ~~~bash
-$ sudo apt-get install libgtk-3-dev
-$ mkdir HelloWorldGtk
-$ cd HelloWorldGtk
+sudo apt-get install libgtk-3-dev
+mkdir HelloWorldGtk
+cd HelloWorldGtk
 
-$ nano HelloWorldGtk.csproj
+nano HelloWorldGtk.csproj
+~~~
+
+~~~xml
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
@@ -43,8 +47,11 @@ $ nano HelloWorldGtk.csproj
   </ItemGroup>
 
 </Project>
+~~~
 
-$ nano Program.cs
+`nano Program.cs`
+
+~~~csharp
 using System;
 using Gtk;
 
@@ -148,9 +155,11 @@ namespace HelloWorldGtkApp
         }
     }
 }
+~~~
 
-$ dotnet restore
-$ dotnet run
+~~~bash
+dotnet restore
+dotnet run
 ~~~
 
 ## Adding secret environment variables to IIS
