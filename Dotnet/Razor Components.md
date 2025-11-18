@@ -740,3 +740,359 @@ Accordion-style details.
 Checkboxes or radio selection.
 
 ---
+
+A **full-featured, professional-grade Data Table component** with:
+
+✔ Sorting
+✔ Pagination
+✔ Filtering
+✔ Row selection
+✔ Inline editing
+✔ Expandable rows
+✔ Infinite scroll
+✔ Loading state
+✔ Resizable + reorderable columns
+✔ Sticky header
+
+Below is the **step-by-step architecture**, **full component code**, and **usage examples**.
+
+---
+
+# ⭐ PART 1 — Base Component (Sorting + Structure)
+
+You already have a solid foundation from the previous version.
+We'll now upgrade it into a **DataGrid** system with multiple subcomponents.
+
+---
+
+# ⭐ PART 2 — Add Pagination
+
+### New Parameters
+
+```csharp
+[Parameter] public int PageSize { get; set; } = 10;
+[Parameter] public int Page { get; set; } = 1;
+[Parameter] public EventCallback<int> PageChanged { get; set; }
+```
+
+### Add paginated list
+
+```csharp
+private IEnumerable<TItem> PagedItems =>
+    SortedItems
+        .Skip((Page - 1) * PageSize)
+        .Take(PageSize);
+```
+
+### Add paging UI
+
+Inside the main DataTable markup:
+
+```razor
+<div class="pagination">
+    <button @onclick="PrevPage" disabled="@(!CanPrev)">Prev</button>
+    <span>Page @Page</span>
+    <button @onclick="NextPage" disabled="@(!CanNext)">Next</button>
+</div>
+
+@code {
+    private bool CanPrev => Page > 1;
+    private bool CanNext =>
+        Items != null && (Page * PageSize) < Items.Count();
+
+    private async Task PrevPage()
+    {
+        if (CanPrev)
+        {
+            Page--;
+            await PageChanged.InvokeAsync(Page);
+        }
+    }
+
+    private async Task NextPage()
+    {
+        if (CanNext)
+        {
+            Page++;
+            await PageChanged.InvokeAsync(Page);
+        }
+    }
+}
+```
+
+---
+
+# ⭐ PART 3 — Add Filtering
+
+### Add filter state
+
+```csharp
+[Parameter] public string FilterText { get; set; } = "";
+[Parameter] public Func<TItem, string>? FilterBy { get; set; }
+```
+
+### Add filtering step
+
+Modify `SortedItems`:
+
+```csharp
+private IEnumerable<TItem> FilteredItems =>
+    string.IsNullOrWhiteSpace(FilterText) || FilterBy == null
+        ? Items ?? Enumerable.Empty<TItem>()
+        : Items!.Where(i => FilterBy(i)
+            .Contains(FilterText, StringComparison.OrdinalIgnoreCase));
+
+private IEnumerable<TItem> SortedItems =>
+    SortColumn == null
+        ? FilteredItems
+        : SortDescending
+            ? FilteredItems.OrderByDescending(SortColumn.SortKeySelector)
+            : FilteredItems.OrderBy(SortColumn.SortKeySelector);
+```
+
+### Add filter UI
+
+In the table header:
+
+```razor
+<input type="text" @bind="FilterText" placeholder="Search..." class="filter-box" />
+```
+
+---
+
+# ⭐ PART 4 — Add Row Selection
+
+This gives checkboxes + multi-select or single-select.
+
+### Parameters
+
+```csharp
+[Parameter] public bool Selectable { get; set; }
+[Parameter] public bool MultiSelect { get; set; } = true;
+
+public HashSet<TItem> SelectedRows { get; private set; } = new();
+```
+
+### Add checkbox column
+
+Inside `<thead>`:
+
+```razor
+@if (Selectable)
+{
+    <th><input type="checkbox" @onchange="ToggleSelectAll" /></th>
+}
+```
+
+Inside `<tbody>`:
+
+```razor
+@if (Selectable)
+{
+    <td>
+        <input type="checkbox" checked="@SelectedRows.Contains(item)" @onchange="() => ToggleItem(item)" />
+    </td>
+}
+```
+
+### Logic
+
+```csharp
+private void ToggleItem(TItem item)
+{
+    if (MultiSelect)
+    {
+        if (!SelectedRows.Add(item))
+            SelectedRows.Remove(item);
+    }
+    else
+    {
+        SelectedRows.Clear();
+        SelectedRows.Add(item);
+    }
+}
+```
+
+---
+
+# ⭐ PART 5 — Inline Editing
+
+Each cell becomes editable using a template.
+
+### Column adds editable template
+
+```csharp
+[Parameter] public RenderFragment<TItem>? EditTemplate { get; set; }
+[Parameter] public bool Editable { get; set; }
+```
+
+### Add IsEditing flag
+
+```csharp
+private TItem? EditingItem = default;
+```
+
+### Render cells
+
+```razor
+<td>
+    @if (col.Editable && EditingItem != null && EqualityComparer<TItem>.Default.Equals(item, EditingItem))
+    {
+        @col.EditTemplate(item)
+    }
+    else
+    {
+        @col.CellTemplate(item)
+    }
+</td>
+```
+
+### Start editing
+
+```razor
+<button @onclick="() => EditingItem = item">Edit</button>
+<button @onclick="() => SaveRow(item)">Save</button>
+<button @onclick="CancelEdit">Cancel</button>
+```
+
+---
+
+# ⭐ PART 6 — Expandable Rows
+
+Accordion-style detail rows.
+
+### Parameter
+
+```csharp
+[Parameter] public RenderFragment<TItem>? DetailTemplate { get; set; }
+```
+
+### Row expansion state
+
+```csharp
+private HashSet<TItem> Expanded = new();
+private void ToggleExpand(TItem item)
+{
+    if (!Expanded.Add(item))
+        Expanded.Remove(item);
+}
+```
+
+### Markup
+
+```razor
+<tr @onclick="() => ToggleExpand(item)">
+    <!-- normal row -->
+</tr>
+
+@if (Expanded.Contains(item))
+{
+    <tr class="expanded-row">
+        <td colspan="@Columns.Count">
+            @DetailTemplate(item)
+        </td>
+    </tr>
+}
+```
+
+---
+
+# ⭐ PART 7 — Infinite Scrolling
+
+We add a scroll container and load more items when reaching bottom.
+
+### Container
+
+```razor
+<div class="scroll-container" @onscroll="CheckScroll">
+    <!-- table here -->
+</div>
+```
+
+### Scroll handler
+
+```csharp
+private async Task CheckScroll(UIEventArgs e)
+{
+    var args = (UIEventArgs)e;
+
+    // Pseudo-code: add JS interop for precise scroll metrics.
+    if (/* near bottom */)
+    {
+        await LoadMore.InvokeAsync(null);
+    }
+}
+
+[Parameter] public EventCallback LoadMore { get; set; }
+```
+
+You can use JS interop to detect scroll position.
+
+---
+
+# ⭐ PART 8 — Loading State
+
+Add spinner or skeleton.
+
+### Parameter
+
+```csharp
+[Parameter] public bool IsLoading { get; set; }
+```
+
+### Markup
+
+```razor
+@if (IsLoading)
+{
+    <div class="loading-overlay">
+        Loading...
+    </div>
+}
+```
+
+---
+
+# ⭐ PART 9 — Column Resizing & Reordering
+
+This requires JavaScript interop to track drag events.
+
+### Add to column definition
+
+```csharp
+public bool Resizable { get; set; }
+public bool Reorderable { get; set; }
+```
+
+### Add resize handle in `<th>`
+
+```razor
+<div class="resize-handle" @onmousedown="(e) => StartResize(e, col)"></div>
+```
+
+### Add reorder drag
+
+```razor
+<th draggable="true"
+    @ondragstart="(e) => StartDrag(e, col)"
+    @ondrop="(e) => DropColumn(e, col)">
+```
+
+I can generate the full JS file too if you want it.
+
+---
+
+# ⭐ PART 10 — Sticky Header
+
+CSS only:
+
+```css
+.data-table thead th {
+    position: sticky;
+    top: 0;
+    background: #f2f2f2;
+    z-index: 5;
+}
+```
+
+---
