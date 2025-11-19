@@ -59,6 +59,10 @@ $ ollama run llama3.2 "Explain the basics of machine learning."
 $ ollama run llama3.2 "Summarize this article." < my_article.txt
 ~~~
 
+## Pdf to text
+
+`pdftotext doc.pdf - | ollama run deepseek-r1:32b --verbose "Summarize the following text:"`
+
 ### Qwen
 
 - [Ollama](https://ollama.com/library/qwen3)
