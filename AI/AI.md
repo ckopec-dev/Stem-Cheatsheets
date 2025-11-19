@@ -57,11 +57,60 @@ $ ollama run llama3.2 "Explain the basics of machine learning."
 
 # Example: pipe a text file into the prompt
 $ ollama run llama3.2 "Summarize this article." < my_article.txt
+
+# Example: use a pdf file in a prompt
+$ pdftotext doc.pdf - | ollama run deepseek-r1:32b --verbose "Summarize the following text:"
 ~~~
 
-## Pdf to text
+### Ollama prompting in Python
 
-`pdftotext doc.pdf - | ollama run deepseek-r1:32b --verbose "Summarize the following text:"`
+~~~python
+import ollama
+
+response = ollama.generate(
+    model='llama3',
+    prompt='Write a short story about a cat who learns to fly.'
+)
+print(response['response'])
+~~~
+
+### Ollama using a web search
+
+~~~python
+import ollama
+
+api_key = "{your api key}"
+headers = {
+    "Authorization": f"Bearer {api_key}"
+}
+url = "https://ollama.com/api/web_search"
+client = ollama.Client(host=url, headers=headers)
+response = client.web_search("Summarize the main features of the latest iPhone model.")
+print(response)
+~~~
+
+### Ollama using a web page response
+
+~~~python
+import requests
+from bs4 import BeautifulSoup
+import ollama
+
+# Fetch a web page
+url = "https://example.com/some-article"
+response = requests.get(url)
+soup = BeautifulSoup(response.text, 'html.parser')
+
+# Extract relevant text (e.g., article content)
+article_text = soup.find('div', class_='article-body').get_text()
+
+# Use the extracted text in an Ollama prompt
+ollama_response = ollama.generate(
+    model='llama3',
+    prompt=f"Summarize the following article:\n\n{article_text}"
+)
+print(ollama_response['response'])
+~~~
 
 ### Qwen
 
@@ -169,7 +218,7 @@ print("Image saved to output.png")
 $ python the_script.py
 ~~~
 
-## Text to sql 
+## Text to sql
 
 ~~~python
 $ pip install ollama
