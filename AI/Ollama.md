@@ -62,6 +62,13 @@ curl http://localhost:11434/api/chat -d '{
 }'
 ~~~
 
+### Allow access from remote hosts
+
+~~~bash
+$ sudo snap set ollama host=0.0.0.0:11434
+$ sudo snap restart ollama
+~~~
+
 ### Remove a local model
 
 `$ ollama rm {model-name}`
