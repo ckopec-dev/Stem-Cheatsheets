@@ -1,1098 +1,484 @@
 <!-- markdownlint-disable MD025 -->
 
-# **Tutorial: Creating a Reusable UI Component for Razor**
+# Blazor Razor Components Tutorial
 
-Below is a **step-by-step tutorial** that shows how to create a **reusable UI component in ASP.NET Core Razor** (Razor Pages or Razor Components).
-This guide covers:
+A comprehensive guide to building interactive web applications with Razor components in Blazor.
 
-✔ Creating a Razor component
-✔ Passing parameters
-✔ Handling events
-✔ Styling
-✔ Reusing it across pages
-✔ Optional: Using the component in Razor Pages
+## What are Razor Components?
 
----
+Razor components are reusable UI building blocks in Blazor that combine C# code with HTML markup using the Razor syntax. They allow you to create interactive web applications using .NET instead of JavaScript.
 
-## 🔹 **1. What You Will Build**
+## Getting Started
 
-A reusable **`AlertMessage`** component that displays messages such as success, info, warning, or error — similar to Bootstrap alerts.
+**Prerequisites:**
+- .NET 6.0 or later
+- Visual Studio 2022, VS Code, or any preferred IDE
+- Basic knowledge of C# and HTML
 
----
+**Creating a New Blazor Project:**
 
-## **2. Create the Razor Component**
+For Blazor Server:
 
-In a **Blazor/Razor Components** (ASP.NET Core 8+) project, create a new file:
+```bash
+dotnet new blazorserver -o MyBlazorApp
+cd MyBlazorApp
+dotnet run
+```
 
-📁 `Components/AlertMessage.razor`
+For Blazor WebAssembly:
+
+```bash
+dotnet new blazorwasm -o MyBlazorApp
+```
+
+## Basic Component Structure
+
+**Your First Component**
+
+Create a file named `Counter.razor` in the `Components` or `Pages` folder:
 
 ```razor
-@* Components/AlertMessage.razor *@
+<h3>Counter Component</h3>
 
-<div class="alert @AlertCss" role="alert">
-    @Message
+<p>Current count: @currentCount</p>
 
-    @if (Dismissable)
+<button @onclick="IncrementCount">Click me</button>
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
     {
-        <button type="button" class="close" @onclick="OnDismissClicked">
-            &times;
-        </button>
+        currentCount++;
     }
+}
+```
+
+This component demonstrates the three main parts of a Razor component: HTML markup with Razor syntax (the `@` symbol), event handling (`@onclick`), and a code block (`@code { }`).
+
+## Component Parameters
+
+Components can accept parameters to make them reusable:
+
+```razor
+<!-- GreetingCard.razor -->
+<div class="card">
+    <h3>Hello, @Name!</h3>
+    <p>@Message</p>
 </div>
 
 @code {
-    [Parameter] public string Message { get; set; } = "";
-    [Parameter] public string Type { get; set; } = "info"; // info, success, warning, danger
-    [Parameter] public bool Dismissable { get; set; } = false;
-
-    [Parameter] public EventCallback OnDismiss { get; set; }
-
-    private string AlertCss =>
-        Type.ToLower() switch
-        {
-            "success" => "alert-success",
-            "warning" => "alert-warning",
-            "danger"  => "alert-danger",
-            _         => "alert-info"
-        };
-
-    private async Task OnDismissClicked()
-    {
-        await OnDismiss.InvokeAsync();
-    }
+    [Parameter]
+    public string Name { get; set; } = "Guest";
+    
+    [Parameter]
+    public string Message { get; set; } = "Welcome!";
 }
 ```
 
-### ✔ Features
-
-* Fully reusable
-* Accepts parameters
-* Supports dismiss events
-* Works with Bootstrap styling
-
----
-
-## **3. Add CSS (Optional)**
-
-If not using Bootstrap, add styling inside `wwwroot/css/site.css`:
-
-```css
-.alert {
-    padding: 12px 16px;
-    border-radius: 6px;
-    margin-bottom: 12px;
-}
-
-.close {
-    background: none;
-    border: none;
-    float: right;
-    cursor: pointer;
-    font-size: 20px;
-}
-```
-
----
-
-## **4. Use the Component**
-
-In any Razor component or Blazor page:
+Usage in another component:
 
 ```razor
-@page "/alerts"
+<GreetingCard Name="Alice" Message="Great to see you!" />
+<GreetingCard Name="Bob" />
+```
 
-<AlertMessage 
-    Message="Operation completed!"
-    Type="success"
-    Dismissable="true"
-    OnDismiss="HandleDismiss"
-/>
+## Data Binding
 
-<p>@Status</p>
+**One-Way Binding**
+
+Display data from your code:
+
+```razor
+<p>The time is: @currentTime</p>
 
 @code {
-    private string Status = "Alert visible";
+    private string currentTime = DateTime.Now.ToLongTimeString();
+}
+```
 
-    private void HandleDismiss()
+**Two-Way Binding**
+
+Use `@bind` for form inputs:
+
+```razor
+<input @bind="userName" />
+<p>Hello, @userName!</p>
+
+@code {
+    private string userName = "";
+}
+```
+
+**Binding with Events**
+
+```razor
+<input @bind="searchTerm" @bind:event="oninput" />
+<p>Searching for: @searchTerm</p>
+
+@code {
+    private string searchTerm = "";
+}
+```
+
+## Event Handling
+
+**Common Events**
+
+```razor
+<button @onclick="HandleClick">Click</button>
+<input @onchange="HandleChange" />
+<input @oninput="HandleInput" />
+<form @onsubmit="HandleSubmit">
+    <button type="submit">Submit</button>
+</form>
+
+@code {
+    private void HandleClick()
     {
-        Status = "Alert dismissed";
+        // Handle click
+    }
+    
+    private void HandleChange(ChangeEventArgs e)
+    {
+        var value = e.Value?.ToString();
+    }
+    
+    private void HandleInput(ChangeEventArgs e)
+    {
+        // Real-time input handling
+    }
+    
+    private void HandleSubmit()
+    {
+        // Handle form submission
     }
 }
 ```
 
----
-
-## **5. Using the Component in Razor Pages (ASP.NET Core)**
-
-If you're using **Razor Pages**, not Blazor, you can still use Razor Components starting in ASP.NET Core 8.
-
-### In a Razor Page `.cshtml`
+**Passing Parameters to Event Handlers**
 
 ```razor
-@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-@using YourApp.Components
-
-<component type="typeof(AlertMessage)"
-           render-mode="Static"
-           param-Message="Server-side alert from Razor Pages"
-           param-Type="warning" />
-```
-
----
-
-## **6. Make the Component Even More Reusable**
-
-### Additional improvements you can add
-
-| Feature      | How                                   |
-| ------------ | ------------------------------------- |
-| Custom icons | Add SVG or icon parameters            |
-| Animation    | Add CSS transitions                   |
-| Slots        | Add `RenderFragment` for custom body  |
-| Auto-dismiss | Add a timer in `OnInitializedAsync()` |
-| Localization | Inject `IStringLocalizer`             |
-
-Example: Custom content slot
-
-```razor
-@* Add this to the component *@
-[Parameter] public RenderFragment? ChildContent { get; set; }
-```
-
-And in the markup:
-
-```razor
-<div class="alert @AlertCss">
-    @ChildContent
-</div>
-```
-
-Usage:
-
-```razor
-<AlertMessage Type="danger">
-    <strong>Error:</strong> Something went wrong.
-</AlertMessage>
-```
-
----
-
-## **7. Folder Structure (Recommended)**
-
-```
-/Components
-    AlertMessage.razor
-/Pages
-    Index.razor
-    Alerts.razor
-wwwroot/css/site.css
-```
-
----
-
-## **8. Summary**
-
-By now you have a fully reusable Razor UI component that supports:
-
-✔ Parameters
-✔ Events
-✔ Customizable styling
-✔ Reuse in Blazor or Razor Pages
-
-Great — let’s build a **more advanced Razor component**:
-A **Modal Dialog** that supports:
-
-✔ Header, body, footer slots
-✔ Open/close callbacks
-✔ Keyboard Escape close
-✔ Backdrop click close
-✔ Fully customizable content
-✔ Animations (optional)
-✔ Works in Razor Components *and* Razor Pages
-
-This is a production-ready UI component.
-
----
-
-# ⭐ **Advanced Reusable Razor Component: ModalDialog**
-
-## 1. Create the Component File
-
-📁 `Components/ModalDialog.razor`
-
-```razor
-@* Components/ModalDialog.razor *@
-
-@if (Visible)
+@foreach (var item in items)
 {
-    <div class="modal-backdrop" @onclick="BackdropClicked">
-        <div class="modal-container @AnimationClass" @onclick:stopPropagation="true">
-
-            @if (Header != null)
-            {
-                <div class="modal-header">
-                    @Header
-                    @if (ShowCloseButton)
-                    {
-                        <button class="modal-close" @onclick="Close">×</button>
-                    }
-                </div>
-            }
-
-            <div class="modal-body">
-                @Body
-            </div>
-
-            @if (Footer != null)
-            {
-                <div class="modal-footer">
-                    @Footer
-                </div>
-            }
-        </div>
-    </div>
+    <button @onclick="() => DeleteItem(item.Id)">
+        Delete @item.Name
+    </button>
 }
 
 @code {
-    // Slots
-    [Parameter] public RenderFragment? Header { get; set; }
-    [Parameter] public RenderFragment? Body { get; set; }
-    [Parameter] public RenderFragment? Footer { get; set; }
+    private List<Item> items = new();
+    
+    private void DeleteItem(int id)
+    {
+        items.RemoveAll(i => i.Id == id);
+    }
+}
+```
 
-    // State
-    [Parameter] public bool Visible { get; set; }
-    [Parameter] public EventCallback<bool> VisibleChanged { get; set; }
+## Component Lifecycle
 
-    [Parameter] public bool CloseOnEscape { get; set; } = true;
-    [Parameter] public bool CloseOnBackdrop { get; set; } = true;
-    [Parameter] public bool ShowCloseButton { get; set; } = true;
+Razor components have lifecycle methods you can override:
 
-    // Animation
-    [Parameter] public bool Animate { get; set; } = true;
-    private string AnimationClass => Animate ? "modal-anim" : "";
+```razor
+@implements IDisposable
 
+<p>Component content</p>
+
+@code {
     protected override void OnInitialized()
     {
-        // Listen for ESC key
-        if (CloseOnEscape)
-        {
-            var dotNetRef = DotNetObjectReference.Create(this);
-            JS.InvokeVoidAsync("modalDialog.registerEsc", dotNetRef);
-        }
+        // Called when component is initialized
+        // Runs once
     }
-
-    [Inject] private IJSRuntime JS { get; set; } = default!;
-
-    [JSInvokable]
-    public async Task EscapePressed()
+    
+    protected override async Task OnInitializedAsync()
     {
-        if (CloseOnEscape && Visible)
-        {
-            await Close();
-        }
+        // Async version - useful for loading data
+        await LoadDataAsync();
     }
-
-    private async Task BackdropClicked()
-    {
-        if (CloseOnBackdrop)
-            await Close();
-    }
-
-    public async Task Close()
-    {
-        Visible = false;
-        await VisibleChanged.InvokeAsync(false);
-    }
-}
-```
-
----
-
-# 2. JavaScript for Escape Key
-
-Create a JS file:
-
-📁 `wwwroot/js/modalDialog.js`
-
-```javascript
-window.modalDialog = {
-    registerEsc: function (dotNetObj) {
-        document.addEventListener("keydown", function (e) {
-            if (e.key === "Escape") {
-                dotNetObj.invokeMethodAsync("EscapePressed");
-            }
-        });
-    }
-};
-```
-
-Add to layout:
-
-```html
-<script src="~/js/modalDialog.js"></script>
-```
-
----
-
-# 3. Add CSS (Styling + Animation)
-
-📁 `wwwroot/css/modal.css`
-
-```css
-.modal-backdrop {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2000;
-}
-
-.modal-container {
-    background: white;
-    width: 450px;
-    max-width: 95%;
-    border-radius: 8px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    overflow: hidden;
-}
-
-.modal-header, .modal-footer {
-    padding: 16px;
-    background: #f2f2f2;
-}
-
-.modal-body {
-    padding: 16px;
-}
-
-.modal-close {
-    float: right;
-    background: none;
-    border: none;
-    font-size: 22px;
-    cursor: pointer;
-}
-
-.modal-anim {
-    animation: modal-enter 0.25s ease-out;
-}
-
-@keyframes modal-enter {
-    from {
-        opacity: 0;
-        transform: translateY(-15px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-```
-
-Add to layout:
-
-```html
-<link rel="stylesheet" href="~/css/modal.css" />
-```
-
----
-
-# 4. Use the Component Anywhere
-
-Example:
-
-```razor
-@page "/example"
-
-<button class="btn btn-primary" @onclick="ShowModal">Open Modal</button>
-
-<ModalDialog Visible="@Show"
-             VisibleChanged="@(v => Show = v)"
-             CloseOnEscape="true"
-             CloseOnBackdrop="true">
-
-    <Header>
-        <h3>Example Modal</h3>
-    </Header>
-
-    <Body>
-        <p>This is a fully customizable modal dialog.</p>
-        <p>You can put <strong>any Razor component</strong> here.</p>
-    </Body>
-
-    <Footer>
-        <button class="btn btn-secondary" @onclick="CloseModal">Cancel</button>
-        <button class="btn btn-primary" @onclick="Save">Save</button>
-    </Footer>
-
-</ModalDialog>
-
-@code {
-    private bool Show = false;
-
-    void ShowModal() => Show = true;
-    void CloseModal() => Show = false;
-
-    void Save()
-    {
-        // Perform save logic
-        Show = false;
-    }
-}
-```
-
-### Features working here
-
-✔ 3 content slots (header/body/footer)
-✔ Close via button
-✔ Close via ESC
-✔ Close via clicking backdrop
-✔ Two-way binding for Visible
-
----
-
-# 5. Using It in Razor Pages
-
-In a `.cshtml` file:
-
-```razor
-<component type="typeof(ModalDialog)"
-           render-mode="Server"
-           param-Visible="Model.Show"
-           param-VisibleChanged="Model.OnModalChanged" />
-```
-
----
-
-# ⭐ Advanced Reusable Component: `DataTable<T>`
-
-A **fully reusable Razor Component Data Table** with:
-
-✔ Sorting (ascending/descending)
-✔ Automatic column creation
-✔ Custom column templates
-✔ Row click event
-✔ Pagination (optional add-on)
-✔ Works in Blazor / Razor Components / Razor Pages
-
-This is a production-ready, generic data table using `RenderFragment<T>` templates.
-
----
-
-## 1. Create the data table component
-
-📁 `Components/DataTable.razor`
-
-```razor
-@typeparam TItem
-
-<table class="data-table">
-    <thead>
-        <tr>
-            @foreach (var col in Columns)
-            {
-                <th @onclick="() => SortBy(col)">
-                    @col.Title
-
-                    @if (SortColumn == col)
-                    {
-                        <span class="sort-indicator">
-                            @(SortDescending ? "▼" : "▲")
-                        </span>
-                    }
-                </th>
-            }
-        </tr>
-    </thead>
-
-    <tbody>
-        @foreach (var item in SortedItems)
-        {
-            <tr @onclick="() => RowClicked.InvokeAsync(item)">
-                @foreach (var col in Columns)
-                {
-                    <td>
-                        @col.CellTemplate(item)
-                    </td>
-                }
-            </tr>
-        }
-    </tbody>
-</table>
-
-@code {
-    // INPUT DATA
-    [Parameter] public IEnumerable<TItem>? Items { get; set; }
-
-    // COLUMNS
-    [Parameter] public RenderFragment? ChildContent { get; set; }
-
-    internal List<DataTableColumn<TItem>> Columns { get; set; } = new();
-
-    // SORTING STATE
-    private DataTableColumn<TItem>? SortColumn;
-    private bool SortDescending = false;
-
-    // EVENTS
-    [Parameter] public EventCallback<TItem> RowClicked { get; set; }
-
-    private IEnumerable<TItem> SortedItems =>
-        SortColumn == null || Items == null
-            ? Items ?? Enumerable.Empty<TItem>()
-            : (SortDescending
-                ? Items.OrderByDescending(SortColumn.SortKeySelector)
-                : Items.OrderBy(SortColumn.SortKeySelector)
-              );
-
+    
     protected override void OnParametersSet()
     {
-        Columns.Clear();
-        ChildContent?.Invoke(this);
+        // Called when parameters are set or changed
     }
-
-    internal void AddColumn(DataTableColumn<TItem> column)
+    
+    protected override async Task OnParametersSetAsync()
     {
-        Columns.Add(column);
+        // Async version
     }
-
-    private void SortBy(DataTableColumn<TItem> col)
+    
+    protected override void OnAfterRender(bool firstRender)
     {
-        if (SortColumn == col)
-            SortDescending = !SortDescending;
-        else
+        // Called after component has rendered
+        if (firstRender)
         {
-            SortColumn = col;
-            SortDescending = false;
+            // Runs only on first render
         }
     }
-}
-```
-
----
-
-# 2. Create a column definition component
-
-📁 `Components/DataTableColumn.razor`
-
-```razor
-@typeparam TItem
-
-@code {
-    [CascadingParameter] internal DataTable<TItem> Table { get; set; } = default!;
-
-    [Parameter] public string Title { get; set; } = "";
-    [Parameter] public Func<TItem, object>? SortKey { get; set; }
-    [Parameter] public RenderFragment<TItem>? Template { get; set; }
-
-    protected override void OnInitialized()
+    
+    protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        Table.AddColumn(new DataTableColumn<TItem>
-        {
-            Title = Title,
-            CellTemplate = Template!,
-            SortKeySelector = SortKey ?? (_ => 0)
-        });
+        // Async version - useful for JS interop
+    }
+    
+    public void Dispose()
+    {
+        // Clean up resources
     }
 }
-
-public class DataTableColumn<TItem>
-{
-    public string Title { get; set; } = "";
-    public RenderFragment<TItem> CellTemplate { get; set; } = default!;
-    public Func<TItem, object> SortKeySelector { get; set; } = default!;
-}
 ```
 
----
+## Conditional Rendering
 
-# 3. Add CSS styling (sortable header, hover, etc.)
-
-📁 `wwwroot/css/datatable.css`
-
-```css
-.data-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.data-table th {
-    cursor: pointer;
-    padding: 10px;
-    background: #f2f2f2;
-    user-select: none;
-    text-align: left;
-}
-
-.data-table th:hover {
-    background: #e2e2e2;
-}
-
-.data-table td {
-    padding: 10px;
-    border-top: 1px solid #ddd;
-}
-
-.data-table tr:hover {
-    background: #fafafa;
-}
-
-.sort-indicator {
-    margin-left: 5px;
-    font-size: 0.8em;
-}
-```
-
-Add to layout:
-
-```html
-<link rel="stylesheet" href="~/css/datatable.css" />
-```
-
----
-
-# 4. Use the Data Table
-
-Create a model:
-
-```csharp
-public class Person 
-{
-    public string Name { get; set; } = "";
-    public int Age { get; set; }
-    public string City { get; set; } = "";
-}
-```
-
-Use the table:
+**If Statements**
 
 ```razor
-@page "/people"
-
-<DataTable Items="@People" RowClicked="OnPersonSelected">
-    <DataTableColumn TItem="Person" Title="Name" SortKey="@(p => p.Name)" Template="@(p => @<span>@p.Name</span>)" />
-    <DataTableColumn TItem="Person" Title="Age" SortKey="@(p => p.Age)" Template="@(p => @<span>@p.Age</span>)" />
-    <DataTableColumn TItem="Person" Title="City" SortKey="@(p => p.City)" Template="@(p => @<span>@p.City</span>)" />
-</DataTable>
-
-<p>@SelectedMessage</p>
+@if (isLoggedIn)
+{
+    <p>Welcome back!</p>
+}
+else
+{
+    <p>Please log in.</p>
+}
 
 @code {
-    List<Person> People = new()
+    private bool isLoggedIn = false;
+}
+```
+
+**Switch Expressions**
+
+```razor
+<p>Status: @status</p>
+<div class="@GetStatusClass()">
+    @status
+</div>
+
+@code {
+    private string status = "pending";
+    
+    private string GetStatusClass() => status switch
     {
-        new Person { Name="Alice", Age=30, City="Boston" },
-        new Person { Name="Bob", Age=22, City="Austin" },
-        new Person { Name="Charlie", Age=27, City="Denver" }
+        "success" => "alert-success",
+        "error" => "alert-danger",
+        "pending" => "alert-warning",
+        _ => "alert-info"
     };
-
-    string SelectedMessage = "";
-
-    void OnPersonSelected(Person p)
-    {
-        SelectedMessage = $"Clicked: {p.Name}";
-    }
 }
 ```
 
----
-
-# 5. Resulting Features
-
-✔ Sort by any column
-✔ Ascending/descending toggle
-✔ Fully customizable cell templates
-✔ Works with any model type
-✔ Row click event
-✔ Reusable across the entire app
-✔ Separate styling
-
----
-
-# 6. Optional Add-Ons
-
-If you want, we can add:
-
-## 🔹 Pagination
-
-Client-side or server-side.
-
-## 🔹 Filtering
-
-Search bar, column filters, multi-column filters.
-
-## 🔹 Column resizing / reordering
-
-Advanced drag UI.
-
-## 🔹 Sticky headers
-
-## 🔹 Loading state
-
-Skeleton UI while fetching.
-
-## 🔹 Expandable rows
-
-Accordion-style details.
-
-## 🔹 Selectable rows
-
-Checkboxes or radio selection.
-
----
-
-A **full-featured, professional-grade Data Table component** with:
-
-✔ Sorting
-✔ Pagination
-✔ Filtering
-✔ Row selection
-✔ Inline editing
-✔ Expandable rows
-✔ Infinite scroll
-✔ Loading state
-✔ Resizable + reorderable columns
-✔ Sticky header
-
-Below is the **step-by-step architecture**, **full component code**, and **usage examples**.
-
----
-
-# ⭐ PART 1 — Base Component (Sorting + Structure)
-
-You already have a solid foundation from the previous version.
-We'll now upgrade it into a **DataGrid** system with multiple subcomponents.
-
----
-
-# ⭐ PART 2 — Add Pagination
-
-### New Parameters
-
-```csharp
-[Parameter] public int PageSize { get; set; } = 10;
-[Parameter] public int Page { get; set; } = 1;
-[Parameter] public EventCallback<int> PageChanged { get; set; }
-```
-
-### Add paginated list
-
-```csharp
-private IEnumerable<TItem> PagedItems =>
-    SortedItems
-        .Skip((Page - 1) * PageSize)
-        .Take(PageSize);
-```
-
-### Add paging UI
-
-Inside the main DataTable markup:
+## Loops and Lists
 
 ```razor
-<div class="pagination">
-    <button @onclick="PrevPage" disabled="@(!CanPrev)">Prev</button>
-    <span>Page @Page</span>
-    <button @onclick="NextPage" disabled="@(!CanNext)">Next</button>
-</div>
+<ul>
+    @foreach (var todo in todos)
+    {
+        <li>
+            <input type="checkbox" @bind="todo.IsCompleted" />
+            @todo.Title
+        </li>
+    }
+</ul>
 
 @code {
-    private bool CanPrev => Page > 1;
-    private bool CanNext =>
-        Items != null && (Page * PageSize) < Items.Count();
-
-    private async Task PrevPage()
+    private List<TodoItem> todos = new()
     {
-        if (CanPrev)
+        new TodoItem { Id = 1, Title = "Learn Blazor", IsCompleted = false },
+        new TodoItem { Id = 2, Title = "Build an app", IsCompleted = false }
+    };
+    
+    public class TodoItem
+    {
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public bool IsCompleted { get; set; }
+    }
+}
+```
+
+## Child Components and EventCallback
+
+**Parent Component**
+
+```razor
+<TodoList OnTodoAdded="HandleTodoAdded" />
+
+<p>Total todos: @todoCount</p>
+
+@code {
+    private int todoCount = 0;
+    
+    private void HandleTodoAdded()
+    {
+        todoCount++;
+    }
+}
+```
+
+**Child Component**
+
+```razor
+<!-- TodoList.razor -->
+<input @bind="newTodo" />
+<button @onclick="AddTodo">Add</button>
+
+@code {
+    [Parameter]
+    public EventCallback OnTodoAdded { get; set; }
+    
+    private string newTodo = "";
+    
+    private async Task AddTodo()
+    {
+        if (!string.IsNullOrWhiteSpace(newTodo))
         {
-            Page--;
-            await PageChanged.InvokeAsync(Page);
+            await OnTodoAdded.InvokeAsync();
+            newTodo = "";
         }
     }
-
-    private async Task NextPage()
-    {
-        if (CanNext)
-        {
-            Page++;
-            await PageChanged.InvokeAsync(Page);
-        }
-    }
 }
 ```
 
----
-
-# ⭐ PART 3 — Add Filtering
-
-### Add filter state
-
-```csharp
-[Parameter] public string FilterText { get; set; } = "";
-[Parameter] public Func<TItem, string>? FilterBy { get; set; }
-```
-
-### Add filtering step
-
-Modify `SortedItems`:
-
-```csharp
-private IEnumerable<TItem> FilteredItems =>
-    string.IsNullOrWhiteSpace(FilterText) || FilterBy == null
-        ? Items ?? Enumerable.Empty<TItem>()
-        : Items!.Where(i => FilterBy(i)
-            .Contains(FilterText, StringComparison.OrdinalIgnoreCase));
-
-private IEnumerable<TItem> SortedItems =>
-    SortColumn == null
-        ? FilteredItems
-        : SortDescending
-            ? FilteredItems.OrderByDescending(SortColumn.SortKeySelector)
-            : FilteredItems.OrderBy(SortColumn.SortKeySelector);
-```
-
-### Add filter UI
-
-In the table header:
+## Form Validation
 
 ```razor
-<input type="text" @bind="FilterText" placeholder="Search..." class="filter-box" />
-```
-
----
-
-# ⭐ PART 4 — Add Row Selection
-
-This gives checkboxes + multi-select or single-select.
-
-### Parameters
-
-```csharp
-[Parameter] public bool Selectable { get; set; }
-[Parameter] public bool MultiSelect { get; set; } = true;
-
-public HashSet<TItem> SelectedRows { get; private set; } = new();
-```
-
-### Add checkbox column
-
-Inside `<thead>`:
-
-```razor
-@if (Selectable)
-{
-    <th><input type="checkbox" @onchange="ToggleSelectAll" /></th>
-}
-```
-
-Inside `<tbody>`:
-
-```razor
-@if (Selectable)
-{
-    <td>
-        <input type="checkbox" checked="@SelectedRows.Contains(item)" @onchange="() => ToggleItem(item)" />
-    </td>
-}
-```
-
-### Logic
-
-```csharp
-private void ToggleItem(TItem item)
-{
-    if (MultiSelect)
-    {
-        if (!SelectedRows.Add(item))
-            SelectedRows.Remove(item);
-    }
-    else
-    {
-        SelectedRows.Clear();
-        SelectedRows.Add(item);
-    }
-}
-```
-
----
-
-# ⭐ PART 5 — Inline Editing
-
-Each cell becomes editable using a template.
-
-### Column adds editable template
-
-```csharp
-[Parameter] public RenderFragment<TItem>? EditTemplate { get; set; }
-[Parameter] public bool Editable { get; set; }
-```
-
-### Add IsEditing flag
-
-```csharp
-private TItem? EditingItem = default;
-```
-
-### Render cells
-
-```razor
-<td>
-    @if (col.Editable && EditingItem != null && EqualityComparer<TItem>.Default.Equals(item, EditingItem))
-    {
-        @col.EditTemplate(item)
-    }
-    else
-    {
-        @col.CellTemplate(item)
-    }
-</td>
-```
-
-### Start editing
-
-```razor
-<button @onclick="() => EditingItem = item">Edit</button>
-<button @onclick="() => SaveRow(item)">Save</button>
-<button @onclick="CancelEdit">Cancel</button>
-```
-
----
-
-# ⭐ PART 6 — Expandable Rows
-
-Accordion-style detail rows.
-
-### Parameter
-
-```csharp
-[Parameter] public RenderFragment<TItem>? DetailTemplate { get; set; }
-```
-
-### Row expansion state
-
-```csharp
-private HashSet<TItem> Expanded = new();
-private void ToggleExpand(TItem item)
-{
-    if (!Expanded.Add(item))
-        Expanded.Remove(item);
-}
-```
-
-### Markup
-
-```razor
-<tr @onclick="() => ToggleExpand(item)">
-    <!-- normal row -->
-</tr>
-
-@if (Expanded.Contains(item))
-{
-    <tr class="expanded-row">
-        <td colspan="@Columns.Count">
-            @DetailTemplate(item)
-        </td>
-    </tr>
-}
-```
-
----
-
-# ⭐ PART 7 — Infinite Scrolling
-
-We add a scroll container and load more items when reaching bottom.
-
-### Container
-
-```razor
-<div class="scroll-container" @onscroll="CheckScroll">
-    <!-- table here -->
-</div>
-```
-
-### Scroll handler
-
-```csharp
-private async Task CheckScroll(UIEventArgs e)
-{
-    var args = (UIEventArgs)e;
-
-    // Pseudo-code: add JS interop for precise scroll metrics.
-    if (/* near bottom */)
-    {
-        await LoadMore.InvokeAsync(null);
-    }
-}
-
-[Parameter] public EventCallback LoadMore { get; set; }
-```
-
-You can use JS interop to detect scroll position.
-
----
-
-# ⭐ PART 8 — Loading State
-
-Add spinner or skeleton.
-
-### Parameter
-
-```csharp
-[Parameter] public bool IsLoading { get; set; }
-```
-
-### Markup
-
-```razor
-@if (IsLoading)
-{
-    <div class="loading-overlay">
-        Loading...
+<EditForm Model="person" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    
+    <div>
+        <label>Name:</label>
+        <InputText @bind-Value="person.Name" />
+        <ValidationMessage For="() => person.Name" />
     </div>
+    
+    <div>
+        <label>Email:</label>
+        <InputText @bind-Value="person.Email" />
+        <ValidationMessage For="() => person.Email" />
+    </div>
+    
+    <div>
+        <label>Age:</label>
+        <InputNumber @bind-Value="person.Age" />
+        <ValidationMessage For="() => person.Age" />
+    </div>
+    
+    <button type="submit">Submit</button>
+</EditForm>
+
+@code {
+    private Person person = new();
+    
+    private void HandleValidSubmit()
+    {
+        // Process valid form
+    }
+    
+    public class Person
+    {
+        [Required]
+        [StringLength(50)]
+        public string Name { get; set; }
+        
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }
+        
+        [Range(0, 120)]
+        public int Age { get; set; }
+    }
 }
 ```
 
----
+## Dependency Injection
 
-# ⭐ PART 9 — Column Resizing & Reordering
+**Register a Service**
 
-This requires JavaScript interop to track drag events.
-
-### Add to column definition
+In `Program.cs`:
 
 ```csharp
-public bool Resizable { get; set; }
-public bool Reorderable { get; set; }
+builder.Services.AddScoped<IWeatherService, WeatherService>();
 ```
 
-### Add resize handle in `<th>`
+**Use in Component**
 
 ```razor
-<div class="resize-handle" @onmousedown="(e) => StartResize(e, col)"></div>
+@inject IWeatherService WeatherService
+
+<h3>Weather Forecast</h3>
+
+@if (forecasts == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <ul>
+        @foreach (var forecast in forecasts)
+        {
+            <li>@forecast.Date: @forecast.Temperature°C</li>
+        }
+    </ul>
+}
+
+@code {
+    private List<WeatherForecast>? forecasts;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        forecasts = await WeatherService.GetForecastAsync();
+    }
+}
 ```
 
-### Add reorder drag
+## Component CSS Isolation
 
-```razor
-<th draggable="true"
-    @ondragstart="(e) => StartDrag(e, col)"
-    @ondrop="(e) => DropColumn(e, col)">
-```
-
-I can generate the full JS file too if you want it.
-
----
-
-# ⭐ PART 10 — Sticky Header
-
-CSS only:
+Create a file named `Counter.razor.css` alongside `Counter.razor`:
 
 ```css
-.data-table thead th {
-    position: sticky;
-    top: 0;
-    background: #f2f2f2;
-    z-index: 5;
+/* Counter.razor.css */
+h3 {
+    color: blue;
+    font-size: 24px;
+}
+
+button {
+    background-color: #0066cc;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #0052a3;
 }
 ```
 
----
+These styles will automatically scope to only the Counter component.
+
+## Best Practices
+
+1. Keep components small and focused on a single responsibility
+2. Use parameters to make components reusable
+3. Leverage dependency injection for services and state management
+4. Implement proper error handling with try-catch blocks
+5. Use async/await for data loading and API calls
+6. Dispose of resources properly in IDisposable
+7. Optimize re-renders by using `ShouldRender()` when needed
+8. Use CSS isolation to prevent style conflicts
+9. Validate user input with data annotations
+10. Follow naming conventions (PascalCase for components and parameters)
+
+## Next Steps
+
+- Explore Blazor routing and navigation
+- Learn about state management with Fluxor or similar libraries
+- Implement authentication and authorization
+- Work with JavaScript interop for browser APIs
+- Deploy your Blazor application to production
+
+Happy coding with Blazor Razor components!
