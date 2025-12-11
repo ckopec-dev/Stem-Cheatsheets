@@ -1,4 +1,4 @@
-# Comprehensive Electrochemistry Tutorial
+Electrochemistry Tutorial
 
 ## Table of Contents
 1. Introduction to Electrochemistry
