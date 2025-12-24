@@ -432,3 +432,410 @@ View Components:
 
 They are one of ASP.NET Core’s **most underused power features**.
 
+
+Below is a **real-world, production-grade View Component library** built the way you would actually ship and reuse it across multiple ASP.NET Core apps.
+
+This goes beyond a demo and covers:
+
+* **Razor Class Library (RCL)**
+* **Multiple real components**
+* **Strong typing**
+* **DI, caching, theming**
+* **Static assets**
+* **Consumer app integration**
+* **Scalable folder structure**
+
+This mirrors how teams build internal design systems or shared UI platforms.
+
+---
+
+# Building a Real-World ASP.NET Core View Component Library
+
+## 1. What We’re Building
+
+A reusable UI library containing **real components**:
+
+| Component   | Purpose                              |
+| ----------- | ------------------------------------ |
+| `Alert`     | Status messages (success/error/info) |
+| `UserMenu`  | Auth-aware user profile menu         |
+| `DataTable` | Sortable table                       |
+| `Footer`    | Dynamic footer content               |
+
+Packaged as:
+
+* ✅ Razor Class Library
+* ✅ Referenced by any MVC or Razor Pages app
+* ✅ Supports theming & caching
+
+---
+
+## 2. Create the Razor Class Library
+
+```bash
+dotnet new razorclasslib -n Acme.Ui.Components
+cd Acme.Ui.Components
+```
+
+Target framework (recommended):
+
+```xml
+<TargetFramework>net8.0</TargetFramework>
+```
+
+Enable MVC features:
+
+```xml
+<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+```
+
+---
+
+## 3. Folder Structure (Production-Ready)
+
+```
+Acme.Ui.Components
+│
+├── Components
+│   ├── Alert
+│   │   ├── AlertViewComponent.cs
+│   │   ├── AlertModel.cs
+│   │   └── Views
+│   │       └── Default.cshtml
+│   │
+│   ├── UserMenu
+│   │   ├── UserMenuViewComponent.cs
+│   │   └── Views
+│   │       └── Default.cshtml
+│   │
+│   ├── DataTable
+│   │   ├── DataTableViewComponent.cs
+│   │   ├── DataTableModel.cs
+│   │   └── Views
+│   │       └── Default.cshtml
+│
+├── wwwroot
+│   └── css
+│       └── components.css
+│
+└── Extensions
+    └── ServiceCollectionExtensions.cs
+```
+
+This structure scales cleanly to **dozens of components**.
+
+---
+
+## 4. Component #1 – Alert (Status Messages)
+
+### Model
+
+```csharp
+namespace Acme.Ui.Components.Components.Alert;
+
+public class AlertModel
+{
+    public string Message { get; set; } = "";
+    public string Type { get; set; } = "info"; // success, danger, warning
+}
+```
+
+---
+
+### View Component
+
+```csharp
+using Microsoft.AspNetCore.Mvc;
+
+namespace Acme.Ui.Components.Components.Alert;
+
+public class AlertViewComponent : ViewComponent
+{
+    public IViewComponentResult Invoke(string message, string type = "info")
+    {
+        return View(new AlertModel
+        {
+            Message = message,
+            Type = type
+        });
+    }
+}
+```
+
+---
+
+### View
+
+📁 `/Components/Alert/Views/Default.cshtml`
+
+```razor
+@model AlertModel
+
+<div class="alert alert-@Model.Type">
+    @Model.Message
+</div>
+```
+
+---
+
+### Usage
+
+```razor
+<vc:alert message="Saved successfully" type="success"></vc:alert>
+```
+
+---
+
+## 5. Component #2 – User Menu (Auth-Aware)
+
+### View Component
+
+```csharp
+using Microsoft.AspNetCore.Mvc;
+
+namespace Acme.Ui.Components.Components.UserMenu;
+
+public class UserMenuViewComponent : ViewComponent
+{
+    public IViewComponentResult Invoke()
+    {
+        if (!User.Identity?.IsAuthenticated ?? true)
+            return Content("");
+
+        return View(User.Identity!.Name);
+    }
+}
+```
+
+---
+
+### View
+
+```razor
+@model string
+
+<div class="user-menu">
+    Hello, <strong>@Model</strong>
+    <a href="/Account/Logout">Logout</a>
+</div>
+```
+
+---
+
+### Usage (Layout)
+
+```razor
+<header>
+    <vc:user-menu></vc:user-menu>
+</header>
+```
+
+---
+
+## 6. Component #3 – DataTable (Real-World UI)
+
+### Model
+
+```csharp
+namespace Acme.Ui.Components.Components.DataTable;
+
+public class DataTableModel<T>
+{
+    public IEnumerable<T> Items { get; set; } = [];
+    public string[] Columns { get; set; } = [];
+}
+```
+
+---
+
+### View Component
+
+```csharp
+using Microsoft.AspNetCore.Mvc;
+
+namespace Acme.Ui.Components.Components.DataTable;
+
+public class DataTableViewComponent : ViewComponent
+{
+    public IViewComponentResult Invoke<T>(
+        IEnumerable<T> items,
+        string[] columns)
+    {
+        return View(new DataTableModel<T>
+        {
+            Items = items,
+            Columns = columns
+        });
+    }
+}
+```
+
+---
+
+### View
+
+```razor
+@model dynamic
+
+<table class="table">
+    <thead>
+        <tr>
+            @foreach (var col in Model.Columns)
+            {
+                <th>@col</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Items)
+        {
+            <tr>
+                @foreach (var col in Model.Columns)
+                {
+                    <td>@item.GetType().GetProperty(col)?.GetValue(item)</td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+```
+
+---
+
+### Usage
+
+```razor
+<vc:data-table items="Model.Users"
+               columns="new[] { \"Name\", \"Email\" }">
+</vc:data-table>
+```
+
+---
+
+## 7. Static Assets (CSS)
+
+📁 `/wwwroot/css/components.css`
+
+```css
+.alert {
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.alert-success { background: #d4edda; }
+.alert-danger  { background: #f8d7da; }
+
+.user-menu {
+    float: right;
+}
+```
+
+---
+
+### Enable Static Assets in Consumer App
+
+```csharp
+app.UseStaticFiles();
+```
+
+Reference in `_Layout.cshtml`:
+
+```html
+<link rel="stylesheet" href="~/Acme.Ui.Components/css/components.css" />
+```
+
+---
+
+## 8. Dependency Injection + Caching Example
+
+```csharp
+public class FooterViewComponent : ViewComponent
+{
+    private readonly IMemoryCache _cache;
+
+    public FooterViewComponent(IMemoryCache cache)
+    {
+        _cache = cache;
+    }
+
+    public async Task<IViewComponentResult> InvokeAsync()
+    {
+        var year = _cache.GetOrCreate("footer-year", _ =>
+        {
+            _.AbsoluteExpirationRelativeToNow = TimeSpan.FromHours(1);
+            return DateTime.UtcNow.Year;
+        });
+
+        return View(year);
+    }
+}
+```
+
+---
+
+## 9. Service Registration Extension
+
+📁 `Extensions/ServiceCollectionExtensions.cs`
+
+```csharp
+using Microsoft.Extensions.DependencyInjection;
+
+namespace Acme.Ui.Components.Extensions;
+
+public static class ServiceCollectionExtensions
+{
+    public static IServiceCollection AddAcmeUiComponents(
+        this IServiceCollection services)
+    {
+        services.AddMemoryCache();
+        return services;
+    }
+}
+```
+
+---
+
+## 10. Consuming the Library
+
+### Reference the project
+
+```bash
+dotnet add reference ../Acme.Ui.Components
+```
+
+### Register services
+
+```csharp
+builder.Services.AddAcmeUiComponents();
+```
+
+### Use anywhere
+
+```razor
+<vc:alert message="Welcome back!" type="info"></vc:alert>
+<vc:user-menu></vc:user-menu>
+```
+
+---
+
+## 11. Testing Strategy
+
+* Unit test View Components (logic)
+* Snapshot test rendered HTML
+* Integration test with `WebApplicationFactory`
+
+View Components are **far more testable than partial views**.
+
+---
+
+## 12. Why This Architecture Works
+
+✅ Feature-based
+✅ Strongly typed
+✅ Async-friendly
+✅ Scales to dozens of components
+✅ Clean separation of UI logic
+✅ Reusable across apps
+
+This is the **same pattern used for internal UI platforms at scale**.
+
