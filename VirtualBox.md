@@ -183,6 +183,292 @@ rm -rf ~/.config/VirtualBox
 rm -rf ~/VirtualBox\ VMs
 ```
 
-## Next Steps
+# Managing VirtualBox from the Terminal
 
-Now that you have VirtualBox set up, you can experiment with different operating systems, create development environments, or test software in isolation. The snapshot feature makes it easy to experiment without consequences, and shared folders let you move files between your host and guest systems seamlessly.
+VirtualBox provides a powerful command-line interface called `VBoxManage` that lets you control virtual machines without opening the GUI. This tutorial covers the essential commands for managing VMs from the terminal.
+
+## Prerequisites
+
+- VirtualBox installed on your system
+- Terminal/command prompt access
+- Basic familiarity with command-line interfaces
+
+## Getting Started
+
+### Verify VBoxManage Installation
+
+First, confirm VBoxManage is available:
+
+```bash
+VBoxManage --version
+```
+
+This should display your VirtualBox version.
+
+## Essential Commands
+
+### Listing Virtual Machines
+
+View all registered VMs:
+
+```bash
+VBoxManage list vms
+```
+
+View running VMs only:
+
+```bash
+VBoxManage list runningvms
+```
+
+Get detailed information about a specific VM:
+
+```bash
+VBoxManage showvminfo "VM_Name"
+```
+
+### Starting Virtual Machines
+
+Start a VM in headless mode (no GUI):
+
+```bash
+VBoxManage startvm "VM_Name" --type headless
+```
+
+Start with GUI:
+
+```bash
+VBoxManage startvm "VM_Name" --type gui
+```
+
+Start in detachable GUI mode:
+
+```bash
+VBoxManage startvm "VM_Name" --type separate
+```
+
+### Controlling Running VMs
+
+Pause a running VM:
+
+```bash
+VBoxManage controlvm "VM_Name" pause
+```
+
+Resume a paused VM:
+
+```bash
+VBoxManage controlvm "VM_Name" resume
+```
+
+Gracefully shut down (requires Guest Additions):
+
+```bash
+VBoxManage controlvm "VM_Name" acpipowerbutton
+```
+
+Force power off (like pulling the plug):
+
+```bash
+VBoxManage controlvm "VM_Name" poweroff
+```
+
+Save the VM state:
+
+```bash
+VBoxManage controlvm "VM_Name" savestate
+```
+
+### Creating a New Virtual Machine
+
+Create a new VM:
+
+```bash
+VBoxManage createvm --name "Ubuntu-Server" --ostype "Ubuntu_64" --register
+```
+
+Common OS types include: `Ubuntu_64`, `Debian_64`, `Windows10_64`, `Fedora_64`. List all types:
+
+```bash
+VBoxManage list ostypes
+```
+
+### Configuring Virtual Machines
+
+Set memory (RAM) in MB:
+
+```bash
+VBoxManage modifyvm "VM_Name" --memory 2048
+```
+
+Set number of CPUs:
+
+```bash
+VBoxManage modifyvm "VM_Name" --cpus 2
+```
+
+Enable IOAPIC (required for multicore):
+
+```bash
+VBoxManage modifyvm "VM_Name" --ioapic on
+```
+
+Configure network adapter:
+
+```bash
+VBoxManage modifyvm "VM_Name" --nic1 nat
+VBoxManage modifyvm "VM_Name" --nic2 bridged --bridgeadapter2 eth0
+```
+
+### Managing Storage
+
+Create a virtual hard disk:
+
+```bash
+VBoxManage createhd --filename "/path/to/disk.vdi" --size 20480
+```
+
+Add a storage controller:
+
+```bash
+VBoxManage storagectl "VM_Name" --name "SATA Controller" --add sata --controller IntelAhci
+```
+
+Attach a hard disk:
+
+```bash
+VBoxManage storageattach "VM_Name" --storagectl "SATA Controller" --port 0 --device 0 --type hdd --medium "/path/to/disk.vdi"
+```
+
+Attach an ISO file:
+
+```bash
+VBoxManage storageattach "VM_Name" --storagectl "SATA Controller" --port 1 --device 0 --type dvddrive --medium "/path/to/ubuntu.iso"
+```
+
+Remove media:
+
+```bash
+VBoxManage storageattach "VM_Name" --storagectl "SATA Controller" --port 1 --device 0 --type dvddrive --medium none
+```
+
+### Snapshots
+
+Create a snapshot:
+
+```bash
+VBoxManage snapshot "VM_Name" take "Snapshot_Name" --description "Clean install"
+```
+
+List snapshots:
+
+```bash
+VBoxManage snapshot "VM_Name" list
+```
+
+Restore a snapshot:
+
+```bash
+VBoxManage snapshot "VM_Name" restore "Snapshot_Name"
+```
+
+Delete a snapshot:
+
+```bash
+VBoxManage snapshot "VM_Name" delete "Snapshot_Name"
+```
+
+### Cloning VMs
+
+Clone a VM:
+
+```bash
+VBoxManage clonevm "Original_VM" --name "Cloned_VM" --register
+```
+
+Create a linked clone (saves disk space):
+
+```bash
+VBoxManage clonevm "Original_VM" --name "Linked_Clone" --snapshot "Snapshot_Name" --options link --register
+```
+
+### Importing and Exporting
+
+Export a VM to OVA format:
+
+```bash
+VBoxManage export "VM_Name" --output "/path/to/vm.ova"
+```
+
+Import an OVA/OVF file:
+
+```bash
+VBoxManage import "/path/to/vm.ova"
+```
+
+### Deleting VMs
+
+Unregister a VM (keeps files):
+
+```bash
+VBoxManage unregistervm "VM_Name"
+```
+
+Delete a VM and all its files:
+
+```bash
+VBoxManage unregistervm "VM_Name" --delete
+```
+
+## Practical Example: Creating and Starting a VM
+
+Here's a complete workflow to create and start a basic Ubuntu VM:
+
+```bash
+# Create the VM
+VBoxManage createvm --name "Ubuntu-Test" --ostype "Ubuntu_64" --register
+
+# Configure basic settings
+VBoxManage modifyvm "Ubuntu-Test" --memory 2048 --cpus 2 --ioapic on
+
+# Create and attach storage
+VBoxManage createhd --filename "$HOME/VirtualBox VMs/Ubuntu-Test/Ubuntu-Test.vdi" --size 25600
+
+VBoxManage storagectl "Ubuntu-Test" --name "SATA Controller" --add sata --controller IntelAhci
+
+VBoxManage storageattach "Ubuntu-Test" --storagectl "SATA Controller" --port 0 --device 0 --type hdd --medium "$HOME/VirtualBox VMs/Ubuntu-Test/Ubuntu-Test.vdi"
+
+# Attach Ubuntu ISO
+VBoxManage storageattach "Ubuntu-Test" --storagectl "SATA Controller" --port 1 --device 0 --type dvddrive --medium "$HOME/Downloads/ubuntu-22.04.iso"
+
+# Configure network
+VBoxManage modifyvm "Ubuntu-Test" --nic1 nat
+
+# Start the VM
+VBoxManage startvm "Ubuntu-Test" --type gui
+```
+
+## Tips and Best Practices
+
+- Always use quotes around VM names that contain spaces
+- Use `--type headless` for servers that don't need a GUI
+- Take snapshots before major changes
+- Use `VBoxManage list` commands to verify your configurations
+- Check the exit status of commands in scripts: `$?` (bash) contains the return code
+- For automation, consider using the `--wait` flag with certain commands
+
+## Getting Help
+
+View all available commands:
+
+```bash
+VBoxManage --help
+```
+
+Get help for a specific command:
+
+```bash
+VBoxManage startvm --help
+```
+
+This tutorial covers the most common VBoxManage operations. The command-line interface provides even more advanced options for networking, USB devices, shared folders, and remote management.
