@@ -398,6 +398,12 @@ echo "The script took $runtime seconds to execute."
 
 # Get performance analysis metrics of a process
 $ sudo perf stat ls -la
+
+# Show disk usage in current directory
+$ ncdu
+
+# Show drive usage in nice format
+$ duf
 ~~~
 
 ## Jobs
