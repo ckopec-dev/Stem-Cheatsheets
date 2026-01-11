@@ -404,6 +404,9 @@ $ ncdu
 
 # Show drive usage in nice format
 $ duf
+
+# Show live stats similar to ping and traceroute
+$ mtr google.com
 ~~~
 
 ## Jobs
