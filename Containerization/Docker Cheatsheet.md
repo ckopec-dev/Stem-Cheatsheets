@@ -374,3 +374,19 @@ $ docker compose down
 ### Show status of compose applications
 
 `$ docker compose ls`
+
+## Lazydocker
+
+This is a console management UI for docker. [Project](https://github.com/jesseduffield/lazydocker)
+
+### Install
+
+~~~bash
+$ git clone https://github.com/jesseduffield/lazydocker.git
+$ cd lazydocker
+$ go install
+~~~
+
+### Run
+
+`$ go run main.go`
