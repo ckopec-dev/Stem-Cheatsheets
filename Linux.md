@@ -134,6 +134,10 @@ $ tree -p
 
 `$ rm {filename}`
 
+### Securely delete a file
+
+`$ shred {filename}`
+
 ### Create a symbolic link
 
 `$ ln -s {target-path} {link-name}`
