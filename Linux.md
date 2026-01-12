@@ -413,6 +413,9 @@ $ glances
 
 # Do a dns lookup and get result in json
 $ dog -J google.com
+
+# Show which boot processes took longest
+$ systemd-analyze blame
 ~~~
 
 ## Jobs
