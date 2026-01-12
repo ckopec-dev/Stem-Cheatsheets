@@ -407,6 +407,12 @@ $ duf
 
 # Show live stats similar to ping and traceroute
 $ mtr google.com
+
+# Another top-like utility
+$ glances
+
+# Do a dns lookup and get result in json
+$ dog -J google.com
 ~~~
 
 ## Jobs
