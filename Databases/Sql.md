@@ -303,6 +303,35 @@ USING(country);
 
 - Creates all possible combinations of two tables.
 
+~~~sql
+CREATE TABLE Colors (
+    ColorName VARCHAR(50)
+);
+
+CREATE TABLE Sizes (
+    SizeLabel VARCHAR(10)
+);
+
+INSERT INTO Colors (ColorName) VALUES
+('Red'),
+('Blue'),
+('Green');
+
+INSERT INTO Sizes (SizeLabel) VALUES
+('S'),
+('M'),
+('L'),
+('XL');
+
+SELECT
+    c.ColorName,
+    s.SizeLabel
+FROM
+    Colors AS c
+CROSS JOIN
+    Sizes AS s;
+~~~
+
 ### Self join
 
 - Used to join a table with itself.
