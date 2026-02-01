@@ -62,6 +62,13 @@ curl http://localhost:11434/api/chat -d '{
 }'
 ~~~
 
+### Monitor
+
+~~~bash
+$ journalctl -u ollama --no-pager --follow
+~~~
+
+
 ### Allow access from remote hosts
 
 ~~~bash
