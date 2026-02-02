@@ -11,6 +11,16 @@ $ sudo nano /etc/default/grub
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash video=hyperv_fb:1920x1080"
 ~~~
 
+### How to convert a VDI file to VHDX format
+
+~~~bash
+# Install qemu
+$ sudo apt install qemu-utils
+
+# Run the conversion
+$ qemu-img convert -p -f vdi source.vdi -O vhdx destination.vhdx
+~~~
+
 ## Remote client access
 
 ### RDP into a Windows machine from an Ubuntu client
