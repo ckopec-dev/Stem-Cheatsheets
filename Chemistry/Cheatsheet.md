@@ -2,6 +2,25 @@
 
 # Chemistry Cheatsheet
 
+## Atom structure
+- Proton: in the nucleus, indicates atomic number
+- Neutron: in the nucleus. Number neutrons = atomic mass - atomic number
+- Electrons: contained in shells (orbits). Each shell contains 1 or more subshells (s, p, d, f, g, h, i, k, etc). Each subshell can hold a maximum number of electrons. The shell itself can therefore hold a maximum number also (except for the outer valence shell).
+- The periods (rows) on the periodic table indicate the number of shells. E.g. Oxygen is on the 2nd row, and therefore has 2 shells.
+
+- Shell max electron capacity
+  - 1st: 2
+  - 2nd: 8
+  - 3rd: 18
+  - 4th: 32
+  - 5th (and higher): 50
+- Subshell max electron capacity
+  - s: 2
+  - p: 6
+  - d: 10
+  - f: 14
+  - g (and higher): 18 	
+
 ## The periodic table
 
 - Top left: symbol
