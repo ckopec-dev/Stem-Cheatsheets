@@ -10,4 +10,4 @@
 
 ## TI-99/4A
 
-[Classic99](https://harmlesslion.com/software/classic99/)
+- [Classic99](https://harmlesslion.com/software/classic99/)
