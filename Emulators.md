@@ -8,7 +8,7 @@
 
 - [Altirra](https://www.virtualdub.org/altirra.html)
 
-## Commodore (C4, Vic-20, Pet)
+## Commodore (C64, Vic-20, Pet)
 
 - [Vice](https://vice-emu.sourceforge.io/)
 
