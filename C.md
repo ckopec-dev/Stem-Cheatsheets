@@ -187,7 +187,8 @@ int main(int argc, char **argv)
 
 ## Windows Programming
 
-[GDI Reference](https://learn.microsoft.com/en-us/windows/win32/gdi/windows-gdi)
+- [GDI Reference](https://learn.microsoft.com/en-us/windows/win32/gdi/windows-gdi)
+- [theForger's Win32 API Programming Tutorial](https://winprog.org/tutorial/)
 
 ### Basic windows programming demo
 
