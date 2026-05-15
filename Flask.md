@@ -106,7 +106,7 @@ Open **http://localhost:5000** in your browser — you should see the hello mess
 
 ## ✅ Your Flask App is Containerized!
 
-### Docker compose
+### Docker compose (docker-compose.yml)
 
 ~~~yaml
 services:
