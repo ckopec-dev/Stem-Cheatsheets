@@ -505,6 +505,8 @@ SETCOLOR register,hue,luminance
 
 # Chapter 15 - Sound
 
+SOUND {voice},{note},{tone},{loudness}
+
 Simple tone
 
 ```basic
