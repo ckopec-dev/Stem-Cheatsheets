@@ -23,6 +23,7 @@
   - To lock movement to an axis, press x, y, or z after the s
 - **Rotate** selected object: r (for rotate) + mouse move, left mouse click to release
   - To lock movement to an axis, press x, y, or z after the r
+- Cycle mode (object/edit): tab
 - Render the scene as an image: F12
 - Switch to camera view: num pad 0
 - Change properties (e.g. color) of an object in the Properties window
