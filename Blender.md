@@ -10,18 +10,18 @@
 
 ## Basic navigation
 
-- Select object: left click
-- Add item to scene: shift + A
-- Remove item from scene: left-click to select, then Delete key
-- Orbit selected object: middle mouse click
-- Pan around entire scene: shift + middle mouse click
-- Zoom in/out: mouse wheel
-- Focus on selected object: num pad .
-- Move selected object: g (for grab) + mouse move, left mouse click to release
+- **Select** object: left click
+- **Add** item to scene: shift + A
+- **Remove** item from scene: left-click to select, then Delete key
+- **Orbit** selected object: middle mouse click
+- **Pan** around entire scene: shift + middle mouse click
+- **Zoom** in/out: mouse wheel
+- **Focus** on selected object: num pad .
+- **Move** selected object: g (for grab) + mouse move, left mouse click to release
   - To lock movement to an axis, press x, y, or z after the g
-- Scale selected object: s (for scale) + mouse move, left mouse click to release
+- **Scale** selected object: s (for scale) + mouse move, left mouse click to release
   - To lock movement to an axis, press x, y, or z after the s
-- Rotate selected object: r (for rotate) + mouse move, left mouse click to release
+- **Rotate** selected object: r (for rotate) + mouse move, left mouse click to release
   - To lock movement to an axis, press x, y, or z after the r
 - Render the scene as an image: F12
 - Switch to camera view: num pad 0
