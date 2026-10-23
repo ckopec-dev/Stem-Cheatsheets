@@ -2,8 +2,8 @@
 
 ## Tutorials
 
-[Donut 2026](https://www.youtube.com/watch?v=z-Xl9tGqH14)
-[ABSOLUTE Beginner Basics.. Blender For Noobs 2025](https://www.youtube.com/watch?v=peSv5IT5Ve4)
+- [Donut 2026](https://www.youtube.com/watch?v=z-Xl9tGqH14)
+- [ABSOLUTE Beginner Basics.. Blender For Noobs 2025](https://www.youtube.com/watch?v=peSv5IT5Ve4)
 
 ## Basic interface
 
