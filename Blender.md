@@ -23,6 +23,7 @@
   - To lock movement to an axis, press x, y, or z after the s
 - **Rotate** selected object: r (for rotate) + mouse move, left mouse click to release
   - To lock movement to an axis, press x, y, or z after the r
+- Above also work in edit mode. You can, for example, scale a single face
 - Cycle mode (object/edit): tab
 - Add edge (loop cut): ctrl-R
 - Render the scene as an image: F12
