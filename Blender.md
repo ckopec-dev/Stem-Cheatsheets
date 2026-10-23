@@ -3,6 +3,7 @@
 ## Tutorials
 
 [Donut 2026](https://www.youtube.com/watch?v=z-Xl9tGqH14)
+[ABSOLUTE Beginner Basics.. Blender For Noobs 2025](https://www.youtube.com/watch?v=peSv5IT5Ve4)
 
 ## Basic interface
 
@@ -23,9 +24,11 @@
   - To lock movement to an axis, press x, y, or z after the s
 - **Rotate** selected object: r (for rotate) + mouse move, left mouse click to release
   - To lock movement to an axis, press x, y, or z after the r
+- **Extrude** selected object: e (for extrude) + mouse move, left mouse click to release
 - Above also work in edit mode. You can, for example, scale a single face
 - Cycle mode (object/edit): tab
-- Add edge (loop cut): ctrl-R
+- Add **edge** (loop cut): ctrl-R
+- Add **bevel**: ctrl-B (smooths)
 - Render the scene as an image: F12
 - Switch to camera view: num pad 0
 - Change properties (e.g. color) of an object in the Properties window
