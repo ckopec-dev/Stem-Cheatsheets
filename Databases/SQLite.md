@@ -1,5 +1,7 @@
 # SQLite on Ubuntu
 
+[Tutorial](https://www.geeksforgeeks.org/python/python-sqlite/)
+
 ## Install 
 
 `sudo apt install sqlite3`
